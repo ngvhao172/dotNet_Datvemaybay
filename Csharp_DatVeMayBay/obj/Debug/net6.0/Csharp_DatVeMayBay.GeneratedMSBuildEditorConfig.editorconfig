@@ -1,0 +1,109 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Csharp_DatVeMayBay
+build_property.RootNamespace = Csharp_DatVeMayBay
+build_property.ProjectDir = D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Admin/Airline.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWlybGluZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Booking/BookingDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29raW5nRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Booking/BookingTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29raW5nVGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Booking/SearchBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xTZWFyY2hCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Client/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Error/505.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcNTA1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Flights/BookingSeat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xCb29raW5nU2VhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Flights/FlightDetailBooking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xGbGlnaHREZXRhaWxCb29raW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Flights/FlightListing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmxpZ2h0c1xGbGlnaHRMaXN0aW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Partials/AdminFooter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcQWRtaW5Gb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Partials/AdminHeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcQWRtaW5IZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Partials/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcRm9vdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Partials/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcSGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Partials/HeaderWithLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydGlhbHNcSGVhZGVyV2l0aExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Passenger/PassengerInfoVerify.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFzc2VuZ2VyXFBhc3NlbmdlckluZm9WZXJpZnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Shared/_AdminLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-pwzegw0g7e

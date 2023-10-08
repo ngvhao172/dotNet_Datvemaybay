@@ -1,0 +1,151 @@
+﻿<!-- Modal -->
+    <div id="AirlineModal" class="modal fade">
+        <div class="modal-dialog">
+            <form method="post" id="AirlineForm" enctype="multipart/form-data">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="fa fa-plus"></i> Thêm/Sửa Hãng bay</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="error-message" class="alert alert-warning alert-dismissible fade show" role="alert"
+                            style="display: none">
+                            <strong></strong>
+                            <button type="button" class="btn-close" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="airline_name" class="control-label">TÊN HÃNG BAY</label>
+                            <input type="text" required class="form-control" id="airline_name" name="airline_name">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="airline_logo" class="control-label">LOGO</label>
+                            <input type="file" required class="form-control" id="airline_logo" name="airline_logo">
+                            <span id="img_uploaded"></span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="airline_id" id="airline_id" />
+                        <input type="hidden" name="action" id="action" value="" />
+                        <input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form method="post" id="DeleteAirlineForm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Thông báo xoá</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="airline_id" id="delete_airline_id" />
+                        <input type="hidden" name="action" id="delete_action" value="" />
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <input type="submit" name="save" id="delete_save" class="btn btn-danger" value="Xoá" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="body">
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-2">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-profile-list"
+                            data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Danh sách
+                            hãng bay</a>
+                        <button type="button" name="add" id="addAirline"
+                            class="list-group-item list-group-item-action">Thêm hãng bay mới</button>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-profile" role="tabpanel"
+                            aria-labelledby="list-profile-list">
+                            <div id="error-delete-message" class="alert alert-warning alert-dismissible fade show"
+                                role="alert" style="display: none">
+                                <strong></strong>
+                                <button type="button" class="btn-close" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <table class="table table-striped" id="dt-airline" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">MÃ HÃNG BAY</th>
+                                        <th scope="col">TÊN HÃNG BAY</th>
+                                        <th scope="col">LOGO</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th scope="col">MÃ HÃNG BAY</th>
+                                        <th scope="col">TÊN HÃNG BAY</th>
+                                        <th scope="col">LOGO</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function () {
+    var airlineData = $('#dt-airline').DataTable({
+        "oLanguage": {
+            "sLengthMenu": "Hiện _MENU_ hãng bay",
+            "oPaginate": {
+                "sPrevious": "Trước",
+                "sNext": "Sau",
+                "sLast": "Cuối",
+                "sFirst": "Đầu"
+            },
+            "sEmptyTable": "Không có dữ liệu"
+        },
+        "bInfo": false,
+        "pagingType": "full_numbers",
+        lengthMenu: [
+            [5, 10, 20, -1],
+            [5, 10, 20, 'All'],
+        ],
+        "processing": true,
+        "serverSide": true,
+        "order": [],
+        "ajax": {
+            url: "./action/action_airline.php",
+            type: "POST",
+            data: { action: 'listAirline' },
+            dataType: "json"
+        },
+        "columnDefs": [
+            {
+                "targets": [3, 4],
+                "orderable": false,
+            },
+        ],
+    });
+});
+</script>
+
+    

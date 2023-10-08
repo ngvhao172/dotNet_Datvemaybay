@@ -1,0 +1,137 @@
+﻿@using Csharp_DatVeMayBay.Util.CustomHelpers;
+@model Csharp_DatVeMayBay.Controllers.BookingController.TicketFlightModel
+@{
+    ViewData["Title"] = "Search Booking";
+}
+    <main class="body-section" style="background: #fafafa">
+        <div class="container-fluid" style="padding: 100px;width: 100%;object-fit: cover;background: url(./img/ticket_info/sky-search-tc.jpg) no-repeat;">
+            <!-- <img class="" src="../../images/main-fight/slideshow-2.jpg" alt=""> -->
+            <div class="container-fluid mt-5" style="padding-top: 100px;">
+                <form method="post" action="/search-booking" class="needs-validation">
+                    <div class="row mb-5">
+                        <h1 class="text-center" style="color: #fff;">CHECK TICKET NUMBER</h1>
+                    </div>
+                    <div class="row  p-4" style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
+                        <div class="col-lg-9">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-dark" id="num-tc" name=ticketId value="" required>
+                                <label for="num-tc">Số mã vé (456******)</label>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-dark" id="name-tc" required>
+                                <label for="name-tc">Tên</label>
+                            </div>
+                        </div> -->
+                        <div class="col-lg-3">
+                            <!-- <a name="" id="" class="btn fw-bold p-3 px-4" href="#" role="button" style="background-color: #8DD3BB;">Tìm kiếm</a> -->
+                            <button type="submit" id="toggle" name="button" class="btn btn-outline-success p-3 fw-bold" style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Thông tin tra vé -->
+   
+       
+        @if (Model != null)
+        {
+            @if(Model.Ticket == null)
+            {
+                <h2 class="p-5 ms-5">Không tìm thấy thông tin vé </h2>
+            }
+        else{
+            <div id="show-ticket" class="container mt-5" style="display: <?php echo $typeButton ?>;">
+                <div class="row p-4" style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
+                    <!-- Row 1 -->
+                    <div class="row">
+                        <div class="col">
+                            <h1 class="bold">@Model.Ticket.TicketId</h1>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="row mt-4">
+                        <div class="row"><h3>Thông tin khách hàng</h3></div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <span class="fw-bold">Họ: @Model.Ticket.Booking.User.FirstName</span>
+                            </div>
+                            <div class="col">
+                                <span class="fw-bold">Tên: @Model.Ticket.Booking.User.LastName </span>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <span class="fw-bold">Địa chỉ:   @Model.Ticket.Booking.User.Address </span>
+                            </div>
+                            <div class="col">
+                                <span class="fw-bold">Email:   @Model.Ticket.Booking.User.UserEmail</span>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <span class="fw-bold">Số điện thoại: @Model.Ticket.Booking.User.PhoneNumber</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="row mt-4">
+                        <h3>Thông tin vé máy bay</h3>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <span class="fw-bold">Mã máy bay: Airbus @string.Concat("A", @Model.Ticket.FlightId)</span>
+                            </div>
+                            <div class="col">
+                                <span class="fw-bold">Ghế ngồi: 
+                            @Model.Ticket.Seat.SeatRow@Model.Ticket.Seat.SeatColumn
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row mt-3 d-flex justify-content-between align-items-center">
+                            <div class="col-4 text-center">
+                                        <div class="row"><p class="" style="opacity: 0.8;">@customHelper.splitDatetime(Model.Flight.DepartureDatetime)[0]</p></div> <!-- Ngày đi -->
+                                <div class="row"><p class="fs-4 fw-bold">@customHelper.splitDatetime(Model.Flight.DepartureDatetime)[1]</p></div> <!-- Giờ đi -->
+                                <div class="row"><p class="" style="opacity: 0.8;">@Model.Flight.from.AirportName <br /> @Model.Flight.from.AirportLocation</p></div> <!-- Nơi đi -->
+                            </div>
+                            <div class="col-4 text-center">
+                                <img
+                        src="./img/booking-detail/plane.svg"
+                        alt="Plane"
+                    />
+                            </div>
+                            <div class="col-4 text-center">
+                                        <div class="row"><p class="" style="opacity: 0.8;">@customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[0]</p></div> <!-- Ngày đến -->
+                                        <div class="row"><p class="fs-4 fw-bold">@customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[1]</p></div> <!-- Giờ đến -->
+                                <div class="row"><p class="" style="opacity: 0.8;">@Model.Flight.to.AirportName <br /> @Model.Flight.to.AirportLocation</p></div> <!-- Nơi đến -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="row mt-4">
+                        <div class="col"></div>
+                        <div class="col text-end fw-bold fs-2">
+                             <span style="color: #ff8682;">@customHelper.FormatCurrency(Model.Ticket.TicketPrice)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    }
+
+    </main>
+@*<script>
+    $(document).ready(function() {
+        if(@Model.Ticket!=null){
+             $("#show-ticket").show();
+        }
+        else{
+              $("#show-ticket").hide();
+        }
+    });
+</script>*@
+
+
