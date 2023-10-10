@@ -44,25 +44,6 @@ namespace Csharp_DatVeMayBay.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Flights",
-                columns: table => new
-                {
-                    FlightId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AirlineId = table.Column<int>(type: "int", nullable: false),
-                    DepartureAiportId = table.Column<int>(type: "int", nullable: false),
-                    ArrivalAiportId = table.Column<int>(type: "int", nullable: false),
-                    DepartureDatetime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ArrivalDatetime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EconomyPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    BussinessPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Flights", x => x.FlightId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -81,25 +62,40 @@ namespace Csharp_DatVeMayBay.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Seats",
+                name: "Flights",
                 columns: table => new
                 {
-                    SeatId = table.Column<int>(type: "int", nullable: false)
+                    FlightId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FlightId = table.Column<int>(type: "int", nullable: false),
-                    SeatRow = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    SeatColumn = table.Column<int>(type: "int", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false)
+                    AirlineId = table.Column<int>(type: "int", nullable: false),
+                    DepartureAirportId = table.Column<int>(type: "int", nullable: false),
+                    ArrivalAirportId = table.Column<int>(type: "int", nullable: false),
+                    DepartureDatetime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ArrivalDatetime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EconomyPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    BussinessPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Seats", x => x.SeatId);
+                    table.PrimaryKey("PK_Flights", x => x.FlightId);
                     table.ForeignKey(
-                        name: "FK_Seats_Flights_FlightId",
-                        column: x => x.FlightId,
-                        principalTable: "Flights",
-                        principalColumn: "FlightId",
-                        onDelete: ReferentialAction.Cascade);
+                        name: "FK_Flights_Airlines_AirlineId",
+                        column: x => x.AirlineId,
+                        principalTable: "Airlines",
+                        principalColumn: "AirlineId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Flights_Airports_ArrivalAirportId",
+                        column: x => x.ArrivalAirportId,
+                        principalTable: "Airports",
+                        principalColumn: "AirportId",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Flights_Airports_DepartureAirportId",
+                        column: x => x.DepartureAirportId,
+                        principalTable: "Airports",
+                        principalColumn: "AirportId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -116,6 +112,28 @@ namespace Csharp_DatVeMayBay.Migrations
                     table.PrimaryKey("PK_Accounts", x => x.UserEmail);
                     table.ForeignKey(
                         name: "FK_Accounts_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Creditcards",
+                columns: table => new
+                {
+                    CardId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CardHolderName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CardNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Creditcards", x => x.CardId);
+                    table.ForeignKey(
+                        name: "FK_Creditcards_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
@@ -152,24 +170,24 @@ namespace Csharp_DatVeMayBay.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Creditcards",
+                name: "Seats",
                 columns: table => new
                 {
-                    CardId = table.Column<int>(type: "int", nullable: false)
+                    SeatId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CardHolderName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    CardNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    FlightId = table.Column<int>(type: "int", nullable: false),
+                    SeatRow = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    SeatColumn = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Creditcards", x => x.CardId);
+                    table.PrimaryKey("PK_Seats", x => x.SeatId);
                     table.ForeignKey(
-                        name: "FK_Creditcards_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "UserId",
+                        name: "FK_Seats_Flights_FlightId",
+                        column: x => x.FlightId,
+                        principalTable: "Flights",
+                        principalColumn: "FlightId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -192,19 +210,19 @@ namespace Csharp_DatVeMayBay.Migrations
                         column: x => x.BookingId,
                         principalTable: "Bookings",
                         principalColumn: "BookingId",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Tickets_Flights_FlightId",
                         column: x => x.FlightId,
                         principalTable: "Flights",
                         principalColumn: "FlightId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Tickets_Seats_SeatId",
                         column: x => x.SeatId,
                         principalTable: "Seats",
                         principalColumn: "SeatId",
-                        onDelete: ReferentialAction.NoAction);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.InsertData(
@@ -232,71 +250,79 @@ namespace Csharp_DatVeMayBay.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Flights",
-                columns: new[] { "FlightId", "AirlineId", "ArrivalAiportId", "ArrivalDatetime", "BussinessPrice", "DepartureAiportId", "DepartureDatetime", "EconomyPrice" },
-                values: new object[,]
-                {
-                    { 1, 3, 2, new DateTime(2023, 10, 9, 22, 15, 0, 0, DateTimeKind.Local), 3091480m, 1, new DateTime(2023, 10, 9, 19, 55, 0, 0, DateTimeKind.Local), 956660m },
-                    { 2, 4, 2, new DateTime(2023, 10, 8, 17, 41, 0, 0, DateTimeKind.Local), 3060001m, 1, new DateTime(2023, 10, 8, 12, 30, 0, 0, DateTimeKind.Local), 1235103m },
-                    { 3, 2, 2, new DateTime(2023, 10, 7, 8, 45, 0, 0, DateTimeKind.Local), 2659971m, 1, new DateTime(2023, 10, 7, 0, 47, 0, 0, DateTimeKind.Local), 1033050m },
-                    { 4, 2, 2, new DateTime(2023, 10, 7, 3, 31, 0, 0, DateTimeKind.Local), 2725080m, 1, new DateTime(2023, 10, 6, 22, 22, 0, 0, DateTimeKind.Local), 1434051m },
-                    { 5, 3, 2, new DateTime(2023, 10, 8, 0, 4, 0, 0, DateTimeKind.Local), 3038526m, 1, new DateTime(2023, 10, 7, 19, 34, 0, 0, DateTimeKind.Local), 1402269m },
-                    { 6, 2, 2, new DateTime(2023, 10, 9, 20, 47, 0, 0, DateTimeKind.Local), 2636289m, 1, new DateTime(2023, 10, 9, 19, 22, 0, 0, DateTimeKind.Local), 1154470m },
-                    { 7, 4, 2, new DateTime(2023, 10, 8, 15, 14, 0, 0, DateTimeKind.Local), 2381200m, 1, new DateTime(2023, 10, 8, 11, 0, 0, 0, DateTimeKind.Local), 1299906m },
-                    { 8, 4, 2, new DateTime(2023, 10, 9, 9, 32, 0, 0, DateTimeKind.Local), 2124942m, 1, new DateTime(2023, 10, 9, 5, 24, 0, 0, DateTimeKind.Local), 1379333m },
-                    { 9, 1, 2, new DateTime(2023, 10, 5, 8, 24, 0, 0, DateTimeKind.Local), 3120489m, 1, new DateTime(2023, 10, 5, 2, 24, 0, 0, DateTimeKind.Local), 1395243m },
-                    { 10, 3, 2, new DateTime(2023, 10, 6, 21, 34, 0, 0, DateTimeKind.Local), 3109464m, 1, new DateTime(2023, 10, 6, 17, 38, 0, 0, DateTimeKind.Local), 1286621m },
-                    { 11, 1, 2, new DateTime(2023, 10, 8, 10, 11, 0, 0, DateTimeKind.Local), 3088574m, 1, new DateTime(2023, 10, 8, 7, 4, 0, 0, DateTimeKind.Local), 1095736m },
-                    { 12, 3, 2, new DateTime(2023, 10, 8, 8, 43, 0, 0, DateTimeKind.Local), 3490041m, 1, new DateTime(2023, 10, 8, 3, 23, 0, 0, DateTimeKind.Local), 1067544m },
-                    { 13, 2, 2, new DateTime(2023, 10, 8, 6, 20, 0, 0, DateTimeKind.Local), 2584078m, 1, new DateTime(2023, 10, 7, 23, 25, 0, 0, DateTimeKind.Local), 996478m },
-                    { 14, 4, 2, new DateTime(2023, 10, 8, 3, 32, 0, 0, DateTimeKind.Local), 2592156m, 1, new DateTime(2023, 10, 7, 22, 42, 0, 0, DateTimeKind.Local), 1455347m },
-                    { 15, 4, 2, new DateTime(2023, 10, 5, 18, 58, 0, 0, DateTimeKind.Local), 2284309m, 1, new DateTime(2023, 10, 5, 13, 23, 0, 0, DateTimeKind.Local), 849526m },
-                    { 16, 5, 2, new DateTime(2023, 10, 5, 11, 55, 0, 0, DateTimeKind.Local), 2245122m, 1, new DateTime(2023, 10, 5, 9, 54, 0, 0, DateTimeKind.Local), 1392494m },
-                    { 17, 1, 2, new DateTime(2023, 10, 9, 4, 39, 0, 0, DateTimeKind.Local), 2852604m, 1, new DateTime(2023, 10, 8, 23, 1, 0, 0, DateTimeKind.Local), 1032167m },
-                    { 18, 2, 2, new DateTime(2023, 10, 6, 8, 17, 0, 0, DateTimeKind.Local), 2656199m, 1, new DateTime(2023, 10, 6, 6, 32, 0, 0, DateTimeKind.Local), 824438m },
-                    { 19, 3, 2, new DateTime(2023, 10, 8, 1, 1, 0, 0, DateTimeKind.Local), 2948710m, 1, new DateTime(2023, 10, 7, 18, 49, 0, 0, DateTimeKind.Local), 1146658m },
-                    { 20, 1, 2, new DateTime(2023, 10, 8, 4, 9, 0, 0, DateTimeKind.Local), 2961035m, 1, new DateTime(2023, 10, 7, 22, 44, 0, 0, DateTimeKind.Local), 967500m },
-                    { 21, 4, 2, new DateTime(2023, 10, 8, 11, 6, 0, 0, DateTimeKind.Local), 2295641m, 1, new DateTime(2023, 10, 8, 10, 2, 0, 0, DateTimeKind.Local), 1247249m },
-                    { 22, 2, 2, new DateTime(2023, 10, 8, 20, 29, 0, 0, DateTimeKind.Local), 3255057m, 1, new DateTime(2023, 10, 8, 18, 57, 0, 0, DateTimeKind.Local), 857284m },
-                    { 23, 1, 2, new DateTime(2023, 10, 5, 3, 52, 0, 0, DateTimeKind.Local), 2276444m, 1, new DateTime(2023, 10, 5, 0, 38, 0, 0, DateTimeKind.Local), 843601m },
-                    { 24, 1, 2, new DateTime(2023, 10, 9, 22, 18, 0, 0, DateTimeKind.Local), 2488428m, 1, new DateTime(2023, 10, 9, 21, 11, 0, 0, DateTimeKind.Local), 1311919m },
-                    { 25, 4, 2, new DateTime(2023, 10, 7, 8, 49, 0, 0, DateTimeKind.Local), 2543922m, 1, new DateTime(2023, 10, 7, 4, 59, 0, 0, DateTimeKind.Local), 1084912m },
-                    { 26, 5, 2, new DateTime(2023, 10, 6, 11, 34, 0, 0, DateTimeKind.Local), 2861970m, 1, new DateTime(2023, 10, 6, 9, 56, 0, 0, DateTimeKind.Local), 1316368m },
-                    { 27, 4, 2, new DateTime(2023, 10, 8, 3, 17, 0, 0, DateTimeKind.Local), 3354754m, 1, new DateTime(2023, 10, 7, 20, 38, 0, 0, DateTimeKind.Local), 1085732m },
-                    { 28, 4, 2, new DateTime(2023, 10, 8, 2, 10, 0, 0, DateTimeKind.Local), 2345624m, 1, new DateTime(2023, 10, 7, 19, 29, 0, 0, DateTimeKind.Local), 802739m },
-                    { 29, 2, 2, new DateTime(2023, 10, 5, 8, 20, 0, 0, DateTimeKind.Local), 2624609m, 1, new DateTime(2023, 10, 5, 1, 51, 0, 0, DateTimeKind.Local), 1393428m },
-                    { 30, 2, 2, new DateTime(2023, 10, 9, 18, 44, 0, 0, DateTimeKind.Local), 2006150m, 1, new DateTime(2023, 10, 9, 14, 15, 0, 0, DateTimeKind.Local), 1137824m },
-                    { 31, 4, 2, new DateTime(2023, 10, 10, 1, 31, 0, 0, DateTimeKind.Local), 3296709m, 1, new DateTime(2023, 10, 9, 23, 21, 0, 0, DateTimeKind.Local), 1019067m },
-                    { 32, 2, 2, new DateTime(2023, 10, 7, 23, 17, 0, 0, DateTimeKind.Local), 3008060m, 1, new DateTime(2023, 10, 7, 15, 42, 0, 0, DateTimeKind.Local), 896852m },
-                    { 33, 2, 2, new DateTime(2023, 10, 8, 12, 28, 0, 0, DateTimeKind.Local), 2973874m, 1, new DateTime(2023, 10, 8, 11, 27, 0, 0, DateTimeKind.Local), 1457327m },
-                    { 34, 3, 2, new DateTime(2023, 10, 7, 22, 23, 0, 0, DateTimeKind.Local), 3100969m, 1, new DateTime(2023, 10, 7, 21, 20, 0, 0, DateTimeKind.Local), 1100674m },
-                    { 35, 4, 2, new DateTime(2023, 10, 5, 6, 50, 0, 0, DateTimeKind.Local), 2920913m, 1, new DateTime(2023, 10, 5, 2, 46, 0, 0, DateTimeKind.Local), 888145m },
-                    { 36, 4, 2, new DateTime(2023, 10, 9, 17, 39, 0, 0, DateTimeKind.Local), 3460147m, 1, new DateTime(2023, 10, 9, 16, 7, 0, 0, DateTimeKind.Local), 1223313m },
-                    { 37, 4, 2, new DateTime(2023, 10, 9, 14, 37, 0, 0, DateTimeKind.Local), 2937349m, 1, new DateTime(2023, 10, 9, 6, 50, 0, 0, DateTimeKind.Local), 1335264m },
-                    { 38, 5, 2, new DateTime(2023, 10, 5, 21, 17, 0, 0, DateTimeKind.Local), 3042549m, 1, new DateTime(2023, 10, 5, 15, 8, 0, 0, DateTimeKind.Local), 1100730m },
-                    { 39, 4, 2, new DateTime(2023, 10, 7, 20, 3, 0, 0, DateTimeKind.Local), 2734508m, 1, new DateTime(2023, 10, 7, 16, 48, 0, 0, DateTimeKind.Local), 1045078m },
-                    { 40, 1, 2, new DateTime(2023, 10, 9, 23, 53, 0, 0, DateTimeKind.Local), 2727904m, 1, new DateTime(2023, 10, 9, 18, 44, 0, 0, DateTimeKind.Local), 1121240m },
-                    { 41, 5, 2, new DateTime(2023, 10, 6, 12, 34, 0, 0, DateTimeKind.Local), 2208969m, 1, new DateTime(2023, 10, 6, 4, 37, 0, 0, DateTimeKind.Local), 1408873m },
-                    { 42, 1, 2, new DateTime(2023, 10, 6, 8, 1, 0, 0, DateTimeKind.Local), 3066870m, 1, new DateTime(2023, 10, 6, 3, 36, 0, 0, DateTimeKind.Local), 1046598m },
-                    { 43, 5, 2, new DateTime(2023, 10, 9, 17, 10, 0, 0, DateTimeKind.Local), 2608810m, 1, new DateTime(2023, 10, 9, 11, 12, 0, 0, DateTimeKind.Local), 1023149m },
-                    { 44, 3, 2, new DateTime(2023, 10, 5, 6, 51, 0, 0, DateTimeKind.Local), 3493793m, 1, new DateTime(2023, 10, 5, 5, 43, 0, 0, DateTimeKind.Local), 815019m },
-                    { 45, 1, 2, new DateTime(2023, 10, 9, 12, 41, 0, 0, DateTimeKind.Local), 3253144m, 1, new DateTime(2023, 10, 9, 9, 1, 0, 0, DateTimeKind.Local), 1080515m },
-                    { 46, 5, 2, new DateTime(2023, 10, 9, 17, 55, 0, 0, DateTimeKind.Local), 2194882m, 1, new DateTime(2023, 10, 9, 15, 50, 0, 0, DateTimeKind.Local), 1075982m },
-                    { 47, 2, 2, new DateTime(2023, 10, 7, 6, 31, 0, 0, DateTimeKind.Local), 3457119m, 1, new DateTime(2023, 10, 7, 4, 24, 0, 0, DateTimeKind.Local), 1193624m },
-                    { 48, 5, 2, new DateTime(2023, 10, 5, 17, 26, 0, 0, DateTimeKind.Local), 3451602m, 1, new DateTime(2023, 10, 5, 11, 34, 0, 0, DateTimeKind.Local), 1041118m },
-                    { 49, 5, 2, new DateTime(2023, 10, 8, 19, 19, 0, 0, DateTimeKind.Local), 2169146m, 1, new DateTime(2023, 10, 8, 15, 5, 0, 0, DateTimeKind.Local), 1077235m },
-                    { 50, 4, 2, new DateTime(2023, 10, 7, 13, 12, 0, 0, DateTimeKind.Local), 3134930m, 1, new DateTime(2023, 10, 7, 9, 7, 0, 0, DateTimeKind.Local), 1343540m }
-                });
-
-            migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "UserId", "Address", "Dob", "FirstName", "LastName", "PhoneNumber", "UserEmail" },
-                values: new object[] { 1, "Huế, Việt Nam", new DateTime(2003, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "Nguyễn Văn", "Hào", "0777777777", "ngvhao@gmail.com" });
+                values: new object[,]
+                {
+                    { 1, "", new DateTime(2003, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "Admin", "", "", "admin@gmail.com" },
+                    { 2, "Huế, Việt Nam", new DateTime(2003, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified), "Nguyễn Văn", "Hào", "0777777777", "ngvhao@gmail.com" }
+                });
 
             migrationBuilder.InsertData(
                 table: "Accounts",
                 columns: new[] { "UserEmail", "Enable", "Password", "UserId" },
-                values: new object[] { "ngvhao@gmail.com", true, "123", 1 });
+                values: new object[,]
+                {
+                    { "admin@gmail.com", true, "$2a$13$smNzWQglgODhnvt1Ns9CRu3Xf10VczVJCtpsKb9RsY0kqcteCZPHe", 1 },
+                    { "ngvhao@gmail.com", true, "$2a$13$zznljfHPyEhgKGOdsDmZ2OVGBSnN9l74DrYcQcIJdSShbGSEW14u.", 2 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Flights",
+                columns: new[] { "FlightId", "AirlineId", "ArrivalAirportId", "ArrivalDatetime", "BussinessPrice", "DepartureAirportId", "DepartureDatetime", "EconomyPrice" },
+                values: new object[,]
+                {
+                    { 1, 1, 2, new DateTime(2023, 10, 10, 23, 0, 0, 0, DateTimeKind.Local), 2352881m, 1, new DateTime(2023, 10, 10, 17, 44, 0, 0, DateTimeKind.Local), 1226802m },
+                    { 2, 2, 2, new DateTime(2023, 10, 14, 2, 15, 0, 0, DateTimeKind.Local), 3265986m, 1, new DateTime(2023, 10, 14, 0, 59, 0, 0, DateTimeKind.Local), 1311592m },
+                    { 3, 2, 2, new DateTime(2023, 10, 10, 13, 48, 0, 0, DateTimeKind.Local), 2096508m, 1, new DateTime(2023, 10, 10, 8, 26, 0, 0, DateTimeKind.Local), 1104723m },
+                    { 4, 5, 2, new DateTime(2023, 10, 11, 11, 57, 0, 0, DateTimeKind.Local), 2335507m, 1, new DateTime(2023, 10, 11, 9, 57, 0, 0, DateTimeKind.Local), 1151131m },
+                    { 5, 2, 2, new DateTime(2023, 10, 10, 16, 18, 0, 0, DateTimeKind.Local), 3444774m, 1, new DateTime(2023, 10, 10, 14, 36, 0, 0, DateTimeKind.Local), 1287270m },
+                    { 6, 5, 2, new DateTime(2023, 10, 15, 3, 24, 0, 0, DateTimeKind.Local), 2366241m, 1, new DateTime(2023, 10, 14, 23, 49, 0, 0, DateTimeKind.Local), 1198081m },
+                    { 7, 3, 2, new DateTime(2023, 10, 10, 15, 47, 0, 0, DateTimeKind.Local), 3204964m, 1, new DateTime(2023, 10, 10, 11, 5, 0, 0, DateTimeKind.Local), 889702m },
+                    { 8, 2, 2, new DateTime(2023, 10, 13, 9, 4, 0, 0, DateTimeKind.Local), 2539154m, 1, new DateTime(2023, 10, 13, 7, 7, 0, 0, DateTimeKind.Local), 1400781m },
+                    { 9, 1, 2, new DateTime(2023, 10, 11, 21, 8, 0, 0, DateTimeKind.Local), 3289072m, 1, new DateTime(2023, 10, 11, 17, 30, 0, 0, DateTimeKind.Local), 1490097m },
+                    { 10, 4, 2, new DateTime(2023, 10, 14, 22, 29, 0, 0, DateTimeKind.Local), 3150207m, 1, new DateTime(2023, 10, 14, 17, 36, 0, 0, DateTimeKind.Local), 1161341m },
+                    { 11, 4, 2, new DateTime(2023, 10, 14, 5, 1, 0, 0, DateTimeKind.Local), 3216753m, 1, new DateTime(2023, 10, 14, 2, 0, 0, 0, DateTimeKind.Local), 1030528m },
+                    { 12, 2, 2, new DateTime(2023, 10, 13, 9, 14, 0, 0, DateTimeKind.Local), 3459929m, 1, new DateTime(2023, 10, 13, 4, 52, 0, 0, DateTimeKind.Local), 1080261m },
+                    { 13, 4, 2, new DateTime(2023, 10, 14, 12, 56, 0, 0, DateTimeKind.Local), 2516089m, 1, new DateTime(2023, 10, 14, 5, 42, 0, 0, DateTimeKind.Local), 1211249m },
+                    { 14, 4, 2, new DateTime(2023, 10, 12, 9, 27, 0, 0, DateTimeKind.Local), 2566395m, 1, new DateTime(2023, 10, 12, 5, 5, 0, 0, DateTimeKind.Local), 958366m },
+                    { 15, 1, 2, new DateTime(2023, 10, 12, 23, 35, 0, 0, DateTimeKind.Local), 3265499m, 1, new DateTime(2023, 10, 12, 17, 57, 0, 0, DateTimeKind.Local), 1466804m },
+                    { 16, 1, 2, new DateTime(2023, 10, 14, 1, 9, 0, 0, DateTimeKind.Local), 2067557m, 1, new DateTime(2023, 10, 13, 18, 19, 0, 0, DateTimeKind.Local), 1209513m },
+                    { 17, 4, 2, new DateTime(2023, 10, 10, 2, 40, 0, 0, DateTimeKind.Local), 3215049m, 1, new DateTime(2023, 10, 10, 0, 38, 0, 0, DateTimeKind.Local), 889668m },
+                    { 18, 4, 2, new DateTime(2023, 10, 10, 15, 30, 0, 0, DateTimeKind.Local), 2526070m, 1, new DateTime(2023, 10, 10, 14, 30, 0, 0, DateTimeKind.Local), 862034m },
+                    { 19, 1, 2, new DateTime(2023, 10, 12, 15, 44, 0, 0, DateTimeKind.Local), 3148716m, 1, new DateTime(2023, 10, 12, 10, 11, 0, 0, DateTimeKind.Local), 903829m },
+                    { 20, 3, 2, new DateTime(2023, 10, 14, 23, 29, 0, 0, DateTimeKind.Local), 2802849m, 1, new DateTime(2023, 10, 14, 19, 25, 0, 0, DateTimeKind.Local), 1404041m },
+                    { 21, 2, 2, new DateTime(2023, 10, 15, 4, 28, 0, 0, DateTimeKind.Local), 2108458m, 1, new DateTime(2023, 10, 14, 21, 25, 0, 0, DateTimeKind.Local), 880519m },
+                    { 22, 3, 2, new DateTime(2023, 10, 12, 19, 11, 0, 0, DateTimeKind.Local), 2856076m, 1, new DateTime(2023, 10, 12, 16, 16, 0, 0, DateTimeKind.Local), 1420359m },
+                    { 23, 4, 2, new DateTime(2023, 10, 11, 20, 26, 0, 0, DateTimeKind.Local), 2930606m, 1, new DateTime(2023, 10, 11, 17, 35, 0, 0, DateTimeKind.Local), 924658m },
+                    { 24, 1, 2, new DateTime(2023, 10, 10, 16, 40, 0, 0, DateTimeKind.Local), 3205566m, 1, new DateTime(2023, 10, 10, 10, 21, 0, 0, DateTimeKind.Local), 1473485m },
+                    { 25, 2, 2, new DateTime(2023, 10, 14, 15, 9, 0, 0, DateTimeKind.Local), 2002835m, 1, new DateTime(2023, 10, 14, 13, 54, 0, 0, DateTimeKind.Local), 1191139m },
+                    { 26, 5, 2, new DateTime(2023, 10, 12, 22, 28, 0, 0, DateTimeKind.Local), 2686995m, 1, new DateTime(2023, 10, 12, 15, 20, 0, 0, DateTimeKind.Local), 966864m },
+                    { 27, 2, 2, new DateTime(2023, 10, 12, 14, 46, 0, 0, DateTimeKind.Local), 2134473m, 1, new DateTime(2023, 10, 12, 10, 19, 0, 0, DateTimeKind.Local), 938163m },
+                    { 28, 1, 2, new DateTime(2023, 10, 12, 22, 1, 0, 0, DateTimeKind.Local), 2728814m, 1, new DateTime(2023, 10, 12, 19, 13, 0, 0, DateTimeKind.Local), 1060949m },
+                    { 29, 2, 2, new DateTime(2023, 10, 11, 8, 52, 0, 0, DateTimeKind.Local), 3220016m, 1, new DateTime(2023, 10, 11, 5, 6, 0, 0, DateTimeKind.Local), 903274m },
+                    { 30, 1, 2, new DateTime(2023, 10, 11, 19, 15, 0, 0, DateTimeKind.Local), 2055931m, 1, new DateTime(2023, 10, 11, 16, 18, 0, 0, DateTimeKind.Local), 1414707m },
+                    { 31, 4, 2, new DateTime(2023, 10, 12, 22, 43, 0, 0, DateTimeKind.Local), 2898517m, 1, new DateTime(2023, 10, 12, 17, 3, 0, 0, DateTimeKind.Local), 1098742m },
+                    { 32, 4, 2, new DateTime(2023, 10, 11, 6, 49, 0, 0, DateTimeKind.Local), 3418428m, 1, new DateTime(2023, 10, 11, 4, 41, 0, 0, DateTimeKind.Local), 979107m },
+                    { 33, 2, 2, new DateTime(2023, 10, 12, 18, 11, 0, 0, DateTimeKind.Local), 2030571m, 1, new DateTime(2023, 10, 12, 12, 48, 0, 0, DateTimeKind.Local), 952571m },
+                    { 34, 2, 2, new DateTime(2023, 10, 11, 5, 7, 0, 0, DateTimeKind.Local), 2190485m, 1, new DateTime(2023, 10, 11, 3, 34, 0, 0, DateTimeKind.Local), 1234725m },
+                    { 35, 4, 2, new DateTime(2023, 10, 10, 13, 4, 0, 0, DateTimeKind.Local), 3124006m, 1, new DateTime(2023, 10, 10, 5, 48, 0, 0, DateTimeKind.Local), 1115515m },
+                    { 36, 4, 2, new DateTime(2023, 10, 11, 16, 33, 0, 0, DateTimeKind.Local), 3015626m, 1, new DateTime(2023, 10, 11, 11, 55, 0, 0, DateTimeKind.Local), 1353891m },
+                    { 37, 5, 2, new DateTime(2023, 10, 15, 0, 38, 0, 0, DateTimeKind.Local), 2514367m, 1, new DateTime(2023, 10, 14, 18, 30, 0, 0, DateTimeKind.Local), 1144613m },
+                    { 38, 2, 2, new DateTime(2023, 10, 10, 10, 47, 0, 0, DateTimeKind.Local), 2010361m, 1, new DateTime(2023, 10, 10, 7, 51, 0, 0, DateTimeKind.Local), 1269909m },
+                    { 39, 5, 2, new DateTime(2023, 10, 11, 12, 19, 0, 0, DateTimeKind.Local), 3347261m, 1, new DateTime(2023, 10, 11, 10, 46, 0, 0, DateTimeKind.Local), 1415484m },
+                    { 40, 5, 2, new DateTime(2023, 10, 10, 9, 0, 0, 0, DateTimeKind.Local), 3328002m, 1, new DateTime(2023, 10, 10, 6, 50, 0, 0, DateTimeKind.Local), 1459894m },
+                    { 41, 4, 2, new DateTime(2023, 10, 13, 8, 22, 0, 0, DateTimeKind.Local), 2054906m, 1, new DateTime(2023, 10, 13, 3, 46, 0, 0, DateTimeKind.Local), 1094383m },
+                    { 42, 4, 2, new DateTime(2023, 10, 10, 10, 31, 0, 0, DateTimeKind.Local), 3009667m, 1, new DateTime(2023, 10, 10, 9, 14, 0, 0, DateTimeKind.Local), 1264910m },
+                    { 43, 3, 2, new DateTime(2023, 10, 14, 19, 7, 0, 0, DateTimeKind.Local), 2434268m, 1, new DateTime(2023, 10, 14, 14, 54, 0, 0, DateTimeKind.Local), 1486291m },
+                    { 44, 3, 2, new DateTime(2023, 10, 14, 23, 26, 0, 0, DateTimeKind.Local), 2431609m, 1, new DateTime(2023, 10, 14, 16, 16, 0, 0, DateTimeKind.Local), 1155369m },
+                    { 45, 1, 2, new DateTime(2023, 10, 14, 22, 49, 0, 0, DateTimeKind.Local), 2431915m, 1, new DateTime(2023, 10, 14, 17, 5, 0, 0, DateTimeKind.Local), 1270870m },
+                    { 46, 1, 2, new DateTime(2023, 10, 14, 12, 42, 0, 0, DateTimeKind.Local), 2276960m, 1, new DateTime(2023, 10, 14, 9, 5, 0, 0, DateTimeKind.Local), 1457977m },
+                    { 47, 2, 2, new DateTime(2023, 10, 15, 0, 39, 0, 0, DateTimeKind.Local), 3129221m, 1, new DateTime(2023, 10, 14, 19, 24, 0, 0, DateTimeKind.Local), 1171341m },
+                    { 48, 1, 2, new DateTime(2023, 10, 12, 22, 54, 0, 0, DateTimeKind.Local), 2174490m, 1, new DateTime(2023, 10, 12, 21, 21, 0, 0, DateTimeKind.Local), 1056933m },
+                    { 49, 5, 2, new DateTime(2023, 10, 10, 15, 14, 0, 0, DateTimeKind.Local), 3129366m, 1, new DateTime(2023, 10, 10, 13, 47, 0, 0, DateTimeKind.Local), 1143039m },
+                    { 50, 3, 2, new DateTime(2023, 10, 11, 12, 15, 0, 0, DateTimeKind.Local), 3315276m, 1, new DateTime(2023, 10, 11, 7, 35, 0, 0, DateTimeKind.Local), 829636m }
+                });
 
             migrationBuilder.InsertData(
                 table: "Seats",
@@ -2126,6 +2152,21 @@ namespace Csharp_DatVeMayBay.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Flights_AirlineId",
+                table: "Flights",
+                column: "AirlineId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Flights_ArrivalAirportId",
+                table: "Flights",
+                column: "ArrivalAirportId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Flights_DepartureAirportId",
+                table: "Flights",
+                column: "DepartureAirportId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Seats_FlightId",
                 table: "Seats",
                 column: "FlightId");
@@ -2153,12 +2194,6 @@ namespace Csharp_DatVeMayBay.Migrations
                 name: "Accounts");
 
             migrationBuilder.DropTable(
-                name: "Airlines");
-
-            migrationBuilder.DropTable(
-                name: "Airports");
-
-            migrationBuilder.DropTable(
                 name: "Creditcards");
 
             migrationBuilder.DropTable(
@@ -2175,6 +2210,12 @@ namespace Csharp_DatVeMayBay.Migrations
 
             migrationBuilder.DropTable(
                 name: "Flights");
+
+            migrationBuilder.DropTable(
+                name: "Airlines");
+
+            migrationBuilder.DropTable(
+                name: "Airports");
         }
     }
 }

@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\img\\airlines\\JetStarLogo.png"
     },
     {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\Mos word2016.png",
+      "PackagePath": "staticwebassets\\img\\airlines\\Mos word2016.png"
+    },
+    {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\PacificAirlinesLogo.png",
       "PackagePath": "staticwebassets\\img\\airlines\\PacificAirlinesLogo.png"
     },
@@ -31,6 +35,14 @@
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietnamAirlinesLogo.png",
       "PackagePath": "staticwebassets\\img\\airlines\\VietnamAirlinesLogo.png"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg",
+      "PackagePath": "staticwebassets\\img\\airlines\\studentid.jpg"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg.jpg",
+      "PackagePath": "staticwebassets\\img\\airlines\\studentid.jpg.jpg"
     },
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\background-images-personal.jpg",
@@ -215,6 +227,14 @@
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airline_script.js",
       "PackagePath": "staticwebassets\\js\\airline_script.js"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airport_script.js",
+      "PackagePath": "staticwebassets\\js\\airport_script.js"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
+      "PackagePath": "staticwebassets\\js\\flight_script.js"
     },
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\site.js",

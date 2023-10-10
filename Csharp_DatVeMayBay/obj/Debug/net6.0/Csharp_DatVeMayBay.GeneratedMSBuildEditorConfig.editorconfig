@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWlybGluZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Admin/Airport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWlycG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Admin/Flight.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRmxpZ2h0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Booking/BookingDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va2luZ1xCb29raW5nRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

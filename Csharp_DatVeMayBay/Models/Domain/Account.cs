@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Extensions.Primitives;
+using NuGet.ContentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -30,3 +31,4 @@ namespace Csharp_DatVeMayBay.Models.Domain
         public User User { get; set; }
     }
 }
+

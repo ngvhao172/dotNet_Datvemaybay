@@ -49,8 +49,8 @@ namespace Csharp_DatVeMayBay.Controllers
             var inputDate = DateTime.Parse(Request.Form["departure_datetime"]).Date;
 
             var flights = dbContext.Flights.Where(f =>
-                f.DepartureAiportId == departureAirportId &&
-                f.ArrivalAiportId == arrivalAirportId &&
+                f.DepartureAirportId == departureAirportId &&
+                f.ArrivalAirportId == arrivalAirportId &&
                 f.DepartureDatetime.Date == inputDate)
                 .ToList();
             var airlines = await dbContext.Airlines.ToListAsync();
@@ -58,51 +58,50 @@ namespace Csharp_DatVeMayBay.Controllers
             var airportArrival = dbContext.Airports.FirstOrDefault(a => arrivalAirportId == a.AirportId);
 
             var customFlights = new List<CustomFlight>();
-            foreach (var flight in flights)
-            {
-                var cleanedTimeDifference = (flight.ArrivalDatetime - flight.DepartureDatetime).ToString().TrimStart('0').TrimEnd('0').TrimEnd(':');
-                var customFlight = new CustomFlight()
-                {
-                    FlightId = flight.FlightId,
-                    AirlineId = flight.AirlineId,
-                    DepartureAiportId = flight.AirlineId,
-                    ArrivalAiportId = flight.AirlineId,
-                    DepartureDatetime = flight.DepartureDatetime,
-                    ArrivalDatetime = flight.ArrivalDatetime,
-                    EconomyPrice = flight.EconomyPrice,
-                    BussinessPrice = flight.BussinessPrice,
-                    airlineInfo = dbContext.Airlines.FirstOrDefault(a => flight.AirlineId == a.AirlineId),
-                    from = airportDeparture,
-                    to = airportArrival,
-                    duration = cleanedTimeDifference + "h",
-                    flightClass = flightClass,
-                    type = type
-                };
-                if(flightClass == "PT")
-                {
-                    customFlight.classPricing = customFlight.EconomyPrice;
-                }
-                else
-                {
-                    customFlight.classPricing = customFlight.BussinessPrice;
-                }
-                customFlights.Add(customFlight);
-            }
-
             var viewModel = new MyViewModel
             {
                 Flights = customFlights,
                 Airlines = airlines
             };
+
             if (flights.Any())
             {
-                return View(viewModel);
+                foreach (var flight in flights)
+                {
+                    var cleanedTimeDifference = (flight.ArrivalDatetime - flight.DepartureDatetime).ToString().TrimStart('0').TrimEnd('0').TrimEnd(':');
+                    var customFlight = new CustomFlight()
+                    {
+                        FlightId = flight.FlightId,
+                        AirlineId = flight.AirlineId,
+                        DepartureAirportId = flight.AirlineId,
+                        ArrivalAirportId = flight.AirlineId,
+                        DepartureDatetime = flight.DepartureDatetime,
+                        ArrivalDatetime = flight.ArrivalDatetime,
+                        EconomyPrice = flight.EconomyPrice,
+                        BussinessPrice = flight.BussinessPrice,
+                        airlineInfo = dbContext.Airlines.FirstOrDefault(a => flight.AirlineId == a.AirlineId),
+                        from = airportDeparture,
+                        to = airportArrival,
+                        duration = cleanedTimeDifference + "h",
+                        flightClass = flightClass,
+                        type = type
+                    };
+                    if (flightClass == "PT")
+                    {
+                        customFlight.classPricing = customFlight.EconomyPrice;
+                    }
+                    else
+                    {
+                        customFlight.classPricing = customFlight.BussinessPrice;
+                    }
+                    customFlights.Add(customFlight);
+                }
             }
             else
             {
                 ViewData["Message"] = "Không tìm thấy chuyến bay nào";
-                return View(viewModel);
             }
+            return View(viewModel);
         }
         [Route("/select-flight/booking-seat")]
         [HttpPost]

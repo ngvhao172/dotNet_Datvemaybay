@@ -281,15 +281,15 @@ namespace Csharp_DatVeMayBay.Controllers
             if(ticketResult!=null)
             {
                 Console.WriteLine(ticketResult.Flight.ToString());
-                var airportDeparture = dbContext.Airports.FirstOrDefault(a => ticketResult.Flight.DepartureAiportId == a.AirportId);
-                var airportArrival = dbContext.Airports.FirstOrDefault(a => ticketResult.Flight.ArrivalAiportId == a.AirportId);
+                var airportDeparture = dbContext.Airports.FirstOrDefault(a => ticketResult.Flight.DepartureAirportId == a.AirportId);
+                var airportArrival = dbContext.Airports.FirstOrDefault(a => ticketResult.Flight.ArrivalAirportId == a.AirportId);
                 var flight = dbContext.Flights.Where(f => f.FlightId == ticketResult.FlightId).FirstOrDefault();
                 var customFlight = new CustomFlight()
                 {
                     FlightId = flight.FlightId,
                     AirlineId = flight.AirlineId,
-                    DepartureAiportId = flight.AirlineId,
-                    ArrivalAiportId = flight.AirlineId,
+                    DepartureAirportId = flight.AirlineId,
+                    ArrivalAirportId = flight.AirlineId,
                     DepartureDatetime = flight.DepartureDatetime,
                     ArrivalDatetime = flight.ArrivalDatetime,
                     EconomyPrice = flight.EconomyPrice,

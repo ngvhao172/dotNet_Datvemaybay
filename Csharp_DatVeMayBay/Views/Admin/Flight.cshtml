@@ -1,0 +1,221 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!-- Modal -->
+    <div id="FlightModal" class="modal fade">
+        <div class="modal-dialog">
+            <form method="post" id="FlightForm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title"><i class="fa fa-plus"></i> Thêm/Sửa Chuyến bay</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="error-message" class="alert alert-warning alert-dismissible fade show" role="alert"
+                            style="display: none">
+                            <strong></strong>
+                            <button type="button" class="btn-close" aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="airline_id" class="control-label">TÊN HÃNG BAY</label>
+                            <select class="form-control" id="airline_id" name="airline_id" required>
+                                <option value="">Chọn hãng bay</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="departure_airport_id" class="control-label">TÊN SÂN BAY KHỞI HÀNH</label>
+                            <select class="form-control" required id="departure_airport_id" name="departure_airport_id">
+                                <option value="">Chọn sân bay khởi hành</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="arrival_airport_id" class="control-label">TÊN SÂN BAY ĐÍCH</label>
+                            <select class="form-control" required id="arrival_airport_id" name="arrival_airport_id">
+                                <option value="">Chọn sân bay đích</option>
+                            </select>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="departure_datetime" class="control-label">THỜI GIAN KHỞI HÀNH</label>
+                            <span id="datetime-error" hidden></span>
+                            <input type="datetime-local" required class="form-control" id="departure_datetime"
+                                name="departure_datetime">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="arrival_datetime" class="control-label">THỜI GIAN ĐẾN</label>
+                            <input type="datetime-local" required class="form-control" id="arrival_datetime"
+                                name="arrival_datetime">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="economy_price" class="control-label">GIÁ PHỔ THÔNG</label>
+                            <input type="number" required class="form-control" id="economy_price" name="economy_price">
+                        </div>
+                        <div class="form-group">
+                            <label for="business_price" class="control-label">GIÁ THƯƠNG GIA</label>
+                            <input type="number" required class="form-control" id="business_price"
+                                name="business_price">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="flight_id" id="flight_id" />
+                        <input type="hidden" name="action" id="action" value="" />
+                        <input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form method="post" id="DeleteFlightForm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Thông báo xoá</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="flight_id" id="delete_flight_id" />
+                        <input type="hidden" name="action" id="delete_action" value="" />
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <input type="submit" name="save" id="delete_save" class="btn btn-danger" value="Xoá" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="body">
+        <div class="container-fluid p-5">
+            <div id="error-delete-message" class="alert alert-warning alert-dismissible fade show" role="alert"
+                style="display: none">
+                <strong></strong>
+                <button type="button" class="btn-close" aria-label="Close">
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <button id="today_flight" class="list-group-item list-group-item-action active list-group-item-success"
+                            id="list-flights_today-list" data-bs-toggle="tab" href="#list-flights_today"
+                            data-bs-target="#list-flights_today" role="tab" aria-controls="list-flights_today">Chuyến
+                            bay hôm
+                            nay</button>
+                        <button id="all_flight" class="list-group-item list-group-item-action list-group-item-success"
+                            id="list-all-flights-list" data-bs-toggle="tab" href="#list-all-flights"
+                            data-bs-target="#list-all-flights" role="tab" aria-controls="list-all-flights">Danh sách
+                            chuyến bay</button>
+                        <button type="button" name="add" id="addFlight"
+                            class="list-group-item list-group-item-action ">Thêm chuyến bay mới</button>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <div class="input-group date datetimepicker" data-target-input="nearest">
+                                <div class="input-group-text d-block">Ngày đi <i class="fa fa-calendar"
+                                        style="height: 100%;"></i></div><input required id="search_fromdate" type="date"
+                                    class="form-control datetimepicker-input" data-target=".datetimepicker" />
+                                <div class="input-group-append" data-target="#datetimepicker"
+                                    data-toggle="datetimepicker">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="input-group date datetimepicker" data-target-input="nearest">
+                                <div class="input-group-text d-block">Ngày về <i class="fa fa-calendar"
+                                        style="height: 100%;"></i></div><input required id="search_todate" type="date"
+                                    class="form-control datetimepicker-input" data-target=".datetimepicker" />
+                                <div class="input-group-append" data-target="#datetimepicker"
+                                    data-toggle="datetimepicker">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <input type="button" name="save" id="btn_search" class="btn btn-info" value="Tìm kiếm" />
+                        </div>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-flights_today" role="tabpanel"
+                            aria-labelledby="list-flights_today-list">
+                            <div class="container-fluid" id="dataContainer">
+                                <div class="row g-3">
+                                    <table class="table table-striped" id="dt-flight-today" style="width: 100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">MÃ CHUYẾN BAY</th>
+                                                <th scope="col">TÊN HÃNG BAY</th>
+                                                <th scope="col">TÊN SÂN BAY KHỞI HÀNH</th>
+                                                <th scope="col">TÊN SÂN BAY ĐÍCH</th>
+                                                <th scope="col">THỜI GIAN KHỞI HÀNH</th>
+                                                <th scope="col">THỜI GIAN ĐẾN</th>
+                                                <th scope="col">GIÁ PHỔ THÔNG</th>
+                                                <th scope="col">GIÁ THƯƠNG GIA</th>
+                                                <th scope="col"></th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <th scope="col">MÃ CHUYẾN BAY</th>
+                                            <th scope="col">TÊN HÃNG BAY</th>
+                                            <th scope="col">TÊN SÂN BAY KHỞI HÀNH</th>
+                                            <th scope="col">TÊN SÂN BAY ĐÍCH</th>
+                                            <th scope="col">THỜI GIAN KHỞI HÀNH</th>
+                                            <th scope="col">THỜI GIAN ĐẾN</th>
+                                            <th scope="col">GIÁ PHỔ THÔNG</th>
+                                            <th scope="col">GIÁ THƯƠNG GIA</th>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="list-all-flights" role="tabpanel"
+                            aria-labelledby="list-all-flights-list">
+                            <table class="table table-striped" id="dt-flight" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">MÃ CHUYẾN BAY</th>
+                                        <th scope="col">MÃ HÃNG BAY</th>
+                                        <th scope="col">MÃ SÂN BAY KHỞI HÀNH</th>
+                                        <th scope="col">MÃ SÂN BAY ĐÍCH</th>
+                                        <th scope="col">THỜI GIAN KHỞI HÀNH</th>
+                                        <th scope="col">THỜI GIAN ĐẾN</th>
+                                        <th scope="col">GIÁ PHỔ THÔNG</th>
+                                        <th scope="col">GIÁ THƯƠNG GIA</th>
+                                        <th scope="col"></th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <th scope="col">MÃ CHUYẾN BAY</th>
+                                    <th scope="col">MÃ HÃNG BAY</th>
+                                    <th scope="col">MÃ SÂN BAY KHỞI HÀNH</th>
+                                    <th scope="col">MÃ SÂN BAY ĐÍCH</th>
+                                    <th scope="col">THỜI GIAN KHỞI HÀNH</th>
+                                    <th scope="col">THỜI GIAN ĐẾN</th>
+                                    <th scope="col">GIÁ PHỔ THÔNG</th>
+                                    <th scope="col">GIÁ THƯƠNG GIA</th>
+                                </tfoot>
+                            </table>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/flight_script.js" asp-append-version="true"></script>

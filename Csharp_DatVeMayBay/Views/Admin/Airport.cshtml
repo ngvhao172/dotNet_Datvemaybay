@@ -1,11 +1,10 @@
-﻿@*@model List<Csharp_DatVeMayBay.Models.Domain.Airline>;*@
-<!-- Modal -->
-    <div id="AirlineModal" class="modal fade">
+﻿<!-- Modal -->
+    <div id="AirportModal" class="modal fade">
         <div class="modal-dialog">
-            <form method="post" id="AirlineForm" enctype="multipart/form-data">
+            <form method="post" id="AirportForm" enctype="multipart/form-data">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title"><i class="fa fa-plus"></i> Thêm/Sửa Hãng bay</h4>
+                        <h4 class="modal-title"><i class="fa fa-plus"></i> Thêm/Sửa Sân bay</h4>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
@@ -17,21 +16,21 @@
                             </button>
                         </div>
                         <div class="mb-3 form-group">
-                            <label for="airline_name" class="control-label">TÊN HÃNG BAY</label>
-                            <input type="text" required class="form-control" id="airline_name" name="airline_name">
-                        </div>
-                         <div class="mb-3 form-group">
-                            <label for="airline_code" class="control-label">CODE</label>
-                            <input type="text" required class="form-control" id="airline_code" name="airline_code">
+                            <label for="airport_name" class="control-label">TÊN SÂN BAY</label>
+                            <input type="text" required class="form-control" id="airport_name" name="airport_name">
                         </div>
                         <div class="mb-3 form-group">
-                            <label for="airline_logo" class="control-label">LOGO</label>
-                            <input type="file" required class="form-control" id="airline_logo" name="airline_logo">
-                            <span id="img_uploaded"></span>
+                            <label for="airport_location" class="control-label">ĐỊA ĐIỂM</label>
+                            <input type="text" required class="form-control" id="airport_location"
+                                name="airport_location">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="airport_code" class="control-label">VIẾT TẮT</label>
+                            <input type="text" required class="form-control" id="airport_code" name="airport_code">
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="hidden" name="airline_id" id="airline_id" />
+                        <input type="hidden" name="airport_id" id="airport_id" />
                         <input type="hidden" name="action" id="action" value="" />
                         <input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Đóng</button>
@@ -45,7 +44,7 @@
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <form method="post" id="DeleteAirlineForm">
+            <form method="post" id="DeleteAirportForm">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="deleteModalLabel">Thông báo xoá</h5>
@@ -57,7 +56,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <input type="hidden" name="airline_id" id="delete_airline_id" />
+                        <input type="hidden" name="airport_id" id="delete_airport_id" />
                         <input type="hidden" name="action" id="delete_action" value="" />
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
                         <input type="submit" name="save" id="delete_save" class="btn btn-danger" value="Xoá" />
@@ -66,16 +65,17 @@
             </form>
         </div>
     </div>
+    <!-- Delete Modal -->
     <div class="body">
         <div class="container-fluid p-5">
             <div class="row">
                 <div class="col-2">
                     <div class="list-group" id="list-tab" role="tablist">
-                        <a class="list-group-item list-group-item-action list-group-item-success"  
+                        <a class="list-group-item list-group-item-action active list-group-item-success" id="list-profile-list"
                             data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Danh sách
-                            hãng bay</a>
-                        <button type="button" name="add" id="addAirline"
-                            class="list-group-item list-group-item-action">Thêm hãng bay mới</button>
+                            sân bay</a>
+                        <button type="button" name="add" id="addAirport"
+                            class="list-group-item list-group-item-action">Thêm sân bay mới</button>
                     </div>
                 </div>
                 <div class="col-10">
@@ -89,36 +89,23 @@
                                     <span aria-hidden="true"></span>
                                 </button>
                             </div>
-                            <table class="table table-striped" id="dt-airline" style="width: 100%">
+                            <table class="table table-striped" id="dt-airport" style="width: 100%">
                                 <thead>
                                     <tr>
-                                        <th scope="col">MÃ HÃNG BAY</th>
-                                        <th scope="col">TÊN HÃNG BAY</th>
-                                        <th scope="col">CODE</th>
-                                        <th scope="col">LOGO</th>
+                                        <th scope="col">MÃ SÂN BAY</th>
+                                        <th scope="col">TÊN SÂN BAY</th>
+                                        <th scope="col">ĐỊA ĐIỂM</th>
+                                        <th scope="col">VIẾT TẮT</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                         @*       @foreach(var airline in Model)
-                                {
-                                    <tr>
-                                            <td>@airline.AirlineId</td>
-                                            <td>@airline.AirlineName</td>
-                                            <td>@airline.AirlineCode</td>
-                                            <td><img src="~/@airline.AirlineLogo"/></td>
-                                            <td><button type="button" name="update" id="@airline.AirlineId" data-name ="@airline.AirlineName" class="update btn btn-outline-success">Sửa</button></td>
-                                            <td><button type="button" name="delete" id="@airline.AirlineId" data-name ="@airline.AirlineName" class="delete btn btn-outline-danger" >Xoá</button></td>
-                                    </tr>
-                                }*@
-                            </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th scope="col">MÃ HÃNG BAY</th>
-                                        <th scope="col">TÊN HÃNG BAY</th>
-                                        <th scope="col">CODE</th>
-                                        <th scope="col">LOGO</th>
+                                        <th scope="col">MÃ SÂN BAY</th>
+                                        <th scope="col">TÊN SÂN BAY</th>
+                                        <th scope="col">ĐỊA ĐIỂM</th>
+                                        <th scope="col">VIẾT TẮT</th>
                                         <th scope="col"></th>
                                         <th scope="col"></th>
                                     </tr>
@@ -130,6 +117,4 @@
             </div>
         </div>
     </div>
-<script src="~/js/airline_script.js" asp-append-version="true"></script>
-
-    
+<script src="~/js/airport_script.js" asp-append-version="true"></script>
