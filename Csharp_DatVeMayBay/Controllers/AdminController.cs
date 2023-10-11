@@ -1,9 +1,11 @@
 ﻿using Csharp_DatVeMayBay.Data;
 using Csharp_DatVeMayBay.Models.Domain;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Csharp_DatVeMayBay.Controllers
 {
+    /*[Authorize(Policy = "AdminOnly")]*/
     public class AdminController : Controller
     {
         private readonly DBContext dbContext;

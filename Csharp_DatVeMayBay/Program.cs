@@ -16,18 +16,33 @@ builder.Services.AddAuthentication(options =>
 .AddCookie(options =>
 {
     options.LoginPath = "/login";
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(20); 
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
     options.LogoutPath = "/logout";
     options.SlidingExpiration = true;//hết phiên làm việc
 });
+/*builder.Services.AddAuthentication()
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/login";
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        options.LogoutPath = "/logout";
+        options.SlidingExpiration = true;
+    });*/
+
 /*SESSION*/
-/*builder.Services.AddDistributedMemoryCache();*/
+builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromSeconds(10);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
+});
+
+/*Authorization*/
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireClaim("Role", "Admin"));
 });
 
 //config database

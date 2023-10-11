@@ -4,6 +4,7 @@ using Csharp_DatVeMayBay.Models.Domain;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace Csharp_DatVeMayBay.Controllers
 {
@@ -17,8 +18,16 @@ namespace Csharp_DatVeMayBay.Controllers
 
         public async Task<IActionResult> Index()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                if (User.FindFirst(ClaimTypes.Role).Value == "Admin")
+                {
+                    return RedirectToAction("Airline", "Admin");
+                }
+            }
             var airports = await dbContext.Airports.ToListAsync();
             return View(airports);
+           
         }
 
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DfmTbZyeqzzoLQMuSUGj32Di2tN3fHfbMQApFE25JV8=",
+  "Hash": "QFT6+SK0AhkQdzbDHoD5M+4R/LW++h0GuVvPv1o6YJs=",
   "Source": "Csharp_DatVeMayBay",
   "BasePath": "_content/Csharp_DatVeMayBay",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Csharp_DatVeMayBay\\wwwroot",
       "Source": "Csharp_DatVeMayBay",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "Csharp_DatVeMayBay.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css"
+      "OriginalItemSpec": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "Csharp_DatVeMayBay.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css"
+      "OriginalItemSpec": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\site.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\site.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\favicon.ico",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\favicon.ico",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\BambooAirwaysLogo.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\BambooAirwaysLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/BambooAirwaysLogo.png",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\BambooAirwaysLogo.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\JetStarLogo.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\JetStarLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/JetStarLogo.png",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\JetStarLogo.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\Mos word2016.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\Mos word2016.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/Mos word2016.png",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\Mos word2016.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\PacificAirlinesLogo.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\PacificAirlinesLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/PacificAirlinesLogo.png",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\PacificAirlinesLogo.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/studentid.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\studentid.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/studentid.jpg.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\studentid.jpg.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietjetAirLogo.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietjetAirLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/VietjetAirLogo.png",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\VietjetAirLogo.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietnamAirlinesLogo.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietnamAirlinesLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/VietnamAirlinesLogo.png",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\VietnamAirlinesLogo.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\background-images-personal.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\background-images-personal.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/background-images-personal.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\img\\background-images-personal.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\avatar.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\avatar.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/avatar.svg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\avatar.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\book-tc-plane.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\book-tc-plane.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/book-tc-plane.svg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\book-tc-plane.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\emirates-logo.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\emirates-logo.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/emirates-logo.svg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\emirates-logo.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\fast-food.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\fast-food.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/fast-food.svg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\fast-food.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\plane.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\plane.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/plane.svg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\plane.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\round-seat.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\round-seat.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/round-seat.svg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\round-seat.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\stopwatch.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\stopwatch.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/stopwatch.svg",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\stopwatch.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\wifi.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\wifi.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/wifi.svg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\wifi.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\logo-footer.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\logo-footer.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/footer/logo-footer.png",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\img\\footer\\logo-footer.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\mailbox.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\mailbox.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/footer/mailbox.png",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\img\\footer\\mailbox.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Frame 36.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Frame 36.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/Frame 36.jpg",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\Frame 36.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Hue.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Hue.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/Hue.jpg",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\Hue.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\live-travel.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\live-travel.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/live-travel.jpg",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\live-travel.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\new-york.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\new-york.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/new-york.svg",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\new-york.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\plane-search.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\plane-search.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/plane-search.jpg",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\plane-search.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\sky-search-tc.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\sky-search-tc.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/sky-search-tc.jpg",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\sky-search-tc.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slide-show.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slide-show.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slide-show.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slide-show.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-1.jpeg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-1.jpeg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-1.jpeg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-1.jpeg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-2.jpg",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-2.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-2.svg",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-2.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-3.jpg",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-3.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-3-search-tc.jpg",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/thanh-pho-Da-Nang.jpg",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/thanh-pho-Ho-Chi-Minh.jpg",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/thu-do-Ha-Noi.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Group 4.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Group 4.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/Group 4.png",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\Group 4.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Logo.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Logo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/Logo.png",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\Logo.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\logofooter.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\logofooter.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/logofooter.png",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\logofooter.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\plane3.jpeg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\plane3.jpeg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/plane3.jpeg",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\plane3.jpeg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\logo-navbar.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\logo-navbar.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/logo-navbar.png",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo-navbar.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\arrow-bottom.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\arrow-bottom.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/arrow-bottom.svg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\arrow-bottom.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\avatar.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\avatar.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/avatar.svg",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\avatar.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\date.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\date.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/date.png",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\date.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\fast-food.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\fast-food.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/fast-food.svg",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\fast-food.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\gate.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\gate.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/gate.png",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\gate.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\maQR.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\maQR.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/maQR.svg",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\maQR.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\round-seat.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\round-seat.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/round-seat.svg",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\round-seat.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\seat.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\seat.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/seat.png",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\seat.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\sky-search-tc.jpg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\sky-search-tc.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/sky-search-tc.jpg",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\sky-search-tc.jpg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\stopwatch.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\stopwatch.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/stopwatch.svg",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\stopwatch.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\time.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\time.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/time.png",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\time.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\visa.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\visa.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/visa.svg",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\visa.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\wifi.svg",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\wifi.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/wifi.svg",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\wifi.svg"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\userlogo.png",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\userlogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/userlogo.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\img\\userlogo.png"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airline_script.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\airline_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/airline_script.js",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\js\\airline_script.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airport_script.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\airport_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/airport_script.js",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\js\\airport_script.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/flight_script.js",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\js\\flight_script.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\site.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\site.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.css",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.css.map",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.min.css",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.min.css.map",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
