@@ -1,4 +1,4 @@
-﻿@model Csharp_DatVeMayBay.Controllers.BookingController.FinalTicketModel;
+﻿@*@model Csharp_DatVeMayBay.Controllers.BookingController.FinalTicketModel;
 @using Csharp_DatVeMayBay.Util.CustomHelpers;
 <main class="body-section" style="background: #FAFAFA; mt-5;">
     <!--  -->
@@ -100,7 +100,7 @@
                                                 {{else}}
                                                     {{user.first_name}} {{user.last_name}}
                                             {{/if}}*@
-                                            @if (User.Identity.IsAuthenticated)
+                                           @* @if (User.Identity.IsAuthenticated)
                                             {
                                                 @User.Identity.Name;
                                             }
@@ -183,7 +183,7 @@
                                                 {{else}}
                                                       {{flightData.seatNo}}
                                             {{/if}}*@
-                                                @Model.PassengerInfo.seat
+                                               @* @Model.PassengerInfo.seat
 
                                         </div>
                                     </div>
@@ -252,4 +252,4 @@
         <!-- Book-body -->
 
 
-</main>
+</main>*@

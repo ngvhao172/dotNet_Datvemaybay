@@ -1,4 +1,4 @@
-﻿using Csharp_DatVeMayBay.Data;
+﻿/*using Csharp_DatVeMayBay.Data;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using static Csharp_DatVeMayBay.Controllers.FlightsController;
@@ -17,18 +17,18 @@ namespace Csharp_DatVeMayBay.Controllers
         {
             this.dbContext = dbContext;
         }
-        /*      private bool isPost*/
+        *//*      private bool isPost*//*
         static FinalTicketModel finalTicketValue;
         public class TicketFlightModel
         {
             public Ticket Ticket;
-            public CustomFlight Flight;
+         *//*   public CustomFlight Flight;*//*
         }
         public class FinalTicketModel
         {
             public List<Creditcard> creditcards;
             public Ticket Ticket { get; set; }
-            public CustomFlight CustomFlight { get; set; }
+        *//*    public CustomFlight CustomFlight { get; set; }*//*
             public PassengerInfo PassengerInfo { get; set; }
         }
 
@@ -46,10 +46,10 @@ namespace Csharp_DatVeMayBay.Controllers
                 var seatNo = Request.Form["seatNo"];
                 var passengerInfo = new PassengerInfo(firstName, lastName, phoneNumber, address, Dob, seatNo);
                 var flightData = Request.Form["flightData"];
-                var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
+               // var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
                 var viewModel = new FinalTicketModel
                 {
-                    CustomFlight = customFlight,
+                 *//*   CustomFlight = customFlight,*//*
                     PassengerInfo = passengerInfo
                 };
 
@@ -60,14 +60,14 @@ namespace Csharp_DatVeMayBay.Controllers
                 var flightData = Request.Form["flightData"];
                 var seatNo = Request.Form["seatNo"];
                 Console.WriteLine(flightData.ToString());
-                var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
-                /* PassengerInfo passengerInfo = new PassengerInfo ;*/
+                //var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
+                *//* PassengerInfo passengerInfo = new PassengerInfo ;*//*
                 var user = await dbContext.Users.Where(u => u.UserEmail == User.FindFirst(ClaimTypes.Email).Value).FirstAsync();
                 var creditcardsUser = dbContext.Creditcards.Where(c => c.UserId == user.UserId).ToList();
                 
                 var viewModel = new FinalTicketModel
                 {
-                    CustomFlight = customFlight,
+                    //CustomFlight = customFlight,
                     PassengerInfo = new PassengerInfo(user.FirstName, user.LastName, user.PhoneNumber, user.Address, DateOnly.Parse(user.Dob.Date.ToString("yyyy-MM-dd")), seatNo),
                     creditcards = creditcardsUser
                 };
@@ -83,18 +83,18 @@ namespace Csharp_DatVeMayBay.Controllers
             var passengerInfo = JsonConvert.DeserializeObject<PassengerInfo>(passenger);
 
             var flightData = Request.Form["flightData"];
-            var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
+            //var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
             var creditcards = Request.Form["cardCreditList"];
             List<Creditcard> cardList = JsonConvert.DeserializeObject<List<Creditcard>>(creditcards);
-/*            foreach (var creditcardValue in creditcards)
+*//*            foreach (var creditcardValue in creditcards)
             {
                 Console.WriteLine(creditcardValue);
                 Creditcard creditcardObject = JsonConvert.DeserializeObject<Creditcard>(creditcardValue);
                 creditcardList.Add(creditcardObject);
 
-            }*/
+            }*//*
             var user = new User();
-            /*Tạo user nếu chưa tồn tại hoặc chưa login*/
+            *//*Tạo user nếu chưa tồn tại hoặc chưa login*//*
             if (!User.Identity.IsAuthenticated)
             {
                 user = new User
@@ -106,10 +106,10 @@ namespace Csharp_DatVeMayBay.Controllers
                     PhoneNumber = passengerInfo.phoneNumber,
                     Dob = DateTime.Parse(passengerInfo.Dob.ToString())
                 };
-                /*Save user*/
+                *//*Save user*//*
                 dbContext.Add(user);
                 await dbContext.SaveChangesAsync();
-                /*Lưu lại creditcard*/
+                *//*Lưu lại creditcard*//*
                 foreach(var creditcard in cardList)
                 {
                     creditcard.UserId = user.UserId;
@@ -117,10 +117,10 @@ namespace Csharp_DatVeMayBay.Controllers
                 }
                 await dbContext.SaveChangesAsync();
             }
-            /*Trường hợp User đã login*/
+            *//*Trường hợp User đã login*//*
             else
             {
-                /*Get User from UserEmail */
+                *//*Get User from UserEmail *//*
                 var userExist = await dbContext.Users.Where(u => u.UserEmail == User.FindFirst(ClaimTypes.Email).Value).FirstAsync();
                 if (userExist != null)
                 {
@@ -133,15 +133,15 @@ namespace Csharp_DatVeMayBay.Controllers
                 }
                 await dbContext.SaveChangesAsync();
             }
-            /*Get flight cũ*/
-            var taskFlight = dbContext.Flights.Where(flight => flight.FlightId == customFlight.FlightId).FirstOrDefaultAsync();
+            *//*Get flight cũ*//*
+            //var taskFlight = dbContext.Flights.Where(flight => flight.FlightId == customFlight.FlightId).FirstOrDefaultAsync();
 
-            Flight Flight = await taskFlight;
-            /**/
+           // Flight Flight = await taskFlight;
+            *//**//*
             if (user!=null)
             {
-                /*Tạo booking, tạo ticket và trả về View*/
-                /*var Booking = dbContext.Bookings.Add(new Booking { })*/
+                *//*Tạo booking, tạo ticket và trả về View*/
+                /*var Booking = dbContext.Bookings.Add(new Booking { })*//*
                 var newBooking = new Booking
                 {
                     UserId = user.UserId,
@@ -156,39 +156,39 @@ namespace Csharp_DatVeMayBay.Controllers
                 await dbContext.SaveChangesAsync();
                 int BookingIdValue = newBooking.BookingId;
                 if(BookingIdValue != null) {
-/*                    if (passengerInfo == null)
+*//*                    if (passengerInfo == null)
                     {
                         passengerInfo = new PassengerInfo(user.FirstName, user.LastName, user.PhoneNumber, user.Address, DateOnly.Parse(user.Dob.Date.ToString("yyyy-MM-dd")), customFlight.seatNo);
-                    }*/
+                    }*//*
                     Console.WriteLine("Seat: " + passengerInfo.seat[0],passengerInfo.seat[1]);
                     Console.WriteLine("FlightID: " + Flight.FlightId);
                     var seatRow = passengerInfo.seat[0];
                     var seatColumn = int.Parse(passengerInfo.seat[1].ToString());
 
-                    /* Console.WriteLine("SeatBooked: " + Flight.Seats);*/
+                    *//* Console.WriteLine("SeatBooked: " + Flight.Seats);*/
 
-                    /*Lấy id của seat đã chọn*/
+                    /*Lấy id của seat đã chọn*//*
                     var seatTask = await dbContext.Seats.Where(seat => seat.FlightId == Flight.FlightId && seat.SeatRow == seatRow && seat.SeatColumn == seatColumn).FirstOrDefaultAsync();
-                    /*  Seat SeatBooked = Flight.Seats.Where(seat => seat.SeatRow == seatRow && seat.SeatColumn == seatColumn).FirstOrDefault();*/
+                    *//*  Seat SeatBooked = Flight.Seats.Where(seat => seat.SeatRow == seatRow && seat.SeatColumn == seatColumn).FirstOrDefault();*/
 
-                    /*Đợi tác vụ hoàn thành*/
+                    /*Đợi tác vụ hoàn thành*//*
                     Seat SeatBooked = seatTask;
                     Console.WriteLine("SeatBooked: "+ SeatBooked);
 
                     if (SeatBooked != null)
                     {
-                        /*Update Seat Status*/
+                        *//*Update Seat Status*//*
                         SeatBooked.Status = Models.Enums.SeatStatus.Busy;
                         dbContext.Update(SeatBooked);
-        /*                 dbContext.SaveChangesAsync();*/
+        *//*                 dbContext.SaveChangesAsync();*/
                         /*Tạo ticket*/
-                        /*Retreiving the last ticket*/
+                        /*Retreiving the last ticket*//*
                         var code = "0001";
-                        /*Lấy ticket cuối cùng*/
+                        *//*Lấy ticket cuối cùng*//*
                         var Date = DateTime.Now.Date.ToString("yyyy-MM-dd").Replace("-", "");
-                        var AirlineCode = customFlight.airlineInfo.AirlineCode.ToString();
+                        //var AirlineCode = customFlight.airlineInfo.AirlineCode.ToString();
 
-                        var TicketString = AirlineCode + Date;
+                        //var TicketString = AirlineCode + Date;
 
                         var getLastTicketId = dbContext.Tickets
                         .Where(ticket => ticket.TicketId.Contains(TicketString))
@@ -206,10 +206,10 @@ namespace Csharp_DatVeMayBay.Controllers
 
                             code = string.Format("{0:D4}", lastfourId);
                         }
-                        /*Tạo ticket*/
+                        *//*Tạo ticket*//*
                         var newTicket = new Ticket
                         {
-                            TicketId = customFlight.airlineInfo.AirlineCode + DateTime.Now.Date.ToString("yyyy-MM-dd").Replace("-","") + code,
+                            //TicketId = customFlight.airlineInfo.AirlineCode + DateTime.Now.Date.ToString("yyyy-MM-dd").Replace("-","") + code,
                             BookingId = BookingIdValue,
                             Booking = newBooking,
                             Flight = Flight,
@@ -217,29 +217,29 @@ namespace Csharp_DatVeMayBay.Controllers
                             SeatId = SeatBooked.SeatId,
                             Seat = SeatBooked,
                             Status = Models.Enums.TicketStatus.Paid,
-                            TicketPrice = customFlight.classPricing
+                            //TicketPrice = customFlight.classPricing
                         };
                         dbContext.Add(newTicket);
                         dbContext.SaveChanges();
                         finalTicketValue = new FinalTicketModel
                         {
                             Ticket = newTicket,
-                            CustomFlight = customFlight,
+                            //CustomFlight = customFlight,
                             PassengerInfo = passengerInfo,
                         };
-                        /*Trả Data về View*/
+                        *//*Trả Data về View*//*
                         return Redirect("/ticket-info");
                     }
                     else
                     {
-                        /*Không tìm được Seat*/
+                        *//*Không tìm được Seat*//*
                         TempData["error"] = "Không tìm thấy Seat được chọn";
                         return RedirectToAction("Error505", "Error");
                     }
                 }
                 else
                 {
-                    /*Không tìm được Booking hay không tạo được Booking*/
+                    *//*Không tìm được Booking hay không tạo được Booking*//*
                     TempData["error"] = "Không tìm được Booking hay không tạo được Booking";
                     return RedirectToAction("Error505", "Error");
                 }
@@ -247,7 +247,7 @@ namespace Csharp_DatVeMayBay.Controllers
             }
             else
             {
-                /*Không tìm được User hay không tạo được User*/
+                *//*Không tìm được User hay không tạo được User*//*
                 TempData["error"] = "Không tìm được User hay không tạo được User";
                 return RedirectToAction("Error505", "Error");
             }
@@ -284,7 +284,7 @@ namespace Csharp_DatVeMayBay.Controllers
                 var airportDeparture = dbContext.Airports.FirstOrDefault(a => ticketResult.Flight.DepartureAirportId == a.AirportId);
                 var airportArrival = dbContext.Airports.FirstOrDefault(a => ticketResult.Flight.ArrivalAirportId == a.AirportId);
                 var flight = dbContext.Flights.Where(f => f.FlightId == ticketResult.FlightId).FirstOrDefault();
-                var customFlight = new CustomFlight()
+                *//*var customFlight = new CustomFlight()
                 {
                     FlightId = flight.FlightId,
                     AirlineId = flight.AirlineId,
@@ -297,11 +297,11 @@ namespace Csharp_DatVeMayBay.Controllers
                     airlineInfo = dbContext.Airlines.FirstOrDefault(a => flight.AirlineId == a.AirlineId),
                     from = airportDeparture,
                     to = airportArrival
-                };
+                };*//*
                 var TicketFlight = new TicketFlightModel
                 {
                     Ticket = ticketResult,
-                    Flight = customFlight
+                    //Flight = customFlight
                 };
                 return View(TicketFlight);
             }
@@ -310,3 +310,4 @@ namespace Csharp_DatVeMayBay.Controllers
 
     }
 }
+*/

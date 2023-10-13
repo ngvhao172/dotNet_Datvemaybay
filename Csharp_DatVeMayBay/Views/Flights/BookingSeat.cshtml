@@ -1,4 +1,4 @@
-﻿@model Csharp_DatVeMayBay.Controllers.FlightsController.CustomFlightViewModel
+﻿@model Csharp_DatVeMayBay.Models.Domain.Flight
 
 <p class="mt-5"></p>
 <div class="container-fluid pt-5 body-section">
@@ -79,7 +79,7 @@
                     const dec = 65;
                     /*const busySeats = ["A1", "B2"];*/ // Thay thế mảng busy_seats bằng dữ liệu thực tế
                     @{
-                        var busySeats = Model.FlightSeats
+                        var busySeats = Model.Seats
                         .Where(seat => seat.Status == Csharp_DatVeMayBay.Models.Enums.SeatStatus.Busy)
                         .Select(seat => seat.SeatRow + seat.SeatColumn.ToString())
                         .ToList();
