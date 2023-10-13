@@ -101,7 +101,7 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
             flight.BussinessPrice = Int32.Parse(business_price);
             try
             {
-                dbContext.Flights.Update(flight);
+                dbContext.Flights.Add(flight);
                 dbContext.SaveChanges();
 
                 /*Thêm ghế phụ thuộc*/

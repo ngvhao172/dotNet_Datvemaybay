@@ -30,5 +30,7 @@ namespace Csharp_DatVeMayBay.Models.Domain
 
         public DateTime Dob { get; set; }
 
+        public ICollection<Creditcard> Creditcards { get; set; }
+
     }
 }

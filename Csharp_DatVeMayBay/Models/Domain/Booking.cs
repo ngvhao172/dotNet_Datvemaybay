@@ -11,13 +11,21 @@ namespace Csharp_DatVeMayBay.Models.Domain
         public int BookingId { get; set; }
 
         [ForeignKey("User")]
+        [Required]
         public int UserId { get; set; }
-        [ForeignKey("Flight")]
-        public int FlightId { get; set; }
-        public DateTime BookingDatime { get; set; }
-        public int PassengerCount { get; set; }
-        public BookingStatus Status { get; set; }
 
+        [ForeignKey("Flight")]
+        [Required]
+        public int FlightId { get; set; }
+
+        [Required]
+        public DateTime BookingDatime { get; set; }
+
+        [Required]
+        public int PassengerCount { get; set; }
+
+        [Required]
+        public BookingStatus Status { get; set; }
         public User User { get; set; }
         public Flight Flight { get; set; }
     }

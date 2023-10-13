@@ -8,12 +8,17 @@ namespace Csharp_DatVeMayBay.Models.Domain
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CardId { get; set; }
+        [MaxLength(100)]
+        [Required]
         public string CardHolderName { get; set; }
 
         [ForeignKey("User")]
+        [Required]
         public int UserId { get; set; }
-
+        [Required]
+        [MaxLength(100)]
         public string CardNumber { get; set; }
+        [Required]
         public DateTime ExpirationDate { get; set; }
 
         public User User { get; set; }

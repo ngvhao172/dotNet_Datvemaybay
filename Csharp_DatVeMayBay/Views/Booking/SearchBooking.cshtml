@@ -1,5 +1,5 @@
-﻿@*@using Csharp_DatVeMayBay.Util.CustomHelpers;
-@model Csharp_DatVeMayBay.Controllers.BookingController.TicketFlightModel
+﻿@using Csharp_DatVeMayBay.Util.CustomHelpers;
+@model Csharp_DatVeMayBay.Models.Domain.Ticket
 @{
     ViewData["Title"] = "Search Booking";
 }
@@ -37,7 +37,7 @@
        
         @if (Model != null)
         {
-            @if(Model.Ticket == null)
+            @if(Model == null)
             {
                 <h2 class="p-5 ms-5">Không tìm thấy thông tin vé </h2>
             }
@@ -47,7 +47,7 @@
                     <!-- Row 1 -->
                     <div class="row">
                         <div class="col">
-                            <h1 class="bold">@Model.Ticket.TicketId</h1>
+                            <h1 class="bold">@Model.TicketId</h1>
                         </div>
                         <div class="col"></div>
                     </div>
@@ -56,23 +56,23 @@
                         <div class="row"><h3>Thông tin khách hàng</h3></div>
                         <div class="row mt-3">
                             <div class="col">
-                                <span class="fw-bold">Họ: @Model.Ticket.Booking.User.FirstName</span>
+                                <span class="fw-bold">Họ: @Model.Booking.User.FirstName</span>
                             </div>
                             <div class="col">
-                                <span class="fw-bold">Tên: @Model.Ticket.Booking.User.LastName </span>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col">
-                                <span class="fw-bold">Địa chỉ:   @Model.Ticket.Booking.User.Address </span>
-                            </div>
-                            <div class="col">
-                                <span class="fw-bold">Email:   @Model.Ticket.Booking.User.UserEmail</span>
+                                <span class="fw-bold">Tên: @Model.Booking.User.LastName </span>
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col">
-                                <span class="fw-bold">Số điện thoại: @Model.Ticket.Booking.User.PhoneNumber</span>
+                                <span class="fw-bold">Địa chỉ:   @Model.Booking.User.Address </span>
+                            </div>
+                            <div class="col">
+                                <span class="fw-bold">Email:   @Model.Booking.User.UserEmail</span>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <span class="fw-bold">Số điện thoại: @Model.Booking.User.PhoneNumber</span>
                             </div>
 
                         </div>
@@ -81,12 +81,17 @@
                     <div class="row mt-4">
                         <h3>Thông tin vé máy bay</h3>
                         <div class="row mt-3">
-                            <div class="col">
-                                <span class="fw-bold">Mã máy bay: Airbus @string.Concat("A", @Model.Ticket.FlightId)</span>
+                            <div class="col text-center">
+                                <span class="fw-bold">Mã máy bay: Airbus @string.Concat("A", @Model.FlightId)</span>
                             </div>
-                            <div class="col">
+                            <div class="col text-center">
                                 <span class="fw-bold">Ghế ngồi: 
-                            @Model.Ticket.Seat.SeatRow@Model.Ticket.Seat.SeatColumn
+                                     @Model.Seat.SeatRow@Model.Seat.SeatColumn
+                                </span>
+                            </div>
+                            <div class="col text-center">
+                                <span class="fw-bold">Hạng vé: 
+                                    @Model.TicketClass
                                 </span>
                             </div>
                         </div>
@@ -94,7 +99,7 @@
                             <div class="col-4 text-center">
                                         <div class="row"><p class="" style="opacity: 0.8;">@customHelper.splitDatetime(Model.Flight.DepartureDatetime)[0]</p></div> <!-- Ngày đi -->
                                 <div class="row"><p class="fs-4 fw-bold">@customHelper.splitDatetime(Model.Flight.DepartureDatetime)[1]</p></div> <!-- Giờ đi -->
-                                <div class="row"><p class="" style="opacity: 0.8;">@Model.Flight.from.AirportName <br /> @Model.Flight.from.AirportLocation</p></div> <!-- Nơi đi -->
+                                        <div class="row"><p class="" style="opacity: 0.8;">@Model.Flight.DepartureAirport.AirportName <br /> @Model.Flight.DepartureAirport.AirportLocation</p></div> <!-- Nơi đi -->
                             </div>
                             <div class="col-4 text-center">
                                 <img
@@ -105,7 +110,7 @@
                             <div class="col-4 text-center">
                                         <div class="row"><p class="" style="opacity: 0.8;">@customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[0]</p></div> <!-- Ngày đến -->
                                         <div class="row"><p class="fs-4 fw-bold">@customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[1]</p></div> <!-- Giờ đến -->
-                                <div class="row"><p class="" style="opacity: 0.8;">@Model.Flight.to.AirportName <br /> @Model.Flight.to.AirportLocation</p></div> <!-- Nơi đến -->
+                                                <div class="row"><p class="" style="opacity: 0.8;">@Model.Flight.ArrivalAirport.AirportName <br /> @Model.Flight.ArrivalAirport.AirportLocation</p></div> <!-- Nơi đến -->
                             </div>
                         </div>
                     </div>
@@ -113,7 +118,7 @@
                     <div class="row mt-4">
                         <div class="col"></div>
                         <div class="col text-end fw-bold fs-2">
-                             <span style="color: #ff8682;">@customHelper.FormatCurrency(Model.Ticket.TicketPrice)</span>
+                             <span style="color: #ff8682;">@customHelper.FormatCurrency(Model.TicketPrice)</span>
                         </div>
                     </div>
                 </div>
@@ -123,13 +128,13 @@
     }
 
     </main>
-@*<script>
+<script>
     $(document).ready(function() {
-        if(@Model.Ticket!=null){
+        if(@Model!=null){
              $("#show-ticket").show();
         }
         else{
               $("#show-ticket").hide();
         }
     });
-</script>*@
+</script>

@@ -19,43 +19,24 @@ namespace Csharp_DatVeMayBay.Controllers
         {
             public string Type { get; set; }
             public string FlightClass { get; set; }
-
             public DateTime DepartureDate { get; set; }
             public Airport DepartureAirport { get; set; }
             public Airport ArrivalAirport { get; set; }
 
+            public string SeatPicker { get; set; }
         }
         public class FlightViewModel
         {
             public FormData FormData { get; set; }
             public List<Flight> Flights { get; set; }
-
             public List<Airline> Airlines { get; set; }
         }
-
-        /* public class MyViewModel
-         {
-             public List<CustomFlight> Flights { get; set; }
-             public List<Airline> Airlines { get; set; }
-         }*/
-        /*public class CustomFlightViewModel
+        public class BookingSeatViewModel
         {
-            public List<Seat> FlightSeats { get; set; }
-            public CustomFlight CustomFlight { get; set; }
-            public string seatNo { get; set; }
-        }*/
-        public class CustomFlight : Flight
-        {
-            public string duration;
-            public string type { get; set; }
-            public string flightClass { get; set; }
-            public Airline airlineInfo { get; set; }
-            public Airport from { get; set; }
-            public Airport to { get; set; }
-            public decimal classPricing { get; set; }
-
+            public FormData FormData { get; set; }
+            public Flight Flight { get; set; }
+            public List<Seat> Seats { get; set; }
         }
-
         /*Route*/
         [Route("/select-flight")]
         [HttpPost]
@@ -99,57 +80,43 @@ namespace Csharp_DatVeMayBay.Controllers
         {
             var FlightData = Request.Form["FlightData"];
             var Flight = JsonConvert.DeserializeObject<Flight>(FlightData);
-            Flight FlightDataWithSeats = await dbContext.Flights.Where(f => f.FlightId == Flight.FlightId).Include(s => s.Seats).FirstOrDefaultAsync();
-            /*var FlightSeats = dbContext.Seats.Where(s => s.FlightId == Flight.FlightId).ToList();*/
+            var Form = Request.Form["FormData"];
+            var FormData = JsonConvert.DeserializeObject<FormData>(Form);
 
-            /*   Console.WriteLine(flightSeats.ToString());*/
-            /*  foreach (var flight in flightSeats)
-              {
-                  Console.WriteLine(flight.Status);
-              }*/
-            //var BusySeats = FlightSeats.Where(seat => seat.Status == Csharp_DatVeMayBay.Models.Enums.SeatStatus.Busy);
-            /*  foreach (var flight in FlightSeats)
-              {
-                  Console.WriteLine(flight.Status);
-              }*/
-            /*var viewModel = new CustomFlightViewModel
+            List<Seat> Seats = dbContext.Seats.Where(s => s.FlightId == Flight.FlightId).Where(s => s.Status == SeatStatus.Busy).ToList();
+            var newFormData = new FormData
             {
-                FlightSeats = flightSeats,
-            };*/
+                Type = FormData.Type,
+                FlightClass = FormData.FlightClass
+            };
+            var BookingSeatViewModel = new BookingSeatViewModel
+            {
+                FormData = newFormData,
+                Flight = Flight,
+                Seats = Seats
+            };
 
-            return View(FlightDataWithSeats);
+            return View(BookingSeatViewModel);
 
         }
-        /*[Route("/select-flight/flight-detail-booking")]
+        [Route("/select-flight/flight-detail-booking")]
         [HttpPost]
         public IActionResult FLightDetailBooking()
         {
-            var flightData = Request.Form["flightData"];
-            var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
-            var seatNo = Request.Form["seat"];
-            var viewModel = new CustomFlightViewModel
+            var FlightData = Request.Form["FlightData"];
+            var Flight = JsonConvert.DeserializeObject<Flight>(FlightData);
+            var Form = Request.Form["FormData"];
+            var FormData = JsonConvert.DeserializeObject<FormData>(Form);
+            var SeatNo = Request.Form["seat"];
+            FormData.SeatPicker = SeatNo;
+            var BookingViewModel = new BookingSeatViewModel
             {
-                CustomFlight = customFlight,
-                seatNo = seatNo
+                Flight = Flight,
+                FormData = FormData
             };
 
-            return View(viewModel);
+            return View(BookingViewModel);
 
-        }*/
-
-        /* public IActionResult Passeng()
-         {
-             var flightData = Request.Form["flightData"];
-             Console.WriteLine(flightData.ToString());
-             var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
-             customFlight.seat = Request.Form["seat"];
-             var viewModel = new CustomFlightViewModel
-             {
-                 CustomFlight = customFlight,
-             };
-
-             return View(viewModel);
-
-         }*/
+        }
     }
 }

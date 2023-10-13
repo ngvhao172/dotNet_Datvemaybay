@@ -1,23 +1,23 @@
-﻿@*@model Csharp_DatVeMayBay.Controllers.FlightsController.CustomFlightViewModel
+﻿@model Csharp_DatVeMayBay.Controllers.FlightsController.BookingSeatViewModel
 @using Csharp_DatVeMayBay.Util.CustomHelpers
 <!-- body -->
 <div class="container mt-5 pt-5 body-section">
     <form id="formBookNow" action="" method="post">
-        <input type="hidden" name="flightData" value='@Json.Serialize(@Model.CustomFlight)'>
-         <input type="hidden" name="seatNo" value="@Model.seatNo">
+        <input type="hidden" name="FlightData" value='@Json.Serialize(@Model.Flight)'>
+         <input type="hidden" name="FormData" value='@Json.Serialize(@Model.FormData)'>
         <div class="row mb-3">
             <!-- col left -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3">
                 <h1 class="fw-bolder">
-                    @Model.CustomFlight.airlineInfo.AirlineName
+                    @Model.Flight.Airline.AirlineName
                 </h1>
                 <div class="fs-5">
-                   @Model.CustomFlight.from.AirportLocation _ @Model.CustomFlight.from.AirportName
+                    @Model.Flight.DepartureAirport.AirportLocation _ @Model.Flight.DepartureAirport.AirportName
                     <br>
                     --
                     <br>
-                    @Model.CustomFlight.to.AirportLocation _ @Model.CustomFlight.to.AirportName
-                    <br>SeatNo:  @Model.seatNo, FlightNo:   @string.Concat("VN", Model.CustomFlight.FlightId),   @string.Concat("Airbus: A", Model.CustomFlight.FlightId) 
+                    @Model.Flight.ArrivalAirport.AirportLocation _ @Model.Flight.ArrivalAirport.AirportName
+                    <br>SeatNo:  @Model.FormData.SeatPicker, FlightNo:   @string.Concat("VN", Model.Flight.FlightId),   @string.Concat("Airbus: A", Model.Flight.FlightId) 
                   
                 </div>
             </div>
@@ -27,7 +27,14 @@
                 <div class="row">
                     <div class="col">
                         <span class="fw-bold fs-2 p-0 text-end" style="color:#ff8682">
-                            @customHelper.FormatCurrency(@Model.CustomFlight.classPricing)
+                            @if(Model.FormData.FlightClass == "PT")
+                            {
+                                @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
+                            }
+                            else
+                            {
+                                @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
+                            }
                         </span>
                     </div>
                 </div>
@@ -55,8 +62,8 @@
                         <!-- <form action="../booking-dt/booking-dt.php" method="POST" class="needs-validation" novalidate> -->
                         <div class="col">
                             <form action="../passenger" method="POST" class="needs-validation">
-                                <input type="hidden" name="flightData" value='@Json.Serialize(Model.CustomFlight)'>
-                                   <input type="hidden" name="seatNo" value="@Model.seatNo">
+                                <input type="hidden" name="FlightData" value='@Json.Serialize(Model.Flight)'>
+                                 <input type="hidden" name="FormData" value='@Json.Serialize(@Model.FormData)'>
                                 <div class="modal-header border-bottom-0">
                                     <div class="container">
                                         <div class="row">
@@ -77,14 +84,14 @@
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control border-dark" id="firstName"
-                                                        name="firstName" placeholder="" value="" required>
+                                                        name="FirstName" placeholder="" value="" required>
                                                     <label for="firstName" class="form-label">Họ</label>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="cvc" class="form-control border-dark" required
-                                                        id="lastName" name="lastName" placeholder="" value="">
+                                                        id="lastName" name="LastName" placeholder="" value="">
                                                     <label for="lastName">Tên</label>
                                                 </div>
                                             </div>
@@ -93,7 +100,7 @@
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="number" class="form-control border-dark" required
-                                                        id="phoneNumber" name="phoneNumber" placeholder="" value="">
+                                                        id="phoneNumber" name="PhoneNumber" placeholder="" value="">
                                                     <label for="phoneNumber">SĐT</label>
                                                 </div>
                                             </div>
@@ -102,7 +109,7 @@
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="cvc" class="form-control border-dark" required
-                                                        id="address" name="address" placeholder="" value="" required>
+                                                        id="address" name="Address" placeholder="" value="" required>
                                                     <label for="address">Địa chỉ</label>
                                                 </div>
                                             </div>
@@ -285,6 +292,5 @@
         $("#formBookNow").attr("action", "../payment-booking");
         </text>
     }
-    
+
 </script> 
-*@

@@ -11,10 +11,11 @@ namespace Csharp_DatVeMayBay.Models.Domain
         public int SeatId { get; set; }
 
         [ForeignKey("Flight")]
+        [Required]
         public int FlightId { get; set; }
-
+        [Required]
         public char SeatRow { get; set; }
-
+        [Required]
         public int SeatColumn { get; set; }  
         public SeatStatus Status { get; set; }
         public Flight Flight { get; set; }

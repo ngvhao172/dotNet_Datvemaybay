@@ -124,9 +124,9 @@ namespace Csharp_DatVeMayBay.Migrations
                 {
                     CardId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CardHolderName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CardHolderName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
-                    CardNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CardNumber = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     ExpirationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -160,13 +160,13 @@ namespace Csharp_DatVeMayBay.Migrations
                         column: x => x.FlightId,
                         principalTable: "Flights",
                         principalColumn: "FlightId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Bookings_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -195,12 +195,13 @@ namespace Csharp_DatVeMayBay.Migrations
                 name: "Tickets",
                 columns: table => new
                 {
-                    TicketId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    TicketId = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    TicketPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    TicketClass = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     BookingId = table.Column<int>(type: "int", nullable: false),
                     FlightId = table.Column<int>(type: "int", nullable: false),
-                    SeatId = table.Column<int>(type: "int", nullable: false),
-                    TicketPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Status = table.Column<int>(type: "int", nullable: false)
+                    SeatId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -263,8 +264,8 @@ namespace Csharp_DatVeMayBay.Migrations
                 columns: new[] { "UserEmail", "Enable", "Password", "UserId" },
                 values: new object[,]
                 {
-                    { "admin@gmail.com", true, "$2a$13$smNzWQglgODhnvt1Ns9CRu3Xf10VczVJCtpsKb9RsY0kqcteCZPHe", 1 },
-                    { "ngvhao@gmail.com", true, "$2a$13$zznljfHPyEhgKGOdsDmZ2OVGBSnN9l74DrYcQcIJdSShbGSEW14u.", 2 }
+                    { "admin@gmail.com", true, "$2a$13$Ax7aBGXk.tpI/c.UXtaCWO83MEMrkRu5oqVKTBsvDM29nGMRKpFX2", 1 },
+                    { "ngvhao@gmail.com", true, "$2a$13$F1VTIkeQP8ORbgqOFRjHOe9tts7DcnfcWtdK6b.cvQexCu3ay/7yy", 2 }
                 });
 
             migrationBuilder.InsertData(
@@ -272,56 +273,56 @@ namespace Csharp_DatVeMayBay.Migrations
                 columns: new[] { "FlightId", "AirlineId", "ArrivalAirportId", "ArrivalDatetime", "BussinessPrice", "DepartureAirportId", "DepartureDatetime", "EconomyPrice" },
                 values: new object[,]
                 {
-                    { 1, 1, 2, new DateTime(2023, 10, 10, 23, 0, 0, 0, DateTimeKind.Local), 2352881m, 1, new DateTime(2023, 10, 10, 17, 44, 0, 0, DateTimeKind.Local), 1226802m },
-                    { 2, 2, 2, new DateTime(2023, 10, 14, 2, 15, 0, 0, DateTimeKind.Local), 3265986m, 1, new DateTime(2023, 10, 14, 0, 59, 0, 0, DateTimeKind.Local), 1311592m },
-                    { 3, 2, 2, new DateTime(2023, 10, 10, 13, 48, 0, 0, DateTimeKind.Local), 2096508m, 1, new DateTime(2023, 10, 10, 8, 26, 0, 0, DateTimeKind.Local), 1104723m },
-                    { 4, 5, 2, new DateTime(2023, 10, 11, 11, 57, 0, 0, DateTimeKind.Local), 2335507m, 1, new DateTime(2023, 10, 11, 9, 57, 0, 0, DateTimeKind.Local), 1151131m },
-                    { 5, 2, 2, new DateTime(2023, 10, 10, 16, 18, 0, 0, DateTimeKind.Local), 3444774m, 1, new DateTime(2023, 10, 10, 14, 36, 0, 0, DateTimeKind.Local), 1287270m },
-                    { 6, 5, 2, new DateTime(2023, 10, 15, 3, 24, 0, 0, DateTimeKind.Local), 2366241m, 1, new DateTime(2023, 10, 14, 23, 49, 0, 0, DateTimeKind.Local), 1198081m },
-                    { 7, 3, 2, new DateTime(2023, 10, 10, 15, 47, 0, 0, DateTimeKind.Local), 3204964m, 1, new DateTime(2023, 10, 10, 11, 5, 0, 0, DateTimeKind.Local), 889702m },
-                    { 8, 2, 2, new DateTime(2023, 10, 13, 9, 4, 0, 0, DateTimeKind.Local), 2539154m, 1, new DateTime(2023, 10, 13, 7, 7, 0, 0, DateTimeKind.Local), 1400781m },
-                    { 9, 1, 2, new DateTime(2023, 10, 11, 21, 8, 0, 0, DateTimeKind.Local), 3289072m, 1, new DateTime(2023, 10, 11, 17, 30, 0, 0, DateTimeKind.Local), 1490097m },
-                    { 10, 4, 2, new DateTime(2023, 10, 14, 22, 29, 0, 0, DateTimeKind.Local), 3150207m, 1, new DateTime(2023, 10, 14, 17, 36, 0, 0, DateTimeKind.Local), 1161341m },
-                    { 11, 4, 2, new DateTime(2023, 10, 14, 5, 1, 0, 0, DateTimeKind.Local), 3216753m, 1, new DateTime(2023, 10, 14, 2, 0, 0, 0, DateTimeKind.Local), 1030528m },
-                    { 12, 2, 2, new DateTime(2023, 10, 13, 9, 14, 0, 0, DateTimeKind.Local), 3459929m, 1, new DateTime(2023, 10, 13, 4, 52, 0, 0, DateTimeKind.Local), 1080261m },
-                    { 13, 4, 2, new DateTime(2023, 10, 14, 12, 56, 0, 0, DateTimeKind.Local), 2516089m, 1, new DateTime(2023, 10, 14, 5, 42, 0, 0, DateTimeKind.Local), 1211249m },
-                    { 14, 4, 2, new DateTime(2023, 10, 12, 9, 27, 0, 0, DateTimeKind.Local), 2566395m, 1, new DateTime(2023, 10, 12, 5, 5, 0, 0, DateTimeKind.Local), 958366m },
-                    { 15, 1, 2, new DateTime(2023, 10, 12, 23, 35, 0, 0, DateTimeKind.Local), 3265499m, 1, new DateTime(2023, 10, 12, 17, 57, 0, 0, DateTimeKind.Local), 1466804m },
-                    { 16, 1, 2, new DateTime(2023, 10, 14, 1, 9, 0, 0, DateTimeKind.Local), 2067557m, 1, new DateTime(2023, 10, 13, 18, 19, 0, 0, DateTimeKind.Local), 1209513m },
-                    { 17, 4, 2, new DateTime(2023, 10, 10, 2, 40, 0, 0, DateTimeKind.Local), 3215049m, 1, new DateTime(2023, 10, 10, 0, 38, 0, 0, DateTimeKind.Local), 889668m },
-                    { 18, 4, 2, new DateTime(2023, 10, 10, 15, 30, 0, 0, DateTimeKind.Local), 2526070m, 1, new DateTime(2023, 10, 10, 14, 30, 0, 0, DateTimeKind.Local), 862034m },
-                    { 19, 1, 2, new DateTime(2023, 10, 12, 15, 44, 0, 0, DateTimeKind.Local), 3148716m, 1, new DateTime(2023, 10, 12, 10, 11, 0, 0, DateTimeKind.Local), 903829m },
-                    { 20, 3, 2, new DateTime(2023, 10, 14, 23, 29, 0, 0, DateTimeKind.Local), 2802849m, 1, new DateTime(2023, 10, 14, 19, 25, 0, 0, DateTimeKind.Local), 1404041m },
-                    { 21, 2, 2, new DateTime(2023, 10, 15, 4, 28, 0, 0, DateTimeKind.Local), 2108458m, 1, new DateTime(2023, 10, 14, 21, 25, 0, 0, DateTimeKind.Local), 880519m },
-                    { 22, 3, 2, new DateTime(2023, 10, 12, 19, 11, 0, 0, DateTimeKind.Local), 2856076m, 1, new DateTime(2023, 10, 12, 16, 16, 0, 0, DateTimeKind.Local), 1420359m },
-                    { 23, 4, 2, new DateTime(2023, 10, 11, 20, 26, 0, 0, DateTimeKind.Local), 2930606m, 1, new DateTime(2023, 10, 11, 17, 35, 0, 0, DateTimeKind.Local), 924658m },
-                    { 24, 1, 2, new DateTime(2023, 10, 10, 16, 40, 0, 0, DateTimeKind.Local), 3205566m, 1, new DateTime(2023, 10, 10, 10, 21, 0, 0, DateTimeKind.Local), 1473485m },
-                    { 25, 2, 2, new DateTime(2023, 10, 14, 15, 9, 0, 0, DateTimeKind.Local), 2002835m, 1, new DateTime(2023, 10, 14, 13, 54, 0, 0, DateTimeKind.Local), 1191139m },
-                    { 26, 5, 2, new DateTime(2023, 10, 12, 22, 28, 0, 0, DateTimeKind.Local), 2686995m, 1, new DateTime(2023, 10, 12, 15, 20, 0, 0, DateTimeKind.Local), 966864m },
-                    { 27, 2, 2, new DateTime(2023, 10, 12, 14, 46, 0, 0, DateTimeKind.Local), 2134473m, 1, new DateTime(2023, 10, 12, 10, 19, 0, 0, DateTimeKind.Local), 938163m },
-                    { 28, 1, 2, new DateTime(2023, 10, 12, 22, 1, 0, 0, DateTimeKind.Local), 2728814m, 1, new DateTime(2023, 10, 12, 19, 13, 0, 0, DateTimeKind.Local), 1060949m },
-                    { 29, 2, 2, new DateTime(2023, 10, 11, 8, 52, 0, 0, DateTimeKind.Local), 3220016m, 1, new DateTime(2023, 10, 11, 5, 6, 0, 0, DateTimeKind.Local), 903274m },
-                    { 30, 1, 2, new DateTime(2023, 10, 11, 19, 15, 0, 0, DateTimeKind.Local), 2055931m, 1, new DateTime(2023, 10, 11, 16, 18, 0, 0, DateTimeKind.Local), 1414707m },
-                    { 31, 4, 2, new DateTime(2023, 10, 12, 22, 43, 0, 0, DateTimeKind.Local), 2898517m, 1, new DateTime(2023, 10, 12, 17, 3, 0, 0, DateTimeKind.Local), 1098742m },
-                    { 32, 4, 2, new DateTime(2023, 10, 11, 6, 49, 0, 0, DateTimeKind.Local), 3418428m, 1, new DateTime(2023, 10, 11, 4, 41, 0, 0, DateTimeKind.Local), 979107m },
-                    { 33, 2, 2, new DateTime(2023, 10, 12, 18, 11, 0, 0, DateTimeKind.Local), 2030571m, 1, new DateTime(2023, 10, 12, 12, 48, 0, 0, DateTimeKind.Local), 952571m },
-                    { 34, 2, 2, new DateTime(2023, 10, 11, 5, 7, 0, 0, DateTimeKind.Local), 2190485m, 1, new DateTime(2023, 10, 11, 3, 34, 0, 0, DateTimeKind.Local), 1234725m },
-                    { 35, 4, 2, new DateTime(2023, 10, 10, 13, 4, 0, 0, DateTimeKind.Local), 3124006m, 1, new DateTime(2023, 10, 10, 5, 48, 0, 0, DateTimeKind.Local), 1115515m },
-                    { 36, 4, 2, new DateTime(2023, 10, 11, 16, 33, 0, 0, DateTimeKind.Local), 3015626m, 1, new DateTime(2023, 10, 11, 11, 55, 0, 0, DateTimeKind.Local), 1353891m },
-                    { 37, 5, 2, new DateTime(2023, 10, 15, 0, 38, 0, 0, DateTimeKind.Local), 2514367m, 1, new DateTime(2023, 10, 14, 18, 30, 0, 0, DateTimeKind.Local), 1144613m },
-                    { 38, 2, 2, new DateTime(2023, 10, 10, 10, 47, 0, 0, DateTimeKind.Local), 2010361m, 1, new DateTime(2023, 10, 10, 7, 51, 0, 0, DateTimeKind.Local), 1269909m },
-                    { 39, 5, 2, new DateTime(2023, 10, 11, 12, 19, 0, 0, DateTimeKind.Local), 3347261m, 1, new DateTime(2023, 10, 11, 10, 46, 0, 0, DateTimeKind.Local), 1415484m },
-                    { 40, 5, 2, new DateTime(2023, 10, 10, 9, 0, 0, 0, DateTimeKind.Local), 3328002m, 1, new DateTime(2023, 10, 10, 6, 50, 0, 0, DateTimeKind.Local), 1459894m },
-                    { 41, 4, 2, new DateTime(2023, 10, 13, 8, 22, 0, 0, DateTimeKind.Local), 2054906m, 1, new DateTime(2023, 10, 13, 3, 46, 0, 0, DateTimeKind.Local), 1094383m },
-                    { 42, 4, 2, new DateTime(2023, 10, 10, 10, 31, 0, 0, DateTimeKind.Local), 3009667m, 1, new DateTime(2023, 10, 10, 9, 14, 0, 0, DateTimeKind.Local), 1264910m },
-                    { 43, 3, 2, new DateTime(2023, 10, 14, 19, 7, 0, 0, DateTimeKind.Local), 2434268m, 1, new DateTime(2023, 10, 14, 14, 54, 0, 0, DateTimeKind.Local), 1486291m },
-                    { 44, 3, 2, new DateTime(2023, 10, 14, 23, 26, 0, 0, DateTimeKind.Local), 2431609m, 1, new DateTime(2023, 10, 14, 16, 16, 0, 0, DateTimeKind.Local), 1155369m },
-                    { 45, 1, 2, new DateTime(2023, 10, 14, 22, 49, 0, 0, DateTimeKind.Local), 2431915m, 1, new DateTime(2023, 10, 14, 17, 5, 0, 0, DateTimeKind.Local), 1270870m },
-                    { 46, 1, 2, new DateTime(2023, 10, 14, 12, 42, 0, 0, DateTimeKind.Local), 2276960m, 1, new DateTime(2023, 10, 14, 9, 5, 0, 0, DateTimeKind.Local), 1457977m },
-                    { 47, 2, 2, new DateTime(2023, 10, 15, 0, 39, 0, 0, DateTimeKind.Local), 3129221m, 1, new DateTime(2023, 10, 14, 19, 24, 0, 0, DateTimeKind.Local), 1171341m },
-                    { 48, 1, 2, new DateTime(2023, 10, 12, 22, 54, 0, 0, DateTimeKind.Local), 2174490m, 1, new DateTime(2023, 10, 12, 21, 21, 0, 0, DateTimeKind.Local), 1056933m },
-                    { 49, 5, 2, new DateTime(2023, 10, 10, 15, 14, 0, 0, DateTimeKind.Local), 3129366m, 1, new DateTime(2023, 10, 10, 13, 47, 0, 0, DateTimeKind.Local), 1143039m },
-                    { 50, 3, 2, new DateTime(2023, 10, 11, 12, 15, 0, 0, DateTimeKind.Local), 3315276m, 1, new DateTime(2023, 10, 11, 7, 35, 0, 0, DateTimeKind.Local), 829636m }
+                    { 1, 3, 2, new DateTime(2023, 10, 16, 23, 25, 0, 0, DateTimeKind.Local), 3086680m, 1, new DateTime(2023, 10, 16, 20, 22, 0, 0, DateTimeKind.Local), 1259094m },
+                    { 2, 3, 2, new DateTime(2023, 10, 13, 15, 6, 0, 0, DateTimeKind.Local), 3241251m, 1, new DateTime(2023, 10, 13, 9, 38, 0, 0, DateTimeKind.Local), 1186288m },
+                    { 3, 4, 2, new DateTime(2023, 10, 17, 3, 6, 0, 0, DateTimeKind.Local), 2264379m, 1, new DateTime(2023, 10, 16, 23, 0, 0, 0, DateTimeKind.Local), 1283135m },
+                    { 4, 4, 2, new DateTime(2023, 10, 16, 10, 38, 0, 0, DateTimeKind.Local), 2096789m, 1, new DateTime(2023, 10, 16, 6, 31, 0, 0, DateTimeKind.Local), 1024583m },
+                    { 5, 1, 2, new DateTime(2023, 10, 14, 23, 27, 0, 0, DateTimeKind.Local), 3252870m, 1, new DateTime(2023, 10, 14, 22, 26, 0, 0, DateTimeKind.Local), 1042971m },
+                    { 6, 5, 2, new DateTime(2023, 10, 15, 5, 15, 0, 0, DateTimeKind.Local), 3172109m, 1, new DateTime(2023, 10, 14, 22, 29, 0, 0, DateTimeKind.Local), 1234056m },
+                    { 7, 2, 2, new DateTime(2023, 10, 17, 8, 1, 0, 0, DateTimeKind.Local), 2396066m, 1, new DateTime(2023, 10, 17, 3, 49, 0, 0, DateTimeKind.Local), 1101456m },
+                    { 8, 4, 2, new DateTime(2023, 10, 17, 22, 14, 0, 0, DateTimeKind.Local), 2309063m, 1, new DateTime(2023, 10, 17, 20, 47, 0, 0, DateTimeKind.Local), 1222047m },
+                    { 9, 3, 2, new DateTime(2023, 10, 15, 8, 10, 0, 0, DateTimeKind.Local), 3369113m, 1, new DateTime(2023, 10, 15, 2, 32, 0, 0, DateTimeKind.Local), 1193754m },
+                    { 10, 3, 2, new DateTime(2023, 10, 13, 14, 27, 0, 0, DateTimeKind.Local), 2088576m, 1, new DateTime(2023, 10, 13, 6, 43, 0, 0, DateTimeKind.Local), 1182397m },
+                    { 11, 1, 2, new DateTime(2023, 10, 13, 15, 33, 0, 0, DateTimeKind.Local), 3020295m, 1, new DateTime(2023, 10, 13, 14, 11, 0, 0, DateTimeKind.Local), 1391901m },
+                    { 12, 2, 2, new DateTime(2023, 10, 15, 22, 13, 0, 0, DateTimeKind.Local), 3350090m, 1, new DateTime(2023, 10, 15, 20, 22, 0, 0, DateTimeKind.Local), 1018027m },
+                    { 13, 3, 2, new DateTime(2023, 10, 14, 3, 51, 0, 0, DateTimeKind.Local), 2341370m, 1, new DateTime(2023, 10, 13, 23, 7, 0, 0, DateTimeKind.Local), 827127m },
+                    { 14, 3, 2, new DateTime(2023, 10, 15, 20, 41, 0, 0, DateTimeKind.Local), 2009537m, 1, new DateTime(2023, 10, 15, 15, 8, 0, 0, DateTimeKind.Local), 1432719m },
+                    { 15, 5, 2, new DateTime(2023, 10, 13, 8, 40, 0, 0, DateTimeKind.Local), 2948776m, 1, new DateTime(2023, 10, 13, 3, 28, 0, 0, DateTimeKind.Local), 1040600m },
+                    { 16, 5, 2, new DateTime(2023, 10, 16, 20, 10, 0, 0, DateTimeKind.Local), 2718864m, 1, new DateTime(2023, 10, 16, 13, 15, 0, 0, DateTimeKind.Local), 1147380m },
+                    { 17, 4, 2, new DateTime(2023, 10, 13, 8, 6, 0, 0, DateTimeKind.Local), 3175351m, 1, new DateTime(2023, 10, 13, 2, 51, 0, 0, DateTimeKind.Local), 1317404m },
+                    { 18, 1, 2, new DateTime(2023, 10, 16, 22, 30, 0, 0, DateTimeKind.Local), 2629085m, 1, new DateTime(2023, 10, 16, 20, 22, 0, 0, DateTimeKind.Local), 887377m },
+                    { 19, 4, 2, new DateTime(2023, 10, 16, 9, 1, 0, 0, DateTimeKind.Local), 2578891m, 1, new DateTime(2023, 10, 16, 4, 40, 0, 0, DateTimeKind.Local), 933721m },
+                    { 20, 4, 2, new DateTime(2023, 10, 16, 18, 54, 0, 0, DateTimeKind.Local), 2616062m, 1, new DateTime(2023, 10, 16, 11, 35, 0, 0, DateTimeKind.Local), 1103780m },
+                    { 21, 1, 2, new DateTime(2023, 10, 14, 4, 50, 0, 0, DateTimeKind.Local), 3007903m, 1, new DateTime(2023, 10, 14, 1, 53, 0, 0, DateTimeKind.Local), 1174336m },
+                    { 22, 1, 2, new DateTime(2023, 10, 15, 22, 52, 0, 0, DateTimeKind.Local), 2593828m, 1, new DateTime(2023, 10, 15, 18, 40, 0, 0, DateTimeKind.Local), 1329533m },
+                    { 23, 1, 2, new DateTime(2023, 10, 14, 5, 48, 0, 0, DateTimeKind.Local), 3403326m, 1, new DateTime(2023, 10, 14, 1, 20, 0, 0, DateTimeKind.Local), 1310056m },
+                    { 24, 3, 2, new DateTime(2023, 10, 13, 23, 34, 0, 0, DateTimeKind.Local), 2430067m, 1, new DateTime(2023, 10, 13, 19, 22, 0, 0, DateTimeKind.Local), 868941m },
+                    { 25, 1, 2, new DateTime(2023, 10, 17, 7, 29, 0, 0, DateTimeKind.Local), 2946184m, 1, new DateTime(2023, 10, 17, 5, 33, 0, 0, DateTimeKind.Local), 1141434m },
+                    { 26, 1, 2, new DateTime(2023, 10, 15, 7, 50, 0, 0, DateTimeKind.Local), 3151871m, 1, new DateTime(2023, 10, 15, 3, 30, 0, 0, DateTimeKind.Local), 839291m },
+                    { 27, 3, 2, new DateTime(2023, 10, 17, 21, 34, 0, 0, DateTimeKind.Local), 3036413m, 1, new DateTime(2023, 10, 17, 19, 49, 0, 0, DateTimeKind.Local), 1381990m },
+                    { 28, 4, 2, new DateTime(2023, 10, 16, 17, 49, 0, 0, DateTimeKind.Local), 2384029m, 1, new DateTime(2023, 10, 16, 14, 9, 0, 0, DateTimeKind.Local), 1306596m },
+                    { 29, 5, 2, new DateTime(2023, 10, 15, 23, 48, 0, 0, DateTimeKind.Local), 2934956m, 1, new DateTime(2023, 10, 15, 21, 26, 0, 0, DateTimeKind.Local), 1203844m },
+                    { 30, 2, 2, new DateTime(2023, 10, 16, 4, 28, 0, 0, DateTimeKind.Local), 2732832m, 1, new DateTime(2023, 10, 16, 1, 18, 0, 0, DateTimeKind.Local), 1404230m },
+                    { 31, 4, 2, new DateTime(2023, 10, 17, 9, 17, 0, 0, DateTimeKind.Local), 2414111m, 1, new DateTime(2023, 10, 17, 7, 0, 0, 0, DateTimeKind.Local), 1236747m },
+                    { 32, 3, 2, new DateTime(2023, 10, 14, 20, 58, 0, 0, DateTimeKind.Local), 2719058m, 1, new DateTime(2023, 10, 14, 15, 13, 0, 0, DateTimeKind.Local), 944519m },
+                    { 33, 1, 2, new DateTime(2023, 10, 18, 5, 32, 0, 0, DateTimeKind.Local), 2324373m, 1, new DateTime(2023, 10, 17, 23, 52, 0, 0, DateTimeKind.Local), 929887m },
+                    { 34, 5, 2, new DateTime(2023, 10, 14, 13, 27, 0, 0, DateTimeKind.Local), 2269117m, 1, new DateTime(2023, 10, 14, 6, 29, 0, 0, DateTimeKind.Local), 1449402m },
+                    { 35, 3, 2, new DateTime(2023, 10, 13, 7, 50, 0, 0, DateTimeKind.Local), 3283977m, 1, new DateTime(2023, 10, 13, 2, 11, 0, 0, DateTimeKind.Local), 1284314m },
+                    { 36, 4, 2, new DateTime(2023, 10, 13, 13, 27, 0, 0, DateTimeKind.Local), 3102225m, 1, new DateTime(2023, 10, 13, 6, 4, 0, 0, DateTimeKind.Local), 988928m },
+                    { 37, 5, 2, new DateTime(2023, 10, 17, 3, 59, 0, 0, DateTimeKind.Local), 2705995m, 1, new DateTime(2023, 10, 16, 22, 50, 0, 0, DateTimeKind.Local), 1202071m },
+                    { 38, 1, 2, new DateTime(2023, 10, 14, 22, 27, 0, 0, DateTimeKind.Local), 2458331m, 1, new DateTime(2023, 10, 14, 17, 33, 0, 0, DateTimeKind.Local), 1378918m },
+                    { 39, 5, 2, new DateTime(2023, 10, 16, 5, 31, 0, 0, DateTimeKind.Local), 2549464m, 1, new DateTime(2023, 10, 16, 4, 0, 0, 0, DateTimeKind.Local), 1161787m },
+                    { 40, 2, 2, new DateTime(2023, 10, 14, 15, 8, 0, 0, DateTimeKind.Local), 2176333m, 1, new DateTime(2023, 10, 14, 10, 34, 0, 0, DateTimeKind.Local), 1045915m },
+                    { 41, 1, 2, new DateTime(2023, 10, 16, 6, 13, 0, 0, DateTimeKind.Local), 2256397m, 1, new DateTime(2023, 10, 15, 23, 11, 0, 0, DateTimeKind.Local), 875158m },
+                    { 42, 4, 2, new DateTime(2023, 10, 17, 10, 57, 0, 0, DateTimeKind.Local), 2718089m, 1, new DateTime(2023, 10, 17, 5, 49, 0, 0, DateTimeKind.Local), 909413m },
+                    { 43, 3, 2, new DateTime(2023, 10, 13, 9, 37, 0, 0, DateTimeKind.Local), 2241338m, 1, new DateTime(2023, 10, 13, 7, 57, 0, 0, DateTimeKind.Local), 991124m },
+                    { 44, 1, 2, new DateTime(2023, 10, 17, 6, 38, 0, 0, DateTimeKind.Local), 2546092m, 1, new DateTime(2023, 10, 17, 4, 6, 0, 0, DateTimeKind.Local), 1218638m },
+                    { 45, 5, 2, new DateTime(2023, 10, 18, 2, 4, 0, 0, DateTimeKind.Local), 2660321m, 1, new DateTime(2023, 10, 17, 22, 3, 0, 0, DateTimeKind.Local), 1493973m },
+                    { 46, 4, 2, new DateTime(2023, 10, 17, 10, 45, 0, 0, DateTimeKind.Local), 2684757m, 1, new DateTime(2023, 10, 17, 9, 15, 0, 0, DateTimeKind.Local), 1432461m },
+                    { 47, 5, 2, new DateTime(2023, 10, 15, 17, 55, 0, 0, DateTimeKind.Local), 3124266m, 1, new DateTime(2023, 10, 15, 11, 24, 0, 0, DateTimeKind.Local), 1403140m },
+                    { 48, 5, 2, new DateTime(2023, 10, 17, 23, 28, 0, 0, DateTimeKind.Local), 2662131m, 1, new DateTime(2023, 10, 17, 19, 45, 0, 0, DateTimeKind.Local), 1415911m },
+                    { 49, 5, 2, new DateTime(2023, 10, 13, 7, 57, 0, 0, DateTimeKind.Local), 2877779m, 1, new DateTime(2023, 10, 13, 1, 45, 0, 0, DateTimeKind.Local), 942713m },
+                    { 50, 5, 2, new DateTime(2023, 10, 15, 8, 50, 0, 0, DateTimeKind.Local), 3233253m, 1, new DateTime(2023, 10, 15, 2, 43, 0, 0, DateTimeKind.Local), 947108m }
                 });
 
             migrationBuilder.InsertData(

@@ -84,14 +84,13 @@
                 <!-- nodejs load hãng bay-->
                     @foreach (var airline in Model.Airlines)
                     {
-                            <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="@airline.AirlineId" id="defaultCheck<@airline.AirlineId>" name="airlines[]" >
-                                    <label class="form-check-label" for="defaultCheck<@airline.AirlineId>">
-                                @airline.AirlineName
-                                </label>
-                            </div>
+                        <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="@airline.AirlineId" id="defaultCheck<@airline.AirlineId>" name="airlines[]" >
+                                <label class="form-check-label" for="defaultCheck<@airline.AirlineId>">
+                            @airline.AirlineName
+                            </label>
+                        </div>
                     }
-
                 <br>
                 <button type="button" class="btn-filter btn btn-outline-dark">Lọc</button>
             </form>
@@ -105,7 +104,8 @@
                     <div class="row">
                         <form action="./select-flight/booking-seat" method="post" class="col-12 p-0">
                         <button name="" value="" type="submit" class="text-decoration-none text-dark border-0 mt-2 p-2 bg-light" style="width:100%; border-radius: 30px">
-                    <input type="hidden" name="FlightData" value='@Json.Serialize(flight)'>
+                        <input type="hidden" name="FlightData" value='@Json.Serialize(flight)'>
+                                 <input type="hidden" name="FormData" value='@Json.Serialize(Model.FormData)'>
                     <div class="row">
                         <div class="col-4 col-lg-3">
                             <div class="row">
@@ -120,7 +120,7 @@
                         <div class="col-8 col-lg-6 mt-4 align-items-center">
                             <div class="row d-flex justify-content-space-between">
                                 <div class="col-4 fw-bold text-start">@flight.DepartureDatetime<br>@flight.DepartureAirport.AirportCode</div>
-                                <div class="col-4 text-center text-end">2h<br> Bay thẳng</div>
+                                                <div class="col-4 text-center text-end">@customHelper.GetDuration(flight.DepartureDatetime, flight.ArrivalDatetime)<br> Bay thẳng</div>
                                 <div class="col-4 fw-bold text-end">@flight.ArrivalDatetime<br>@flight.ArrivalAirport.AirportCode</div>
                             </div>
                         </div>

@@ -7,19 +7,28 @@ namespace Csharp_DatVeMayBay.Models.Domain
     public class Ticket
     {
         [Key]
+        [MaxLength(100)]
         public string TicketId { get; set; }
+
+        [Required]
+        public decimal TicketPrice { get; set; }
+        [Required]
+        public TicketStatus Status { get; set; }
+        [MaxLength(100)]
+        [Required]
+        public string TicketClass { get; set; }
+
         [ForeignKey("Booking")]
+        [Required]
         public int BookingId { get; set; }
 
         [ForeignKey("Flight")]
+        [Required]
         public int FlightId { get; set; }
         
         [ForeignKey("Seat")]
+        [Required]
         public int SeatId { get; set; }
-
-        public decimal TicketPrice { get; set; }
-        public TicketStatus Status { get; set; }
-
         public Seat Seat { get; set; }
         public Flight Flight { get; set; }
         public Booking Booking { get; set; }

@@ -1,4 +1,5 @@
 ﻿
+using Csharp_DatVeMayBay.Models.Domain;
 using Microsoft.AspNetCore.Http;
 using System.Globalization;
 namespace Csharp_DatVeMayBay.Util.CustomHelpers
@@ -14,6 +15,11 @@ namespace Csharp_DatVeMayBay.Util.CustomHelpers
         {
             var tempDate = originalDate;
             return tempDate.ToString("yyyy-MM-dd");
+        }
+        public static string GetDuration(DateTime from, DateTime to)
+        {
+            var Duration = (to - from).ToString().TrimStart('0').TrimEnd('0').TrimEnd(':') + 'h';
+            return Duration;
         }
 
         public static string[] splitDatetime(DateTime originalDate)

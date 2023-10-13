@@ -1,4 +1,4 @@
-﻿@*@model Csharp_DatVeMayBay.Controllers.BookingController.FinalTicketModel;
+﻿@model Csharp_DatVeMayBay.Controllers.BookingController.BookingDetailModel;
 @using Csharp_DatVeMayBay.Util.CustomHelpers;
 <!-- Book-body -->
 <div class="container-fluid mt-5 body-section" style="background: #fafafa;">
@@ -13,21 +13,28 @@
                     <div class="row mt-3">
                         <div class="col-9 p-0">
                             <h2>
-                                @Model.CustomFlight.airlineInfo.AirlineName
+                                @Model.Flight.Airline.AirlineName
                             </h2>
                         </div>
                         <div class="col-3"><strong class="fs-3" style="color: #ff8682;">
-                                @customHelper.FormatCurrency(Model.CustomFlight.classPricing)
+                                @if (Model.FormData.FlightClass == "PT")
+                                {
+                                    @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
+                                }
+                                else
+                                {
+                                    @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
+                                }
                             </strong></div>
                     </div>
                     <!-- Row 2 -->
                     <div class="row mt-3">
                         <div class="col-10 fw-bold p-0">
-                            <p>Departure on @Model.CustomFlight.DepartureDatetime</p>
+                            <p>Departure on @Model.Flight.DepartureDatetime</p>
                         </div>
                         <div class="col-2 fs-5">
                             <p>
-                                @Model.CustomFlight.duration
+                                @customHelper.GetDuration(Model.Flight.DepartureDatetime, Model.Flight.ArrivalDatetime)
                             </p>
                         </div>
                     </div>
@@ -37,17 +44,17 @@
                             <div class="row pe-3 d-flex align-items-center"
                                 style="border: 0.5px solid #8DD3BB; border-radius: 8px;">
                                 <div class="col-md-4 col-sm-12 col-12 text-center">
-                                    <img class="" src=" @Model.CustomFlight.airlineInfo.AirlineLogo"
+                                    <img class="" src=" @Model.Flight.Airline.AirlineLogo"
                                         style="width: 80px; height: 65px" alt="">
                                 </div>
                                 <div class="col-md-8 col-sm-12 col-12 text-center">
                                     <div class="row">
                                         <h2 class="fs-4 pt-2 text-center">
-                                            @Model.CustomFlight.airlineInfo.AirlineName
+                                            @Model.Flight.Airline.AirlineName
                                         </h2>
                                     </div>
                                     <div class="row">
-                                        <p class="desc">Airbus @string.Concat("A",Model.CustomFlight.FlightId)
+                                        <p class="desc">Airbus @string.Concat("A",Model.Flight.FlightId)
                                         </p>
                                     </div>
                                 </div>
@@ -66,14 +73,14 @@
                         <div class="col-4 text-center">
                             <div class="row">
                                 <p class="fs-4 fw-bold">
-                                    @customHelper.splitDatetime(Model.CustomFlight.DepartureDatetime)[0]
+                                    @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[0]
                                     <br>
-                                    @customHelper.splitDatetime(Model.CustomFlight.DepartureDatetime)[1]
+                                    @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[1]
                                 </p>
                             </div>
                             <div class="row">
                                 <p class="" style="opacity: 0.8;">
-                                    @Model.CustomFlight.from.AirportName
+                                    @Model.Flight.DepartureAirport.AirportName
                                 </p>
                             </div>
                         </div>
@@ -85,14 +92,14 @@
                         <div class="col-4 text-center">
                             <div class="row">
                                 <p class="fs-4 fw-bold">
-                                    @customHelper.splitDatetime(Model.CustomFlight.ArrivalDatetime)[0]
+                                    @customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[0]
                                     <br>
-                                    @customHelper.splitDatetime(Model.CustomFlight.ArrivalDatetime)[1]
+                                    @customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[1]
                                 </p>
                             </div>
                             <div class="row">
                                 <p class="" style="opacity: 0.8;">
-                                    @Model.CustomFlight.to.AirportName
+                                    @Model.Flight.ArrivalAirport.AirportName
                                 </p>
                             </div>
                         </div>
@@ -104,28 +111,28 @@
                     style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
                     <!-- card -->
                     <card id="card-container">
-                        @if (Model.creditcards!=null)
+                        @if (Model.Creditcards != null)
                         {
-                            @foreach (var creditcard in Model.creditcards)
+                            @foreach (var creditcard in Model.Creditcards)
                             {
-                                         <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB;border-radius: 12px;">
-                                        <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
-                                        <div class="col-md-3 col-12"><span class="" name="carnumber">
+                                                 <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB;border-radius: 12px;">
+                                                <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
+                                                <div class="col-md-3 col-12"><span class="" name="carnumber">
                                             @creditcard.CardNumber
-                                            </span></div>
-                                        <div class="col-md-4 col-12"><span class="" name="nameoncard">
+                                                    </span></div>
+                                                <div class="col-md-4 col-12"><span class="" name="nameoncard">
                                             @creditcard.CardHolderName
-                                            </span></div>
-                                        <div class="col-md-3 col-12"><span class="" name="validation">
+                                                    </span></div>
+                                                <div class="col-md-3 col-12"><span class="" name="validation">
                                             @customHelper.splitDatetime(@creditcard.ExpirationDate)[0]
-                                            </span></div>
-                                        <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
-                                    </div>
+                                                    </span></div>
+                                                <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
+                                            </div>
                             }
                         }
                     </card>
-                    
-                    <a href="#!" class="bg-transparent border-0 text-decoration-none p-0" id="add-credit"
+
+                    <a class="bg-transparent border-0 text-decoration-none p-0" id="add-credit"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="container-card bg-light text-center align-items-center d-flex justify-content-center mb-2 mt-3"
                             style="border-radius: 10px; height: 200px;width: 100%;border: 2px dashed #8DD3BB;">
@@ -207,7 +214,7 @@
                                                     <div class="container">
                                                         <div class="row"></div>
                                                         <div class="col mb-2">
-                                                            <button type="button" name="addNewCard" id="addNewCard"
+                                                            <button type="button" id="addNewCard"
                                                                 class="btn btn-outline-success p-2"
                                                                 style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">Save
                                                                 changes</button>
@@ -239,18 +246,18 @@
                         </div>
                         <div class="col-lg-5 col-md-8 col-sm-8 col-6">
                             <div class="row"><span class="">
-                                    @if (Model.CustomFlight.flightClass == "PT")
+                                    @if (Model.FormData.FlightClass == "PT")
                                     {
-                                         <p>Phổ Thông</p>
+                                             <p>Phổ Thông</p>
                                     }
                                     else
                                     {
-                                         <p>Thương Gia</p>
+                                             <p>Thương Gia</p>
                                     }
                                 </span></div>
                             <div class="row fw-bold">
                                 <p class="col">
-                                    @Model.CustomFlight.airlineInfo.AirlineName <br>Airbus @string.Concat("A",Model.CustomFlight.FlightId)
+                                    @Model.Flight.Airline.AirlineName <br>Airbus @string.Concat("A",Model.Flight.FlightId)
                                 </p>
                             </div>
                         </div>
@@ -265,7 +272,14 @@
                             </div>
                             <div class="col text-end">
                                 <span class="fw-bold">
-                                    @customHelper.FormatCurrency(Model.CustomFlight.classPricing)
+                                    @if (Model.FormData.FlightClass == "PT")
+                                    {
+                                        @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
+                                    }
+                                    else
+                                    {
+                                        @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
+                                    }
                                 </span>
                             </div>
                         </div>
@@ -276,7 +290,14 @@
                             </div>
                             <div class="col text-end">
                                 <span class="fw-bold">
-                                    @customHelper.FormatCurrency(Model.CustomFlight.classPricing)
+                                    @if (Model.FormData.FlightClass == "PT")
+                                    {
+                                        @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
+                                    }
+                                    else
+                                    {
+                                        @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
+                                    }
                                 </span>
                             </div>
                         </div>
@@ -284,8 +305,9 @@
                             <div class="col-6"></div>
                             <div class="col-6 text-end">
                                 <form action="ticket-info" method="post">
-                                    <input type="hidden" name="flightData" value='@Json.Serialize(Model.CustomFlight)'>
-                                    <input type="hidden" name="passengerInfo" value='@Json.Serialize(Model.PassengerInfo)'>
+                                    <input type="hidden" name="FlightData" value='@Json.Serialize(Model.Flight)'>
+                                    <input type="hidden" name="PassengerInfo" value='@Json.Serialize(Model.PassengerInfo)'>
+                                    <input type="hidden" name="FormData" value='@Json.Serialize(Model.FormData)'>
                                     <input type="hidden" id="cardCreditList" name="cardCreditList"></input>
                                     <button type="button" onclick="showModal(event)"
                                         name="pay" class="fw-bold p-3" id="pay-button"
@@ -309,10 +331,11 @@
         event.preventDefault();
         $('#exampleModal').modal('show');
             // prevent form submission
-    } else {
-            // allow form submission
-         $("#pay-button").prop("type", "submit");
-        // 
+        } else {
+                // allow form submission
+             $("#pay-button").prop("type", "submit");
+            // 
+        }
     }
     $(document).ready(function(){
         var creditCardList = [];
@@ -345,5 +368,4 @@
         }
         })
     })
-}
-</script>*@
+</script>

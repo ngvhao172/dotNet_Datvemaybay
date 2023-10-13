@@ -1,17 +1,8 @@
-﻿@*@model Csharp_DatVeMayBay.Controllers.BookingController.FinalTicketModel;
+﻿@model Csharp_DatVeMayBay.Models.Domain.Ticket;
 @using Csharp_DatVeMayBay.Util.CustomHelpers;
 <main class="body-section" style="background: #FAFAFA; mt-5;">
     <!--  -->
     <div class="container-fluid pt-5 mt-5">
-        <!-- <div class="hero-head mt-lg-4">
-                    <a class="turkey" href="#!">Turkey</a>
-                    <i class="fa-solid fa-greater-than"></i>
-                    <a class="Istanbul" href="#!">Istanbul</a>
-                    <i class="fa-solid fa-greater-than"></i>
-                    <a class="CVK" href="#!"
-                        >CVK Park Bosphorus Hotel Istanbul</a
-                    >
-                </div> -->
 
         <div class="container">
             <!-- row 1 -->
@@ -19,20 +10,20 @@
                 <!-- col 1 -->
                 <div class="col-6 col-lg-8 col-md-8 col-sm ">
                     <h2 class="mb-3">
-                       @Model.CustomFlight.airlineInfo.AirlineName @string.Concat("A",Model.CustomFlight.FlightId) Airbus
+                       @Model.Flight.Airline.AirlineName @string.Concat("A",Model.Flight.FlightId) Airbus
                     </h2>
                     <i class="fa-solid fa-location-dot"></i>
                     <span>
-                        @Model.CustomFlight.from.AirportLocation --
-                        @Model.CustomFlight.to.AirportLocation . No: Airbus @string.Concat("A",Model.CustomFlight.FlightId)
+                        @Model.Flight.DepartureAirport.AirportLocation --
+                        @Model.Flight.ArrivalAirport.AirportLocation . No: Airbus @string.Concat("A",Model.Flight.FlightId)
                     </span>
                 </div>
                 <!-- col 2 -->
                 <div class="col-6 col-lg-4 col-md-4 text-end">
                     <div class="row mb-3 p-0">
                         <span class="fw-bold fs-5 p-0" style="color: #ff8682;">
-                           @customHelper.FormatCurrency(Model.CustomFlight.classPricing)
-                        </span>
+                           @customHelper.FormatCurrency(Model.TicketPrice)
+                        </span> 
                     </div>
                     <div class="row">
                         <div class="col col-lg-4 col-md-3 col-sm-4"></div>
@@ -61,12 +52,12 @@
                         style="background-color: #EBF6F2;border-radius: 8px 0 0 8px;">
                         <div class="row">
                             <span class="time-start fw-bold fs-2">
-                                @customHelper.splitDatetime(Model.CustomFlight.DepartureDatetime)[0]
+                                @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[0]
                                 <br>
-                                @customHelper.splitDatetime(Model.CustomFlight.DepartureDatetime)[1]
+                                @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[1]
                             </span>
                             <span class="depart-start">
-                                @Model.CustomFlight.from.AirportLocation
+                                @Model.Flight.DepartureAirport.AirportLocation
                             </span>
                         </div>
                         <div class="row">
@@ -74,12 +65,12 @@
                         </div>
                         <div class="row">
                             <span class="time-end fw-bold fs-2">
-                                @customHelper.splitDatetime(Model.CustomFlight.ArrivalDatetime)[0]
+                                @customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[0]
                                 <br>
-                                @customHelper.splitDatetime(Model.CustomFlight.ArrivalDatetime)[1]
+                                @customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[1]
                             </span>
                             <span class="depart-end">
-                                @Model.CustomFlight.to.AirportLocation
+                                @Model.Flight.ArrivalAirport.AirportLocation
                             </span>
                         </div>
                     </div>
@@ -100,14 +91,15 @@
                                                 {{else}}
                                                     {{user.first_name}} {{user.last_name}}
                                             {{/if}}*@
-                                           @* @if (User.Identity.IsAuthenticated)
+                                         @*  @if (User.Identity.IsAuthenticated)
                                             {
                                                 @User.Identity.Name;
                                             }
                                             else
                                             {
                                                 @Model.PassengerInfo.firstName  @Model.PassengerInfo.lastName
-                                            }
+                                            }*@
+                                            @Model.Booking.User.FirstName @Model.Booking.User.LastName
                                             
 
                                         </h3>
@@ -118,7 +110,7 @@
                             </div>
                             <div class="col-5 col-lg-6 col-md-6 text-end">
                                 <span class="fw-bold">
-                                    @Model.CustomFlight.flightClass
+                                    @Model.TicketClass
                                 </span>
                             </div>
                         </div>
@@ -134,7 +126,7 @@
                                     <div class="col ms-1">
                                         <div class="date-info fw-bold" style="opacity: 0.6;">Date</div>
                                         <div id="date">
-                                            @customHelper.splitDatetime(Model.CustomFlight.DepartureDatetime)[0]
+                                            @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[0]
                                         </div>
                                     </div>
                                 </div>
@@ -149,7 +141,7 @@
                                     <div class="col ms-1">
                                         <div class="flight-info fw-bold" style="opacity: 0.6;">Flight time</div>
                                         <div id="flight-time">
-                                            @customHelper.splitDatetime(Model.CustomFlight.DepartureDatetime)[1]
+                                            @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[1]
                                         </div>
                                     </div>
                                 </div>
@@ -178,13 +170,7 @@
                                     <div class="col ms-1">
                                         <div class="seat-info fw-bold" style="opacity: 0.6;">Seat</div>
                                         <div id="seatnum">
-@*                                            {{#if passengerInfo}}
-                                                {{passengerInfo.seatNo}}
-                                                {{else}}
-                                                      {{flightData.seatNo}}
-                                            {{/if}}*@
-                                               @* @Model.PassengerInfo.seat
-
+                                            @Model.Seat.SeatRow@Model.Seat.SeatColumn 
                                         </div>
                                     </div>
                                 </div>
@@ -194,11 +180,11 @@
                             <div class="col-12 col-sm-6">
                                 <div class="row">
                                     <h2>
-                                        @Model.Ticket.TicketId
+                                        @Model.TicketId
                                     </h2>
                                 </div>
                                 <div class="row ms-1">
-                                    @Model.CustomFlight.airlineInfo.AirlineName @string.Concat("A",Model.CustomFlight.FlightId) Airbus
+                                    @Model.Flight.Airline.AirlineName @string.Concat("A",Model.Flight.FlightId) Airbus
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6 text-sm-end p-0">
@@ -252,4 +238,4 @@
         <!-- Book-body -->
 
 
-</main>*@
+</main>
