@@ -16,12 +16,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/403.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXDQwMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/505.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXDUwNS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXENoYW5nZVBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/VerifiedFail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFZlcmlmaWVkRmFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Access/VerifiedSucess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFZlcmlmaWVkU3VjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Admin/Airline.cshtml]
@@ -50,10 +74,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Client/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50XEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Error/505.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JcNTA1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Code/dotNet/Project/Csharp_DatVeMayBay/Csharp_DatVeMayBay/Views/Flights/BookingSeat.cshtml]

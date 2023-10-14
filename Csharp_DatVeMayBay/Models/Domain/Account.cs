@@ -14,21 +14,20 @@ namespace Csharp_DatVeMayBay.Models.Domain
             Password = password;
         }*/
 
-        [Key]
+        [Key, MaxLength(100)]
         [Required(ErrorMessage = "Please input email")]
-        [MaxLength(100)]
         [EmailAddress(ErrorMessage = "Invalid Email.")]
         public string UserEmail { get; set; }
-        [Required(ErrorMessage = "Please input password")]
-        [MaxLength(100)]
+        [MaxLength(100), Required(ErrorMessage = "Please input password")]
         public string Password { get; set; }
+
         [Required]
         public bool Enable { get; set; }
 
-        [ForeignKey("User")]
-        [Required]
+        [Required, ForeignKey("User")]
         public int UserId { get; set; }
         public User User { get; set; }
+        public bool Verified { get; set; } = false;
     }
 }
 

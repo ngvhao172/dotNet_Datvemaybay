@@ -1,4 +1,5 @@
 ﻿using Csharp_DatVeMayBay.Models.Domain;
+using Csharp_DatVeMayBay.Models.DTO;
 using Microsoft.EntityFrameworkCore;
 using System.Collections;
 
@@ -19,6 +20,8 @@ namespace Csharp_DatVeMayBay.Data
         public DbSet<Booking> Bookings { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Creditcard> Creditcards { get; set; }
+
+        public DbSet<UserVerification> UserVerifications { get; set; }
 
 
 

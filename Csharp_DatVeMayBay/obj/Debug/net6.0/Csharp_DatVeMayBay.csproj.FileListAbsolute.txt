@@ -818,3 +818,11 @@ D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\refint\Csh
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\Csharp_DatVeMayBay.pdb
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\Csharp_DatVeMayBay.genruntimeconfig.cache
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\ref\Csharp_DatVeMayBay.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\MailKit.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\MimeKit.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Formats.Asn1.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll

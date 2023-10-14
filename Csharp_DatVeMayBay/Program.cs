@@ -1,4 +1,5 @@
 ﻿using Csharp_DatVeMayBay.Data;
+using Csharp_DatVeMayBay.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
@@ -40,15 +41,17 @@ builder.Services.AddSession(options =>
 });
 
 /*Authorization*/
-builder.Services.AddAuthorization(options =>
+/*builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy => policy.RequireClaim("Role", "Admin"));
-});
+});*/
 
 //config database
 builder.Services.AddDbContext<DBContext>(options =>
 options.UseSqlServer(builder.Configuration
 .GetConnectionString("DatvemaybayConnection")));
+
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 var app = builder.Build();
 
@@ -71,6 +74,12 @@ app.UseAuthorization();
 
 app.UseSession();
 
+//Verification route
+app.MapControllerRoute(
+    name: "VerifyRoute",
+    pattern: "Account/Verify/{id}/{token}",
+    defaults: new { controller = "Access", action = "Verify" }
+);
 
 app.MapControllerRoute(
     name: "default",

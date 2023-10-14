@@ -1,6 +1,8 @@
 ﻿using Azure.Core;
 using Csharp_DatVeMayBay.Data;
 using Csharp_DatVeMayBay.Models.Domain;
+using Csharp_DatVeMayBay.Models.DTO;
+using Csharp_DatVeMayBay.Services.EmailService;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 
