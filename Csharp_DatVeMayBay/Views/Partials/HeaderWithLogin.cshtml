@@ -35,8 +35,11 @@
                     aria-expanded="false"></a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/">Trang chủ</a></li>
-                    <li><a class="dropdown-item" href="#">Hồ sơ</a></li>
-                    <li><a class="dropdown-item" href="#">Cài đặt</a></li>
+                    <li><a class="dropdown-item" href="/me">Hồ sơ</a></li>
+                 @*   <form action="/me/changepassword" method="post" target="blank">
+                        <li><button type="submit" class="dropdown-item">Đổi mật khẩu</button></li>
+                    </form>*@
+                      <li><a class="dropdown-item" href="/me/changepassword" target="blank">Đổi mật khẩu</a></li>
                     <form action="/logout" method="post">
                         <li><button type="submit" name="logout" class="dropdown-item class">Đăng xuất</button></li>
                     </form>

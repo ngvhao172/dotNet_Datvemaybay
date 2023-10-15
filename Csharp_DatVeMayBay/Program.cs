@@ -2,6 +2,7 @@
 using Csharp_DatVeMayBay.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -74,11 +75,17 @@ app.UseAuthorization();
 
 app.UseSession();
 
-//Verification route
+//Verification route via email
 app.MapControllerRoute(
     name: "VerifyRoute",
     pattern: "Account/Verify/{id}/{token}",
     defaults: new { controller = "Access", action = "Verify" }
+);
+//Reset password route via email
+app.MapControllerRoute(
+    name: "ChangePasswordRoute",
+    pattern: "Account/ChangePassword/{id}/{token}",
+    defaults: new { controller = "Access", action = "ChangePassword" }
 );
 
 app.MapControllerRoute(

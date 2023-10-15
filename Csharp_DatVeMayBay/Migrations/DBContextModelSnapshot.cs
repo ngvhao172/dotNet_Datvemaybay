@@ -36,6 +36,9 @@ namespace Csharp_DatVeMayBay.Migrations
                     b.Property<DateTime>("ExpiredAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("MailType")
+                        .HasColumnType("int");
+
                     b.Property<string>("UniqueString")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -79,7 +82,7 @@ namespace Csharp_DatVeMayBay.Migrations
                         {
                             UserEmail = "admin@gmail.com",
                             Enable = true,
-                            Password = "$2a$13$OEFo0V50US.8UUQt3x2hB./i4AJK86lzrdTUvyp8eeZcoYnR1X9Ze",
+                            Password = "$2a$13$r7Qmq3j/9.5y2PtijBJ0VukIRfS.LIMuol5CrIWucGN1ncArJqd02",
                             UserId = 1,
                             Verified = false
                         },
@@ -87,7 +90,7 @@ namespace Csharp_DatVeMayBay.Migrations
                         {
                             UserEmail = "ngvhao@gmail.com",
                             Enable = true,
-                            Password = "$2a$13$44XLIgH1g1hTdraOkYQK0.Fj7mt6Zj9S/eKdcCMMvV5IYXNwazR0G",
+                            Password = "$2a$13$Elr0QMG9ASrcGR8DcweAEOQvnzUwUHbOU3ckFl48Vok2h09JFLgY2",
                             UserId = 2,
                             Verified = false
                         });
@@ -329,552 +332,552 @@ namespace Csharp_DatVeMayBay.Migrations
                         new
                         {
                             FlightId = 1,
-                            AirlineId = 2,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 0, 27, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2525419m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 10, 5, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3389747m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 21, 42, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1340079m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 4, 13, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1276914m
                         },
                         new
                         {
                             FlightId = 2,
-                            AirlineId = 3,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 11, 47, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3327829m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 7, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2113206m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 6, 21, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1064995m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 0, 9, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 932235m
                         },
                         new
                         {
                             FlightId = 3,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 3, 44, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2637276m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 2, 34, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3344018m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 23, 39, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 956660m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 19, 12, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1408959m
                         },
                         new
                         {
                             FlightId = 4,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 19, 16, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2995463m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 2, 6, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2163474m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 17, 32, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 986025m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 23, 44, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 952367m
                         },
                         new
                         {
                             FlightId = 5,
-                            AirlineId = 2,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 8, 1, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3027736m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 6, 43, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2932770m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 6, 5, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1403782m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 23, 22, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1366820m
                         },
                         new
                         {
                             FlightId = 6,
                             AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 12, 22, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2026701m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 18, 17, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3377530m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 11, 7, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 986237m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 12, 19, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 884237m
                         },
                         new
                         {
                             FlightId = 7,
-                            AirlineId = 2,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 11, 20, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2671341m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 16, 8, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2658432m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 9, 54, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1068667m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 13, 10, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1426220m
                         },
                         new
                         {
                             FlightId = 8,
-                            AirlineId = 5,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 20, 36, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2499202m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 16, 7, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3036744m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 13, 58, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1464835m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 11, 3, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1051511m
                         },
                         new
                         {
                             FlightId = 9,
-                            AirlineId = 4,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 19, 13, 27, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2312060m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 22, 1, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2448457m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 9, 39, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1037752m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 14, 41, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 867931m
                         },
                         new
                         {
                             FlightId = 10,
-                            AirlineId = 4,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 18, 45, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3449006m,
+                            ArrivalDatetime = new DateTime(2023, 10, 16, 16, 36, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2867388m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 16, 18, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1163259m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 9, 4, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1033005m
                         },
                         new
                         {
                             FlightId = 11,
-                            AirlineId = 1,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 9, 2, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2296486m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 3, 11, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2193675m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 6, 15, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 822728m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 22, 16, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1088788m
                         },
                         new
                         {
                             FlightId = 12,
-                            AirlineId = 5,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 5, 45, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2440255m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 5, 12, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2842755m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 3, 11, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 846758m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 3, 20, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1250234m
                         },
                         new
                         {
                             FlightId = 13,
-                            AirlineId = 5,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 2, 55, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2984849m,
+                            ArrivalDatetime = new DateTime(2023, 10, 15, 7, 0, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2916544m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 23, 10, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 961081m
+                            DepartureDatetime = new DateTime(2023, 10, 15, 2, 27, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 926041m
                         },
                         new
                         {
                             FlightId = 14,
-                            AirlineId = 2,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 10, 15, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2588489m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 14, 36, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3136409m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 6, 42, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 807963m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 9, 24, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1337382m
                         },
                         new
                         {
                             FlightId = 15,
-                            AirlineId = 3,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 22, 5, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3350049m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 10, 2, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2671296m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 17, 17, 6, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1233885m
+                            DepartureDatetime = new DateTime(2023, 10, 19, 8, 0, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 963863m
                         },
                         new
                         {
                             FlightId = 16,
-                            AirlineId = 2,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 19, 19, 0, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3025045m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 3, 6, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2646322m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 11, 27, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1142680m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 19, 57, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1097278m
                         },
                         new
                         {
                             FlightId = 17,
-                            AirlineId = 1,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 10, 46, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3287559m,
+                            ArrivalDatetime = new DateTime(2023, 10, 15, 4, 46, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2771013m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 17, 6, 19, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 962178m
+                            DepartureDatetime = new DateTime(2023, 10, 15, 1, 11, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1153117m
                         },
                         new
                         {
                             FlightId = 18,
-                            AirlineId = 3,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 0, 59, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2822391m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 17, 33, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3421056m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 23, 47, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 929805m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 14, 25, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1152711m
                         },
                         new
                         {
                             FlightId = 19,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 22, 5, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2931423m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 15, 25, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2957764m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 17, 19, 13, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1056203m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 8, 3, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1105326m
                         },
                         new
                         {
                             FlightId = 20,
                             AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 19, 16, 46, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3406730m,
+                            ArrivalDatetime = new DateTime(2023, 10, 15, 19, 24, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2396382m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 10, 50, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 948627m
+                            DepartureDatetime = new DateTime(2023, 10, 15, 16, 56, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1187660m
                         },
                         new
                         {
                             FlightId = 21,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 8, 39, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2527427m,
+                            ArrivalDatetime = new DateTime(2023, 10, 15, 6, 6, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2455693m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 3, 10, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 887703m
+                            DepartureDatetime = new DateTime(2023, 10, 15, 5, 6, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1146084m
                         },
                         new
                         {
                             FlightId = 22,
-                            AirlineId = 1,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 7, 4, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3205583m,
+                            ArrivalDatetime = new DateTime(2023, 10, 15, 7, 53, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3189042m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 0, 25, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 962101m
+                            DepartureDatetime = new DateTime(2023, 10, 15, 4, 58, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1225995m
                         },
                         new
                         {
                             FlightId = 23,
-                            AirlineId = 4,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 5, 31, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2470398m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 9, 20, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2290198m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 4, 18, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 819700m
+                            DepartureDatetime = new DateTime(2023, 10, 19, 4, 34, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1061640m
                         },
                         new
                         {
                             FlightId = 24,
-                            AirlineId = 4,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 5, 44, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2351232m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 21, 44, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2463100m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 1, 6, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 854797m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 19, 51, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1245938m
                         },
                         new
                         {
                             FlightId = 25,
                             AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 13, 8, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2676869m,
+                            ArrivalDatetime = new DateTime(2023, 10, 15, 13, 11, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3167427m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 10, 48, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1006169m
+                            DepartureDatetime = new DateTime(2023, 10, 15, 11, 10, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 922492m
                         },
                         new
                         {
                             FlightId = 26,
-                            AirlineId = 4,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 18, 32, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2450384m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 2, 5, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3223074m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 16, 56, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1129191m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 0, 32, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 927439m
                         },
                         new
                         {
                             FlightId = 27,
-                            AirlineId = 3,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 22, 45, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2927799m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 3, 4, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2067885m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 14, 49, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1042594m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 21, 15, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1441847m
                         },
                         new
                         {
                             FlightId = 28,
                             AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 6, 51, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2231350m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 8, 33, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2935847m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 1, 43, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1494201m
+                            DepartureDatetime = new DateTime(2023, 10, 19, 0, 39, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1298510m
                         },
                         new
                         {
                             FlightId = 29,
                             AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 18, 32, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3147760m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 8, 0, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2966561m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 17, 17, 21, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 887329m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 2, 5, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1387769m
                         },
                         new
                         {
                             FlightId = 30,
-                            AirlineId = 1,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 19, 1, 54, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2863406m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 21, 11, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3483194m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 0, 6, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 813177m
+                            DepartureDatetime = new DateTime(2023, 10, 19, 19, 39, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 807700m
                         },
                         new
                         {
                             FlightId = 31,
-                            AirlineId = 4,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 21, 20, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2910882m,
+                            ArrivalDatetime = new DateTime(2023, 10, 16, 18, 42, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3356696m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 15, 54, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1275309m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 12, 36, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1044825m
                         },
                         new
                         {
                             FlightId = 32,
                             AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 13, 9, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3125971m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 9, 43, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2352974m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 11, 14, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 933928m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 4, 39, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1010242m
                         },
                         new
                         {
                             FlightId = 33,
-                            AirlineId = 4,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 10, 22, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2030229m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 8, 50, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3236973m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 2, 26, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1369115m
+                            DepartureDatetime = new DateTime(2023, 10, 19, 2, 29, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1186549m
                         },
                         new
                         {
                             FlightId = 34,
-                            AirlineId = 5,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 6, 40, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2024642m,
+                            ArrivalDatetime = new DateTime(2023, 10, 16, 11, 47, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3418664m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 3, 2, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 945652m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 8, 30, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1085700m
                         },
                         new
                         {
                             FlightId = 35,
-                            AirlineId = 1,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 20, 0, 49, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2411286m,
+                            ArrivalDatetime = new DateTime(2023, 10, 16, 1, 27, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2306500m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 22, 46, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1264530m
+                            DepartureDatetime = new DateTime(2023, 10, 15, 22, 14, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1327371m
                         },
                         new
                         {
                             FlightId = 36,
-                            AirlineId = 4,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 9, 55, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3152425m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 4, 27, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2888313m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 17, 8, 13, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1158248m
+                            DepartureDatetime = new DateTime(2023, 10, 19, 2, 17, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1070062m
                         },
                         new
                         {
                             FlightId = 37,
-                            AirlineId = 3,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 17, 15, 38, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2049168m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 21, 34, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2785854m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 17, 12, 31, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 833403m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 19, 44, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1300041m
                         },
                         new
                         {
                             FlightId = 38,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 17, 51, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2331101m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 22, 34, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2198506m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 15, 41, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1457968m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 19, 2, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 878799m
                         },
                         new
                         {
                             FlightId = 39,
-                            AirlineId = 1,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 18, 20, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2528928m,
+                            ArrivalDatetime = new DateTime(2023, 10, 16, 15, 36, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3223679m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 17, 1, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1053734m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 10, 34, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 973955m
                         },
                         new
                         {
                             FlightId = 40,
-                            AirlineId = 2,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 12, 30, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3382792m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 19, 54, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2228429m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 8, 35, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1102436m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 14, 51, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1381449m
                         },
                         new
                         {
                             FlightId = 41,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 7, 42, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2638093m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 3, 19, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2084816m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 6, 11, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 831121m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 1, 56, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 815288m
                         },
                         new
                         {
                             FlightId = 42,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 16, 19, 17, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2883724m,
+                            ArrivalDatetime = new DateTime(2023, 10, 16, 4, 14, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2898390m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 16, 12, 53, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1358127m
+                            DepartureDatetime = new DateTime(2023, 10, 16, 0, 10, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1103950m
                         },
                         new
                         {
                             FlightId = 43,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 11, 31, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2012152m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 15, 28, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2677237m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 5, 2, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 981768m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 12, 2, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 908340m
                         },
                         new
                         {
                             FlightId = 44,
-                            AirlineId = 4,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 11, 31, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2333382m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 10, 36, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2580949m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 10, 2, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1239008m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 8, 44, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1266249m
                         },
                         new
                         {
                             FlightId = 45,
-                            AirlineId = 1,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 15, 21, 1, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2325193m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 18, 49, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2602833m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 15, 15, 6, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 874400m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 17, 11, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 848896m
                         },
                         new
                         {
                             FlightId = 46,
-                            AirlineId = 1,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 18, 18, 4, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3263039m,
+                            ArrivalDatetime = new DateTime(2023, 10, 19, 6, 59, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2199588m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 11, 54, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1382077m
+                            DepartureDatetime = new DateTime(2023, 10, 19, 4, 57, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 821296m
                         },
                         new
                         {
                             FlightId = 47,
                             AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 19, 0, 43, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3434142m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 17, 29, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2955371m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 18, 20, 16, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 892560m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 13, 41, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1118327m
                         },
                         new
                         {
                             FlightId = 48,
-                            AirlineId = 5,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 20, 4, 22, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2267471m,
+                            ArrivalDatetime = new DateTime(2023, 10, 17, 17, 37, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3258075m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 23, 38, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1104821m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 10, 33, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1090635m
                         },
                         new
                         {
                             FlightId = 49,
-                            AirlineId = 4,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 19, 19, 5, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2866891m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 18, 44, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3479827m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 15, 7, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1407898m
+                            DepartureDatetime = new DateTime(2023, 10, 18, 17, 35, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1131503m
                         },
                         new
                         {
                             FlightId = 50,
-                            AirlineId = 4,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 10, 19, 11, 39, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2550600m,
+                            ArrivalDatetime = new DateTime(2023, 10, 18, 2, 42, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3488825m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 10, 19, 9, 56, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1373952m
+                            DepartureDatetime = new DateTime(2023, 10, 17, 23, 43, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1436273m
                         });
                 });
 

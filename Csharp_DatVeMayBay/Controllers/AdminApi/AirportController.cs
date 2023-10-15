@@ -62,7 +62,6 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
             {
                 return Json(new { data = new { status = false, message = "Có lỗi khi xóa! " + ex.Message.ToString() } });
             }
-
         }
         [HttpPost]
         [Route("AddAirport")]

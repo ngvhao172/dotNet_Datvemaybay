@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Csharp_DatVeMayBay.Models.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace Csharp_DatVeMayBay.Models.DTO
 {
@@ -10,5 +11,6 @@ namespace Csharp_DatVeMayBay.Models.DTO
         public string UniqueString { get; set; }
         public DateTime CreateAt { get; set; }
         public DateTime ExpiredAt { get; set; }
+        public MailType MailType { get; set; }
     }
 }
