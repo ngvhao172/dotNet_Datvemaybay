@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AvhNOiM7q6k50IR9gFgNAB97j/6AOIYX0rmivUdyFJbiIrEJ08v/iQPWheimlokfaGxj+dWncFxXtebzbdXXeA==",
+  "dgSpecHash": "exiKkrKpODYe3+vUvId3KxIXAEfFARYktXFc2B6uNupSnF4WJUZeiXa1BVStXbOKcRIUDCP8EVISmhoKpsHDsQ==",
   "success": true,
   "projectFilePath": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
   "expectedPackageFiles": [
@@ -65,6 +65,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.9\\microsoft.aspnet.mvc.5.2.9.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.9\\microsoft.aspnet.razor.3.2.9.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.9\\microsoft.aspnet.webpages.3.2.9.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\6.0.23\\microsoft.aspnetcore.authentication.google.6.0.23.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.build\\17.3.2\\microsoft.build.17.3.2.nupkg.sha512",

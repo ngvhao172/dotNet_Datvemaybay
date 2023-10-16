@@ -15,21 +15,24 @@ builder.Services.AddAuthentication(options =>
     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultSignOutScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 })
-.AddCookie(options =>
-{
-    options.LoginPath = "/login";
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-    options.LogoutPath = "/logout";
-    options.SlidingExpiration = true;//hết phiên làm việc
-});
-/*builder.Services.AddAuthentication()
     .AddCookie(options =>
     {
         options.LoginPath = "/login";
         options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
         options.LogoutPath = "/logout";
-        options.SlidingExpiration = true;
-    });*/
+        options.SlidingExpiration = true;//hết phiên làm việc
+    }
+);
+
+builder.Services.AddAuthentication()
+    .AddGoogle(googleOptions =>
+    {
+        IConfigurationSection ggAuthNSection = builder.Configuration.GetSection("Authentication:Google");
+
+        googleOptions.ClientId = ggAuthNSection["ClientId"];
+        googleOptions.ClientSecret = ggAuthNSection["ClientSecret"];
+
+    });
 
 /*SESSION*/
 builder.Services.AddDistributedMemoryCache();
@@ -42,10 +45,10 @@ builder.Services.AddSession(options =>
 });
 
 /*Authorization*/
-/*builder.Services.AddAuthorization(options =>
+builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("AdminOnly", policy => policy.RequireClaim("Role", "Admin"));
-});*/
+});
 
 //config database
 builder.Services.AddDbContext<DBContext>(options =>

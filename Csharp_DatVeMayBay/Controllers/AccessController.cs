@@ -6,7 +6,8 @@ using Csharp_DatVeMayBay.Models.Domain;
 using Csharp_DatVeMayBay.Data;
 using Csharp_DatVeMayBay.Models.DTO;
 using Csharp_DatVeMayBay.Services.EmailService;
-using System.Web.Helpers;
+using Microsoft.AspNetCore.Authentication.Google;
+using Microsoft.EntityFrameworkCore;
 
 namespace Csharp_DatVeMayBay.Controllers
 {
@@ -604,6 +605,100 @@ namespace Csharp_DatVeMayBay.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public IActionResult GoogleLogin(string provider = "Google", string returnUrl = "/")
+        {
+            var properties = new AuthenticationProperties
+            {
+                RedirectUri = Url.Action("GoogleLoginCallback"),
+                Items =
+                {
+                    { "returnUrl", returnUrl },
+                },
+            };
+            return Challenge(properties, provider);
+        }
+        [HttpGet]
+        public async Task<IActionResult> GoogleLoginCallback(string returnUrl)
+        {
+            var authenticateResult = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+
+            if (!authenticateResult.Succeeded)
+            {
+                return RedirectToAction("Error505","Error");
+            }
+
+            // Lấy thông tin từ authenticateResult
+            var userId = authenticateResult.Principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var email = authenticateResult.Principal.FindFirst(ClaimTypes.Email)?.Value;
+            var fullName = authenticateResult.Principal.FindFirst(ClaimTypes.Name)?.Value;
+            var surname = authenticateResult.Principal.FindFirst(ClaimTypes.Surname)?.Value; //Tên
+            var familyname = authenticateResult.Principal.FindFirst(ClaimTypes.GivenName)?.Value; //Họ
+            var phonenumber = authenticateResult.Principal.FindFirst(ClaimTypes.MobilePhone)?.Value;
+            var dob = authenticateResult.Principal.FindFirst(ClaimTypes.DateOfBirth)?.Value;
+            var address = authenticateResult.Principal.FindFirst(ClaimTypes.StreetAddress)?.Value;
+
+            // Check nếu user đã tồn tại trong dtb
+            var UserExisted = await dbContext.Accounts.Where(a => a.UserEmail == email).FirstOrDefaultAsync();
+            var claims = new List<Claim>();
+            //User chưa tồn tại
+            if(UserExisted == null)
+            {
+                //Tạo user
+                var User = new User
+                {
+                    FirstName = familyname,
+                    LastName = surname,
+                    PhoneNumber = (!string.IsNullOrEmpty(phonenumber) ? phonenumber : ""),
+                    UserEmail = email,
+                    Address = (!string.IsNullOrEmpty(address) ? address : ""),
+                    Dob = (!string.IsNullOrEmpty(dob) ? DateTime.Parse(dob) : DateTime.Now),
+                };
+                await dbContext.Users.AddAsync(User);
+                await dbContext.SaveChangesAsync();
+
+                var password = email.Split("@");
+                var Account = new Account
+                {
+                    UserEmail = email,
+                    UserId = User.UserId,
+                    Password = BCrypt.Net.BCrypt.EnhancedHashPassword(password[0],13), //password mặc định là tên email
+                    Enable = true,
+                    Verified = true
+                };
+                await dbContext.Accounts.AddAsync(Account);
+                await dbContext.SaveChangesAsync();
+
+                // Thêm claim roles cho người dùng
+                claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.NameIdentifier, User.UserId.ToString()),
+                    new Claim(ClaimTypes.Email, email),
+                    new Claim(ClaimTypes.Name, fullName),
+                    new Claim(ClaimTypes.Role, "User")
+                };
+            }
+            else
+            {
+                claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.NameIdentifier, UserExisted.UserId.ToString()),
+                    new Claim(ClaimTypes.Email, email),
+                    new Claim(ClaimTypes.Name, fullName),
+                    new Claim(ClaimTypes.Role, "User")
+                };
+            }
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = true
+            };
+
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+            return RedirectToAction("Index", "Client");
+        }
+
     }
 
 }

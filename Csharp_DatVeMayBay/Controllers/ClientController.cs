@@ -20,7 +20,8 @@ namespace Csharp_DatVeMayBay.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                if (User.FindFirst(ClaimTypes.Role).Value == "Admin")
+
+                if (User.FindFirst(ClaimTypes.Role)?.Value == "Admin")
                 {
                     return RedirectToAction("Airline", "Admin");
                 }

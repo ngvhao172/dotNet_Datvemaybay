@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Primitives;
 using Newtonsoft.Json;
-using static Csharp_DatVeMayBay.Controllers.FlightsController;
 
 namespace Csharp_DatVeMayBay.Controllers
 {
@@ -23,7 +22,6 @@ namespace Csharp_DatVeMayBay.Controllers
             public DateTime DepartureDate { get; set; }
             public Airport DepartureAirport { get; set; }
             public Airport ArrivalAirport { get; set; }
-
             public string SeatPicker { get; set; }
         }
         public class FlightViewModel

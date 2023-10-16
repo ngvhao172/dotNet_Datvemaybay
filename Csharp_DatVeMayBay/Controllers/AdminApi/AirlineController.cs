@@ -28,7 +28,7 @@ namespace Csharp_DatVeMayBay.Controllers.Admin
         [Route("GetAirlineById")]
         public JsonResult GetAirlineById([FromForm] string airline_id)
         {
-            var airline = dbContext.Airlines.Where(a => a.AirlineId == Int64.Parse(airline_id)).FirstOrDefault();
+            var airline = dbContext.Airlines.Where(a => a.AirlineId == Int16.Parse(airline_id)).FirstOrDefault();
             airline.AirlineLogo = "<img src='/" + airline.AirlineLogo + "' class='img-thumbnail mt-3'/> <input type='hidden' name='hidden_airline_logo' value='/" + airline.AirlineLogo + "'/>";
             return Json(new { data = airline });
         }
@@ -36,11 +36,10 @@ namespace Csharp_DatVeMayBay.Controllers.Admin
         [Route("UpdateAirline")]
         public JsonResult UpdateAirline([FromForm] string airline_id, [FromForm] string airline_name, [FromForm] string airline_code, [FromForm] IFormFile airline_logo)
         {
-            var airline = dbContext.Airlines.Where(a => a.AirlineId == Int64.Parse(airline_id)).FirstOrDefault();
+            var airline = dbContext.Airlines.Where(a => a.AirlineId == Int16.Parse(airline_id)).FirstOrDefault();
             airline.AirlineName = airline_name;
             airline.AirlineCode = airline_code;
             airline.AirlineLogo = UploadFile(airline_logo);
-           
             try
             {
                 dbContext.Airlines.Update(airline);
@@ -73,7 +72,7 @@ namespace Csharp_DatVeMayBay.Controllers.Admin
         [Route("DeleteAirline")]
         public JsonResult DeleteAirline ([FromForm] string airline_id)
         {
-            var airline = dbContext.Airlines.Where(a => a.AirlineId == Int64.Parse(airline_id)).FirstOrDefault();
+            var airline = dbContext.Airlines.Where(a => a.AirlineId == Int16.Parse(airline_id)).FirstOrDefault();
             try
             {
                 dbContext.Airlines.Remove(airline);

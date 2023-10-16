@@ -8,12 +8,6 @@ namespace Csharp_DatVeMayBay.Models.Domain
 {
     public class Account
     {
-       /* public Account(string userEmail, String password)
-        {
-            UserEmail = userEmail;
-            Password = password;
-        }*/
-
         [Key, MaxLength(100)]
         [Required(ErrorMessage = "Please input email")]
         [EmailAddress(ErrorMessage = "Invalid Email.")]

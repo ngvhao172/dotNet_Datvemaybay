@@ -108,7 +108,7 @@ namespace Csharp_DatVeMayBay.Controllers
                     foreach (var creditcard in cardList)
                     {
                         creditcard.UserId = user.UserId;
-                        dbContext.Add(creditcard);
+                        await dbContext.AddAsync(creditcard);
                     }
                 }
                
@@ -128,7 +128,7 @@ namespace Csharp_DatVeMayBay.Controllers
                     foreach (var creditcard in cardList)
                     {
                         creditcard.UserId = user.UserId;
-                        dbContext.Add(creditcard);
+                        await dbContext.AddAsync(creditcard);
                     }
                 }
                 await dbContext.SaveChangesAsync();
@@ -150,7 +150,7 @@ namespace Csharp_DatVeMayBay.Controllers
                     PassengerCount = 1,
                     Status = Models.Enums.BookingStatus.Booked
                 };
-                dbContext.Add(newBooking);
+                await dbContext.AddAsync(newBooking);
                 await dbContext.SaveChangesAsync();
                 int BookingIdValue = newBooking.BookingId;
                 if (BookingIdValue != null)
@@ -176,7 +176,7 @@ namespace Csharp_DatVeMayBay.Controllers
                         //Update Seat Status
                         SeatBooked.Status = Models.Enums.SeatStatus.Busy;
                         dbContext.Update(SeatBooked);
-                        dbContext.SaveChangesAsync();
+                        await dbContext.SaveChangesAsync();
                         //Tạo ticket
                         //Retreiving the last ticket
                         var code = "0001";
@@ -213,8 +213,8 @@ namespace Csharp_DatVeMayBay.Controllers
                             TicketPrice = FormData.FlightClass == "PT" ? Flight.EconomyPrice : Flight.BussinessPrice,
                             TicketClass = FormData.FlightClass == "PT" ? "Phổ thông" : "Thương"
                         };
-                        dbContext.Add(newTicket);
-                        dbContext.SaveChanges();
+                        await dbContext.AddAsync(newTicket);
+                        await dbContext.SaveChangesAsync();
 
 
 
@@ -245,7 +245,6 @@ namespace Csharp_DatVeMayBay.Controllers
                     TempData["error"] = "Không tìm được Booking hay không tạo được Booking";
                     return RedirectToAction("Error505", "Error");
                 }
-
             }
             else
             {

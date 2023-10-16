@@ -42,14 +42,14 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
         [Route("GetFlightById")]
         public JsonResult GetFlightById([FromForm] string flight_id)
         {
-            var airline = dbContext.Flights.Where(a => a.FlightId == Int64.Parse(flight_id)).FirstOrDefault();
+            var airline = dbContext.Flights.Where(a => a.FlightId == Int16.Parse(flight_id)).FirstOrDefault();
             return Json(new { data = airline });
         }
         [HttpPost]
         [Route("DeleteFlight")]
         public JsonResult DeleteFlight([FromForm] string flight_id)
         {
-            var flight = dbContext.Flights.Where(f => f.FlightId == Int64.Parse(flight_id)).FirstOrDefault();
+            var flight = dbContext.Flights.Where(f => f.FlightId == Int16.Parse(flight_id)).FirstOrDefault();
             try
             {
                 dbContext.Flights.Remove(flight);
