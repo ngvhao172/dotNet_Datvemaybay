@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\403.css"
     },
     {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\404.css",
+      "PackagePath": "staticwebassets\\css\\404.css"
+    },
+    {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\seats.css",
       "PackagePath": "staticwebassets\\css\\seats.css"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kkT80KLX7H6JYoSGRtxj2FGyHryavCP74yrJynVdnQY=",
+  "Hash": "eg65sNIxe21Q2KtK8oWOR11Q/ruRl0YJJtX7P/InIPQ=",
   "Source": "Csharp_DatVeMayBay",
   "BasePath": "_content/Csharp_DatVeMayBay",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\403.css"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\404.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "css/404.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\404.css"
     },
     {
       "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\seats.css",

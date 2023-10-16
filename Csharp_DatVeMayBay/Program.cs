@@ -75,6 +75,8 @@ app.UseAuthorization();
 
 app.UseSession();
 
+app.UseStatusCodePagesWithReExecute("/Error/{0}");
+
 //Verification route via email
 app.MapControllerRoute(
     name: "VerifyRoute",
