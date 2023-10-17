@@ -23,8 +23,7 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="wwwroot\images\" />
-    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\img\account\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />

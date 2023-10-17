@@ -1,0 +1,448 @@
+﻿<link rel="stylesheet" type="text/css" href="~/css/account.css">
+<div class="body-section mt-5">
+            <div class="body-content pb-5">
+                <div class="container-fluid" style="height: max-content;">
+                    <div class="user-info">
+                        <div class="container-fluid position-relative">
+                            <div class="background-img" style="background-image:url(./img/account/background.jpg)">
+                            </div>
+                            <div class="avt-info position-relative z-index-5">
+                                <img class="avt .img-fluid z-index-10000 mb-5" src="./img/account/avt.png" alt="">
+                                <p class="user-name">Nguyen Van Hao</p>
+                                <p class="user-email">ngvhao172@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid" style="height: 50px;">
+                    <div class="option-viewing bg-light" style="height: 50px;border-radius: 10px;">
+                        <div class="row justify-content-center align-items-center">
+                            <div id="account-option" class="col justify-content-center text-center">Tài khoản
+                                <div class="line-chosen"></div>
+                            </div>
+                            <div id="ticket-option" class="col justify-content-center text-center">Lịch sử mua vé
+                                <div class="line-chosen"></div>
+                            </div>
+                            <div id="payment-option" class="col justify-content-center text-center">Thẻ tín dụng
+                                <div class="line-chosen"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid mt-5" style="height: max-content;">
+                        <div class="account-info">
+                            <p class="title h4 fw-bold">Thông tin tài khoản</p>
+                            <div class="card-group bg-light" style="border-radius: 20px;">
+                                <div class="container-fluid d-block">
+                                    <br>
+                                    <div class="rows ms-3 mt-2">
+                                        <div class="row mb-2">
+                                            <div class="col-sm-12 col-md-9">
+                                                <label for="exampleFormControlInput1" class="form-label">Họ và tên</label>
+                                                <input type="email" class="form-control border-0 bg-transparent p-0 m-0" id="exampleFormControlInput1" placeholder=<?php echo $full_name; ?>>
+                                            </div>
+                                            <div class="col-sm-12 col-md-3 mt-sm-2 text-md-end">
+                                                <button type="button" class="btn btn-outline-success me-2" style="
+                                                    height: 100%;
+                                                    border: 2px solid #8DD3BB;
+                                                    border-radius: 5px;">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Thay đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-sm-12 col-md-9">
+                                                <label for="exampleFormControlInput2" class="form-label">Email</label>
+                                                <input type="email" class="form-control border-0 bg-transparent p-0 m-0" id="exampleFormControlInput2" placeholder=<?php echo $email; ?>>
+                                            </div>
+                                            <div class="col-sm-12 col-md-3 mt-sm-2 text-md-end">
+                                                <button type="button" class="btn btn-outline-success me-2" style="
+                                                    height: 100%;
+                                                    border: 2px solid #8DD3BB;
+                                                    border-radius: 5px;">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Thay đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-sm-12 col-md-9">
+                                                <label for="exampleFormControlInput3" class="form-label">Mật khẩu</label>
+                                                <input type="email" class="form-control border-0 bg-transparent p-0 m-0" id="exampleFormControlInput3" placeholder="**************">
+                                            </div>
+                                            <div class="col-sm-12 col-md-3 mt-2 mt-sm-2 text-md-end">
+                                                <button type="button" class="btn btn-outline-success me-2" style="
+                                                    height: 100%;
+                                                    border: 2px solid #8DD3BB;
+                                                    border-radius: 5px;">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Thay đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-sm-12 col-md-9">
+                                                <label for="exampleFormControlInput4" class="form-label">Số điện thoại</label>
+                                                <input type="email" class="form-control border-0 bg-transparent p-0 m-0" id="exampleFormControlInput4" placeholder=<?php echo $phone; ?>>
+                                            </div>
+                                            <div class="col-sm-12 col-md-3 mt-2 mt-sm-2 text-md-end">
+                                                <button type="button" class="btn btn-outline-success me-2" style="
+                                                    height: 100%;
+                                                    border: 2px solid #8DD3BB;
+                                                    border-radius: 5px;">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Thay đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-sm-12 col-md-9">
+                                                <label for="exampleFormControlInput5" class="form-label">Địa chỉ</label>
+                                                <input type="email" class="form-control border-0 bg-transparent p-0 m-0" id="exampleFormControlInput5" placeholder=<?php echo $address;?>>
+                                            </div>
+                                            <div class="col-sm-12 col-md-3 mt-2 mt-sm-2 text-md-end">
+                                                <button type="button" class="btn btn-outline-success me-2" style="
+                                                    height: 100%;
+                                                    border: 2px solid #8DD3BB;
+                                                    border-radius: 5px;">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Thay đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2 pb-5">
+                                            <div class="col-sm-12 col-md-9">
+                                                <label for="exampleFormControlInput6" class="form-label">Ngày sinh</label>
+                                                <input type="email" class="form-control border-0 bg-transparent p-0 m-0" id="exampleFormControlInput6" placeholder=<?php echo $dob; ?>>
+                                            </div>
+                                            <div class="col-sm-12 col-md-3 mt-2 mt-sm-2 text-md-end">
+                                                <button type="button" class="btn btn-outline-success me-2" style="
+                                                    height: 100%;
+                                                    border: 2px solid #8DD3BB;
+                                                    border-radius: 5px;">
+                                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Thay đổi
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- ticket tab -->
+                    <div class="ticketbooking-info">
+                        <p class="title h4 fw-bold">Vé đã mua</p>
+                        <?php
+                            // require_once("../../api/userTicketInforController.php");
+                            // lấy thông tin các booking
+                            $bookings = (new bookingController())->get_info($user_id);
+                            foreach($bookings as $booking){
+                                // print_r($booking);
+                                $booking_id = $booking->booking_id;
+                                // lây thông tin ticket
+                                $ticket = (new ticketController())->get_info($booking_id);
+                                $ticket_id = $ticket->ticket_id;
+                                $flight_id = $ticket->flight_id;
+                                $seat_id = $ticket->seat_id;
+                                // $ticket_price = $ticket->ticket_price;
+                                // $ticket_status = $ticket->ticket_status;
+                                // lấy thông tin chuyến bay
+                                $flight = (new flightController())->get_flight_by_flight_id($flight_id);
+                                $airline_id = $flight->airline_id;
+                                $departure_airport_id = $flight->departure_airport_id;
+                                $arrival_airport_id = $flight->arrival_airport_id;
+
+                                $departure_datetime = explode(" ", $flight->departure_datetime);
+                                if (count($departure_datetime) >= 2) {
+                                    $departure_date = trim($departure_datetime[0], " ");
+                                    $departure_time = trim($departure_datetime[1], " ");
+                                }
+
+                                $arrival_datetime = explode(" ", $flight->arrival_datetime);
+                                if (count($arrival_datetime) >= 2) {
+                                    $arrival_date = trim($arrival_datetime[0], " ");
+                                    $arrival_time = trim($arrival_datetime[1], " ");
+                                }
+
+
+                                $economy_price = $flight->economy_price;	
+                                $business_price = $flight->business_price;
+
+                                // lấy thông tin hãng bay
+                                $airline = (new airlineController())->get_airline_by_airline_id($airline_id);
+                                $airline_name = $airline->airline_name;
+                                $airline_logo = $airline->airline_logo;
+
+                                // lấy thông tin sân bay đi, sân bay đến
+                                // sân bay đi
+                                $depart_airport = (new airportController())->get_airport_by_id($departure_airport_id);
+                                $departure_airport_name = $depart_airport->airport_name;
+                                $departure_airport_locaton = $depart_airport->airport_location;
+                                $departure_airport_code = $depart_airport->airport_code;
+                                // sân bay đến
+                                $arrival_airport = (new airportController())->get_airport_by_id($arrival_airport_id);
+                                $arrival_airport_name = $arrival_airport->airport_name;
+                                $arrival_airport_locaton = $arrival_airport->airport_location;
+                                $arrival_airport_code = $arrival_airport->airport_code;
+
+                                // lấy thông tin ghế ngồi
+                                $seat = (new seatController())->get_seat_by_seat_id($seat_id);
+                                // echo $seat_id;
+                                $seat_num = $seat->seat_row . $seat->seat_column; 
+                                ?>
+                                <div class="container-fluid p-0 m-0 bg-light mb-4" style="border-radius: 20px; height: max-content;">
+                                    <div class="row p-3 d-flex justify-content-between align-items-center">
+
+                                        <div class="col-12 col-lg-2 col-lg-1 p-1 text-center d-flex justify-content-center">
+                                            <img src="" alt="Logo hãng bay">
+                                        </div>
+                                        <div class="col-12 col-lg-5 col-sm-8 col-md-8 col-xl-4">
+                                            <div class="container">
+                                                <div class="row d-flex justify-content-center text-center">
+                                                    <div class="col-5 text-start">
+                                                        <!-- php -->
+                                                        <div class="fw-bold" id="departure-airport"><?php echo $departure_airport_locaton; ?></div>
+                                                        <div class="" id="departure-time"><?php echo $departure_time;?></div>
+                                                    </div>
+                                                    <div class="col-1 p-0 text-center"><hr width="100%"></div>
+                                                    <div class="col-5 text-end">
+                                                        <!-- php -->
+                                                        <div class="fw-bold" id="arrival-airport"><?php echo $arrival_airport_locaton; ?></div>
+                                                        <div class="" id="arrival-time"><?php echo $arrival_time; ?></div>
+                                                    </div>
+                                                    <div class="col-lg-1 line-straight" style="border-right: 1px solid black; height: 50px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-4 col-sm-4 info-airline">
+                                            <div class="container-fluid p-0">
+                                                <div class="row mb-2">
+                                                    <div class="col-7">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img src="./img/account/date.png" alt="Date">
+                                                            </div>
+                                                            <!-- php -->
+                                                            <div class="col ms-1">
+                                                                <div class="date-info">Date</div>
+                                                                <div id="date"><?php echo $departure_date;?></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <img src="./img/account/gate.png" alt="Gate">
+                                                            </div>
+                                                            <!-- php -->
+                                                            <div class="col ms-1">
+                                                                <div class="gate-info">Gate</div>
+                                                                <div id="gatenum">Q12</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-7">
+                                                        <div class="row">
+                                                            <div class="col-3">
+                                                                <img src="./img/account/time.png" alt="Time">
+                                                            </div>
+                                                            <!-- php -->
+                                                            <div class="col ms-1">
+                                                                <div class="flight-info">Flight time</div>
+                                                                <div id="date"><?php echo $departure_date;?></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        <div class="row ">
+                                                            <div class="col-4">
+                                                                <img src="./img/account/seat.png" alt="Seat">
+                                                            </div>
+                                                            <!-- php -->
+                                                            <div class="col ms-1">
+                                                                <div class="seat-info">Seat</div>
+                                                                <div id="seat-num"><?php echo $seat_num; ?></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-2 col-sm-2 col-md-2 d-flex justify-content-center">
+                                            <div class="btn-download" style="height: 100%; width: max-content;">
+                                                <button type="button" class="btn btn-outline-success p-2" style="
+                                                    background-color:#8DD3BB; border: #8DD3BB; color: 
+                                                    black;height: 100%;"><?php echo $ticket_id; ?>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        ?>
+                    </div>
+
+                    <div class="payment-info">
+                        <p class="title h4 fw-bold">Các thẻ tín dụng</p>
+                        <div class="card-group bg-light" style="border-radius: 20px; height: max-content;">
+                            <div class="container-fluid p-0 m-0">
+                                <p></p>
+                                <div class="row m-3 mt-2">
+                                    <?php 
+                                     if(isset($_SESSION['user_id'])){
+                                        if(count($creditcards)>0){
+                                            foreach($creditcards as $creditcard){
+                                                ?>
+                                                <div class="col-md-4 mb-sm-2">
+                                                    <div class="ps-3 pe-3 mb-2 mt-3" style="background-color:#8DD3BB;border-radius: 10px; height: 200px;max-width: 300px">
+                                                        <div class="row mb-4">
+                                                            <div class="col-9 p-0">
+                                                                <div class="char fw-bolder mt-3 ms-3" style="font-size: 20px;"><?php echo $creditcard->cardholder_name ?></div>
+                                                                <div class="fw-bolder ms-3" style="font-size: 20px;"><?php echo $creditcard->card_number ?></div>
+                                                            </div>
+                                                            <div class="col-3 text-end">
+                                                                <i class="fa-sharp fa-solid fa-trash mt-3" style="font-size: 20px;"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-5">
+                                                            <div class="col-8">
+                                                                <div>Valid thru</div>
+                                                                <div class="fw-bolder" id="expired"><?php echo $creditcard->expiration_date ?></div>
+                                                            </div>
+                                                            <div class="col-4 text-end">
+                                                                <i class="fa-brands fa-cc-visa" style="font-size: 30px;"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <?php
+                                            }
+                                        } 
+                                     }    
+                                    ?>
+                                    <!-- <p></p> -->
+                                    <div class="col-md-4 mb-sm-1">
+                                        <div class="bg-light text-center align-items-center d-flex justify-content-center mb-2 mt-3" style="border-radius: 10px; height: 200px;max-width: 300px;border: 2px dashed #8DD3BB;">
+                                            <button class="bg-transparent border-0" id="add-credit" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <div class="add-icon">
+                                                    <i style="font-size: 30px;" class="fas fa-solid fa-plus-circle"></i>
+                                                    <div>Add a new card</div>
+                                                </div>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div> 
+        </div> 
+         <!-- Modal Dialog -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content pb-3" style="border-radius: 10px;">
+                    <div class="container">
+                        <div class="row">
+                        <form action="" class="needs-validation" method="post">
+                        <div class="col">
+                                <div class="modal-header border-bottom-0">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <h2 class="modal-title fw-bolder" id="exampleModalLabel">Add a new Card</h2>
+                                            </div>
+                                            <div class="col-2 align-items-center text-center d-flex">
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-body border-bottom-0">
+                                    <div class="container">
+                                        <div class="row mb-3">
+                                            <div class="col-md">
+                                                <div class="form-floating">
+                                                    <input type="number" class="form-control border-dark" id="validationCustom01" name="cardnum" placeholder="" value="" required>
+                                                    <label for="validationCustom01">Số thẻ</label>
+                                                    <div class="invalid-feedback">
+                                                        Vui lòng nhập số thẻ.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                <input type="date" class="form-control border-dark" id="validationCustom02" name="expdate" min="<?php echo date('Y-m-d'); ?>" placeholder="" value="" required>
+                                                <label for="validationCustom02">Ngày hết hạn</label>
+                                                <div class="invalid-feedback">
+                                                    Vui lòng nhập ngày hết hạn của thẻ.
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col">
+                                                <div class="form-floating">
+                                                    <input type="namecard" class="form-control border-dark" id="validationCustom04" name="holdername" placeholder="" value="" required>
+                                                    <label for="validationCustom04">Tên thẻ</label>
+                                                    <div class="invalid-feedback">
+                                                        Vui lòng nhập tên trên thẻ.
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" name="" id="" required> Securely save my information for 1-click checkout
+                                                <div class="invalid-feedback">
+                                                    Vui lòng đồng ý.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer border-bottom-0 border-top-0">
+                                    <div class="container">
+                                        <div class="row"></div>
+                                        <div class="col mb-2">
+                                            <button type="submit" name="addNewCard" class="btn btn-outline-success p-2" style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">Thêm thẻ</button>
+                                        </div>
+                                        <div class="col">
+                                            <p class="text-center" style="font-size: 10px;">By confirming your subscription, you allow The Outdoor Inn Crowd Limited to charge your card for this payment and future payments in accordance with their terms. You can always cancel your subscription.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+    $(".option-viewing > .row > .col").click(function() { // sửa lại sự kiện click
+        $('.line-chosen').css("display", "none");
+        $(this).find('.line-chosen').css("display", "block");
+
+        // Hiển thị/ẩn các phần tử tương ứng
+        if($(this).attr('id') === 'account-option') {
+            $(".account-info").css("display", "block");
+            $(".payment-info").css("display", "none");
+            $(".ticketbooking-info").css("display", "none");
+        } else if ($(this).attr('id') === 'ticket-option') {
+            $(".account-info").css("display", "none");
+            $(".payment-info").css("display", "none");
+            $(".ticketbooking-info").css("display", "block");
+        } else if ($(this).attr('id') === 'payment-option') {
+            $(".account-info").css("display", "none");
+            $(".payment-info").css("display", "block");
+            $(".ticketbooking-info").css("display", "none");
+        }
+    });
+});
+
+        </script>

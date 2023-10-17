@@ -173,84 +173,93 @@ namespace Csharp_DatVeMayBay.Controllers
 
                     if (SeatBooked != null)
                     {
-                        //Update Seat Status
-                        SeatBooked.Status = Models.Enums.SeatStatus.Busy;
-                        dbContext.Update(SeatBooked);
-                        await dbContext.SaveChangesAsync();
-                        //Tạo ticket
-                        //Retreiving the last ticket
-                        var code = "0001";
-                        //Lấy ticket cuối cùng
-                        var Date = DateTime.Now.Date.ToString("yyyy-MM-dd").Replace("-", "");
-                        var AirlineCode = Flight.Airline.AirlineCode.ToString();
-
-                        var TicketString = AirlineCode + Date;
-
-                        var getLastTicketId = dbContext.Tickets
-                        .Where(ticket => ticket.TicketId.Contains(TicketString))
-                        .OrderBy(ticket => ticket.TicketId)
-                        .LastOrDefaultAsync();
-
-
-                        Ticket lastTicketId = await getLastTicketId;
-                        if (lastTicketId != null)
+                        if(SeatBooked.Status == Models.Enums.SeatStatus.Available)
                         {
-                            var lastId = lastTicketId.TicketId.Substring(lastTicketId.TicketId.Length - 4, 4);
-                            Console.WriteLine("LastID: " + lastId);
+                            //Update Seat Status
+                            SeatBooked.Status = Models.Enums.SeatStatus.Busy;
+                            dbContext.Update(SeatBooked);
+                            await dbContext.SaveChangesAsync();
+                            //Tạo ticket
+                            //Retreiving the last ticket
+                            var code = "0001";
+                            //Lấy ticket cuối cùng
+                            var Date = DateTime.Now.Date.ToString("yyyy-MM-dd").Replace("-", "");
+                            var AirlineCode = Flight.Airline.AirlineCode.ToString();
 
-                            var lastfourId = int.Parse(lastId) + 1;
+                            var TicketString = AirlineCode + Date;
 
-                            code = string.Format("{0:D4}", lastfourId);
+                            var getLastTicketId = dbContext.Tickets
+                            .Where(ticket => ticket.TicketId.Contains(TicketString))
+                            .OrderBy(ticket => ticket.TicketId)
+                            .LastOrDefaultAsync();
+
+
+                            Ticket lastTicketId = await getLastTicketId;
+                            if (lastTicketId != null)
+                            {
+                                var lastId = lastTicketId.TicketId.Substring(lastTicketId.TicketId.Length - 4, 4);
+                                Console.WriteLine("LastID: " + lastId);
+
+                                var lastfourId = int.Parse(lastId) + 1;
+
+                                code = string.Format("{0:D4}", lastfourId);
+                            }
+                            //Tạo ticket
+                            var newTicket = new Ticket
+                            {
+                                TicketId = Flight.Airline.AirlineCode + DateTime.Now.Date.ToString("yyyy-MM-dd").Replace("-", "") + code,
+                                BookingId = BookingIdValue,
+                                FlightId = Flight.FlightId,
+                                SeatId = SeatBooked.SeatId,
+                                Status = Models.Enums.TicketStatus.Paid,
+                                TicketPrice = FormData.FlightClass == "PT" ? Flight.EconomyPrice : Flight.BussinessPrice,
+                                TicketClass = FormData.FlightClass == "PT" ? "Phổ thông" : "Thương"
+                            };
+                            await dbContext.AddAsync(newTicket);
+                            await dbContext.SaveChangesAsync();
+
+
+
+                            finalTicketValue = await dbContext.Tickets
+                                .Where(t => t.TicketId == newTicket.TicketId)
+                                .Include(f => f.Flight)
+                                    .ThenInclude(a => a.Airline)
+                                .Include(f => f.Flight)
+                                    .ThenInclude(a => a.DepartureAirport)
+                                .Include(f => f.Flight)
+                                    .ThenInclude(a => a.ArrivalAirport)
+                                .Include(f => f.Booking)
+                                    .ThenInclude(a => a.User)
+                                .FirstAsync();
+                            //Trả Data về View
+                            return Redirect("/ticket-info");
                         }
-                        //Tạo ticket
-                        var newTicket = new Ticket
+                        else
                         {
-                            TicketId = Flight.Airline.AirlineCode + DateTime.Now.Date.ToString("yyyy-MM-dd").Replace("-","") + code,
-                            BookingId = BookingIdValue,
-                            FlightId = Flight.FlightId,
-                            SeatId = SeatBooked.SeatId,
-                            Status = Models.Enums.TicketStatus.Paid,
-                            TicketPrice = FormData.FlightClass == "PT" ? Flight.EconomyPrice : Flight.BussinessPrice,
-                            TicketClass = FormData.FlightClass == "PT" ? "Phổ thông" : "Thương"
-                        };
-                        await dbContext.AddAsync(newTicket);
-                        await dbContext.SaveChangesAsync();
-
-
-
-                        finalTicketValue = await dbContext.Tickets
-                            .Where(t => t.TicketId == newTicket.TicketId)
-                            .Include(f => f.Flight)
-                                .ThenInclude(a => a.Airline)
-                            .Include(f => f.Flight)
-                                .ThenInclude(a => a.DepartureAirport)
-                            .Include(f => f.Flight)
-                                .ThenInclude(a => a.ArrivalAirport)
-                            .Include(f => f.Booking)
-                                .ThenInclude(a => a.User)
-                            .FirstAsync();
-                        //Trả Data về View
-                        return Redirect("/ticket-info");
+                            //Seat đã được đặt
+                            TempData["error"] = "Chỗ ngồi đó đã được đặt, vui lòng chọn chỗ ngồi khác.";
+                            return RedirectToAction("Error500", "Error");
+                        }
                     }
                     else
                     {
                         //Không tìm được Seat
                         TempData["error"] = "Không tìm thấy Seat được chọn";
-                        return RedirectToAction("Error505", "Error");
+                        return RedirectToAction("Error500", "Error");
                     }
                 }
                 else
                 {
                     //Không tìm được Booking hay không tạo được Booking
                     TempData["error"] = "Không tìm được Booking hay không tạo được Booking";
-                    return RedirectToAction("Error505", "Error");
+                    return RedirectToAction("Error500", "Error");
                 }
             }
             else
             {
                 //Không tìm được User hay không tạo được User
                 TempData["error"] = "Không tìm được User hay không tạo được User";
-                return RedirectToAction("Error505", "Error");
+                return RedirectToAction("Error500", "Error");
             }
         }
         [Route("/ticket-info")]
@@ -261,7 +270,7 @@ namespace Csharp_DatVeMayBay.Controllers
             {
                 return View(finalTicketValue);
             }
-            return RedirectToAction("Error505", "Error");
+            return RedirectToAction("Error500", "Error");
         }
 
         [Route("/search-booking")]

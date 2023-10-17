@@ -160,7 +160,7 @@
     <!-- Modal Dialog -->
 
     <div class="row mb-5 mt-5">
-        <img class=" p-0 w-100" style="border-radius: 12px;" src="../../images/flight-detail/plane-flight-detail.svg"
+        <img class=" p-0 w-100" style="border-radius: 12px;" src="~/img/flight-booking-detail/plane-flight-detail.svg"
             alt="flight-detail">
     </div>
 
@@ -186,12 +186,12 @@
     </div>
 
     <div class="row mb-3">
-        <img src="../../images/flight-detail/window-plane.png" alt="" class="col-2 rounded">
-        <img src="../../images/flight-detail/family-plane.png" alt="" class="col-2 rounded">
-        <img src="../../images/flight-detail/inside-plane.png" alt="" class="col-2 rounded">
-        <img src="../../images/flight-detail/family-plane.png" alt="" class="col-2 rounded">
-        <img src="../../images/flight-detail/window-plane.png" alt="" class="col-2 rounded">
-        <img src="../../images/flight-detail/family-plane.png" alt="" class="col-2 rounded">
+        <img src="~/img/flight-booking-detail/window-plane.png" alt="" class="col-2 rounded">
+        <img src="~/img/flight-booking-detail/family-plane.png" alt="" class="col-2 rounded">
+        <img src="~/img/flight-booking-detail/inside-plane.png" alt="" class="col-2 rounded">
+        <img src="~/img/flight-booking-detail/family-plane.png" alt="" class="col-2 rounded">
+        <img src="~/img/flight-booking-detail/window-plane.png" alt="" class="col-2 rounded">
+        <img src="~/img/flight-booking-detail/family-plane.png" alt="" class="col-2 rounded">
     </div>
 
     <!-- chính sách -->
@@ -222,10 +222,10 @@
             <div class="col-12 p-4">
                 <div class="row">
                     <div class="col">
-                        <h3 class="fw-bold">Return Wed, Dec 8</h3>
+                        <h4 class="fw-bold">Departure on @Model.Flight.DepartureDatetime</h4>
                     </div>
                     <div class="col">
-                        <h3 class="text-secondary text-end">2h 28m</h3>
+                        <h3 class="text-secondary text-end">@customHelper.GetDuration(Model.Flight.DepartureDatetime, Model.Flight.ArrivalDatetime)</h3>
                     </div>
                 </div>
             </div>
@@ -236,13 +236,13 @@
                     <div class="col-12 col-lg-4 px-5 justify-content-center">
                         <div class="row border rounded-3">
                             <!-- logo -->
-                            <img class="col-12 col-sm-6 col-md-5 col-lg-5 p-0" src="../../images/VietjetAirLogo.png"
+                            <img class="col-12 col-sm-6 col-md-5 col-lg-5 p-0" src="../@Model.Flight.Airline.AirlineLogo"
                                 alt="">
 
                             <!-- info -->
                             <div class="col-12 col-sm-6 col-md-7 col-lg-7 py-2 justify-content-center">
-                                <h4 class="fw-bold text-center">Emirates</h4>
-                                <h5 class="text-secondary text-center">Airbus A320</h5>
+                                <h4 class="fw-bold text-center">@Model.Flight.Airline.AirlineName</h4>
+                                <h5 class="text-secondary text-center">Airbus @string.Concat("A", Model.Flight.FlightId) </h5>
                             </div>
                         </div>
                     </div>
@@ -265,19 +265,19 @@
             <div class="row row-cols-auto justify-content-md-center py-4 footer-in-return">
                 <!-- footer-in-return la class tu them --->
                 <div class="col">
-                    <h4 class="fw-bold">12:00 pm</h4>
+                    @*<h4 class="fw-bold">12:00 pm</h4>*@
                 </div>
                 <div class="col">
-                    <h5>Newark(EWR)</h5>
+                    <h5>@Model.Flight.DepartureAirport.AirportLocation</h5>
                 </div>
                 <!-- <div class="col footer-icon-arrow-left"><i class="fa-solid fa-arrow-left-long fs-3"></i></div> -->
                 <div class="col footer-icon-plane"><i class="fa-sharp fa-solid fa-plane fs-2"></i></div>
                 <!-- <div class="col footer-icon-arrow-left"><i class="fa-solid fa-arrow-right-long fs-3"></i></div> -->
                 <div class="col">
-                    <h5>Newark(EWR)</h5>
+                    <h5>@Model.Flight.ArrivalAirport.AirportLocation</h5>
                 </div>
                 <div class="col">
-                    <h4 class="fw-bold">12:00 pm</h4>
+                    @*<h4 class="fw-bold">12:00 pm</h4>*@
                 </div>
             </div>
         </div>

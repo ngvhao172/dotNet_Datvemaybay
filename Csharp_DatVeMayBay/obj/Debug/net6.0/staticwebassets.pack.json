@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\404.css"
     },
     {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\seats.css",
       "PackagePath": "staticwebassets\\css\\seats.css"
     },
@@ -31,6 +35,30 @@
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\avt.png",
+      "PackagePath": "staticwebassets\\img\\account\\avt.png"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\background.jpg",
+      "PackagePath": "staticwebassets\\img\\account\\background.jpg"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\date.png",
+      "PackagePath": "staticwebassets\\img\\account\\date.png"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\gate.png",
+      "PackagePath": "staticwebassets\\img\\account\\gate.png"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\seat.png",
+      "PackagePath": "staticwebassets\\img\\account\\seat.png"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\time.png",
+      "PackagePath": "staticwebassets\\img\\account\\time.png"
     },
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\BambooAirwaysLogo.png",

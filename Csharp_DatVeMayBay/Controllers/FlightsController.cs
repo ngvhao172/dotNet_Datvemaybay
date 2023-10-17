@@ -70,6 +70,8 @@ namespace Csharp_DatVeMayBay.Controllers
                 flightViewModel.TotalPages = totalPages;
                 flightViewModel.PageNumber = pageNumber;
 
+                ViewData["Message"] = "Không tìm thấy chuyến bay nào";
+
                 return View("FlightListing", flightViewModel);
             }
             return RedirectToAction("Error404", "Error");
@@ -121,7 +123,6 @@ namespace Csharp_DatVeMayBay.Controllers
                     AirlineChecked = null
                 };
                 flightListPage = flightList;
-                ViewData["Message"] = "Không tìm thấy chuyến bay nào";
                 return Redirect("/select-flight");
             }
             //Lọc hãng bay

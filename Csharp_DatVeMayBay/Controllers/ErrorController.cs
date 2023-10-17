@@ -4,9 +4,9 @@ namespace Csharp_DatVeMayBay.Controllers
 {
     public class ErrorController : Controller
     {
-        public IActionResult Error505()
+        public IActionResult Error500()
         {
-            return View("505");
+            return View("500");
         }
         public IActionResult Error403()
         {
@@ -28,13 +28,13 @@ namespace Csharp_DatVeMayBay.Controllers
             {
                 return View("404");
             }
-            else if(statusCode == 505)
+            else if(statusCode == 403)
             {
-                return View("505");
+                return View("403");
             }
             else
             {
-                return View("403");
+                return View("500");
             }
           
         }

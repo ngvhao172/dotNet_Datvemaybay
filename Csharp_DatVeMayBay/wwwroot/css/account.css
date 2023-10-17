@@ -1,0 +1,83 @@
+﻿/* Body content */
+.body {
+    background-color: rgb(240, 240, 240);
+    height: max-content;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 400px;
+}
+
+.body-content {
+    height: max-content;
+    width: 96%;
+    margin: 0% 2%;
+}
+
+.user-info {
+    height: 30%;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.user-name {
+    font-size: 25px;
+}
+
+.user-email {
+    color: gray;
+}
+/* background-imgs */
+.background-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.avt-info {
+    width: 100%;
+    text-align: center;
+    margin-top: -200px;
+    margin-bottom: -50px;
+}
+
+    .avt-info > .avt {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+    }
+
+#account-option, #ticket-option, #payment-option {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+/* Account-Ticket-Payment Methods */
+/* Animation */
+
+
+.line-chosen {
+    bottom: 0;
+    position: absolute;
+    width: 60%;
+    height: 5px;
+    background-color: #8DD3BB;
+    display: none;
+    border-radius: 2px;
+}
+
+#account-option:hover, #ticket-option:hover, #payment-option:hover {
+    cursor: pointer;
+}
+
+.payment-info, .ticketbooking-info {
+    display: none;
+}
+
+.add-icon:hover {
+    cursor: pointer;
+}
