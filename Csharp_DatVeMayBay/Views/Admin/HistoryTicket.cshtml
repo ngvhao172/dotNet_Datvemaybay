@@ -1,0 +1,72 @@
+﻿<div class="body">
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-2">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <button id="history_customer" class="list-group-item list-group-item-action active"
+                            id="list-messages-list" data-bs-toggle="list" href="#list-messages" role="tab"
+                            aria-controls="list-messages">Lịch sử
+                            mua vé của khách hàng</button>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="row mb-3">
+                        <div class="col-4">
+                            <div class="input-group date datetimepicker" data-target-input="nearest">
+                                <div class="input-group-text d-block">Từ Ngày <i class="fa fa-calendar"
+                                        style="height: 100%;"></i></div><input required id="search_fromdate" type="date"
+                                    class="form-control datetimepicker-input" data-target=".datetimepicker" />
+                                <div class="input-group-append" data-target="#datetimepicker"
+                                    data-toggle="datetimepicker">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="input-group date datetimepicker" data-target-input="nearest">
+                                <div class="input-group-text d-block">Đến Ngày <i class="fa fa-calendar"
+                                        style="height: 100%;"></i></div><input required id="search_todate" type="date"
+                                    class="form-control datetimepicker-input" data-target=".datetimepicker" />
+                                <div class="input-group-append" data-target="#datetimepicker"
+                                    data-toggle="datetimepicker">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <input type="button" name="save" id="btn_search" class="btn btn-info" value="Tìm kiếm" />
+                        </div>
+                    </div>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-messages" role="tabpanel"
+                            aria-labelledby="list-messages-list">
+                            <table class="table table-striped" id="dt-history" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">MÃ KHÁCH HÀNG</th>
+                                        <th scope="col">EMAIL</th>
+                                        <th scope="col">MÃ ĐẶT VÉ</th>
+                                        <th scope="col">NGÀY ĐẶT</th>
+                                        <th scope="col">MÃ CHUYẾN BAY</th>
+                                        <th scope="col">MÃ VÉ</th>
+                                        <th scope="col">GIÁ VÉ</th>
+                                        <th scope="col">TRẠNG THÁI VÉ</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th scope="col">MÃ KHÁCH HÀNG</th>
+                                        <th scope="col">EMAIL</th>
+                                        <th scope="col">MÃ ĐẶT VÉ</th>
+                                        <th scope="col">NGÀY ĐẶT</th>
+                                        <th scope="col">MÃ CHUYẾN BAY</th>
+                                        <th scope="col">MÃ VÉ</th>
+                                        <th scope="col">GIÁ VÉ</th>
+                                        <th scope="col">TRẠNG THÁI VÉ</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

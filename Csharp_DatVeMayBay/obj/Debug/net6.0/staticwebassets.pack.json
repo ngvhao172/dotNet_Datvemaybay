@@ -129,6 +129,22 @@
       "PackagePath": "staticwebassets\\img\\booking-detail\\wifi.svg"
     },
     {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\family-plane.png",
+      "PackagePath": "staticwebassets\\img\\flight-booking-detail\\family-plane.png"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\inside-plane.png",
+      "PackagePath": "staticwebassets\\img\\flight-booking-detail\\inside-plane.png"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\plane-flight-detail.svg",
+      "PackagePath": "staticwebassets\\img\\flight-booking-detail\\plane-flight-detail.svg"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\window-plane.png",
+      "PackagePath": "staticwebassets\\img\\flight-booking-detail\\window-plane.png"
+    },
+    {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\logo-footer.png",
       "PackagePath": "staticwebassets\\img\\footer\\logo-footer.png"
     },

@@ -69,9 +69,9 @@ namespace Csharp_DatVeMayBay.Data
           /*  modelBuilder.Entity<Airline>().HasData(Airlines);*/
 
             User admin = new User { UserId = 1, UserEmail = "admin@gmail.com", FirstName = "Admin", LastName = "", Address = "", Dob = new DateTime(2003, 12, 7), PhoneNumber = "" };
-            Account acc = new Account { UserEmail = "admin@gmail.com", Password = BCrypt.Net.BCrypt.EnhancedHashPassword("admin", 13), Enable = true, UserId = 1 };
+            Account acc = new Account { UserEmail = "admin@gmail.com", Password = BCrypt.Net.BCrypt.EnhancedHashPassword("admin", 13), Enable = true, UserId = 1, Verified = true };
             User user = new User {UserId = 2, UserEmail = "ngvhao@gmail.com", FirstName = "Nguyễn Văn", LastName = "Hào", Address = "Huế, Việt Nam", Dob = new DateTime(2003, 12, 7), PhoneNumber = "0777777777" };
-            Account acc2 = new Account { UserEmail = "ngvhao@gmail.com", Password = BCrypt.Net.BCrypt.EnhancedHashPassword("123",13), Enable = true , UserId = 2};
+            Account acc2 = new Account { UserEmail = "ngvhao@gmail.com", Password = BCrypt.Net.BCrypt.EnhancedHashPassword("123",13), Enable = true , UserId = 2, Verified = true };
 
             modelBuilder.Entity<User>().HasData(admin);
             modelBuilder.Entity<Account>().HasData(acc);

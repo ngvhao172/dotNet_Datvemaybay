@@ -25,5 +25,17 @@ namespace Csharp_DatVeMayBay.Controllers
         {
             return View();
         }
+        public IActionResult Customer()
+        {
+            return View();
+        }
+        public IActionResult HistoryTicket()
+        {
+            return View();
+        }
+        public IActionResult Statistic()
+        {
+            return View();
+        }
     }
 }

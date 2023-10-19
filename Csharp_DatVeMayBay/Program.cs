@@ -80,19 +80,6 @@ app.UseSession();
 
 app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
-//Verification route via email
-app.MapControllerRoute(
-    name: "VerifyRoute",
-    pattern: "Account/Verify/{id}/{token}",
-    defaults: new { controller = "Access", action = "Verify" }
-);
-//Reset password route via email
-app.MapControllerRoute(
-    name: "ChangePasswordRoute",
-    pattern: "Account/ChangePassword/{id}/{token}",
-    defaults: new { controller = "Access", action = "ChangePassword" }
-);
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Client}/{action=Index}/{id?}");

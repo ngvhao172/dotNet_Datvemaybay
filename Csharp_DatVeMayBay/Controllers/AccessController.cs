@@ -139,7 +139,6 @@ namespace Csharp_DatVeMayBay.Controllers
         public async Task<IActionResult> Register(User User)
         {
             var UserExist = dbContext.Accounts.Find(User.UserEmail);
-            Console.WriteLine(User.UserEmail);
             //Chưa tồn tại User
             if (UserExist == null)
             {
@@ -171,7 +170,8 @@ namespace Csharp_DatVeMayBay.Controllers
                             UserId = newUser.UserId,
                             UniqueString = hashUniqueString.ToString(),
                             CreateAt = DateTime.Now,
-                            ExpiredAt = DateTime.Now.AddMinutes(60) // link hết hạn sau 60m
+                            ExpiredAt = DateTime.Now.AddMinutes(60), // link hết hạn sau 60m
+                            MailType = Models.Enums.MailType.Verification
                         };
                         try
                         {
@@ -267,13 +267,14 @@ namespace Csharp_DatVeMayBay.Controllers
             }
         }
         //Verifying account route
-        public IActionResult Verify(int id, string token)
+        [Route("Account/Verify/{id}/{token}")]
+        public async Task<IActionResult> Verify(int id, string token)
         {
             var User = dbContext.Users.Where(u => u.UserId == id).FirstOrDefault();
             if (User != null)
             {
-                var UserVerification = dbContext.UserVerifications.Where(u => u.UserId == id && u.MailType == Models.Enums.MailType.Verification).FirstOrDefault();
-                if(UserVerification!= null)
+                var UserVerification = await dbContext.UserVerifications.Where(u => u.UserId == id && u.MailType == Models.Enums.MailType.Verification).FirstOrDefaultAsync();
+                if (UserVerification!= null)
                 {
                     if(UserVerification.ExpiredAt > DateTime.Now)
                     {
@@ -290,7 +291,7 @@ namespace Csharp_DatVeMayBay.Controllers
                                     Account.Verified = true;
                                     //Xóa UserVerification
                                     dbContext.UserVerifications.Remove(UserVerification);
-                                    dbContext.SaveChanges();
+                                    await dbContext.SaveChangesAsync();
                                     return RedirectToAction("SucessVerify", "Access");
                                 }
                                 catch(Exception ex)
@@ -314,7 +315,7 @@ namespace Csharp_DatVeMayBay.Controllers
                     }
                     //xóa UserVerification
                     dbContext.UserVerifications.Remove(UserVerification);
-                    dbContext.SaveChanges();
+                    await dbContext.SaveChangesAsync();
                 }
                 else
                 {
@@ -405,113 +406,19 @@ namespace Csharp_DatVeMayBay.Controllers
             }
             return View();
         }
-        //Đổi mật khẩu
-        [Route("me/changepassword")]
-        [HttpGet]
-        public IActionResult ChangePasswordUser()
-        {
-            if (User.Identity.IsAuthenticated)
-            {
-                return View();
-            }
-            return RedirectToAction("Error403", "Error");
-        }
-        [Route("me/changepassword")]
-        [HttpPost]
-        public IActionResult ChangePasswordUserAccount()
-        {
-            var currentPassword = Request.Form["currentPassword"];
-            var newPassword = Request.Form["newPassword"];
-            var cfPassword = Request.Form["cPassword"];
-            if (string.IsNullOrWhiteSpace(currentPassword))
-            {
-                ModelState.AddModelError("CurrentPassword", "Current Password is required.");
-            }
-            if (string.IsNullOrWhiteSpace(newPassword))
-            {
-                ModelState.AddModelError("NewPassword", "New Password is required.");
-            }
-            if (string.IsNullOrWhiteSpace(cfPassword))
-            {
-                ModelState.AddModelError("ConfirmPassword", "Confirm Password is required.");
-            }
-            if (User.Identity.IsAuthenticated)
-            {
-                if (ModelState.IsValid)
-                {
-                    var UserEmail = User.FindFirst(ClaimTypes.Email).Value;
-                    if(UserEmail != null)
-                    {
-                        var Account = dbContext.Accounts.Where(a => a.UserEmail == UserEmail).FirstOrDefault();
-                        if (Account != null)
-                        {
-                            if(BCrypt.Net.BCrypt.EnhancedVerify(currentPassword, Account.Password))
-                            {
-                                if(newPassword == cfPassword)
-                                {
-                                    try
-                                    {
-                                        var hashedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(newPassword, 13);
-                                        Account.Password= hashedPassword;
-                                        dbContext.Accounts.Update(Account);
-                                        dbContext.SaveChanges();
-                                        ViewData["status"] = "success";
-                                        ViewData["message"] = "Password has been changed successfully";
-                                    }
-                                    catch (Exception ex)
-                                    {
-                                        ViewData["status"] = "danger";
-                                        ViewData["message"] = "Fail to change password! " + ex.Message;
-                                    } 
-                                }
-                                else
-                                {
-                                    ViewData["status"] = "danger";
-                                    ViewData["message"] = "Password confirm incorrect!";
-                                }  
-                            }
-                            else
-                            {
-                                ViewData["status"] = "danger";
-                                ViewData["message"] = "Current Password incorrect!";
-                            }
-                        }
-                        else
-                        {
-                            ViewData["status"] = "danger";
-                            ViewData["message"] = "User Account not found!";
-                        }
-                    }
-                    else
-                    {
-                        ViewData["status"] = "danger";
-                        ViewData["message"] = "UserEmail not found!";
-                    }   
-                }
-                else
-                {
-                    ViewData["status"] = "danger";
-                    ViewData["message"] = "Input invalid. Please filling all input!";
-                }
-            }
-            else
-            {
-                ViewData["status"] = "danger";
-                ViewData["message"] = "User is not logined.";
-            }
-            return View("ChangePasswordUser");
-        }
         //Quên mật khẩu
         [HttpGet]
-        public IActionResult ChangePasword()
+        [Route("Account/ChangePassword/{id}/{token}")]
+        public IActionResult ChangePassword()
         {    
             return View();
         }
         [HttpPost]
+        [Route("Account/ChangePassword/{id}/{token}")]
         public IActionResult ChangePassword(int id, string token)
         {
             var newPassword = Request.Form["newPassword"];
-            var cfPassword = Request.Form["cPassword"];
+            var cfPassword = Request.Form["cPassword"]; 
             if (string.IsNullOrWhiteSpace(newPassword))
             {
                 ModelState.AddModelError("Password", "Password is required.");

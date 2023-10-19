@@ -28,7 +28,7 @@ namespace Csharp_DatVeMayBay.Controllers
             {
                 return View("404");
             }
-            else if(statusCode == 403)
+            else if (statusCode == 403)
             {
                 return View("403");
             }
@@ -36,7 +36,6 @@ namespace Csharp_DatVeMayBay.Controllers
             {
                 return View("500");
             }
-          
         }
     }
 }

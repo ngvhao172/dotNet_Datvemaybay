@@ -1,0 +1,79 @@
+﻿<!-- Delete Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <form method="post" id="DeleteUserForm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Thông báo xoá</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"></span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <input type="hidden" name="id" id="delete_user" />
+                        <input type="hidden" name="action" id="delete_action" value="abc" />
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                        <input type="submit" name="save" id="delete_save" class="btn btn-danger" value="Xoá" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Delete Modal -->
+    <div class="body">
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-2">
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <a class="list-group-item list-group-item-action active" id="list-profile-list"
+                            data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Danh sách
+                            khách hàng</a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="list-profile" role="tabpanel"
+                            aria-labelledby="list-profile-list">
+                            <div id="error-delete-message" class="alert alert-warning alert-dismissible fade show"
+                                role="alert" style="display: none">
+                                <strong></strong>
+                                <button type="button" class="btn-close" aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <table class="table table-striped" id="dt-user" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">MÃ KHÁCH HÀNG</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Họ</th>
+                                        <th scope="col">Tên</th>
+                                        <th scope="col">Số điện thoại</th>
+                                        <th scope="col">Địa chỉ</th>
+                                        <th scope="col">Ngày sinh</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th scope="col">MÃ KHÁCH HÀNG</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Họ</th>
+                                        <th scope="col">Tên</th>
+                                        <th scope="col">Số điện thoại</th>
+                                        <th scope="col">Địa chỉ</th>
+                                        <th scope="col">Ngày sinh</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
