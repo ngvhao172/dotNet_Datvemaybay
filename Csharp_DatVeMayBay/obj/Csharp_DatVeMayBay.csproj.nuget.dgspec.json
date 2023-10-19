@@ -1,20 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {}
+    "C:\\Users\\PHAM NHAT QUYNH\\Desktop\\VS\\VSCode\\VScode\\Net\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {}
   },
   "projects": {
-    "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {
+    "C:\\Users\\PHAM NHAT QUYNH\\Desktop\\VS\\VSCode\\VScode\\Net\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
+        "projectUniqueName": "C:\\Users\\PHAM NHAT QUYNH\\Desktop\\VS\\VSCode\\VScode\\Net\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
         "projectName": "Csharp_DatVeMayBay",
-        "projectPath": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\",
+        "projectPath": "C:\\Users\\PHAM NHAT QUYNH\\Desktop\\VS\\VSCode\\VScode\\Net\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
+        "packagesPath": "C:\\Users\\PHAM NHAT QUYNH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PHAM NHAT QUYNH\\Desktop\\VS\\VSCode\\VScode\\Net\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PHAM NHAT QUYNH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +28,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -98,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
