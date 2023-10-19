@@ -297,12 +297,24 @@
       "PackagePath": "staticwebassets\\js\\airport_script.js"
     },
     {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\customer_script.js",
+      "PackagePath": "staticwebassets\\js\\customer_script.js"
+    },
+    {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
       "PackagePath": "staticwebassets\\js\\flight_script.js"
     },
     {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\history_script.js",
+      "PackagePath": "staticwebassets\\js\\history_script.js"
+    },
+    {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",
+      "PackagePath": "staticwebassets\\js\\statistic_script.js"
     },
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\LICENSE",

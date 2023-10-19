@@ -179,4 +179,23 @@
     </div>
 </div>
 </div>
+<script>
+    $(document).ready(()=>{
+        $('#chuyenVe').hide();
+    $('#type').on('change', function() {
+        var val = $(this).val();
+        if (val == "Khứ hồi") {
+            $('#khoiHanh').text("Chuyến Đi")
+            // select the input element by its ID
+            const inputElement = document.getElementById('toDate');
+            $('#chuyenVe').show();
+        } else {
+            $('#khoiHanh').text("Khởi Hành")
+            const inputElement = document.getElementById('toDate');
+            $('#chuyenVe').hide();
+        }
+    });
+    })
+    
+</script>
 

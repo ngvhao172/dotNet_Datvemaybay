@@ -165,11 +165,7 @@ namespace Csharp_DatVeMayBay.Controllers
                     var seatColumn = int.Parse(FormData.SeatPicker[1].ToString());
 
                     //Lấy id của seat đã chọn
-                    var seatTask = await dbContext.Seats.Where(seat => seat.FlightId == Flight.FlightId && seat.SeatRow == seatRow && seat.SeatColumn == seatColumn).FirstOrDefaultAsync();
-
-                    //Đợi tác vụ hoàn thành
-                    Seat SeatBooked = seatTask;
-                    Console.WriteLine("SeatBooked: " + SeatBooked);
+                    Seat SeatBooked = await dbContext.Seats.Where(seat => seat.FlightId == Flight.FlightId && seat.SeatRow == seatRow && seat.SeatColumn == seatColumn).FirstAsync();
 
                     if (SeatBooked != null)
                     {
@@ -188,13 +184,8 @@ namespace Csharp_DatVeMayBay.Controllers
 
                             var TicketString = AirlineCode + Date;
 
-                            var getLastTicketId = dbContext.Tickets
-                            .Where(ticket => ticket.TicketId.Contains(TicketString))
-                            .OrderBy(ticket => ticket.TicketId)
-                            .LastOrDefaultAsync();
+                            Ticket? lastTicketId = await dbContext.Tickets.Where(ticket => ticket.TicketId.Contains(TicketString)).OrderBy(ticket => ticket.TicketId).LastOrDefaultAsync();
 
-
-                            Ticket lastTicketId = await getLastTicketId;
                             if (lastTicketId != null)
                             {
                                 var lastId = lastTicketId.TicketId.Substring(lastTicketId.TicketId.Length - 4, 4);

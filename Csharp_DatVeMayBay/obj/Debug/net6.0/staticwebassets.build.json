@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lUkrZADxsw1xW3ZR0juYcLcbjnAkYd7dPFRnpbX3Imw=",
+  "Hash": "RHfuO5zEUIUwswWdrW4qTl+Q388h4DXlO68fJher3EE=",
   "Source": "Csharp_DatVeMayBay",
   "BasePath": "_content/Csharp_DatVeMayBay",
   "Mode": "Default",
@@ -1292,6 +1292,23 @@
       "OriginalItemSpec": "wwwroot\\js\\airport_script.js"
     },
     {
+      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\customer_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "js/customer_script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\customer_script.js"
+    },
+    {
       "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
@@ -1309,6 +1326,23 @@
       "OriginalItemSpec": "wwwroot\\js\\flight_script.js"
     },
     {
+      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\history_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "js/history_script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\history_script.js"
+    },
+    {
       "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\site.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
@@ -1324,6 +1358,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "js/statistic_script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\statistic_script.js"
     },
     {
       "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

@@ -166,7 +166,7 @@ namespace Csharp_DatVeMayBay.Controllers
             var Form = Request.Form["FormData"];
             var FormData = JsonConvert.DeserializeObject<FormData>(Form);
 
-            List<Seat> Seats = dbContext.Seats.Where(s => s.FlightId == Flight.FlightId).Where(s => s.Status == SeatStatus.Busy).ToList();
+            List<Seat> Seats = await dbContext.Seats.Where(s => s.FlightId == Flight.FlightId).Where(s => s.Status == SeatStatus.Busy).ToListAsync();
             var newFormData = new FormData
             {
                 Type = FormData.Type,
@@ -196,9 +196,7 @@ namespace Csharp_DatVeMayBay.Controllers
                 Flight = Flight,
                 FormData = FormData
             };
-
             return View(BookingViewModel);
-
         }
     }
 }
