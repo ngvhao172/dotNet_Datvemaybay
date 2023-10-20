@@ -1,16 +1,42 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Csharp_DatVeMayBay.Models.Domain;
+using Microsoft.AspNetCore.Mvc;
+using Csharp_DatVeMayBay.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Linq;
 
 namespace Csharp_DatVeMayBay.Controllers.AdminApi
 {
-    // VIẾT API RỒI  GỌI BÊN JS, THAM KHẢO NHỮNG CÁI HÀO LÀM TRƯỚC ĐÓ
-    // QUỲNH : CODE CHỖ NÀY
     [ApiController]
     [Route("api/Statistic")]
     public class StatisticController : Controller
     {
-        public IActionResult Index()
+        private readonly DBContext dbContext;
+
+        public StatisticController(DBContext dbContext)
         {
-            return View();
+            this.dbContext = dbContext;
+        }
+
+        [HttpGet]
+        [Route("GetStatistic")]
+        public JsonResult GetStatistic(DateTime fromDate, DateTime toDate)
+        {
+            var rs_totalTickets = dbContext.Tickets
+                .Where(t => t.Booking.BookingDatime >= fromDate && t.Booking.BookingDatime <= toDate)
+                .Count();
+
+            var rs_totalRevenue = dbContext.Tickets
+                .Where(t => t.Booking.BookingDatime >= fromDate && t.Booking.BookingDatime <= toDate)
+                .Sum(t => t.TicketPrice);
+
+            var statisticData = new
+            {
+                totalTickets = rs_totalTickets,
+                totalRevenue = rs_totalRevenue
+            };
+
+            return Json(new { data = statisticData });
         }
     }
 }
