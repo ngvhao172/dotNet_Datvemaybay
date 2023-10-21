@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RHfuO5zEUIUwswWdrW4qTl+Q388h4DXlO68fJher3EE=",
+  "Hash": "WBJjbTp+i0GP7kV8aC8gM0XWvm0ouBqzU+VCh7nNm2k=",
   "Source": "Csharp_DatVeMayBay",
   "BasePath": "_content/Csharp_DatVeMayBay",
   "Mode": "Default",
@@ -935,6 +935,23 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg"
     },
     {
+      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\backButton.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "img/loginpage/backButton.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\loginpage\\backButton.svg"
+    },
+    {
       "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Group 4.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
@@ -1341,23 +1358,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\history_script.js"
-    },
-    {
-      "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\site.js",
-      "SourceId": "Csharp_DatVeMayBay",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\",
-      "BasePath": "_content/Csharp_DatVeMayBay",
-      "RelativePath": "js/site.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
       "Identity": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",

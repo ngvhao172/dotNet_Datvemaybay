@@ -12,21 +12,29 @@ $(document).ready(function () {
             },
             "sEmptyTable": "Không có dữ liệu"
         },
-        "bInfo": false,
-        "pagingType": "full_numbers",
-        lengthMenu: [
-            [5, 10, 20, -1],
-            [5, 10, 20, 'All'],
-        ],
         "processing": true,
-        "serverSide": true,
-        "order": [],
         "ajax": {
-            url: "./action/action_user.php",
-            type: "POST",
-            data: { action: 'listUser' },
-            dataType: "json"
+            "url": "/api/Customers/GetAllCustomer",
+            "type": "GET",
+            "dataType": "json",
+            "dataSrc": "data"
         },
+        "columns": [
+            { "data": "userId", },
+            { "data": "userEmail" },
+            { "data": "firstName" },
+            { "data": "lastName" },
+            { "data": "phoneNumber" },
+            { "data": "address" },
+            { "data": "dob" },
+            {
+                "data": "userId",
+                "render": function (data, type, row) {
+                    return '<button type="button" class="delete btn btn-outline-danger" data-id="' + data + '">Xoá</button>';
+                }
+            }
+
+        ],
         "columnDefs": [
             {
                 "targets": [7],
@@ -36,35 +44,37 @@ $(document).ready(function () {
     });
     $("#dt-user").on('click', '.delete', function () {
         $('#error-message').show();
-        var userId = $(this).attr("id");
-        var action = 'getUser';
+        var userId = $(this).attr("data-id");
         $.ajax({
-            url: "./action/action_user.php",
+            url: "/api/Customers/GetCustomerById",
             method: "POST",
-            data: { id: userId, action: action },
+            data: { user_id: userId},
             dataType: "json",
             success: function (data) {
                 $('#deleteModal').modal('show');
-                $('#delete_user').val(data.id);
-                $("#deleteModal .modal-body").text('Bạn có chắc muốn xoá người dùng: ' + data.email);
-                $('#delete_action').val('userDelete');
+                $('#delete_user').val(data.data.userId);
+                console.log(data);
+                $("#deleteModal .modal-body").text('Bạn có chắc muốn xoá người dùng ' + data.data.firstName + ' ' + data.data.lastName + '?');
             }
         });
     });
+
     $("#deleteModal").on('submit', '#DeleteUserForm', function (event) {
         event.preventDefault();
         $('#delete_save').attr('disabled', 'disabled');
-        var formData = $(this).serialize();
+        var user_id = $('#delete_user').val();
+        console.log(user_id);
         $.ajax({
-            url: "./action/action_user.php",
+            url: "/api/Customers/DeleteCustomer",
             method: "POST",
-            data: formData,
+            data: { user_id: user_id },
             dataType: "json",
             success: function (data) {
+                data = data.data;
                 $('#DeleteUserForm')[0].reset();
                 $('#deleteModal').modal('hide');
                 $('#delete_save').attr('disabled', false);
-                if (data.success) {
+                if (data.status) {       
                     $('#error-delete-message').removeClass('alert-warning').addClass('alert-success');
                     $('#error-delete-message strong').text(data.message);
                     $('#error-delete-message').show();
@@ -76,12 +86,14 @@ $(document).ready(function () {
                 }
             }
         });
+
         if ($('#error-delete-message').hasClass('show')) {
             setTimeout(function () {
                 $('#error-delete-message').fadeOut();
             }, 5000);
         }
     });
+
     $('#error-delete-message .btn-close').on('click', function () {
         $('#error-delete-message').fadeOut();
     });

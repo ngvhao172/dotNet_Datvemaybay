@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-2">
                     <div class="list-group" id="list-tab" role="tablist">
-                        <button id="statistic" class="list-group-item list-group-item-action active"
+                        <button id="statistic" class="list-group-item list-group-item-action list-group-item-success"
                             id="list-settings-list" data-bs-toggle="list" href="#list-settings" role="tab"
                             aria-controls="list-settings">Thống
                             kê thu nhập</button>
@@ -17,7 +17,7 @@
                                 <div class="row mb-3">
                                     <div class="col-4">
                                         <div class="input-group date datetimepicker" data-target-input="nearest">
-                                            <div class="input-group-text d-block">Ngày đi <i class="fa fa-calendar"
+                                            <div class="input-group-text d-block">Từ ngày <i class="fa fa-calendar"
                                                     style="height: 100%;"></i></div><input required id="search_fromdate"
                                                 type="date" class="form-control datetimepicker-input"
                                                 data-target=".datetimepicker" />
@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="col-4">
                                         <div class="input-group date datetimepicker" data-target-input="nearest">
-                                            <div class="input-group-text d-block">Ngày về <i class="fa fa-calendar"
+                                            <div class="input-group-text d-block">Đến ngày <i class="fa fa-calendar"
                                                     style="height: 100%;"></i></div><input required id="search_todate"
                                                 type="date" class="form-control datetimepicker-input"
                                                 data-target=".datetimepicker" />
@@ -52,6 +52,12 @@
                                                     <th scope="col">DOANH THU</th>
                                                 </tr>
                                             </thead>
+                                             <tfoot>
+                                                <tr>
+                                                    <th scope="col">TỔNG SỐ LƯỢNG VÉ</th>
+                                                    <th scope="col">DOANH THU</th>
+                                                </tr>
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
@@ -63,3 +69,4 @@
             </div>
         </div>
     </div>
+<script src="~/js/statistic_script.js" asp-append-version="true"></script>

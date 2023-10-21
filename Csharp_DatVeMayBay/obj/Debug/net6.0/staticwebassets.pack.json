@@ -221,6 +221,10 @@
       "PackagePath": "staticwebassets\\img\\loginpage\\Logo.png"
     },
     {
+      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\backButton.svg",
+      "PackagePath": "staticwebassets\\img\\loginpage\\backButton.svg"
+    },
+    {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\logofooter.png",
       "PackagePath": "staticwebassets\\img\\loginpage\\logofooter.png"
     },
@@ -307,10 +311,6 @@
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\history_script.js",
       "PackagePath": "staticwebassets\\js\\history_script.js"
-    },
-    {
-      "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "D:\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",

@@ -1,42 +1,58 @@
-﻿//QUỲNH: FIX LẠI CHỖ NÀY, THAM KHẢO CÁC FILE JS HÀO ĐÃ LÀM TRƯỚC ĐÓ
-
-$(document).ready(function () {
+﻿$(document).ready(function () {
     var statisticData = $('#dt-statistic').DataTable({
         "oLanguage": {
+            "oPaginate": {
+                "sPrevious": "Trước",
+                "sNext": "Sau",
+                "sLast": "Cuối",
+                "sFirst": "Đầu"
+            },
             "sEmptyTable": "Không có dữ liệu"
         },
-        "paging": false,
-        "bInfo": false,
-        lengthMenu: [
-            [5, 10, 20, -1],
-            [5, 10, 20, 'All'],
-        ],
         "processing": true,
-        "searching": false,
-        "serverSide": true,
         "ordering": false,
         "ajax": {
-            url: "./action/action_statistic.php",
-            type: "POST",
-            'data': function (data) {
-                var from_date = $('#search_fromdate').val();
-                var to_date = $('#search_todate').val();
-
-                data.action = 'listStatistic';
-                data.searchByFromdate = from_date;
-                data.searchByTodate = to_date;
-            },
-            dataType: "json",
+            "url": "/api/Statistic/GetStatistic",
+            "type": "POST",
+            "dataType": "json",
+            "dataSrc": "data"
         },
+        "columns": [
+            { "data": "totalTickets", },
+            {
+                "data": "totalRevenue",
+                "render": function (data, type, row) {
+                    return formatCurrency(data);
+                }
+            }
+        ],
     });
+    function formatCurrency(value) {
+        // Sử dụng toLocaleString() với ngôn ngữ 'vi-VN' (Tiếng Việt, Việt Nam)
+        // và các tùy chọn định dạng tiền tệ (style: 'currency', currency: 'VND')
+        if (value) {
+            return value.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        }
+        else {
+            value = 0;
+            return value.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        }
+    }
+
     $('#btn_search').click(function () {
-        if ($('#search_fromdate').val() != '' && $('#search_todate').val() != '') {
-            statisticData.draw();
+        var fromDate = $('#search_fromdate').val();
+        var toDate = $('#search_todate').val();
+        statisticData.ajax.url("/api/Statistic/GetStatistic?fromDate=" + fromDate + "&toDate=" + toDate).load();
+        if (fromDate !== "" && toDate !== "") {
+           
+        } else {
+            statisticData.ajax.url("/api/Statistic/GetStatistic").load();
         }
     });
+
     $('#statistic').click(function () {
-        $('#search_fromdate').val('')
-        $('#search_todate').val('')
-        statisticData.draw();
+        $('#search_fromdate').val('');
+        $('#search_todate').val('');
+        statisticData.ajax.reload();
     });
-})
+});
