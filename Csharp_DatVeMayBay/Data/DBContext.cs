@@ -27,18 +27,6 @@ namespace Csharp_DatVeMayBay.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-           /* List<Airport> Airports = new List<Airport>();
-            var NOIBAIAIRPORT = new Airport { AirportId = 1, AirportName = "Noi Bai International Airport", AirportLocation = "Hanoi, Vietnam", AirportCode = "HAN" };
-            var TSNAIRPORT = new Airport { AirportId = 2, AirportName = "Tan Son Nhat International Airport", AirportLocation = "Ho Chi Minh City, Vietnam", AirportCode = "SGN" };
-            var DNAIRPORT = new Airport { AirportId = 3, AirportName = "Da Nang International Airport", AirportLocation = "Da Nang, Vietnam", AirportCode = "DAD" };
-            var CRAIRPORT = new Airport { AirportId = 4, AirportName = "Cam Ranh International Airport", AirportLocation = "Khanh Hoa, Vietnam", AirportCode = "CXR" };
-            var PHUBAIAIRPORT = new Airport { AirportId = 5, AirportName = "Phu Bai International Airport", AirportLocation = "Hue, Vietnam", AirportCode = "HUI" };
-            Airports.Add(NOIBAIAIRPORT);
-            Airports.Add(TSNAIRPORT);
-            Airports.Add(DNAIRPORT);
-            Airports.Add(CRAIRPORT);
-            Airports.Add(PHUBAIAIRPORT);
-*/
             modelBuilder.Entity<Airport>().HasData(
                 new Airport { AirportId = 1, AirportName = "Noi Bai International Airport", AirportLocation = "Hanoi, Vietnam", AirportCode = "HAN" },
                 new Airport { AirportId = 2, AirportName = "Tan Son Nhat International Airport", AirportLocation = "Ho Chi Minh City, Vietnam", AirportCode = "SGN" },
@@ -46,18 +34,7 @@ namespace Csharp_DatVeMayBay.Data
                 new Airport { AirportId = 4, AirportName = "Cam Ranh International Airport", AirportLocation = "Khanh Hoa, Vietnam", AirportCode = "CXR" },
                 new Airport { AirportId = 5, AirportName = "Phu Bai International Airport", AirportLocation = "Hue, Vietnam", AirportCode = "HUI" }
             );
-            /* modelBuilder.Entity<Airport>().HasData(Airports);
-             List<Airline> Airlines = new List<Airline>();
-             var VietnamAirlines = new Airline { AirlineId = 1, AirlineName = "Vietnam Airlines", AirlineLogo = "./img/airlines/VietnamAirlinesLogo.png", AirlineCode = "VN" };
-             var JetstarPacific = new Airline { AirlineId = 2, AirlineName = "Jetstar Pacific", AirlineLogo = "./img/airlines/JetStarLogo.png", AirlineCode = "BL" };
-             var VietJetAir = new Airline { AirlineId = 3, AirlineName = "VietJet Air", AirlineLogo = "./img/airlines/VietjetAirLogo.png", AirlineCode = "VJ" };
-             var BambooAirways = new Airline { AirlineId = 4, AirlineName = "Bamboo Airways", AirlineLogo = "./img/airlines/BambooAirwaysLogo.png", AirlineCode = "QH" };
-             var PacificAirlines = new Airline { AirlineId = 5, AirlineName = "Pacific Airlines", AirlineLogo = "./img/airlines/PacificAirlinesLogo.png", AirlineCode = "PA" };
-             Airlines.Add(VietnamAirlines);
-             Airlines.Add(JetstarPacific);
-             Airlines.Add(VietJetAir);
-             Airlines.Add(BambooAirways);
-             Airlines.Add(PacificAirlines);*/
+
 
             modelBuilder.Entity<Airline>().HasData(
                new Airline { AirlineId = 1, AirlineName = "Vietnam Airlines", AirlineLogo = "./img/airlines/VietnamAirlinesLogo.png", AirlineCode = "VN" },
@@ -66,7 +43,6 @@ namespace Csharp_DatVeMayBay.Data
                new Airline { AirlineId = 4, AirlineName = "Bamboo Airways", AirlineLogo = "./img/airlines/BambooAirwaysLogo.png", AirlineCode = "QH" },
                new Airline { AirlineId = 5, AirlineName = "Pacific Airlines", AirlineLogo = "./img/airlines/PacificAirlinesLogo.png", AirlineCode = "PA" }
             );
-          /*  modelBuilder.Entity<Airline>().HasData(Airlines);*/
 
             User admin = new User { UserId = 1, UserEmail = "admin@gmail.com", FirstName = "Admin", LastName = "", Address = "", Dob = new DateTime(2003, 12, 7), PhoneNumber = "" };
             Account acc = new Account { UserEmail = "admin@gmail.com", Password = BCrypt.Net.BCrypt.EnhancedHashPassword("admin", 13), Enable = true, UserId = 1, Verified = true };

@@ -64,6 +64,7 @@
             .ToList();
     }
         const busySeats = @Html.Raw(Json.Serialize(busySeats));
+        //busySeats = busySeats.push("G1,G2,G3,G4,G5,G6,H1,H2,H3,H4,H5,H6,I1,I2,I3,I4.I5,I6,J1,J2,J3,J4,J5,J6");
         for (let i = 0; i < 10; i++) {
             const row = String.fromCharCode(dec + i);
             let col = 0;
@@ -80,7 +81,7 @@
 
                     if (busySeats.includes(coe)) {
                         // Chỗ ngồi đã được đặt
-                        if (row <= 'D') {
+                        if (row <= 'C') {
                             seatHtml = `<div class='col-3 p-0 mx-auto seat'>
                         <div class='Thương-Gia text-center seat fw-bold p-1' 
                             style='width:100%; height:38px; background-color:#6bc6d2; color:#fff;'
@@ -99,7 +100,7 @@
                         }
                     } else {
                         // Chỗ sẵn có
-                        if (row <= 'D') {
+                        if (row <= 'C') {
                             seatHtml = `<div class='col-3 p-0 mx-auto seat'>
                         <div class='Thương-Gia available text-center seat fw-bold p-1' 
                             style='width:100%; height:38px; background-color:rgb(195, 195, 195); color:#fff;'
@@ -125,7 +126,7 @@
             s += `</div>`;
             document.getElementById("seating-chart").innerHTML += s;
 
-            if (row === 'D') {
+            if (row === 'C') {
                 document.getElementById("seating-chart").innerHTML += `<div class='row m-0 align-items-end'>
                                                             <div class='col'><hr></div>
                                                         </div>`;
@@ -172,7 +173,7 @@
                         $(elem).addClass('selected');
                         // console.log(elem.classList);
                         let coe = $.trim($(elem).text());
-                        if (coe[0] <= 'D') {
+                        if (coe[0] <= 'C') {
                             $(elem).css({ 'background-color': '#6bc6d2', 'border': 'solid  #FF3131' });
                         }
                         else {

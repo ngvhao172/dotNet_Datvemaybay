@@ -163,6 +163,8 @@ namespace Csharp_DatVeMayBay.Controllers
                     Console.WriteLine("FlightID: " + Flight.FlightId);*/
                     var seatRow = FormData.SeatPicker[0];
                     var seatColumn = int.Parse(FormData.SeatPicker[1].ToString());
+                    Console.WriteLine(seatRow);
+                    Console.WriteLine(seatColumn);
 
                     //Lấy id của seat đã chọn
                     Seat SeatBooked = await dbContext.Seats.Where(seat => seat.FlightId == Flight.FlightId && seat.SeatRow == seatRow && seat.SeatColumn == seatColumn).FirstAsync();
