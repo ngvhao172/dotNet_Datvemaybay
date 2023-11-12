@@ -54,17 +54,16 @@ namespace Csharp_DatVeMayBay.Controllers
                             if (User.UserEmail == "admin@gmail.com")
                             {
                                 claims = new List<Claim>() {
-                            new Claim(ClaimTypes.NameIdentifier, User.UserId.ToString()),
-                            new Claim(ClaimTypes.Name,User.FirstName + ' '+  User.LastName),
-                            new Claim(ClaimTypes.Email, Account.UserEmail),
-                            new Claim(ClaimTypes.Role, "Admin")
+                                new Claim(ClaimTypes.NameIdentifier, User.UserId.ToString()),
+                                new Claim(ClaimTypes.Name,User.FirstName + ' '+  User.LastName),
+                                new Claim(ClaimTypes.Email, Account.UserEmail),
+                                new Claim(ClaimTypes.Role, "Admin")
                             };
                                 ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
                                     CookieAuthenticationDefaults.AuthenticationScheme);
 
                                 AuthenticationProperties properties = new AuthenticationProperties()
                                 {
-
                                     AllowRefresh = true,
                                     IsPersistent = false
                                 };
@@ -73,8 +72,6 @@ namespace Csharp_DatVeMayBay.Controllers
                                     new ClaimsPrincipal(claimsIdentity), properties);
 
                                 return RedirectToAction("Airline", "Admin");
-
-                                /*  return Redirect("Admin/Airline");*/
                             }
                             else
                             {
@@ -89,7 +86,6 @@ namespace Csharp_DatVeMayBay.Controllers
 
                                 AuthenticationProperties properties = new AuthenticationProperties()
                                 {
-
                                     AllowRefresh = true,
                                     IsPersistent = false
                                 };

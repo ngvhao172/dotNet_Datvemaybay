@@ -1112,3 +1112,22 @@ C:\Users\PHAM NHAT QUYNH\Desktop\VS\VSCode\VScode\Net\dotNet_Datvemaybay\Csharp_
 C:\Users\PHAM NHAT QUYNH\Desktop\VS\VSCode\VScode\Net\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\Csharp_DatVeMayBay.pdb
 C:\Users\PHAM NHAT QUYNH\Desktop\VS\VSCode\VScode\Net\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\Csharp_DatVeMayBay.genruntimeconfig.cache
 C:\Users\PHAM NHAT QUYNH\Desktop\VS\VSCode\VScode\Net\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\ref\Csharp_DatVeMayBay.dll
+D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\RestSharp.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\bundleconfig.json
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\MailKit.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Web.Mvc.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Web.Razor.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Web.Helpers.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Web.WebPages.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\MimeKit.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\RestSharp.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Formats.Asn1.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+\\ADMINISTRATOR\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll

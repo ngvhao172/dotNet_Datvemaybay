@@ -1,6 +1,4 @@
-﻿//QUỲNH: FIX LẠI CHỖ NÀY, THAM KHẢO CÁC FILE JS HÀO ĐÃ LÀM TRƯỚC ĐÓ
-
-$(document).ready(function () {
+﻿$(document).ready(function () {
     var userData = $('#dt-user').DataTable({
         "oLanguage": {
             "sLengthMenu": "Hiện _MENU_ người dùng",

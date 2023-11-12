@@ -1,7 +1,7 @@
 ﻿@model List<Csharp_DatVeMayBay.Models.Domain.Airport>
 @{
     ViewData["Title"] = "Home Page";
-    
+
 }
 <div class="body-section">
     <!-- carousel -->
@@ -177,25 +177,32 @@
             </div>
         </div>
     </div>
+        @if (@TempData["error"] != null)
+        {
+            <script>
+                alert("@TempData["error"]");
+            </script>
+        }
+
 </div>
+
 </div>
 <script>
     $(document).ready(()=>{
         $('#chuyenVe').hide();
-    $('#type').on('change', function() {
-        var val = $(this).val();
-        if (val == "Khứ hồi") {
-            $('#khoiHanh').text("Chuyến Đi")
-            // select the input element by its ID
-            const inputElement = document.getElementById('toDate');
-            $('#chuyenVe').show();
-        } else {
-            $('#khoiHanh').text("Khởi Hành")
-            const inputElement = document.getElementById('toDate');
-            $('#chuyenVe').hide();
-        }
+        $('#type').on('change', function() {
+            var val = $(this).val();
+            if (val == "Khứ hồi") {
+                $('#khoiHanh').text("Chuyến Đi")
+                // select the input element by its ID
+                const inputElement = document.getElementById('toDate');
+                $('#chuyenVe').show();
+            } else {
+                $('#khoiHanh').text("Khởi Hành")
+                const inputElement = document.getElementById('toDate');
+                $('#chuyenVe').hide();
+            }
+        });
     });
-    })
-    
 </script>
 

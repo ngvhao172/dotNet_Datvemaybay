@@ -2,6 +2,7 @@
 using Csharp_DatVeMayBay.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddAuthentication(options =>
     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     options.DefaultSignOutScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme= CookieAuthenticationDefaults.AuthenticationScheme;
 })
     .AddCookie(options =>
     {
@@ -47,7 +49,7 @@ builder.Services.AddSession(options =>
 /*Authorization*/
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("AdminOnly", policy => policy.RequireClaim("Role", "Admin"));
+    options.AddPolicy("Admin", policy => policy.RequireClaim(ClaimTypes.Role, "Admin"));
 });
 
 //config database

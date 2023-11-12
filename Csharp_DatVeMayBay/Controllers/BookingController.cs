@@ -7,15 +7,18 @@ using Csharp_DatVeMayBay.Models.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
+
 namespace Csharp_DatVeMayBay.Controllers
 {
     public class BookingController : Controller
     {
 
         private readonly DBContext dbContext;
+
         public BookingController(DBContext dbContext)
         {
             this.dbContext = dbContext;
+
         }
         static Ticket finalTicketValue;
         public class BookingDetailModel
@@ -85,6 +88,7 @@ namespace Csharp_DatVeMayBay.Controllers
             var Form = Request.Form["FormData"];
             var FormData = JsonConvert.DeserializeObject<FormData>(Form);
             var creditcards = Request.Form["cardCreditList"];
+            var paymentMethod = Request.Form["method"];
             List<Creditcard> cardList = JsonConvert.DeserializeObject<List<Creditcard>>(creditcards);
             var user = new User();
             //Tạo user nếu chưa tồn tại hoặc chưa login
@@ -103,7 +107,7 @@ namespace Csharp_DatVeMayBay.Controllers
                 dbContext.Add(user);
                 await dbContext.SaveChangesAsync();
                 //Lưu lại creditcard
-                if (cardList!=null)
+                if (cardList != null)
                 {
                     foreach (var creditcard in cardList)
                     {
@@ -111,7 +115,7 @@ namespace Csharp_DatVeMayBay.Controllers
                         await dbContext.AddAsync(creditcard);
                     }
                 }
-               
+
                 await dbContext.SaveChangesAsync();
             }
             //Trường hợp User đã login
@@ -133,11 +137,6 @@ namespace Csharp_DatVeMayBay.Controllers
                 }
                 await dbContext.SaveChangesAsync();
             }
-            //Get flight cũ
-            //var taskFlight = dbContext.Flights.Where(flight => flight.FlightId == customFlight.FlightId).FirstOrDefaultAsync();
-
-            // Flight Flight = await taskFlight;
-
             if (user != null)
             {
                 //Tạo booking, tạo ticket và trả về View
@@ -173,10 +172,13 @@ namespace Csharp_DatVeMayBay.Controllers
                     {
                         if(SeatBooked.Status == Models.Enums.SeatStatus.Available)
                         {
-                            //Update Seat Status
-                            SeatBooked.Status = Models.Enums.SeatStatus.Busy;
-                            dbContext.Update(SeatBooked);
-                            await dbContext.SaveChangesAsync();
+                            //Update Seat Status trong trường hợp trả bằng creditcard
+                            if(paymentMethod == "creditCard")
+                            {
+                                SeatBooked.Status = Models.Enums.SeatStatus.Busy;
+                                dbContext.Update(SeatBooked);
+                                await dbContext.SaveChangesAsync();
+                            }
                             //Tạo ticket
                             //Retreiving the last ticket
                             var code = "0001";
@@ -204,7 +206,7 @@ namespace Csharp_DatVeMayBay.Controllers
                                 BookingId = BookingIdValue,
                                 FlightId = Flight.FlightId,
                                 SeatId = SeatBooked.SeatId,
-                                Status = Models.Enums.TicketStatus.Paid,
+                                Status = (paymentMethod == "creditCard") ? Models.Enums.TicketStatus.Paid : Models.Enums.TicketStatus.Unpaid, // trả bằng credit card => paid, momo => unpaid (cần thanh toán)
                                 TicketPrice = FormData.FlightClass == "PT" ? Flight.EconomyPrice : Flight.BussinessPrice,
                                 TicketClass = FormData.FlightClass == "PT" ? "Phổ thông" : "Thương"
                             };
@@ -212,7 +214,7 @@ namespace Csharp_DatVeMayBay.Controllers
                             await dbContext.SaveChangesAsync();
 
 
-
+                            //render ticket
                             finalTicketValue = await dbContext.Tickets
                                 .Where(t => t.TicketId == newTicket.TicketId)
                                 .Include(f => f.Flight)
@@ -224,8 +226,9 @@ namespace Csharp_DatVeMayBay.Controllers
                                 .Include(f => f.Booking)
                                     .ThenInclude(a => a.User)
                                 .FirstAsync();
-                            //Trả Data về View
-                            return Redirect("/ticket-info");
+                            //Trả Data về View 
+                            //Nếu thanh toán bằng tiền mặt trả về ticket, còn momo sẽ chuyển sang action momo để xử lý
+                            return (paymentMethod == "creditCard") ? Redirect("/ticket-info") : Redirect("/paymentWithMomo/" +newTicket.TicketId + "/" + newTicket.TicketPrice);
                         }
                         else
                         {
@@ -266,6 +269,29 @@ namespace Csharp_DatVeMayBay.Controllers
             return RedirectToAction("Error500", "Error");
         }
 
+        [Route("/ticket-momo-processing/{ticketId}")]
+        [HttpGet]
+        public async Task<IActionResult> TicketMoMoProcessing(string ticketId)
+        {
+            Ticket ticket = await dbContext.Tickets
+                .Where(t => t.TicketId == ticketId)
+                .Include(f => f.Flight)
+                    .ThenInclude(a => a.Airline)
+                .Include(f => f.Flight)
+                    .ThenInclude(a => a.DepartureAirport)
+                .Include(f => f.Flight)
+                    .ThenInclude(a => a.ArrivalAirport)
+                .Include(f => f.Booking)
+                    .ThenInclude(a => a.User)
+                .FirstAsync();
+            if (ticket != null)
+            {
+                finalTicketValue = ticket;
+                Redirect("/ticket-info");
+            }
+            return RedirectToAction("Error500", "Error");
+        }
+
         [Route("/search-booking")]
         [HttpGet]
         public IActionResult SearchBooking()
@@ -297,6 +323,5 @@ namespace Csharp_DatVeMayBay.Controllers
             }
             return View(null);
         }
-
     }
 }

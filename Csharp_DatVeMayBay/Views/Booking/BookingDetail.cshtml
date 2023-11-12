@@ -115,19 +115,19 @@
                         {
                             @foreach (var creditcard in Model.Creditcards)
                             {
-                                                 <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB;border-radius: 12px;">
-                                                <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
-                                                <div class="col-md-3 col-12"><span class="" name="carnumber">
-                                            @creditcard.CardNumber
-                                                    </span></div>
-                                                <div class="col-md-4 col-12"><span class="" name="nameoncard">
-                                            @creditcard.CardHolderName
-                                                    </span></div>
-                                                <div class="col-md-3 col-12"><span class="" name="validation">
-                                            @customHelper.splitDatetime(@creditcard.ExpirationDate)[0]
-                                                    </span></div>
-                                                <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
-                                            </div>
+                                    <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB;border-radius: 12px;">
+                                <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
+                                <div class="col-md-3 col-12"><span class="" name="carnumber">
+                            @creditcard.CardNumber
+                                    </span></div>
+                                <div class="col-md-4 col-12"><span class="" name="nameoncard">
+                            @creditcard.CardHolderName
+                                    </span></div>
+                                <div class="col-md-3 col-12"><span class="" name="validation">
+                            @customHelper.splitDatetime(@creditcard.ExpirationDate)[0]
+                                    </span></div>
+                                <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
+                            </div>
                             }
                         }
                     </card>
@@ -238,7 +238,7 @@
             </div>
             <div class="col-lg-4 col-sm-12 col-12 p-3">
                 <div class="row p-4"
-                    style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
+                    style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px; width: 100%">
                     <!-- Row 1 -->
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-7 col-md-4 col-sm-4 col-6">
@@ -248,11 +248,11 @@
                             <div class="row"><span class="">
                                     @if (Model.FormData.FlightClass == "PT")
                                     {
-                                             <p>Phổ Thông</p>
+                                       <p>Phổ Thông</p>
                                     }
                                     else
                                     {
-                                             <p>Thương Gia</p>
+                                       <p>Thương Gia</p>
                                     }
                                 </span></div>
                             <div class="row fw-bold">
@@ -301,18 +301,20 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="row px-2">
-                            <div class="col-6"></div>
-                            <div class="col-6 text-end">
-                                <form action="ticket-info" method="post">
+                        <div class="row p-0">
+                            <div class="col text-end">
+                                <form action="ticket-info" method="post" id="ticket-processing">
                                     <input type="hidden" name="FlightData" value='@Json.Serialize(Model.Flight)'>
                                     <input type="hidden" name="PassengerInfo" value='@Json.Serialize(Model.PassengerInfo)'>
                                     <input type="hidden" name="FormData" value='@Json.Serialize(Model.FormData)'>
-                                    <input type="hidden" id="cardCreditList" name="cardCreditList"></input>
-                                    <button type="button" onclick="showModal(event)"
-                                        name="pay" class="fw-bold p-3" id="pay-button"
-                                        style="border: none;border-radius: 6px;background-color: #8DD3BB;color: black;font-size: 12px;">Thanh
-                                        toán</button>
+                                    <input type="hidden" id="cardCreditList" name="cardCreditList">
+                                    <input type="hidden" id="paymentMethod" name="method" />
+                                    <button type="button" onclick="showModal(event)" name="pay" class="fw-bold p-3" id="pay-button" style="border: none;border-radius: 6px;background-color: #8DD3BB;color: black;font-size: 12px;">
+                                        Thanh toán
+                                    </button>
+                                    <button type="button" name="pay" class="fw-bold p-3" id="payWithMomo" style="border: none; border-radius: 6px; background-color: #a50064; color: white; font-size: 12px;">
+                                        Thanh toán với Momo
+                                    </button> 
                                 </form>
                             </div>
                         </div>
@@ -329,14 +331,19 @@
 
         if (count==0) {
         event.preventDefault();
-        $('#exampleModal').modal('show');
+            $('#exampleModal').modal('show');
             // prevent form submission
         } else {
                 // allow form submission
-             $("#pay-button").prop("type", "submit");
+            $("#paymentMethod").val("creditCard");
+            $("#pay-button").prop("type", "submit");
             // 
         }
     }
+    $("#payWithMomo").on("click", () => {
+        $("#paymentMethod").val("Momo");
+        $("#ticket-processing").submit();
+    })
     $(document).ready(function(){
         var creditCardList = [];
         $("#addNewCard").on('click', function () {

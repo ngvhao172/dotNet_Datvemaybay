@@ -1,6 +1,7 @@
 ﻿using Csharp_DatVeMayBay.Data;
 using Csharp_DatVeMayBay.Models.Domain;
 using Csharp_DatVeMayBay.Models.Enums;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Primitives;
@@ -126,9 +127,10 @@ namespace Csharp_DatVeMayBay.Controllers
                 return Redirect("/select-flight");
             }
             //Lọc hãng bay
-            //Trường hợp không check all + không check airline và có check all đồng thời check airline
+            //Trường hợp không check all + không check airline hoặc có check all đồng thời check airline
              else if(!StringValues.IsNullOrEmpty(AllAirlinesChecked) || StringValues.IsNullOrEmpty(AllAirlinesChecked) && StringValues.IsNullOrEmpty(AirlinesIdValue))
             {
+                Console.WriteLine("TH NAY");
                 var Airlines = await dbContext.Airlines.ToListAsync();
                 flightViewModel = new FlightViewModel
                 {
@@ -137,6 +139,7 @@ namespace Csharp_DatVeMayBay.Controllers
                     Airlines = Airlines,
                     AirlineChecked = null
                 };
+                flightListPage = flightList;
                 return Redirect("/select-flight");
             }
             //Trường hợp chỉ check airline

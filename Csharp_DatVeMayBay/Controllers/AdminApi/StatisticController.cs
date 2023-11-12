@@ -35,7 +35,7 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
                 .Count();
 
                 var rs_totalRevenue = dbContext.Tickets
-                    .Where(t => t.Booking.BookingDatime >= fromDate && t.Booking.BookingDatime <= toDate)
+                    .Where(t => t.Booking.BookingDatime >= fromDate && t.Booking.BookingDatime <= toDate && t.Status == Models.Enums.TicketStatus.Paid)
                     .Sum(t => t.TicketPrice);
 
                 StatisticModel statisticData = new StatisticModel()
@@ -51,7 +51,7 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
                 var rs_totalTickets = dbContext.Tickets
                 .Count();
 
-                var rs_totalRevenue = dbContext.Tickets
+                var rs_totalRevenue = dbContext.Tickets.Where( t => t.Status == Models.Enums.TicketStatus.Paid)
                     .Sum(t => t.TicketPrice);
 
                 StatisticModel statisticData = new StatisticModel()

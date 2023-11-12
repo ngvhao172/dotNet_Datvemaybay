@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Csharp_DatVeMayBay.Controllers
 {
     /*[Authorize(Policy = "AdminOnly")]*/
+    [Authorize(Policy = "Admin")]
     public class AdminController : Controller
     {
         private readonly DBContext dbContext;
