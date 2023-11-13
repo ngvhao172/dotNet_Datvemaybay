@@ -221,6 +221,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-lg-2 col-sm-2 col-md-2 d-flex justify-content-center">
+                                @if(ticket.Status == Csharp_DatVeMayBay.Models.Enums.TicketStatus.Paid){
                                 <div class="btn-download" style="height: 100%; width: max-content;">
                                     <button type="button" class="btn btn-outline-success p-2" style="
                                     background-color:#8DD3BB; border: #8DD3BB; color:
@@ -228,6 +229,16 @@
                                         @ticket.TicketId
                                     </button>
                                 </div>
+                                }
+                                else{
+                                <div class="btn-download" style="height: 100%; width: max-content;">
+                                    <button type="button" class="btn btn-outline-danger p-2 bg-danger" style="border: #8DD3BB; color:
+                                    black;height: 100%;">
+                                        @ticket.TicketId
+                                    </button>
+                                </div>
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -242,7 +253,7 @@
                         <div class="row m-3 mt-2" id="card-container">
                             @foreach (var card in Model.creditCards)
                             {
-                                <div class="col-md-4 mb-sm-2">
+                                <div class="col-3 mb-sm-2">
                                     <div class="ps-3 pe-3 mb-2 mt-3" style="background-color:#8DD3BB;border-radius: 10px; height: 200px;max-width: 300px">
                                         <div class="row mb-4">
                                             <div class="col-9 p-0">
@@ -266,7 +277,7 @@
                                 </div>
                             }
                             <!-- <p></p> -->
-                            <div class="col-md-4 mb-sm-1">
+                            <div class="col-3 mb-sm-1">
                                 <div class="bg-light text-center align-items-center d-flex justify-content-center mb-2 mt-3" style="border-radius: 10px; height: 200px;max-width: 300px;border: 2px dashed #8DD3BB;">
                                     <button class="bg-transparent border-0" id="add-credit" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                         <div class="add-icon">

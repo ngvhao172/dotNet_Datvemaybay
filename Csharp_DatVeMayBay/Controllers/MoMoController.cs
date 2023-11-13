@@ -95,10 +95,18 @@ namespace Csharp_DatVeMayBay.Controllers
                 Ticket ticket = await dbContext.Tickets.Where(t => t.TicketId == ticketId).FirstOrDefaultAsync();
                 if (ticket != null)
                 {
+                    //Cập nhật trạng thái vé
                     ticket.Status = Models.Enums.TicketStatus.Paid;
                     dbContext.Tickets.Update(ticket);
 
+                    //Cập nhật trạng thái ghế ngồi
+                    Seat seatBooked = await dbContext.Seats.Where(s => s.SeatId == ticket.SeatId).FirstOrDefaultAsync();
+                    seatBooked.Status = Models.Enums.SeatStatus.Busy;
+
                     await dbContext.SaveChangesAsync();
+
+                    Console.WriteLine(ticket.Status);
+                    Console.WriteLine(message);
 
                     return Redirect("/ticket-momo-processing/" + ticket.TicketId);
                 }

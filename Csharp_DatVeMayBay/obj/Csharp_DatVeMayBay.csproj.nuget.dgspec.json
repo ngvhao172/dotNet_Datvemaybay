@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {}
+    "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {}
   },
   "projects": {
-    "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {
+    "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
+        "projectUniqueName": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
         "projectName": "Csharp_DatVeMayBay",
-        "projectPath": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
+        "projectPath": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\",
+        "outputPath": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -107,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -227,7 +227,7 @@ namespace Csharp_DatVeMayBay.Controllers
                                     .ThenInclude(a => a.User)
                                 .FirstAsync();
                             //Trả Data về View 
-                            //Nếu thanh toán bằng tiền mặt trả về ticket, còn momo sẽ chuyển sang action momo để xử lý
+                            //Nếu thanh toán bằng thẻ tín dụng trả về ticket, còn momo sẽ chuyển sang action momo để xử lý
                             return (paymentMethod == "creditCard") ? Redirect("/ticket-info") : Redirect("/paymentWithMomo/" +newTicket.TicketId + "/" + newTicket.TicketPrice);
                         }
                         else
@@ -273,6 +273,7 @@ namespace Csharp_DatVeMayBay.Controllers
         [HttpGet]
         public async Task<IActionResult> TicketMoMoProcessing(string ticketId)
         {
+            Console.WriteLine(ticketId);
             Ticket ticket = await dbContext.Tickets
                 .Where(t => t.TicketId == ticketId)
                 .Include(f => f.Flight)
@@ -283,11 +284,13 @@ namespace Csharp_DatVeMayBay.Controllers
                     .ThenInclude(a => a.ArrivalAirport)
                 .Include(f => f.Booking)
                     .ThenInclude(a => a.User)
+                .Include(s => s.Seat)
                 .FirstAsync();
+            Console.WriteLine(ticket.ToString());
             if (ticket != null)
             {
                 finalTicketValue = ticket;
-                Redirect("/ticket-info");
+                return Redirect("/ticket-info");
             }
             return RedirectToAction("Error500", "Error");
         }

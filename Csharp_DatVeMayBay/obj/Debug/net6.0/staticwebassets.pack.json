@@ -1,563 +1,563 @@
 {
   "Files": [
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css",
       "PackagePath": "staticwebassets\\Csharp_DatVeMayBay.bundle.scp.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\403.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\403.css",
       "PackagePath": "staticwebassets\\css\\403.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\404.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\404.css",
       "PackagePath": "staticwebassets\\css\\404.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\account.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\account.css",
       "PackagePath": "staticwebassets\\css\\account.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\seats.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\seats.css",
       "PackagePath": "staticwebassets\\css\\seats.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\site.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\verFail.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\verFail.css",
       "PackagePath": "staticwebassets\\css\\verFail.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\verSucess.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\css\\verSucess.css",
       "PackagePath": "staticwebassets\\css\\verSucess.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\favicon.ico",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\avt.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\avt.png",
       "PackagePath": "staticwebassets\\img\\account\\avt.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\background.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\background.jpg",
       "PackagePath": "staticwebassets\\img\\account\\background.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\date.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\date.png",
       "PackagePath": "staticwebassets\\img\\account\\date.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\gate.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\gate.png",
       "PackagePath": "staticwebassets\\img\\account\\gate.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\seat.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\seat.png",
       "PackagePath": "staticwebassets\\img\\account\\seat.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\time.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\time.png",
       "PackagePath": "staticwebassets\\img\\account\\time.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\BambooAirwaysLogo.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\BambooAirwaysLogo.png",
       "PackagePath": "staticwebassets\\img\\airlines\\BambooAirwaysLogo.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\JetStarLogo.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\JetStarLogo.png",
       "PackagePath": "staticwebassets\\img\\airlines\\JetStarLogo.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\Mos word2016.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\Mos word2016.png",
       "PackagePath": "staticwebassets\\img\\airlines\\Mos word2016.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\PacificAirlinesLogo.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\PacificAirlinesLogo.png",
       "PackagePath": "staticwebassets\\img\\airlines\\PacificAirlinesLogo.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietjetAirLogo.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietjetAirLogo.png",
       "PackagePath": "staticwebassets\\img\\airlines\\VietjetAirLogo.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietnamAirlinesLogo.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietnamAirlinesLogo.png",
       "PackagePath": "staticwebassets\\img\\airlines\\VietnamAirlinesLogo.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg",
       "PackagePath": "staticwebassets\\img\\airlines\\studentid.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg.jpg",
       "PackagePath": "staticwebassets\\img\\airlines\\studentid.jpg.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\background-images-personal.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\background-images-personal.jpg",
       "PackagePath": "staticwebassets\\img\\background-images-personal.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\avatar.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\avatar.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\avatar.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\book-tc-plane.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\book-tc-plane.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\book-tc-plane.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\emirates-logo.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\emirates-logo.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\emirates-logo.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\fast-food.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\fast-food.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\fast-food.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\plane.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\plane.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\plane.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\round-seat.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\round-seat.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\round-seat.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\stopwatch.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\stopwatch.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\stopwatch.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\wifi.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\wifi.svg",
       "PackagePath": "staticwebassets\\img\\booking-detail\\wifi.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\family-plane.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\family-plane.png",
       "PackagePath": "staticwebassets\\img\\flight-booking-detail\\family-plane.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\inside-plane.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\inside-plane.png",
       "PackagePath": "staticwebassets\\img\\flight-booking-detail\\inside-plane.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\plane-flight-detail.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\plane-flight-detail.svg",
       "PackagePath": "staticwebassets\\img\\flight-booking-detail\\plane-flight-detail.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\window-plane.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\window-plane.png",
       "PackagePath": "staticwebassets\\img\\flight-booking-detail\\window-plane.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\logo-footer.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\logo-footer.png",
       "PackagePath": "staticwebassets\\img\\footer\\logo-footer.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\mailbox.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\mailbox.png",
       "PackagePath": "staticwebassets\\img\\footer\\mailbox.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Frame 36.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Frame 36.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\Frame 36.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Hue.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Hue.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\Hue.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\live-travel.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\live-travel.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\live-travel.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\new-york.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\new-york.svg",
       "PackagePath": "staticwebassets\\img\\homepage\\new-york.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\plane-search.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\plane-search.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\plane-search.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\sky-search-tc.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\sky-search-tc.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\sky-search-tc.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slide-show.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slide-show.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\slide-show.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-1.jpeg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-1.jpeg",
       "PackagePath": "staticwebassets\\img\\homepage\\slideshow-1.jpeg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\slideshow-2.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.svg",
       "PackagePath": "staticwebassets\\img\\homepage\\slideshow-2.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\slideshow-3-search-tc.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\slideshow-3.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\thanh-pho-Da-Nang.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg",
       "PackagePath": "staticwebassets\\img\\homepage\\thu-do-Ha-Noi.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Group 4.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Group 4.png",
       "PackagePath": "staticwebassets\\img\\loginpage\\Group 4.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Logo.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Logo.png",
       "PackagePath": "staticwebassets\\img\\loginpage\\Logo.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\backButton.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\backButton.svg",
       "PackagePath": "staticwebassets\\img\\loginpage\\backButton.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\logofooter.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\logofooter.png",
       "PackagePath": "staticwebassets\\img\\loginpage\\logofooter.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\plane3.jpeg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\plane3.jpeg",
       "PackagePath": "staticwebassets\\img\\loginpage\\plane3.jpeg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\logo-navbar.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\logo-navbar.png",
       "PackagePath": "staticwebassets\\img\\logo-navbar.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\arrow-bottom.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\arrow-bottom.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\arrow-bottom.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\avatar.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\avatar.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\avatar.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\date.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\date.png",
       "PackagePath": "staticwebassets\\img\\ticket_info\\date.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\fast-food.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\fast-food.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\fast-food.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\gate.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\gate.png",
       "PackagePath": "staticwebassets\\img\\ticket_info\\gate.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\maQR.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\maQR.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\maQR.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\round-seat.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\round-seat.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\round-seat.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\seat.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\seat.png",
       "PackagePath": "staticwebassets\\img\\ticket_info\\seat.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\sky-search-tc.jpg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\sky-search-tc.jpg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\sky-search-tc.jpg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\stopwatch.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\stopwatch.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\stopwatch.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\time.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\time.png",
       "PackagePath": "staticwebassets\\img\\ticket_info\\time.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\visa.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\visa.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\visa.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\wifi.svg",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\wifi.svg",
       "PackagePath": "staticwebassets\\img\\ticket_info\\wifi.svg"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\userlogo.png",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\img\\userlogo.png",
       "PackagePath": "staticwebassets\\img\\userlogo.png"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airline_script.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airline_script.js",
       "PackagePath": "staticwebassets\\js\\airline_script.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airport_script.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\airport_script.js",
       "PackagePath": "staticwebassets\\js\\airport_script.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\customer_script.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\customer_script.js",
       "PackagePath": "staticwebassets\\js\\customer_script.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
       "PackagePath": "staticwebassets\\js\\flight_script.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\history_script.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\history_script.js",
       "PackagePath": "staticwebassets\\js\\history_script.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",
       "PackagePath": "staticwebassets\\js\\statistic_script.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "\\\\ADMINISTRATOR\\Code\\dotNet\\Project\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

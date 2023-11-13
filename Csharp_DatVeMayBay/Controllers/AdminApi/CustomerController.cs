@@ -19,7 +19,7 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
         [Route("GetAllCustomer")]
         public JsonResult GetAllCustomer()
         {
-            List<User> customers = dbContext.Users.ToList();
+            List<User> customers = dbContext.Users.Where(c => c.UserEmail != "admin@gmail.com").ToList();
             return Json(new { data = customers });
         }
         [HttpPost]
