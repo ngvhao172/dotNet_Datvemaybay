@@ -306,7 +306,7 @@ namespace Csharp_DatVeMayBay.Controllers
         public async Task<IActionResult> SearchBooking(Ticket ticket)
         {
             var TicketResult = Request.Form["ticketId"].ToString();
-            Ticket Ticket = await dbContext.Tickets
+            Ticket? Ticket = await dbContext.Tickets
                 .Where(t => t.TicketId == TicketResult)
                 .Include(f => f.Flight)
                 .ThenInclude(a => a.Airline)
@@ -316,8 +316,8 @@ namespace Csharp_DatVeMayBay.Controllers
                     .ThenInclude(a => a.ArrivalAirport)
                 .Include(s => s.Seat)
                 .Include(f => f.Booking)
-                    .ThenInclude(a => a.User).FirstAsync();
-            if (TicketResult != null)
+                    .ThenInclude(a => a.User).FirstOrDefaultAsync();
+            if (Ticket != null)
             {
                 var airportDeparture = dbContext.Airports.FirstOrDefault(a => Ticket.Flight.DepartureAirportId == a.AirportId);
                 var airportArrival = dbContext.Airports.FirstOrDefault(a => Ticket.Flight.ArrivalAirportId == a.AirportId);

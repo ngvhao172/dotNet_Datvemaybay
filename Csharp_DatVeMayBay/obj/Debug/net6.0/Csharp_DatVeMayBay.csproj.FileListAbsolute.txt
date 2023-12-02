@@ -544,7 +544,6 @@ D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\obj\Debug\net6.0\Cs
 D:\Code\dotNet\Project\Csharp_DatVeMayBay\Csharp_DatVeMayBay\obj\Debug\net6.0\ref\Csharp_DatVeMayBay.dll
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\appsettings.Development.json
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\appsettings.json
-D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\bundleconfig.json
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\Csharp_DatVeMayBay.staticwebassets.runtime.json
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\Csharp_DatVeMayBay.exe
 D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\Csharp_DatVeMayBay.deps.json
@@ -1416,3 +1415,14 @@ D:\Code\dotNet\Project_FinalTerm\Csharp_DatVeMayBay\Csharp_DatVeMayBay\obj\Debug
 D:\Code\dotNet\Project_FinalTerm\Csharp_DatVeMayBay\Csharp_DatVeMayBay\obj\Debug\net6.0\Csharp_DatVeMayBay.pdb
 D:\Code\dotNet\Project_FinalTerm\Csharp_DatVeMayBay\Csharp_DatVeMayBay\obj\Debug\net6.0\Csharp_DatVeMayBay.genruntimeconfig.cache
 D:\Code\dotNet\Project_FinalTerm\Csharp_DatVeMayBay\Csharp_DatVeMayBay\obj\Debug\net6.0\ref\Csharp_DatVeMayBay.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\BouncyCastle.Cryptography.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\MailKit.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\MimeKit.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\RestSharp.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Formats.Asn1.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\System.Text.Encoding.CodePages.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
+D:\Code\dotNet\dotNet_Datvemaybay\Csharp_DatVeMayBay\obj\Debug\net6.0\Csharp_DatVeMayBay.sourcelink.json
