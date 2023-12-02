@@ -64,7 +64,7 @@ namespace Csharp_DatVeMayBay.Controllers
                 var FormData = JsonConvert.DeserializeObject<FormData>(Form);
                 //var customFlight = JsonConvert.DeserializeObject<CustomFlight>(flightData);
                 PassengerInfo passengerInfo;
-                var user = await dbContext.Users.Where(u => u.UserEmail == User.FindFirst(ClaimTypes.Email).Value).Include(c => c.Creditcards).FirstAsync();
+                var user = await dbContext.Users.Where(u => u.UserEmail == User.FindFirst(ClaimTypes.Email).Value).Include(c => c.Creditcards).FirstOrDefaultAsync();
 
                 var BookingDetailModel = new BookingDetailModel
                 {

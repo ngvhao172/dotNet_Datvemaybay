@@ -188,7 +188,9 @@
 
 </div>
 <script>
-    $(document).ready(()=>{
+    $(document).ready(() => {
+        var currentDate = new Date().toISOString().split('T')[0];
+        $("#departure_datetime").attr('min', currentDate);
         $('#chuyenVe').hide();
         $('#type').on('change', function() {
             var val = $(this).val();

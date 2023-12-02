@@ -113,7 +113,7 @@ namespace Csharp_DatVeMayBay.Controllers
                 flightList = dbContext.Flights.Where(f =>
                     f.DepartureAirportId == departureAirportId &&
                     f.ArrivalAirportId == arrivalAirportId &&
-                    f.DepartureDatetime.Date == inputDate).Include(a => a.DepartureAirport).Include(a => a.ArrivalAirport).Include(a => a.Airline)
+                    f.DepartureDatetime.Date == inputDate && f.DepartureDatetime > DateTime.Now).Include(a => a.DepartureAirport).Include(a => a.ArrivalAirport).Include(a => a.Airline)
                     .ToList();
                 var Airlines = await dbContext.Airlines.ToListAsync();
                 flightViewModel = new FlightViewModel
