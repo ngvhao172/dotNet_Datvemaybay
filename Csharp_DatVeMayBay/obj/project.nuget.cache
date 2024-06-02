@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "09RXw6qa2V+QwA6hIsq8zFHzYsRQAant5z6hrwGxoQ45gTvyTMzrOQ0FDv680aDk4PCIADB7ChyYDARX4UqvkA==",
+  "dgSpecHash": "UVgvoT5JSum5807TaDZdV3IM6u/HeXimMT6rii8B5YlroytcgX4NR/npQoghIndfCOE8spNa1nKL76ONKGT7XQ==",
   "success": true,
-  "projectFilePath": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
+  "projectFilePath": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -240,6 +240,12 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
     {
       "code": "NU1701",
       "level": "Warning",

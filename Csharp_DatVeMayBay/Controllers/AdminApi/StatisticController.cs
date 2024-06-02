@@ -17,6 +17,8 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
         }
         class StatisticModel {
             public int totalTickets { get; set; }
+
+            public int totalTicketsPaid { get; set; }
             public decimal totalRevenue { get; set; }
 
         }
@@ -30,6 +32,10 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
                 .Where(t => t.Booking.BookingDatime >= fromDate && t.Booking.BookingDatime <= toDate)
                 .Count();
 
+                var rs_totalTicketsPaid = dbContext.Tickets
+                .Where(t => t.Booking.BookingDatime >= fromDate && t.Booking.BookingDatime <= toDate && t.Status == Models.Enums.TicketStatus.Paid)
+                .Count();
+
                 var rs_totalRevenue = dbContext.Tickets
                     .Where(t => t.Booking.BookingDatime >= fromDate && t.Booking.BookingDatime <= toDate && t.Status == Models.Enums.TicketStatus.Paid)
                     .Sum(t => t.TicketPrice);
@@ -37,6 +43,7 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
                 StatisticModel statisticData = new StatisticModel()
                 {
                     totalTickets = rs_totalTickets,
+                    totalTicketsPaid = rs_totalTicketsPaid,
                     totalRevenue = rs_totalRevenue
                 };
                 dataArray.Add(statisticData);
@@ -47,12 +54,16 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
                 var rs_totalTickets = dbContext.Tickets
                 .Count();
 
+                var rs_totalTicketsPaid = dbContext.Tickets.Where(t => t.Status == Models.Enums.TicketStatus.Paid)
+                .Count();
+
                 var rs_totalRevenue = dbContext.Tickets.Where( t => t.Status == Models.Enums.TicketStatus.Paid)
                     .Sum(t => t.TicketPrice);
 
                 StatisticModel statisticData = new StatisticModel()
                 {
                     totalTickets = rs_totalTickets,
+                    totalTicketsPaid = rs_totalTicketsPaid,
                     totalRevenue = rs_totalRevenue
                 };
                 dataArray.Add(statisticData);

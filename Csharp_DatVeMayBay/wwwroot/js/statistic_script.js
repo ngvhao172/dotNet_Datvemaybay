@@ -26,7 +26,8 @@
             "dataSrc": "data"
         },
         "columns": [
-            { "data": "totalTickets", },
+            { "data": "totalTickets" },
+            { "data": "totalTicketsPaid" },
             {
                 "data": "totalRevenue",
                 "render": function (data, type, row) {

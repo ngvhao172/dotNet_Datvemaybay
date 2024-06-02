@@ -665,11 +665,27 @@ namespace Csharp_DatVeMayBay.Controllers
         [HttpPost]
         public async Task<IActionResult> SearchBookingPost()
         {
+<<<<<<< HEAD
             var TicketId = Request.Form["ticketId"].ToString();
             var BookingId = Request.Form["bookingId"].ToString();
             List<Ticket> tickets = null;
 
             if (string.IsNullOrWhiteSpace(TicketId) && string.IsNullOrWhiteSpace(BookingId))
+=======
+            var TicketResult = Request.Form["ticketId"].ToString();
+            Ticket? Ticket = await dbContext.Tickets
+                .Where(t => t.TicketId == TicketResult)
+                .Include(f => f.Flight)
+                .ThenInclude(a => a.Airline)
+                .Include(f => f.Flight)
+                    .ThenInclude(a => a.DepartureAirport)
+                .Include(f => f.Flight)
+                    .ThenInclude(a => a.ArrivalAirport)
+                .Include(s => s.Seat)
+                .Include(f => f.Booking)
+                    .ThenInclude(a => a.User).FirstOrDefaultAsync();
+            if (Ticket != null)
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
             {
                 TempData["error"] = true;
             }

@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "/W6XZuCI1sOMmf6W0y1TiiBx96Z0ZDgJ19I7wGLDG+E=",
+=======
+  "Hash": "vfXucOWF2Z6/1Nga8O0nZfMmkm6M24Pm4BekVoRrSrs=",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
   "Source": "Csharp_DatVeMayBay",
   "BasePath": "_content/Csharp_DatVeMayBay",
   "Mode": "Default",
@@ -10,27 +14,41 @@
     {
       "Name": "Csharp_DatVeMayBay\\wwwroot",
       "Source": "Csharp_DatVeMayBay",
+<<<<<<< HEAD
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Computed",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "Csharp_DatVeMayBay.styles.css",
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css"
     },
     {
@@ -38,16 +56,28 @@
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Computed",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+=======
+      "OriginalItemSpec": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Csharp_DatVeMayBay.styles.css"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "Csharp_DatVeMayBay.bundle.scp.css",
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
+<<<<<<< HEAD
       "OriginalItemSpec": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css"
     },
     {
@@ -55,11 +85,22 @@
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "OriginalItemSpec": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Csharp_DatVeMayBay.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\403.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/403.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -68,15 +109,24 @@
       "OriginalItemSpec": "wwwroot\\css\\403.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\css\\404.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\404.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/404.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -85,6 +135,7 @@
       "OriginalItemSpec": "wwwroot\\css\\404.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\css\\500.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
@@ -106,11 +157,19 @@
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\account.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/account.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -119,15 +178,24 @@
       "OriginalItemSpec": "wwwroot\\css\\account.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\css\\seats.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\seats.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/seats.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -136,15 +204,24 @@
       "OriginalItemSpec": "wwwroot\\css\\seats.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\css\\site.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\site.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -153,15 +230,24 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\css\\verFail.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\verFail.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/verFail.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -170,15 +256,24 @@
       "OriginalItemSpec": "wwwroot\\css\\verFail.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\css\\verSucess.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\css\\verSucess.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "css/verSucess.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -187,15 +282,24 @@
       "OriginalItemSpec": "wwwroot\\css\\verSucess.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\favicon.ico",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\favicon.ico",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -204,15 +308,24 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\avt.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\avt.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/account/avt.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -221,15 +334,24 @@
       "OriginalItemSpec": "wwwroot\\img\\account\\avt.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\background.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\background.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/account/background.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -238,15 +360,24 @@
       "OriginalItemSpec": "wwwroot\\img\\account\\background.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\date.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\date.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/account/date.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -255,15 +386,24 @@
       "OriginalItemSpec": "wwwroot\\img\\account\\date.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\gate.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\gate.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/account/gate.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -272,15 +412,24 @@
       "OriginalItemSpec": "wwwroot\\img\\account\\gate.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\seat.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\seat.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/account/seat.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -289,15 +438,24 @@
       "OriginalItemSpec": "wwwroot\\img\\account\\seat.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\time.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\account\\time.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/account/time.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -306,15 +464,24 @@
       "OriginalItemSpec": "wwwroot\\img\\account\\time.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\BambooAirwaysLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\BambooAirwaysLogo.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/BambooAirwaysLogo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -323,15 +490,43 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\BambooAirwaysLogo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\JetStarLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\EmiratesLogo.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "img/airlines/EmiratesLogo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\airlines\\EmiratesLogo.jpg"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\JetStarLogo.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/JetStarLogo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -340,15 +535,43 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\JetStarLogo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\PacificAirlinesLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\Mos word2016.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "img/airlines/Mos word2016.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\airlines\\Mos word2016.png"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\PacificAirlinesLogo.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/PacificAirlinesLogo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -357,15 +580,62 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\PacificAirlinesLogo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietjetAirLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "img/airlines/studentid.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\airlines\\studentid.jpg"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\studentid.jpg.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+      "BasePath": "_content/Csharp_DatVeMayBay",
+      "RelativePath": "img/airlines/studentid.jpg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\airlines\\studentid.jpg.jpg"
+    },
+    {
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietjetAirLogo.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/VietjetAirLogo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -374,15 +644,24 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\VietjetAirLogo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietnamAirlinesLogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\airlines\\VietnamAirlinesLogo.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/airlines/VietnamAirlinesLogo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -391,15 +670,24 @@
       "OriginalItemSpec": "wwwroot\\img\\airlines\\VietnamAirlinesLogo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\background-images-personal.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\background-images-personal.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/background-images-personal.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -408,15 +696,24 @@
       "OriginalItemSpec": "wwwroot\\img\\background-images-personal.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\avatar.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\avatar.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/avatar.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -425,15 +722,24 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\avatar.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\book-tc-plane.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\book-tc-plane.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/book-tc-plane.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -442,15 +748,24 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\book-tc-plane.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\emirates-logo.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\emirates-logo.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/emirates-logo.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -459,15 +774,24 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\emirates-logo.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\fast-food.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\fast-food.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/fast-food.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -476,15 +800,24 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\fast-food.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\plane.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\plane.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/plane.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -493,15 +826,24 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\plane.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\round-seat.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\round-seat.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/round-seat.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -510,15 +852,24 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\round-seat.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\stopwatch.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\stopwatch.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/stopwatch.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -527,6 +878,7 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\stopwatch.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\vnpay.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
@@ -565,11 +917,19 @@
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\booking-detail\\wifi.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/booking-detail/wifi.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -578,15 +938,24 @@
       "OriginalItemSpec": "wwwroot\\img\\booking-detail\\wifi.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\family-plane.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\family-plane.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/flight-booking-detail/family-plane.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -595,15 +964,24 @@
       "OriginalItemSpec": "wwwroot\\img\\flight-booking-detail\\family-plane.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\inside-plane.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\inside-plane.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/flight-booking-detail/inside-plane.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -612,15 +990,24 @@
       "OriginalItemSpec": "wwwroot\\img\\flight-booking-detail\\inside-plane.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\plane-flight-detail.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\plane-flight-detail.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/flight-booking-detail/plane-flight-detail.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -629,15 +1016,24 @@
       "OriginalItemSpec": "wwwroot\\img\\flight-booking-detail\\plane-flight-detail.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\window-plane.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\flight-booking-detail\\window-plane.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/flight-booking-detail/window-plane.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -646,15 +1042,24 @@
       "OriginalItemSpec": "wwwroot\\img\\flight-booking-detail\\window-plane.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\logo-footer.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\logo-footer.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/footer/logo-footer.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -663,15 +1068,24 @@
       "OriginalItemSpec": "wwwroot\\img\\footer\\logo-footer.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\mailbox.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\footer\\mailbox.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/footer/mailbox.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -680,15 +1094,24 @@
       "OriginalItemSpec": "wwwroot\\img\\footer\\mailbox.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Frame 36.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Frame 36.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/Frame 36.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -697,15 +1120,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\Frame 36.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Hue.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\Hue.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/Hue.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -714,15 +1146,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\Hue.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\live-travel.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\live-travel.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/live-travel.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -731,15 +1172,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\live-travel.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\new-york.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\new-york.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/new-york.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -748,15 +1198,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\new-york.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\plane-search.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\plane-search.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/plane-search.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -765,15 +1224,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\plane-search.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\sky-search-tc.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\sky-search-tc.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/sky-search-tc.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -782,15 +1250,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\sky-search-tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slide-show.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slide-show.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slide-show.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -799,15 +1276,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slide-show.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-1.jpeg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-1.jpeg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-1.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -816,15 +1302,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-1.jpeg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -833,15 +1328,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-2.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-2.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-2.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -850,15 +1354,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-2.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-3.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -867,15 +1380,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-3.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/slideshow-3-search-tc.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -884,15 +1406,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\slideshow-3-search-tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/thanh-pho-Da-Nang.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -901,15 +1432,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\thanh-pho-Da-Nang.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/thanh-pho-Ho-Chi-Minh.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -918,15 +1458,24 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\thanh-pho-Ho-Chi-Minh.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/homepage/thu-do-Ha-Noi.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -935,6 +1484,7 @@
       "OriginalItemSpec": "wwwroot\\img\\homepage\\thu-do-Ha-Noi.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\iconlogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
@@ -956,11 +1506,19 @@
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\backButton.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/backButton.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -969,15 +1527,24 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\backButton.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Group 4.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Group 4.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/Group 4.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -986,15 +1553,24 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\Group 4.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Logo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\Logo.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/Logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1003,15 +1579,24 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\Logo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\logofooter.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\logofooter.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/logofooter.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1020,15 +1605,24 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\logofooter.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\plane3.jpeg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\loginpage\\plane3.jpeg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/loginpage/plane3.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1037,15 +1631,24 @@
       "OriginalItemSpec": "wwwroot\\img\\loginpage\\plane3.jpeg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\logo-navbar.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\logo-navbar.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/logo-navbar.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1054,15 +1657,24 @@
       "OriginalItemSpec": "wwwroot\\img\\logo-navbar.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\arrow-bottom.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\arrow-bottom.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/arrow-bottom.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1071,15 +1683,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\arrow-bottom.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\avatar.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\avatar.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/avatar.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1088,15 +1709,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\avatar.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\date.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\date.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/date.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1105,15 +1735,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\date.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\fast-food.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\fast-food.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/fast-food.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1122,15 +1761,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\fast-food.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\gate.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\gate.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/gate.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1139,15 +1787,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\gate.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\maQR.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\maQR.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/maQR.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1156,15 +1813,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\maQR.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\round-seat.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\round-seat.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/round-seat.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1173,15 +1839,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\round-seat.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\seat.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\seat.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/seat.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1190,15 +1865,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\seat.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\sky-search-tc.jpg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\sky-search-tc.jpg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/sky-search-tc.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1207,15 +1891,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\sky-search-tc.jpg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\stopwatch.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\stopwatch.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/stopwatch.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1224,15 +1917,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\stopwatch.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\time.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\time.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/time.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1241,15 +1943,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\time.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\visa.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\visa.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/visa.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1258,15 +1969,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\visa.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\wifi.svg",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\ticket_info\\wifi.svg",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/ticket_info/wifi.svg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1275,15 +1995,24 @@
       "OriginalItemSpec": "wwwroot\\img\\ticket_info\\wifi.svg"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\img\\userlogo.png",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\img\\userlogo.png",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "img/userlogo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1292,15 +2021,24 @@
       "OriginalItemSpec": "wwwroot\\img\\userlogo.png"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\js\\airline_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\airline_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/airline_script.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1309,15 +2047,24 @@
       "OriginalItemSpec": "wwwroot\\js\\airline_script.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\js\\airport_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\airport_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/airport_script.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1326,6 +2073,7 @@
       "OriginalItemSpec": "wwwroot\\js\\airport_script.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\js\\booking_detail.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
@@ -1347,11 +2095,19 @@
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\customer_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/customer_script.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1360,15 +2116,24 @@
       "OriginalItemSpec": "wwwroot\\js\\customer_script.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\flight_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/flight_script.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1377,15 +2142,24 @@
       "OriginalItemSpec": "wwwroot\\js\\flight_script.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\js\\history_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\history_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/history_script.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1394,15 +2168,24 @@
       "OriginalItemSpec": "wwwroot\\js\\history_script.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\js\\statistic_script.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "js/statistic_script.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1411,15 +2194,24 @@
       "OriginalItemSpec": "wwwroot\\js\\statistic_script.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1428,15 +2220,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1445,15 +2246,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1462,15 +2272,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1479,15 +2298,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1496,15 +2324,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1513,15 +2350,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1530,15 +2376,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1547,15 +2402,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1564,15 +2428,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1581,15 +2454,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1598,15 +2480,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1615,15 +2506,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1632,15 +2532,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1649,15 +2558,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1666,15 +2584,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1683,15 +2610,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1700,15 +2636,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1717,15 +2662,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1734,15 +2688,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1751,15 +2714,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1768,15 +2740,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1785,15 +2766,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1802,15 +2792,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1819,15 +2818,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1836,15 +2844,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1853,15 +2870,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1870,15 +2896,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-theme.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1887,15 +2922,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1904,15 +2948,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1921,15 +2974,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1938,15 +3000,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1955,15 +3026,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1972,15 +3052,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -1989,15 +3078,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2006,15 +3104,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2023,15 +3130,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2040,15 +3156,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2057,15 +3182,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2074,15 +3208,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2091,15 +3234,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2108,15 +3260,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2125,15 +3286,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2142,15 +3312,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2159,15 +3338,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2176,15 +3364,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2193,15 +3390,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2210,15 +3416,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2227,15 +3442,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2244,15 +3468,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2261,15 +3494,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2278,15 +3520,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2295,15 +3546,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2312,15 +3572,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2329,15 +3598,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2346,15 +3624,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2363,15 +3650,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2380,15 +3676,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2397,15 +3702,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2414,15 +3728,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
@@ -2431,15 +3754,24 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Csharp_DatVeMayBay",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\wwwroot\\",
+=======
+      "Identity": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "Csharp_DatVeMayBay",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Code\\dotNet\\dotNet_Datvemaybay\\Csharp_DatVeMayBay\\wwwroot\\",
+>>>>>>> 1410fb0aa031d0c4bbf14b0dfd7d287c2370ddb8
       "BasePath": "_content/Csharp_DatVeMayBay",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
