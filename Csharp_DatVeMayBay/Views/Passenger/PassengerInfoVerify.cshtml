@@ -1,7 +1,11 @@
 ﻿@model Csharp_DatVeMayBay.Controllers.PassengerController.BookingViewModel
 @using Csharp_DatVeMayBay.Util.CustomHelpers
+@{
+    ViewData["Title"] = "Passenger Info";
+
+}
 <div class="container-fluid"
-    style="padding: 100px;width: 100%;object-fit: cover;background: url(./img/background-images-personal.jpg) no-repeat;">
+     style="padding: 100px;width: 100%;object-fit: cover;background: url(./img/background-images-personal.jpg) no-repeat;">
     <div class="container-fluid mt-5  body-section">
         <form action="payment-booking" method="POST" class="needs-validation">
             <input type="hidden" name="FlightData" value='@Json.Serialize(Model.Flight)'>
@@ -10,13 +14,20 @@
                 <h1 class="text-center" style="color: #fff;">XÁC NHẬN LẠI THÔNG TIN CÁ NHÂN</h1>
             </div>
             <div class="row  p-5"
-                style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
+                 style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
                 <!-- Row for seat -->
                 <div class="row mb-4">
                     <div class="col">
                         <div class="form-floating">
+                            @if(Model.FormData.ReturnFlight!=null){
                             <input type="text" class="form-control border-dark" id="seat" name="seatNo"
-                                value="@Model.FormData.SeatPicker" readonly>
+                                   value="@Model.FormData.SeatPicker[0], @Model.FormData.SeatPicker[1]" readonly>
+                            }
+                            else{
+                            <input type="text" class="form-control border-dark" id="seat" name="seatNo"
+                                   value="@Model.FormData.SeatPicker[0]" readonly>
+                            }
+
                             <label for="num-tc">Chỗ ngồi</label>
                         </div>
                     </div>
@@ -26,14 +37,14 @@
                     <div class="col">
                         <div class="form-floating">
                             <input type="text" class="form-control border-dark" id="firstName" name="FirstName"
-                                value="@Model.PassengerInfo.FirstName">
+                                   value="@Model.PassengerInfo.FirstName">
                             <label for="num-tc">Họ</label>
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-floating">
                             <input type="text" class="form-control border-dark" id="lastName" name="LastName"
-                                value="@Model.PassengerInfo.LastName">
+                                   value="@Model.PassengerInfo.LastName">
                             <label for="num-tc">Tên</label>
                         </div>
                     </div>
@@ -43,7 +54,7 @@
                     <div class="col">
                         <div class="form-floating">
                             <input type="text" class="form-control border-dark" id="num-tc" name="PhoneNumber"
-                                value="@Model.PassengerInfo.PhoneNumber">
+                                   value="@Model.PassengerInfo.PhoneNumber">
                             <label for="num-tc">SĐT</label>
                         </div>
                     </div>
@@ -53,7 +64,7 @@
                     <div class="col">
                         <div class="form-floating">
                             <input type="text" class="form-control border-dark" id="num-tc" name="Address"
-                                value="@Model.PassengerInfo.Address">
+                                   value="@Model.PassengerInfo.Address">
                             <label for="num-tc">Địa chỉ</label>
                         </div>
                     </div>
@@ -63,7 +74,7 @@
                     <div class="col">
                         <div class="form-floating">
                             <input type="date" class="form-control border-dark" id="Dob" name="Dob" placeholder=""
-                                value=@customHelper.FormatDateTime(Model.PassengerInfo.Dob)>
+                                   value=@customHelper.FormatDateTime(Model.PassengerInfo.Dob)>
                             <label for="Dob">Ngày sinh</label>
                         </div>
                     </div>
@@ -74,10 +85,12 @@
                     <div class="col">
                         <div class="form-floating">
                             <button class="btn btn-outline-success p-2"
-                                style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">
+                                    style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">
                                 <a class="d-inline-block text-decoration-none text-black"
-                                    style="width:100%; height:100%" href="../flight-flow/flight-detail-page.php">Quay
-                                    lại</a>
+                                   style="width:100%; height:100%" href="../flight-flow/flight-detail-page.php">
+                                    Quay
+                                    lại
+                                </a>
                             </button>
                         </div>
                     </div>
@@ -86,14 +99,16 @@
                         <div class="form-floating">
                             <!-- <form action="../booking-dt/booking-dt.php" method="POST"> -->
                             <button type="submit" name="" id="" class="btn btn-outline-success p-2"
-                                style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">Xác
-                                nhận</button>
+                                    style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">
+                                Xác
+                                nhận
+                            </button>
                             <!-- </form> -->
                         </div>
                     </div>
                 </div>
             </div>
-           <input type="hidden" name="PassengerInfo" value='@Json.Serialize(Model.PassengerInfo)'>
+            <input type="hidden" name="PassengerInfo" value='@Json.Serialize(Model.PassengerInfo)'>
         </form>
     </div>
 </div>

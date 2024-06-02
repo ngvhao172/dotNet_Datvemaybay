@@ -8,6 +8,8 @@ using Csharp_DatVeMayBay.Models.DTO;
 using Csharp_DatVeMayBay.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.EntityFrameworkCore;
+using Csharp_DatVeMayBay.Models;
+using Csharp_DatVeMayBay.Adapter_Pattern;
 
 namespace Csharp_DatVeMayBay.Controllers
 {
@@ -32,91 +34,55 @@ namespace Csharp_DatVeMayBay.Controllers
             return View();
         }
 
-        [Route("/login")]
+        [Route("/login/{*returnUrl}")]
         [HttpPost]
-        public async Task<IActionResult> Login(Account UserAccount)
+        public async Task<IActionResult> LoginPOST(string returnUrl)
         {
-            var Account = dbContext.Accounts.Find(UserAccount.UserEmail);
-            if (Account != null )
+            Console.WriteLine(returnUrl);
+            if (String.IsNullOrEmpty(returnUrl))
             {
-                if(Account.Verified == true)
-                {
-                    //var hasedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(UserAccount.Password, 13);
-                    /*                Console.WriteLine(UserAccount.Password);
-                                    Console.WriteLine(hasedPassword);
-                                    Console.WriteLine(Account.Password);*/
-                    if (BCrypt.Net.BCrypt.EnhancedVerify(UserAccount.Password, Account.Password))
-                    {
-                        var User = dbContext.Users.FirstOrDefault(u => u.UserEmail == Account.UserEmail);
-                        if (User != null)
-                        {
-                            List<Claim> claims = new List<Claim>();
-                            if (User.UserEmail == "admin@gmail.com")
-                            {
-                                claims = new List<Claim>() {
-                                new Claim(ClaimTypes.NameIdentifier, User.UserId.ToString()),
-                                new Claim(ClaimTypes.Name,User.FirstName + ' '+  User.LastName),
-                                new Claim(ClaimTypes.Email, Account.UserEmail),
-                                new Claim(ClaimTypes.Role, "Admin")
-                            };
-                                ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
-                                    CookieAuthenticationDefaults.AuthenticationScheme);
-
-                                AuthenticationProperties properties = new AuthenticationProperties()
-                                {
-                                    AllowRefresh = true,
-                                    IsPersistent = false
-                                };
-
-                                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                                    new ClaimsPrincipal(claimsIdentity), properties);
-
-                                return RedirectToAction("Airline", "Admin");
-                            }
-                            else
-                            {
-                                claims = new List<Claim>() {
-                            new Claim(ClaimTypes.NameIdentifier, User.UserId.ToString()),
-                            new Claim(ClaimTypes.Name,User.FirstName + ' '+  User.LastName),
-                            new Claim(ClaimTypes.Email, Account.UserEmail),
-                            new Claim(ClaimTypes.Role, "User")
-                            };
-                                ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims,
-                                    CookieAuthenticationDefaults.AuthenticationScheme);
-
-                                AuthenticationProperties properties = new AuthenticationProperties()
-                                {
-                                    AllowRefresh = true,
-                                    IsPersistent = false
-                                };
-
-                                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                                    new ClaimsPrincipal(claimsIdentity), properties);
-
-                                return RedirectToAction("Index", "Client");
-                            };
-                        }
-                    }
-                    else
-                    {
-                        ViewData["error"] = "Password Incorrect.";
-                        return View();
-                    } 
-                }
-                else
-                {
-                    ViewData["error"] = "Please verifying your account before continuing.";
-                    return View();
-                }
+                returnUrl = "/";
             }
-            ViewData["error"] = "No user found with that email.";
-            return View();
+            var email = Request.Form["email"];
+            var password = Request.Form["password"];
+
+            Account UserAccount = new Account
+            {
+                UserEmail = email,
+                Password = password
+            };
+            IAuthenticator accountAuthenticator = new AccountAuthenticator(HttpContext, dbContext);
+            AuthenticateResultDTO resultDTO =  await accountAuthenticator.Authenticate(UserAccount);
+            if(resultDTO.User == null)
+            {
+                TempData["error"] = resultDTO.Message;
+                return Redirect("/login");
+            }
+            else if(resultDTO.Role == Models.Enums.RoleSystem.Admin)
+            {
+                Logger.GetInstance().Log("Admin login successfully");
+                return RedirectToAction("Flight", "Admin");
+            }
+            else
+            {
+                //New code_logger
+                Logger.GetInstance().Log($"User login by account successfully: User({resultDTO.User.UserId}, {resultDTO.User.FirstName + ' ' + resultDTO.User.LastName})");
+
+                if(returnUrl == "/" || string.IsNullOrEmpty(returnUrl))
+                {
+                    return RedirectToAction("Index", "Client");
+                }
+                return Redirect("/" + returnUrl);
+            }
+
         }
 
         [Route("/logout")]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            Logger.GetInstance().CloseLog();
 
             return RedirectToAction("Index", "Client");
 
@@ -176,6 +142,13 @@ namespace Csharp_DatVeMayBay.Controllers
                             _emailService.SendEmail(emailDTO);
                             Console.WriteLine("Verification mail has been sent to " + User.UserEmail);
                             TempData["success"] = "Registration successful. An email has been sent to your account!";
+
+                            //New code_logger
+                            Logger.GetInstance().Log($"New User registered : User({newUser.UserId}, {User.FirstName + ' ' + User.LastName})");
+
+                            Logger.GetInstance().CloseLog();
+
+
                             return Redirect("/login");
                         }
                         catch(Exception ex)
@@ -238,11 +211,15 @@ namespace Csharp_DatVeMayBay.Controllers
                                 _emailService.SendEmail(emailDTO);
                                 Console.WriteLine("Verification mail has been sent to " + User.UserEmail);
                                 TempData["success"] = "Registration successful. An email has been sent to your account!";
+
+                                //New code_logger
+                                Logger.GetInstance().Log($"User register successfully: User({User.UserId}, {User.FirstName + ' ' + User.LastName})");
+
                                 return Redirect("/login");
                             }
                             catch (Exception ex)
                             {
-                                TempData["error"] = "Registration failed." + ex.Message;
+                                TempData["error"] = "Error. " + ex.Message;
                                 return Redirect("/login");
                             }
 
@@ -288,6 +265,10 @@ namespace Csharp_DatVeMayBay.Controllers
                                     //Xóa UserVerification
                                     dbContext.UserVerifications.Remove(UserVerification);
                                     await dbContext.SaveChangesAsync();
+
+                                    //New code_logger
+                                    Logger.GetInstance().Log($"User verify successfully: User({User.UserId}, {User.FirstName + ' ' + User.LastName})");
+
                                     return RedirectToAction("SucessVerify", "Access");
                                 }
                                 catch(Exception ex)
@@ -508,9 +489,11 @@ namespace Csharp_DatVeMayBay.Controllers
             }
             return View();
         }
+        [Route("ggLogin/{*returnUrl}")]
         [HttpGet]
-        public IActionResult GoogleLogin(string provider = "Google", string returnUrl = "/")
+        public IActionResult GoogleLogin(string returnUrl, string provider = "Google")
         {
+            Console.WriteLine(returnUrl);
             var properties = new AuthenticationProperties
             {
                 RedirectUri = Url.Action("GoogleLoginCallback"),
@@ -522,84 +505,19 @@ namespace Csharp_DatVeMayBay.Controllers
             return Challenge(properties, provider);
         }
         [HttpGet]
-        public async Task<IActionResult> GoogleLoginCallback(string returnUrl)
+        public async Task<IActionResult> GoogleLoginCallback()
         {
-            var authenticateResult = await HttpContext.AuthenticateAsync(GoogleDefaults.AuthenticationScheme);
+            GoogleAuthenticator googleAuthenticator = new GoogleAuthenticator(dbContext);
 
-            if (!authenticateResult.Succeeded)
+            GoogleAuthAdapter googleAuthAdapter = new GoogleAuthAdapter(googleAuthenticator, HttpContext);
+            AuthenticateResultDTO resultDTO = await googleAuthAdapter.Authenticate(null);
+            if (resultDTO.User == null)
             {
-                return RedirectToAction("Error505","Error");
+                return Redirect("/Error/404");
             }
-
-            // Lấy thông tin từ authenticateResult
-            var userId = authenticateResult.Principal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var email = authenticateResult.Principal.FindFirst(ClaimTypes.Email)?.Value;
-            var fullName = authenticateResult.Principal.FindFirst(ClaimTypes.Name)?.Value;
-            var surname = authenticateResult.Principal.FindFirst(ClaimTypes.Surname)?.Value; //Tên
-            var familyname = authenticateResult.Principal.FindFirst(ClaimTypes.GivenName)?.Value; //Họ
-            var phonenumber = authenticateResult.Principal.FindFirst(ClaimTypes.MobilePhone)?.Value;
-            var dob = authenticateResult.Principal.FindFirst(ClaimTypes.DateOfBirth)?.Value;
-            var address = authenticateResult.Principal.FindFirst(ClaimTypes.StreetAddress)?.Value;
-
-            // Check nếu user đã tồn tại trong dtb
-            var UserExisted = await dbContext.Accounts.Where(a => a.UserEmail == email).FirstOrDefaultAsync();
-            var claims = new List<Claim>();
-            //User chưa tồn tại
-            if(UserExisted == null)
-            {
-                //Tạo user
-                var User = new User
-                {
-                    FirstName = familyname,
-                    LastName = surname,
-                    PhoneNumber = (!string.IsNullOrEmpty(phonenumber) ? phonenumber : ""),
-                    UserEmail = email,
-                    Address = (!string.IsNullOrEmpty(address) ? address : ""),
-                    Dob = (!string.IsNullOrEmpty(dob) ? DateTime.Parse(dob) : DateTime.Now),
-                };
-                await dbContext.Users.AddAsync(User);
-                await dbContext.SaveChangesAsync();
-
-                var password = email.Split("@");
-                var Account = new Account
-                {
-                    UserEmail = email,
-                    UserId = User.UserId,
-                    Password = BCrypt.Net.BCrypt.EnhancedHashPassword(password[0],13), //password mặc định là tên email
-                    Enable = true,
-                    Verified = true
-                };
-                await dbContext.Accounts.AddAsync(Account);
-                await dbContext.SaveChangesAsync();
-
-                // Thêm claim roles cho người dùng
-                claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.NameIdentifier, User.UserId.ToString()),
-                    new Claim(ClaimTypes.Email, email),
-                    new Claim(ClaimTypes.Name, fullName),
-                    new Claim(ClaimTypes.Role, "User")
-                };
-            }
-            else
-            {
-                claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.NameIdentifier, UserExisted.UserId.ToString()),
-                    new Claim(ClaimTypes.Email, email),
-                    new Claim(ClaimTypes.Name, fullName),
-                    new Claim(ClaimTypes.Role, "User")
-                };
-            }
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var authProperties = new AuthenticationProperties
-            {
-                IsPersistent = true
-            };
-
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
-
-            return RedirectToAction("Index", "Client");
+            Logger.GetInstance().Log($"User login by Google successfully: User({resultDTO.User.UserId}, {resultDTO.User.FirstName + ' ' + resultDTO.User.LastName})");
+            return Redirect("/" + resultDTO.ReturnUrl);
+            /*return RedirectToAction("Index", "Client");*/
         }
 
     }

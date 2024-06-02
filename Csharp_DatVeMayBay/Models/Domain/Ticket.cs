@@ -16,11 +16,11 @@ namespace Csharp_DatVeMayBay.Models.Domain
         public TicketStatus Status { get; set; }
         [MaxLength(100)]
         [Required]
-        public string TicketClass { get; set; }
+        public TicketClass TicketClass { get; set; }
 
         [ForeignKey("Booking")]
         [Required]
-        public int BookingId { get; set; }
+        public string BookingId { get; set; }
 
         [ForeignKey("Flight")]
         [Required]

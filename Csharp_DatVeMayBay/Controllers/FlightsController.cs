@@ -1,7 +1,7 @@
-﻿using Csharp_DatVeMayBay.Data;
+﻿using Csharp_DatVeMayBay.Command_Pattern;
+using Csharp_DatVeMayBay.Data;
 using Csharp_DatVeMayBay.Models.Domain;
 using Csharp_DatVeMayBay.Models.Enums;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Primitives;
@@ -12,18 +12,28 @@ namespace Csharp_DatVeMayBay.Controllers
     public class FlightsController : Controller
     {
         private readonly DBContext dbContext;
-        public FlightsController(DBContext dbContext)
+        private FlightService _flightService;
+
+        Invoker commandInvoker = new Invoker();
+        public FlightsController(DBContext dbContext, FlightService flightService)
         {
             this.dbContext = dbContext;
+            _flightService = flightService;
         }
         public class FormData
         {
             public string Type { get; set; }
             public string FlightClass { get; set; }
             public DateTime DepartureDate { get; set; }
+            public DateTime ReturnDate { get; set; }
             public Airport DepartureAirport { get; set; }
             public Airport ArrivalAirport { get; set; }
-            public string SeatPicker { get; set; }
+            public string Message { get; set; }
+            public Flight OutBoundFlight { get; set; }
+            public Flight ReturnFlight { get; set; }
+            public List<string> SeatPicker { get; set; }
+            public List<int> NumberOfMeals { get; set; }
+            public List<int> NumberOfLuggages { get; set; }
         }
         public class FlightViewModel
         {
@@ -46,7 +56,10 @@ namespace Csharp_DatVeMayBay.Controllers
         static FormData formData;
         static List<Flight> flightList;
         static List<Flight> flightListPage;
+
+        private static BookingSeatViewModel bookingFlightDetail;
         [Route("/select-flight"), HttpGet]
+        [Route("/select-return-flight"), HttpGet]
         public IActionResult GetFlightListing(int page)
         {
             int pageSize = 5;
@@ -84,53 +97,76 @@ namespace Csharp_DatVeMayBay.Controllers
         [HttpPost]
         public async Task<IActionResult> FlightListing()
         {
+            var type = Request.Form["type"];
+            var flightClass = Request.Form["class"];
+            var departureAirportId = int.Parse(Request.Form["departure_airport_id"]);
+            var arrivalAirportId = int.Parse(Request.Form["arrival_airport_id"]);
+            if (Request.Form["departure_datetime"] == "")
+            {
+                return Redirect("/");
+            }
+            var inputDate = DateTime.Parse(Request.Form["departure_datetime"]).Date;
+            var date = Request.Form["return_datetime"];
+
+            DateTime returnDate;
+            if (date != "")
+            {
+                returnDate = DateTime.Parse(date).Date;
+            }
+            else
+            {
+                returnDate = new DateTime();
+            }
+            var airportDeparture = dbContext.Airports.FirstOrDefault(a => departureAirportId == a.AirportId);
+            var airportArrival = dbContext.Airports.FirstOrDefault(a => arrivalAirportId == a.AirportId);
+            formData = new FormData
+            {
+                Type = type,
+                FlightClass = flightClass,
+                DepartureDate = inputDate,
+                ReturnDate = returnDate,
+                DepartureAirport = airportDeparture,
+                ArrivalAirport = airportArrival,
+                Message = "Chọn vé đi"
+            };
+            ICommand searchFlightsCommand = new SearchFlightsCommand(_flightService, formData);
+            commandInvoker.SetCommand(searchFlightsCommand);
+            await commandInvoker.ExecuteCommand();
+
+            flightList = ((SearchFlightsCommand)searchFlightsCommand).GetResult();
+            var Airlines = await dbContext.Airlines.ToListAsync();
+            flightViewModel = new FlightViewModel
+            {
+                FormData = formData,
+                Flights = flightList,
+                Airlines = Airlines,
+                AirlineChecked = null
+            };
+            flightListPage = flightList;
+            return Redirect("/select-flight");
+        }
+        [Route("/{select_type}/filter")]
+        [HttpPost]
+        public async Task<IActionResult> FlightListingFilter(string select_type)
+        {
+            if (select_type != "select-return-flight" && select_type != "select-flight")
+            {
+                return Redirect("Error/Error404");
+            }
             var AirlinesIdValue = Request.Form["airlines"];
             var AllAirlinesChecked = Request.Form["allairlines"];
 
             //Biến tách request
-            var checkVariable = Request.Form["checkTrue"]; 
+            var checkVariable = Request.Form["checkTrue"];
 
             //Trường hợp default được gửi lên
             /* || StringValues.IsNullOrEmpty(AllAirlinesChecked) && StringValues.IsNullOrEmpty(AirlinesIdValue)*/
             if (StringValues.IsNullOrEmpty(AirlinesIdValue) && StringValues.IsNullOrEmpty(checkVariable))
             {
-                var type = Request.Form["type"];
-                var flightClass = Request.Form["class"];
-                var departureAirportId = int.Parse(Request.Form["departure_airport_id"]);
-                var arrivalAirportId = int.Parse(Request.Form["arrival_airport_id"]);
-                var inputDate = DateTime.Parse(Request.Form["departure_datetime"]).Date;
-
-                var airportDeparture = dbContext.Airports.FirstOrDefault(a => departureAirportId == a.AirportId);
-                var airportArrival = dbContext.Airports.FirstOrDefault(a => arrivalAirportId == a.AirportId);
-                formData = new FormData
-                {
-                    Type = type,
-                    FlightClass = flightClass,
-                    DepartureDate = inputDate,
-                    DepartureAirport = airportDeparture,
-                    ArrivalAirport = airportArrival
-                };
-                flightList = dbContext.Flights.Where(f =>
-                    f.DepartureAirportId == departureAirportId &&
-                    f.ArrivalAirportId == arrivalAirportId &&
-                    f.DepartureDatetime.Date == inputDate && f.DepartureDatetime > DateTime.Now).Include(a => a.DepartureAirport).Include(a => a.ArrivalAirport).Include(a => a.Airline)
-                    .ToList();
-                var Airlines = await dbContext.Airlines.ToListAsync();
-                flightViewModel = new FlightViewModel
-                {
-                    FormData = formData,
-                    Flights = flightList,
-                    Airlines = Airlines,
-                    AirlineChecked = null
-                };
-                flightListPage = flightList;
-                return Redirect("/select-flight");
+                return Redirect($"/{select_type}");
             }
-            //Lọc hãng bay
-            //Trường hợp không check all + không check airline hoặc có check all đồng thời check airline
-             else if(!StringValues.IsNullOrEmpty(AllAirlinesChecked) || StringValues.IsNullOrEmpty(AllAirlinesChecked) && StringValues.IsNullOrEmpty(AirlinesIdValue))
+            else if (!StringValues.IsNullOrEmpty(AllAirlinesChecked) || StringValues.IsNullOrEmpty(AllAirlinesChecked) && StringValues.IsNullOrEmpty(AirlinesIdValue))
             {
-                Console.WriteLine("TH NAY");
                 var Airlines = await dbContext.Airlines.ToListAsync();
                 flightViewModel = new FlightViewModel
                 {
@@ -140,7 +176,7 @@ namespace Csharp_DatVeMayBay.Controllers
                     AirlineChecked = null
                 };
                 flightListPage = flightList;
-                return Redirect("/select-flight");
+                return Redirect($"/{select_type}");
             }
             //Trường hợp chỉ check airline
             else
@@ -157,49 +193,164 @@ namespace Csharp_DatVeMayBay.Controllers
                     AirlineChecked = airlinesStringList
                 };
                 flightListPage = Flights;
-                return Redirect("/select-flight");
+                return Redirect($"/{select_type}");
             }
         }
-        [Route("/select-flight/booking-seat")]
+
+
+        [Route("/select-return-flight")]
         [HttpPost]
-        public async Task<IActionResult> BookingSeat()
+        public async Task<IActionResult> FlightListingReturn()
         {
+            var FlightData = Request.Form["FlightData"];
+
+            var Flight = JsonConvert.DeserializeObject<Flight>(FlightData);
+            var Form = Request.Form["FormData"];
+            var FormData = JsonConvert.DeserializeObject<FormData>(Form);
+
+            var seat = Request.Form["seat"];
+            List<string> seats = new List<string>();
+            seats.Add(seat);
+            FormData.SeatPicker = seats;
+            formData.SeatPicker = seats;
+
+            var returnFormData = FormData;
+            returnFormData.DepartureDate = formData.ReturnDate;
+            returnFormData.DepartureAirport = formData.ArrivalAirport;
+            returnFormData.ArrivalAirport = formData.DepartureAirport;
+
+
+
+            ICommand searchFlightsCommand = new SearchFlightsCommand(_flightService, returnFormData);
+            commandInvoker.SetCommand(searchFlightsCommand);
+            await commandInvoker.ExecuteCommand();
+
+            flightList = ((SearchFlightsCommand)searchFlightsCommand).GetResult();
+
+
+            /*flightList = dbContext.Flights.Where(f =>
+                f.DepartureAirportId == FormData.ArrivalAirport.AirportId &&
+                f.ArrivalAirportId == FormData.DepartureAirport.AirportId &&
+                f.DepartureDatetime.Date == FormData.ReturnDate && f.DepartureDatetime > DateTime.Now).Include(a => a.DepartureAirport).Include(a => a.ArrivalAirport).Include(a => a.Airline)
+                .ToList();*/
+            var Airlines = await dbContext.Airlines.ToListAsync();
+            formData.Message = "Chọn vé về";
+            flightViewModel = new FlightViewModel
+            {
+                FormData = formData,
+                Flights = flightList,
+                Airlines = Airlines,
+                AirlineChecked = null
+            };
+            flightListPage = flightList;
+            return Redirect("/select-return-flight");
+        }
+
+
+        [Route("/{select_type}/booking-seat")]
+      /*  [Route("/select-return-flight/booking-seat")]*/
+        [HttpPost]
+        public async Task<IActionResult> BookingSeat(string select_type)
+        {
+            if (select_type != "select-return-flight" && select_type != "select-flight")
+            {
+                return Redirect("Error/Error404");
+            }
             var FlightData = Request.Form["FlightData"];
             var Flight = JsonConvert.DeserializeObject<Flight>(FlightData);
             var Form = Request.Form["FormData"];
             var FormData = JsonConvert.DeserializeObject<FormData>(Form);
 
             List<Seat> Seats = await dbContext.Seats.Where(s => s.FlightId == Flight.FlightId).Where(s => s.Status == SeatStatus.Busy).ToListAsync();
-            var newFormData = new FormData
+            if (FormData.Type == "Khứ hồi")
             {
-                Type = FormData.Type,
-                FlightClass = FormData.FlightClass
-            };
+                if (FormData.OutBoundFlight != null)
+                {
+                    FormData.ReturnFlight = Flight;
+                    formData.ReturnFlight = Flight;
+                }
+                else
+                {
+                    FormData.OutBoundFlight = Flight;
+                    formData.OutBoundFlight = Flight;
+                    FormData.ReturnFlight = null;
+                }
+            }
+            else
+            {
+                FormData.OutBoundFlight = Flight;
+                formData.OutBoundFlight = Flight;
+            }
             var BookingSeatViewModel = new BookingSeatViewModel
             {
-                FormData = newFormData,
+                FormData = FormData,
                 Flight = Flight,
                 Seats = Seats
             };
-            return View(BookingSeatViewModel);
+            HttpContext.Session.SetString("BookingSeatViewModel", JsonConvert.SerializeObject(BookingSeatViewModel));
 
+            return Redirect($"/{select_type}/booking-seat");
+         /*   return RedirectToAction("BookingSeatGET");*/
         }
-        [Route("/select-flight/flight-detail-booking")]
+
+        [Route("/select-flight/booking-seat")]
+        [Route("/select-return-flight/booking-seat")]
+        [HttpGet]
+        public async Task<IActionResult> BookingSeatGET()
+        {
+            var json = HttpContext.Session.GetString("BookingSeatViewModel");
+            if (!string.IsNullOrEmpty(json))
+            {
+                var model = JsonConvert.DeserializeObject<BookingSeatViewModel>(json);
+                return View("BookingSeat", model);
+            }
+            return RedirectToAction("Error404", "Error");
+        }
+
+        [Route("/flight-detail-booking")]
         [HttpPost]
         public IActionResult FLightDetailBooking()
         {
+            HttpContext.Session.Remove("BookingSeatViewModel");
             var FlightData = Request.Form["FlightData"];
             var Flight = JsonConvert.DeserializeObject<Flight>(FlightData);
             var Form = Request.Form["FormData"];
             var FormData = JsonConvert.DeserializeObject<FormData>(Form);
             var SeatNo = Request.Form["seat"];
-            FormData.SeatPicker = SeatNo;
+            if (FormData.SeatPicker == null)
+            {
+                List<String> seats = new List<string>();
+                FormData.SeatPicker = seats;
+                formData.SeatPicker = seats;
+            }
+            FormData.SeatPicker.Add(SeatNo);
+            formData.SeatPicker.Add(SeatNo);
+
             var BookingViewModel = new BookingSeatViewModel
             {
                 Flight = Flight,
                 FormData = FormData
             };
-            return View(BookingViewModel);
+            HttpContext.Session.SetString("BookingViewModel", JsonConvert.SerializeObject(BookingViewModel));
+            bookingFlightDetail = BookingViewModel;
+            return RedirectToAction("FLightDetailBookingGET");
+        }
+        [Route("/flight-detail-booking")]
+        [HttpGet]
+        public IActionResult FLightDetailBookingGET()
+        {
+            var json = HttpContext.Session.GetString("BookingViewModel");
+            if (!string.IsNullOrEmpty(json))
+            {
+                var model = JsonConvert.DeserializeObject<BookingSeatViewModel>(json);
+                return View("FLightDetailBooking", model);
+            }
+            else if(bookingFlightDetail != null)
+            {
+                var model = bookingFlightDetail;
+                return View("FLightDetailBooking", model);
+            }
+            return RedirectToAction("Error404", "Error");
         }
     }
 }

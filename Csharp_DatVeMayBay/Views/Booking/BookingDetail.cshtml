@@ -1,40 +1,64 @@
 ﻿@model Csharp_DatVeMayBay.Controllers.BookingController.BookingDetailModel;
 @using Csharp_DatVeMayBay.Util.CustomHelpers;
-<!-- Book-body -->
+@{
+    ViewData["Title"] = "Booking Detail";
+}
+<!-- body -->
 <div class="container-fluid mt-5 body-section" style="background: #fafafa;">
     <!--  -->
-    <div class="container">
+    <div class="container p-3">
+
+        @if(TempData["booked"] != null && TempData["booked"].ToString().Equals("True", StringComparison.OrdinalIgnoreCase))
+        {
+        <div class="alert alert-warning alert-dismissible fade show mt-5" role="alert">
+            <strong>Warning!</strong> Chỗ ngồi đó đã được đặt, vui lòng chọn chỗ ngồi khác. Tự động chuyển hướng về trang chủ sau <span id="countdown">5</span> giây.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        }
+
+        @if(TempData["warning"] != null)
+        {
+        <div class="alert alert-warning alert-dismissible fade show mt-5" role="alert">
+            <strong>Warning!</strong> @TempData["warning"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        }
+
+
+
         <div class="row p-3">
             <div class="col-lg-8 col-sm-12 col-12 p-3 pe-4">
                 <!-- Row 1 -->
                 <div class="row p-4"
-                    style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
+                     style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
                     <!-- Row 1 -->
                     <div class="row mt-3">
                         <div class="col-9 p-0">
                             <h2>
-                                @Model.Flight.Airline.AirlineName
+                                @Model.FormData.OutBoundFlight.Airline.AirlineName
                             </h2>
                         </div>
-                        <div class="col-3"><strong class="fs-3" style="color: #ff8682;">
+                        <div class="col-3">
+                            <strong class="fs-3" style="color: #ff8682;">
                                 @if (Model.FormData.FlightClass == "PT")
                                 {
-                                    @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
+                                @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.EconomyPrice)
                                 }
                                 else
                                 {
-                                    @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
+                                @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.BussinessPrice)
                                 }
-                            </strong></div>
+                            </strong>
+                        </div>
                     </div>
                     <!-- Row 2 -->
                     <div class="row mt-3">
                         <div class="col-10 fw-bold p-0">
-                            <p>Departure on @Model.Flight.DepartureDatetime</p>
+                            <p>Departure on @Model.FormData.OutBoundFlight.DepartureDatetime</p>
                         </div>
                         <div class="col-2 fs-5">
                             <p>
-                                @customHelper.GetDuration(Model.Flight.DepartureDatetime, Model.Flight.ArrivalDatetime)
+                                @customHelper.GetDuration(Model.FormData.OutBoundFlight.DepartureDatetime, Model.FormData.OutBoundFlight.ArrivalDatetime)
                             </p>
                         </div>
                     </div>
@@ -42,19 +66,20 @@
                     <div class="row mt-3 d-flex justify-content-between align-items-center">
                         <div class="col-md-4 col-sm-12 col-12">
                             <div class="row pe-3 d-flex align-items-center"
-                                style="border: 0.5px solid #8DD3BB; border-radius: 8px;">
+                                 style="border: 0.5px solid #8DD3BB; border-radius: 8px;">
                                 <div class="col-md-4 col-sm-12 col-12 text-center">
-                                    <img class="" src=" @Model.Flight.Airline.AirlineLogo"
-                                        style="width: 80px; height: 65px" alt="">
+                                    <img class="" src=" @Model.FormData.OutBoundFlight.Airline.AirlineLogo"
+                                         style="width: 80px; height: 65px" alt="">
                                 </div>
                                 <div class="col-md-8 col-sm-12 col-12 text-center">
                                     <div class="row">
                                         <h2 class="fs-4 pt-2 text-center">
-                                            @Model.Flight.Airline.AirlineName
+                                            @Model.FormData.OutBoundFlight.Airline.AirlineName
                                         </h2>
                                     </div>
                                     <div class="row">
-                                        <p class="desc">Airbus @string.Concat("A",Model.Flight.FlightId)
+                                        <p class="desc">
+                                            Airbus @string.Concat("A",Model.FormData.OutBoundFlight.FlightId)
                                         </p>
                                     </div>
                                 </div>
@@ -73,14 +98,14 @@
                         <div class="col-4 text-center">
                             <div class="row">
                                 <p class="fs-4 fw-bold">
-                                    @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[0]
+                                    @customHelper.splitDatetime(Model.FormData.OutBoundFlight.DepartureDatetime)[0]
                                     <br>
-                                    @customHelper.splitDatetime(Model.Flight.DepartureDatetime)[1]
+                                    @customHelper.splitDatetime(Model.FormData.OutBoundFlight.DepartureDatetime)[1]
                                 </p>
                             </div>
                             <div class="row">
                                 <p class="" style="opacity: 0.8;">
-                                    @Model.Flight.DepartureAirport.AirportName
+                                    @Model.FormData.OutBoundFlight.DepartureAirport.AirportName
                                 </p>
                             </div>
                         </div>
@@ -92,52 +117,164 @@
                         <div class="col-4 text-center">
                             <div class="row">
                                 <p class="fs-4 fw-bold">
-                                    @customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[0]
+                                    @customHelper.splitDatetime(Model.FormData.OutBoundFlight.ArrivalDatetime)[0]
                                     <br>
-                                    @customHelper.splitDatetime(Model.Flight.ArrivalDatetime)[1]
+                                    @customHelper.splitDatetime(Model.FormData.OutBoundFlight.ArrivalDatetime)[1]
                                 </p>
                             </div>
                             <div class="row">
                                 <p class="" style="opacity: 0.8;">
-                                    @Model.Flight.ArrivalAirport.AirportName
+                                    @Model.FormData.OutBoundFlight.ArrivalAirport.AirportName
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if(Model.FormData.ReturnFlight != null){
+                <div class="row p-4 mt-5"
+                     style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
+                    <div class="row mt-3">
+                        <div class="col-9 p-0">
+                            <h2>
+                                @Model.FormData.ReturnFlight.Airline.AirlineName
+                            </h2>
+                        </div>
+                        <div class="col-3">
+                            <strong class="fs-3" style="color: #ff8682;">
+                                @if (Model.FormData.FlightClass == "PT")
+                                {
+                                @customHelper.FormatCurrency(@Model.FormData.ReturnFlight.EconomyPrice)
+                                }
+                                else
+                                {
+                                @customHelper.FormatCurrency(@Model.FormData.ReturnFlight.BussinessPrice)
+                                }
+                            </strong>
+                        </div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="row mt-3">
+                        <div class="col-10 fw-bold p-0">
+                            <p>Return on @Model.FormData.ReturnFlight.DepartureDatetime</p>
+                        </div>
+                        <div class="col-2 fs-5">
+                            <p>
+                                @customHelper.GetDuration(Model.FormData.ReturnFlight.DepartureDatetime, Model.FormData.ReturnFlight.ArrivalDatetime)
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Row-3 -->
+                    <div class="row mt-3 d-flex justify-content-between align-items-center">
+                        <div class="col-md-4 col-sm-12 col-12">
+                            <div class="row pe-3 d-flex align-items-center"
+                                 style="border: 0.5px solid #8DD3BB; border-radius: 8px;">
+                                <div class="col-md-4 col-sm-12 col-12 text-center">
+                                    <img class="" src=" @Model.FormData.ReturnFlight.Airline.AirlineLogo"
+                                         style="width: 80px; height: 65px" alt="">
+                                </div>
+                                <div class="col-md-8 col-sm-12 col-12 text-center">
+                                    <div class="row">
+                                        <h2 class="fs-4 pt-2 text-center">
+                                            @Model.FormData.ReturnFlight.Airline.AirlineName
+                                        </h2>
+                                    </div>
+                                    <div class="row">
+                                        <p class="desc">
+                                            Airbus @string.Concat("A",Model.FormData.ReturnFlight.FlightId)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-sm-12 col-12 text-center">
+                            <img class="p-3" src="~/img/booking-detail/plane.svg" alt="Plane" />
+                            <img class="p-3" src="~/img/booking-detail/wifi.svg" alt="Wifi" />
+                            <img class="p-3" src="~/img/booking-detail/stopwatch.svg" alt="Watch" />
+                            <img class="p-3" src="~/img/booking-detail/fast-food.svg" alt="Food" />
+                            <img class="ps-3" src="~/img/booking-detail/round-seat.svg" alt="Seat" />
+                        </div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="row mt-3 d-flex justify-content-between align-items-center px-5 py-4">
+                        <div class="col-4 text-center">
+                            <div class="row">
+                                <p class="fs-4 fw-bold">
+                                    @customHelper.splitDatetime(Model.FormData.ReturnFlight.DepartureDatetime)[0]
+                                    <br>
+                                    @customHelper.splitDatetime(Model.FormData.ReturnFlight.DepartureDatetime)[1]
+                                </p>
+                            </div>
+                            <div class="row">
+                                <p class="" style="opacity: 0.8;">
+                                    @Model.FormData.ReturnFlight.DepartureAirport.AirportName
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-4 text-center">
+                            <img src="~/img/booking-detail/plane.svg" alt="Plane" />
+                        </div>
+
+                        <div class="col-4 text-center">
+                            <div class="row">
+                                <p class="fs-4 fw-bold">
+                                    @customHelper.splitDatetime(Model.FormData.ReturnFlight.ArrivalDatetime)[0]
+                                    <br>
+                                    @customHelper.splitDatetime(Model.FormData.ReturnFlight.ArrivalDatetime)[1]
+                                </p>
+                            </div>
+                            <div class="row">
+                                <p class="" style="opacity: 0.8;">
+                                    @Model.FormData.ReturnFlight.ArrivalAirport.AirportName
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+
+                }
+
+
+
                 <!-- Row 2 -->
                 <div class="row mt-5 p-4"
-                    style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
+                     style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px;">
                     <!-- card -->
                     <card id="card-container">
                         @if (Model.Creditcards != null)
                         {
-                            @foreach (var creditcard in Model.Creditcards)
-                            {
-                                    <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB;border-radius: 12px;">
-                                <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
-                                <div class="col-md-3 col-12"><span class="" name="carnumber">
-                            @creditcard.CardNumber
-                                    </span></div>
-                                <div class="col-md-4 col-12"><span class="" name="nameoncard">
-                            @creditcard.CardHolderName
-                                    </span></div>
-                                <div class="col-md-3 col-12"><span class="" name="validation">
-                            @customHelper.splitDatetime(@creditcard.ExpirationDate)[0]
-                                    </span></div>
-                                <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
+                        @foreach (var creditcard in Model.Creditcards)
+                        {
+                        <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB;border-radius: 12px;">
+                            <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
+                            <div class="col-md-3 col-12">
+                                <span class="" name="carnumber">
+                                    @creditcard.CardNumber
+                                </span>
                             </div>
-                            }
+                            <div class="col-md-4 col-12">
+                                <span class="" name="nameoncard">
+                                    @creditcard.CardHolderName
+                                </span>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <span class="" name="validation">
+                                    @customHelper.splitDatetime(@creditcard.ExpirationDate)[0]
+                                </span>
+                            </div>
+                            <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
+                        </div>
+                        }
                         }
                     </card>
 
                     <a class="bg-transparent border-0 text-decoration-none p-0" id="add-credit"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                       data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="container-card bg-light text-center align-items-center d-flex justify-content-center mb-2 mt-3"
-                            style="border-radius: 10px; height: 200px;width: 100%;border: 2px dashed #8DD3BB;">
+                             style="border-radius: 10px; height: 200px;width: 100%;border: 2px dashed #8DD3BB;">
                             <button class="bg-transparent border-0" id="add-credit" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
+                                    data-bs-target="#exampleModal">
                                 <div class="add-icon">
                                     <i style="font-size: 30px;" class="fa fa-circle-plus" style="color: #8dd3bb"></i>
                                     <div>Add a new card</div>
@@ -146,86 +283,91 @@
                         </div>
                     </a>
                     <!-- Modal Add new Card-->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content pb-3" style="border-radius: 10px;">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="modal-header border-bottom-0">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-10">
-                                                                <h2 class="modal-title fw-bolder"
-                                                                    id="exampleModalLabel">Add a new Card</h2>
-                                                            </div>
-                                                            <div class="col-2 align-items-center text-center d-flex">
-                                                                <button type="button" class="btn-close"
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content pb-3" style="border-radius: 10px;">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="modal-header border-bottom-0">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-10">
+                                                            <h2 class="modal-title fw-bolder"
+                                                                id="exampleModalLabel">
+                                                                Add a new Card
+                                                            </h2>
+                                                        </div>
+                                                        <div class="col-2 align-items-center text-center d-flex">
+                                                            <button type="button" class="btn-close"
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
-                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="modal-body border-bottom-0">
-                                                    <div class="container">
-                                                        <div class="row mb-3">
-                                                            <div class="col-md">
-                                                                <div class="form-floating">
-                                                                    <input type="number"
-                                                                        class="form-control border-dark"
-                                                                        id="cardnum" name="cardnum"
-                                                                        placeholder="" value="">
-                                                                    <label for="cardnum">Card Number</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row g-2 mb-3">
-                                                            <div class="col">
-                                                                <div class="form-floating">
-                                                                    <input type="date" class="form-control border-dark"
-                                                                        id="expdate" name="expdate"
-                                                                        min=""
-                                                                        placeholder="" value="">
-                                                                    <label for="expdate">Exp. Date</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="form-floating">
-                                                                    <input type="namecard"
-                                                                        class="form-control border-dark"
-                                                                        id="holdername" name="holdername"
-                                                                        placeholder="" value="">
-                                                                    <label for="holdername">Name on Card</label>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <input type="checkbox" name="" id=""> Securely save my
-                                                                information for 1-click checkout
+                                            </div>
+                                            <div class="modal-body border-bottom-0">
+                                                <div class="container">
+                                                    <div class="row mb-3">
+                                                        <div class="col-md">
+                                                            <div class="form-floating">
+                                                                <input type="number"
+                                                                       class="form-control border-dark"
+                                                                       id="cardnum" name="cardnum"
+                                                                       placeholder="" value="">
+                                                                <label for="cardnum">Card Number</label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="modal-footer border-bottom-0 border-top-0">
-                                                    <div class="container">
-                                                        <div class="row"></div>
-                                                        <div class="col mb-2">
-                                                            <button type="button" id="addNewCard"
-                                                                class="btn btn-outline-success p-2"
-                                                                style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">Save
-                                                                changes</button>
-                                                        </div>
+                                                    <div class="row g-2 mb-3">
                                                         <div class="col">
-                                                            <p class="text-center" style="font-size: 10px;">By
-                                                                confirming your subscription, you allow The Outdoor Inn
-                                                                Crowd Limited to charge your card for this payment and
-                                                                future payments in accordance with their terms. You can
-                                                                always cancel your subscription.</p>
+                                                            <div class="form-floating">
+                                                                <input type="date" class="form-control border-dark"
+                                                                       id="expdate" name="expdate"
+                                                                       min=""
+                                                                       placeholder="" value="">
+                                                                <label for="expdate">Exp. Date</label>
+                                                            </div>
                                                         </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col">
+                                                            <div class="form-floating">
+                                                                <input type="namecard"
+                                                                       class="form-control border-dark"
+                                                                       id="holdername" name="holdername"
+                                                                       placeholder="" value="">
+                                                                <label for="holdername">Name on Card</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <input type="checkbox" name="" id=""> Securely save my
+                                                            information for 1-click checkout
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer border-bottom-0 border-top-0">
+                                                <div class="container">
+                                                    <div class="row"></div>
+                                                    <div class="col mb-2">
+                                                        <button type="button" id="addNewCard"
+                                                                class="btn btn-outline-success p-2"
+                                                                style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">
+                                                            Save
+                                                            changes
+                                                        </button>
+                                                    </div>
+                                                    <div class="col">
+                                                        <p class="text-center" style="font-size: 10px;">
+                                                            By
+                                                            confirming your subscription, you allow The Outdoor Inn
+                                                            Crowd Limited to charge your card for this payment and
+                                                            future payments in accordance with their terms. You can
+                                                            always cancel your subscription.
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -234,27 +376,30 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-12 col-12 p-3">
                 <div class="row p-4"
-                    style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px; width: 100%">
+                     style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);border-radius: 12px; width: 100%">
                     <!-- Row 1 -->
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-7 col-md-4 col-sm-4 col-6">
                             <img src="~/img/booking-detail/book-tc-plane.svg" alt="Plane-ticket">
                         </div>
                         <div class="col-lg-5 col-md-8 col-sm-8 col-6">
-                            <div class="row"><span class="">
+                            <div class="row">
+                                <span class="">
                                     @if (Model.FormData.FlightClass == "PT")
                                     {
-                                       <p>Phổ Thông</p>
+                                    <p>Economy</p>
                                     }
                                     else
                                     {
-                                       <p>Thương Gia</p>
+                                    <p>Bussiness</p>
                                     }
-                                </span></div>
+                                </span>
+                            </div>
                             <div class="row fw-bold">
                                 <p class="col">
                                     @Model.Flight.Airline.AirlineName <br>Airbus @string.Concat("A",Model.Flight.FlightId)
@@ -274,15 +419,99 @@
                                 <span class="fw-bold">
                                     @if (Model.FormData.FlightClass == "PT")
                                     {
-                                        @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
+                                    @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.EconomyPrice)
                                     }
                                     else
                                     {
-                                        @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
+                                    @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.BussinessPrice)
                                     }
                                 </span>
                             </div>
                         </div>
+                        @if(@Model.FormData.NumberOfMeals[0] > 0){
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Meal x <span class="fw-bold">@Model.FormData.NumberOfMeals[0]</span> </p>
+                            </div>
+                            <div class="col text-end">
+                                <span class="fw-bold">
+                                    @if (Model.FormData.FlightClass == "PT")
+                                    {
+                                    @customHelper.FormatCurrency(150000 * @Model.FormData.NumberOfMeals[0])
+                                    }
+                                    else
+                                    {
+                                    @customHelper.FormatCurrency(250000 * @Model.FormData.NumberOfMeals[0])
+                                    }
+                                </span>
+                            </div>
+                        </div>
+                        }
+
+                        @if(@Model.FormData.NumberOfLuggages[0] > 0){
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Luggage x <span class="fw-bold">@Model.FormData.NumberOfLuggages[0]</span></p>
+                            </div>
+                            <div class="col text-end">
+                                <span class="fw-bold">
+                                    @customHelper.FormatCurrency(150000 * @Model.FormData.NumberOfLuggages[0])
+                                </span>
+                            </div>
+                        </div>
+                        }
+
+                        @if(Model.FormData.ReturnFlight!=null){
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Ticket Return Fare</p>
+                            </div>
+                            <div class="col text-end">
+                                <span class="fw-bold">
+                                    @if (Model.FormData.FlightClass == "PT")
+                                    {
+                                    @customHelper.FormatCurrency(@Model.FormData.ReturnFlight.EconomyPrice)
+                                    }
+                                    else
+                                    {
+                                    @customHelper.FormatCurrency(@Model.FormData.ReturnFlight.BussinessPrice)
+                                    }
+                                </span>
+                            </div>
+                        </div>
+                        @if(@Model.FormData.NumberOfMeals[1] > 0){
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Meal x <span class="fw-bold">@Model.FormData.NumberOfMeals[1]</span></p>
+                            </div>
+                            <div class="col text-end">
+                                <span class="fw-bold">
+                                    @if (Model.FormData.FlightClass == "PT")
+                                    {
+                                    @customHelper.FormatCurrency(150000 * @Model.FormData.NumberOfMeals[1])
+                                    }
+                                    else
+                                    {
+                                    @customHelper.FormatCurrency(250000 * @Model.FormData.NumberOfMeals[1])
+                                    }
+                                </span>
+                            </div>
+                        </div>
+                        }
+                        @if(@Model.FormData.NumberOfLuggages[1] > 0){
+                        <div class="row">
+                            <div class="col">
+                                <p class="">Luggage x <span class="fw-bold">@Model.FormData.NumberOfLuggages[1]</span></p>
+                            </div>
+                            <div class="col text-end">
+                                <span class="fw-bold">
+                                    @customHelper.FormatCurrency(150000 * @Model.FormData.NumberOfLuggages[1])
+                                </span>
+                            </div>
+                        </div>
+                        }
+
+                        }
                         <hr />
                         <div class="row">
                             <div class="col">
@@ -290,31 +519,30 @@
                             </div>
                             <div class="col text-end">
                                 <span class="fw-bold">
-                                    @if (Model.FormData.FlightClass == "PT")
-                                    {
-                                        @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
-                                    }
-                                    else
-                                    {
-                                        @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
-                                    }
+                                    @customHelper.FormatCurrency(@Model.Total)
                                 </span>
                             </div>
                         </div>
                         <div class="row p-0">
                             <div class="col text-end">
-                                <form action="ticket-info" method="post" id="ticket-processing">
+                                <form action="payment-method" method="post" id="ticket-processing">
                                     <input type="hidden" name="FlightData" value='@Json.Serialize(Model.Flight)'>
                                     <input type="hidden" name="PassengerInfo" value='@Json.Serialize(Model.PassengerInfo)'>
                                     <input type="hidden" name="FormData" value='@Json.Serialize(Model.FormData)'>
                                     <input type="hidden" id="cardCreditList" name="cardCreditList">
                                     <input type="hidden" id="paymentMethod" name="method" />
-                                    <button type="button" onclick="showModal(event)" name="pay" class="fw-bold p-3" id="pay-button" style="border: none;border-radius: 6px;background-color: #8DD3BB;color: black;font-size: 12px;">
+                                    <button type="button" id="payWithCreditCard" onclick="showModal(event)" name="pay" class="fw-bold p-3" style="border: none; border-radius: 6px; background-color: #8DD3BB; color: black; font-size: 12px; height: 55px;">
                                         Thanh toán
                                     </button>
-                                    <button type="button" name="pay" class="fw-bold p-3" id="payWithMomo" style="border: none; border-radius: 6px; background-color: #a50064; color: white; font-size: 12px;">
-                                        Thanh toán với Momo
-                                    </button> 
+
+                                    <button type="button" class="fw-bold p-2" id="payWithVNPay" style="background-image: url('/img/booking-detail/vnpay.png'); background-repeat: no-repeat; background-position: center; background-size: contain; background-color: #fff; width: 100px; height: 55px; border: solid 1px thick; border-radius: 6px;">
+                                        &nbsp;
+                                    </button>
+
+                                    <button type="button" name="pay" class="fw-bold p-3" id="payWithMomo" style="border: none; border-radius: 6px; background-color: #a50064; color: white; font-size: 12px; height: 55px;">
+                                        Momo
+                                    </button>
+
                                 </form>
                             </div>
                         </div>
@@ -326,53 +554,127 @@
 </div>
 <script>
     function showModal(event) {
-    // perform validation here
-     var count = $(".card-booking").length;
-
-        if (count==0) {
-        event.preventDefault();
+        // perform validation here
+        var count = $(".card-booking").length;
+        if (count == 0) {
+            event.preventDefault();
             $('#exampleModal').modal('show');
             // prevent form submission
-        } else {
-                // allow form submission
-            $("#paymentMethod").val("creditCard");
-            $("#pay-button").prop("type", "submit");
-            // 
+        }
+        else {
+            $("#paymentMethod").val("Creditcard");
+            sessionStorage.removeItem('creditCardList');
+            $("#ticket-processing").submit();
         }
     }
     $("#payWithMomo").on("click", () => {
         $("#paymentMethod").val("Momo");
+        sessionStorage.removeItem('creditCardList');
         $("#ticket-processing").submit();
+
     })
-    $(document).ready(function(){
-        var creditCardList = [];
-        $("#addNewCard").on('click', function () {
+
+    $("#payWithVNPay").on("click", () => {
+        $("#paymentMethod").val("VNPay");
+        sessionStorage.removeItem('creditCardList');
+        $("#ticket-processing").submit();
+
+    })
+
+
+    var creditCardList = [];
+
+    if ("@User.Identity.IsAuthenticated" != "True") {
+        var cardsJSON = sessionStorage.getItem('creditCardList');
+        console.log(cardsJSON)
+        if (cardsJSON) {
+            var cards = JSON.parse(cardsJSON);
+            if (cards.length > 0) {
+                cards.forEach((card) => {
+                    var cardHtml = `
+                <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB; border-radius: 12px;">
+                    <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
+                    <div class="col-md-4 col-12"><span class="" name="carnumber">${card.cardNumber}</span></div>
+                    <div class="col-md-3 col-12"><span class="" name="nameoncard">${card.cardHolderName}</span></div>
+                    <div class="col-md-3 col-12"><span class="" name="validation">${card.cardDate}</span></div>
+                    <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
+                </div>`;
+
+                    // Thêm card vào container
+                    $("#card-container").append(cardHtml);
+                });
+            }
+        } else {
+            // Xử lý trường hợp không có dữ liệu trong sessionStorage
+            console.log("Không có dữ liệu thẻ tín dụng trong sessionStorage.");
+        }
+    }
+    $("#addNewCard").on('click', function () {
         var cardHolderName = $("#holdername").val();
         var cardDate = $("#expdate").val();
-        var cardNumber =$("#cardnum").val();
+        var cardNumber = $("#cardnum").val();
         if (cardNumber) {
             // Tạo một thẻ div mới làm card
             //var $card = $('<div></div>').addClass('card').text(cardName);
             var cardHtml = `
-            <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB; border-radius: 12px;">
-                <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
-                <div class="col-md-4 col-12"><span class="" name="carnumber">${cardNumber}</span></div>
-                <div class="col-md-3 col-12"><span class="" name="nameoncard">${cardHolderName}</span></div>
-                <div class="col-md-3 col-12"><span class="" name="validation">${cardDate}</span></div>
-                <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
-            </div>`;
+                <div class="row p-4 mb-5 m-0 card-booking" style="background: #8DD3BB; border-radius: 12px;">
+                    <div class="col-md-1 col-12"><i class="fa-brands fa-cc-visa"></i></div>
+                    <div class="col-md-4 col-12"><span class="" name="carnumber">${cardNumber}</span></div>
+                    <div class="col-md-3 col-12"><span class="" name="nameoncard">${cardHolderName}</span></div>
+                    <div class="col-md-3 col-12"><span class="" name="validation">${cardDate}</span></div>
+                    <div class="col-md-1 col-12"><input type="radio" name="check" id="" checked></div>
+                </div>`;
 
             // Thêm card vào container
             $("#card-container").append(cardHtml);
-            const newCreditCard = {CardNumber: cardNumber, CardHolderName: cardHolderName, ExpirationDate: cardDate}
+            const newCreditCard = { cardNumber: cardNumber, cardHolderName: cardHolderName, cardDate: cardDate }
             creditCardList.push(newCreditCard);
             $("#cardCreditList").val(JSON.stringify(creditCardList))
+
+            sessionStorage.setItem('creditCardList', JSON.stringify(creditCardList));
             // Xóa nội dung trong input và ẩn modal
-           $("#holdername").val('');
-           $("#expdate").val('');
-           $("#cardnum").val('');
-           $('#exampleModal').modal('hide');
+            $("#holdername").val('');
+            $("#expdate").val('');
+            $("#cardnum").val('');
+            $('#exampleModal').modal('hide');
+
+            if ("@User.Identity.IsAuthenticated" == "True") {
+                $.ajax({
+                    url: '/api/User/AddingNewCreditCard',
+                    method: "POST",
+                    data: {
+                        cardHolderName: cardHolderName,
+                        cardDate: cardDate,
+                        cardNumber: cardNumber,
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data)
+                    }
+                });
+            }
         }
-        })
     })
+    var seconds = 5;
+    var countdownElement = document.getElementById('countdown');
+
+    function redirectToHomepage() {
+        window.location.href = "/";
+    }
+
+    setInterval(function () {
+        seconds--;
+        countdownElement.textContent = seconds;
+        if (seconds <= 0) {
+            redirectToHomepage();
+        }
+    }, 1000);
+
+    if ('@(TempData["booked"])' == "True") {
+        $("#payWithMomo").prop('disabled', true).css('cursor', 'not-allowed');
+        $("#payWithVNPay").prop('disabled', true).css('cursor', 'not-allowed');
+        $("#payWithCreditCard").prop('disabled', true).css('cursor', 'not-allowed');
+    }
+</script>
+
 </script>

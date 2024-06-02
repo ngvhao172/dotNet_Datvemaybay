@@ -30,5 +30,10 @@ namespace Csharp_DatVeMayBay.Util.CustomHelpers
             parts[1] = parts[1] + ' ' + parts[2];
             return parts;
         }
+
+        public static decimal AddExpression(decimal a, decimal b)
+        {
+            return a + b;
+        }
     }
 }

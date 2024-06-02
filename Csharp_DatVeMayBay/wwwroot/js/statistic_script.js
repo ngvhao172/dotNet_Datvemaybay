@@ -12,9 +12,17 @@
         "processing": true,
         "ordering": false,
         "ajax": {
-            "url": "/api/Statistic/GetStatistic",
+            "url": "/api/Management/ManageData",
             "type": "POST",
             "dataType": "json",
+            "data": function () {
+                return {
+                    dataType: "Statistic",
+                    action: "GetAll",
+                    fromDate: $('#search_fromdate').val(),
+                    toDate: $('#search_todate').val()
+                };
+            },
             "dataSrc": "data"
         },
         "columns": [
@@ -42,12 +50,17 @@
     $('#btn_search').click(function () {
         var fromDate = $('#search_fromdate').val();
         var toDate = $('#search_todate').val();
-        statisticData.ajax.url("/api/Statistic/GetStatistic?fromDate=" + fromDate + "&toDate=" + toDate).load();
+
         if (fromDate !== "" && toDate !== "") {
-           
+            statisticData.ajax.data = {
+                dataType: "Statistic",
+                action: "GetAll",
+                fromDate: fromDate,
+                toDate: toDate
+            };
+            statisticData.ajax.reload();
         } else {
-            statisticData.ajax.url("/api/Statistic/GetStatistic").load();
-        }
+        }   
     });
 
     $('#statistic').click(function () {

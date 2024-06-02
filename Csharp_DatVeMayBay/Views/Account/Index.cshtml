@@ -226,7 +226,7 @@
                                     <button type="button" class="btn btn-outline-success p-2" style="
                                     background-color:#8DD3BB; border: #8DD3BB; color:
                                     black;height: 100%;">
-                                        @ticket.TicketId
+                                        <a class="text-decoration-none text-black fw-bold" href="/me/tickets/@ticket.TicketId">@ticket.TicketId</a>
                                     </button>
                                 </div>
                                 }
@@ -250,7 +250,7 @@
                 <div class="card-group bg-light" style="border-radius: 20px; height: max-content;">
                     <div class="container-fluid p-0 m-0">
                         <p></p>
-                        <div class="row m-3 mt-2" id="card-container">
+                        <div class="row m-3 mt-2 " id="card-container">
                             @foreach (var card in Model.creditCards)
                             {
                                 <div class="col-3 mb-sm-2">

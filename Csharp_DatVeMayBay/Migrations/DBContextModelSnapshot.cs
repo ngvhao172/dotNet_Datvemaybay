@@ -82,7 +82,7 @@ namespace Csharp_DatVeMayBay.Migrations
                         {
                             UserEmail = "admin@gmail.com",
                             Enable = true,
-                            Password = "$2a$13$uQD16xQaAe45EOYXo2eyU.tDDoSRCe9I8OPruLTCEVqppgdx6QuPS",
+                            Password = "$2a$13$8pe8iCC53Oly7hK8klc8Zuqezyt5pylxGqHEo9YfeQEXOx9bw1idq",
                             UserId = 1,
                             Verified = true
                         },
@@ -90,8 +90,16 @@ namespace Csharp_DatVeMayBay.Migrations
                         {
                             UserEmail = "ngvhao@gmail.com",
                             Enable = true,
-                            Password = "$2a$13$kyhbY2mjiF1ggJ2OgI.erO6jz1h9BeiLw4GIhW9i1f8yMu2NtiaPy",
+                            Password = "$2a$13$oln/xVCrukcGFjr9XL6bXOAvuG95w14OsDC13WqgnI18nMhQqb162",
                             UserId = 2,
+                            Verified = true
+                        },
+                        new
+                        {
+                            UserEmail = "user@gmail.com",
+                            Enable = true,
+                            Password = "$2a$13$rdEHMq7Yk4T3f5ceoqD/geBIHT56HrPAACusm5/oVRS4NE6Bg03r6",
+                            UserId = 3,
                             Verified = true
                         });
                 });
@@ -228,16 +236,19 @@ namespace Csharp_DatVeMayBay.Migrations
 
             modelBuilder.Entity("Csharp_DatVeMayBay.Models.Domain.Booking", b =>
                 {
-                    b.Property<int>("BookingId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BookingId"));
+                    b.Property<string>("BookingId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("BookingDatime")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("BookingType")
+                        .HasColumnType("int");
+
                     b.Property<int>("FlightId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("FlightReturnId")
                         .HasColumnType("int");
 
                     b.Property<int>("PassengerCount")
@@ -252,6 +263,8 @@ namespace Csharp_DatVeMayBay.Migrations
                     b.HasKey("BookingId");
 
                     b.HasIndex("FlightId");
+
+                    b.HasIndex("FlightReturnId");
 
                     b.HasIndex("UserId");
 
@@ -334,550 +347,1100 @@ namespace Csharp_DatVeMayBay.Migrations
                             FlightId = 1,
                             AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 16, 28, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3250212m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 7, 48, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2545518m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 13, 28, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 928690m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 2, 23, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 946931m
                         },
                         new
                         {
                             FlightId = 2,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 6, 34, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2113690m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 19, 25, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2242283m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 1, 41, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1283775m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 17, 42, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1120024m
                         },
                         new
                         {
                             FlightId = 3,
-                            AirlineId = 1,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 7, 36, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2681523m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 3, 17, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2955967m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 1, 43, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1257999m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 20, 59, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 857970m
                         },
                         new
                         {
                             FlightId = 4,
                             AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 2, 12, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2838563m,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 0, 47, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3146434m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 0, 9, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1450987m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 17, 39, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 854670m
                         },
                         new
                         {
                             FlightId = 5,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 18, 20, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2717854m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 1, 40, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3134723m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 15, 28, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1467925m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 23, 56, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1117595m
                         },
                         new
                         {
                             FlightId = 6,
-                            AirlineId = 4,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 18, 41, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2303592m,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 3, 41, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3342641m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 15, 47, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 804359m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 20, 21, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1267611m
                         },
                         new
                         {
                             FlightId = 7,
-                            AirlineId = 3,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 21, 25, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3208980m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 20, 50, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2529483m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 20, 24, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1306150m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 13, 1, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 885226m
                         },
                         new
                         {
                             FlightId = 8,
                             AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 2, 47, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2838276m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 18, 12, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3265394m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 23, 24, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1444999m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 16, 7, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1331269m
                         },
                         new
                         {
                             FlightId = 9,
-                            AirlineId = 3,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 8, 55, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2951708m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 4, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3027096m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 3, 47, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1478351m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 1, 36, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1086599m
                         },
                         new
                         {
                             FlightId = 10,
-                            AirlineId = 3,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 2, 11, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2174478m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 7, 29, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3066553m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 18, 42, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1482214m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 6, 15, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 982033m
                         },
                         new
                         {
                             FlightId = 11,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 2, 26, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2656942m,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 12, 50, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3448434m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 20, 51, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1132844m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 11, 42, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 884039m
                         },
                         new
                         {
                             FlightId = 12,
-                            AirlineId = 3,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 14, 30, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2653022m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 8, 43, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3360431m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 7, 37, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 955509m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 2, 42, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1428728m
                         },
                         new
                         {
                             FlightId = 13,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 7, 4, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3174632m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 7, 46, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3096990m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 4, 19, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 906872m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 6, 32, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1212072m
                         },
                         new
                         {
                             FlightId = 14,
-                            AirlineId = 4,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 6, 7, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3199080m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 13, 17, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2384260m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 4, 1, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1117357m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 8, 38, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1068021m
                         },
                         new
                         {
                             FlightId = 15,
-                            AirlineId = 2,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 14, 54, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2142851m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 0, 4, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3110376m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 11, 55, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 887110m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 17, 2, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 999956m
                         },
                         new
                         {
                             FlightId = 16,
-                            AirlineId = 4,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 18, 21, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2877650m,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 6, 57, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2680851m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 14, 23, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 864516m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 23, 17, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1411139m
                         },
                         new
                         {
                             FlightId = 17,
-                            AirlineId = 1,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 22, 25, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3081299m,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 20, 4, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3121606m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 15, 4, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 894037m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 17, 37, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1153205m
                         },
                         new
                         {
                             FlightId = 18,
-                            AirlineId = 5,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 23, 43, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2753662m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 17, 8, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2623506m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 22, 21, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1135716m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 10, 28, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1029706m
                         },
                         new
                         {
                             FlightId = 19,
-                            AirlineId = 2,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 16, 15, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3034226m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 15, 17, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2929350m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 15, 4, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1144343m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 10, 50, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1491683m
                         },
                         new
                         {
                             FlightId = 20,
-                            AirlineId = 1,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 19, 57, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3499466m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 12, 7, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3083643m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 18, 0, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1478829m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 5, 17, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1318160m
                         },
                         new
                         {
                             FlightId = 21,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 19, 34, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2456763m,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 10, 44, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2578937m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 17, 47, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 821241m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 7, 28, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 922378m
                         },
                         new
                         {
                             FlightId = 22,
-                            AirlineId = 1,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 23, 50, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2090302m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 4, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2939390m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 20, 21, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1473426m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 21, 8, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 892407m
                         },
                         new
                         {
                             FlightId = 23,
-                            AirlineId = 5,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 6, 46, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3255396m,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 11, 55, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2630162m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 3, 46, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1397967m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 5, 58, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1056920m
                         },
                         new
                         {
                             FlightId = 24,
                             AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 15, 15, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2280106m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 3, 25, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2928498m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 9, 15, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1155229m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 23, 13, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1414927m
                         },
                         new
                         {
                             FlightId = 25,
-                            AirlineId = 2,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 5, 0, 48, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3458247m,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 17, 57, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3404053m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 22, 21, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1295630m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 12, 7, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1344387m
                         },
                         new
                         {
                             FlightId = 26,
-                            AirlineId = 5,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 6, 45, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2233649m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 9, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3083515m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 23, 9, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1154955m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 2, 48, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 808972m
                         },
                         new
                         {
                             FlightId = 27,
-                            AirlineId = 4,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 3, 36, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2621722m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 3, 58, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3499886m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 20, 55, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 801508m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 23, 42, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1181492m
                         },
                         new
                         {
                             FlightId = 28,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 21, 13, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2184647m,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 3, 24, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2112366m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 17, 0, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1189886m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 23, 40, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 862474m
                         },
                         new
                         {
                             FlightId = 29,
-                            AirlineId = 3,
+                            AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 6, 58, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2252226m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 23, 33, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2678840m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 1, 1, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1144395m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 15, 50, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 869847m
                         },
                         new
                         {
                             FlightId = 30,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 21, 10, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3063178m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 5, 2, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2442103m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 19, 20, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 862410m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 3, 51, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1312524m
                         },
                         new
                         {
                             FlightId = 31,
                             AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 7, 19, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3107396m,
+                            ArrivalDatetime = new DateTime(2024, 5, 4, 5, 57, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2150686m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 5, 13, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 833315m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 23, 38, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 912765m
                         },
                         new
                         {
                             FlightId = 32,
                             AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 20, 52, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2340570m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 12, 57, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2924549m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 16, 19, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1379383m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 8, 43, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1274777m
                         },
                         new
                         {
                             FlightId = 33,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 4, 21, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2865162m,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 22, 23, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2235269m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 0, 13, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1055852m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 19, 18, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1284255m
                         },
                         new
                         {
                             FlightId = 34,
-                            AirlineId = 3,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 5, 36, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2251403m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 4, 39, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3213951m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 1, 4, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1449300m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 23, 36, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1195146m
                         },
                         new
                         {
                             FlightId = 35,
                             AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 1, 47, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3145556m,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 16, 53, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2524859m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 18, 40, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1204635m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 9, 57, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1077850m
                         },
                         new
                         {
                             FlightId = 36,
                             AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 16, 30, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2662428m,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 16, 27, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3274293m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 12, 30, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 984443m
+                            DepartureDatetime = new DateTime(2024, 5, 2, 12, 5, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 801183m
                         },
                         new
                         {
                             FlightId = 37,
                             AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 13, 53, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2736697m,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 19, 43, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2875527m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 12, 31, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1091686m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 13, 28, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1353375m
                         },
                         new
                         {
                             FlightId = 38,
-                            AirlineId = 4,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 6, 25, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3225561m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 6, 25, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2433270m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 0, 24, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1072548m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 0, 4, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1440123m
                         },
                         new
                         {
                             FlightId = 39,
-                            AirlineId = 4,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 2, 6, 52, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2655585m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 1, 15, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2736167m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 2, 20, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 988818m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 0, 5, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1038653m
                         },
                         new
                         {
                             FlightId = 40,
-                            AirlineId = 1,
+                            AirlineId = 3,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 22, 52, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3190711m,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 9, 32, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2255263m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 15, 54, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1315085m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 2, 37, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 860784m
                         },
                         new
                         {
                             FlightId = 41,
-                            AirlineId = 5,
+                            AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 11, 49, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2748964m,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 12, 37, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2725236m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 5, 55, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1442130m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 6, 33, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1048796m
                         },
                         new
                         {
                             FlightId = 42,
-                            AirlineId = 1,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 9, 46, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2893234m,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 14, 34, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2294218m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 6, 24, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 813719m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 9, 40, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1245825m
                         },
                         new
                         {
                             FlightId = 43,
                             AirlineId = 2,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 17, 18, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2919398m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 5, 23, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2980598m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 3, 10, 1, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 800963m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 2, 56, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1410245m
                         },
                         new
                         {
                             FlightId = 44,
-                            AirlineId = 3,
+                            AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 21, 5, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3487372m,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 6, 15, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3426729m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 16, 50, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1086120m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 0, 59, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1003272m
                         },
                         new
                         {
                             FlightId = 45,
                             AirlineId = 1,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 13, 48, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3372665m,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 19, 11, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2700954m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 8, 12, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1380394m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 12, 21, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1068081m
                         },
                         new
                         {
                             FlightId = 46,
-                            AirlineId = 5,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 4, 23, 7, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3221747m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 15, 40, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2413169m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 4, 18, 10, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1387286m
+                            DepartureDatetime = new DateTime(2024, 5, 1, 13, 26, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 825151m
                         },
                         new
                         {
                             FlightId = 47,
                             AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 18, 52, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3193919m,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 17, 38, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2797316m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 12, 40, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 895970m
+                            DepartureDatetime = new DateTime(2024, 4, 29, 12, 37, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1176574m
                         },
                         new
                         {
                             FlightId = 48,
                             AirlineId = 5,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 3, 2, 15, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2696441m,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 2, 13, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2674346m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 2, 23, 44, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1386483m
+                            DepartureDatetime = new DateTime(2024, 4, 30, 21, 36, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1249167m
                         },
                         new
                         {
                             FlightId = 49,
-                            AirlineId = 5,
+                            AirlineId = 4,
                             ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 12, 1, 19, 3, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 2340065m,
+                            ArrivalDatetime = new DateTime(2024, 5, 4, 0, 49, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2232189m,
                             DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 12, 1, 17, 58, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1021694m
+                            DepartureDatetime = new DateTime(2024, 5, 3, 17, 41, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 821156m
                         },
                         new
                         {
                             FlightId = 50,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 7, 45, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3042795m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 5, 2, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 885956m
+                        },
+                        new
+                        {
+                            FlightId = 51,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 18, 54, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3281437m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 14, 33, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1114677m
+                        },
+                        new
+                        {
+                            FlightId = 52,
+                            AirlineId = 1,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 2, 25, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2414622m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 20, 56, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 949239m
+                        },
+                        new
+                        {
+                            FlightId = 53,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 4, 42, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2111418m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 1, 24, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 961053m
+                        },
+                        new
+                        {
+                            FlightId = 54,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 19, 14, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2688575m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 15, 15, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1438277m
+                        },
+                        new
+                        {
+                            FlightId = 55,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 19, 21, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2694018m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 16, 10, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 853609m
+                        },
+                        new
+                        {
+                            FlightId = 56,
+                            AirlineId = 1,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 9, 27, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2766885m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 2, 3, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1269832m
+                        },
+                        new
+                        {
+                            FlightId = 57,
                             AirlineId = 5,
-                            ArrivalAirportId = 2,
-                            ArrivalDatetime = new DateTime(2023, 11, 30, 22, 31, 0, 0, DateTimeKind.Local),
-                            BussinessPrice = 3460361m,
-                            DepartureAirportId = 1,
-                            DepartureDatetime = new DateTime(2023, 11, 30, 17, 25, 0, 0, DateTimeKind.Local),
-                            EconomyPrice = 1208625m
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 18, 49, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2951426m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 13, 54, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1043324m
+                        },
+                        new
+                        {
+                            FlightId = 58,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 17, 47, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3051554m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 12, 43, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 883917m
+                        },
+                        new
+                        {
+                            FlightId = 59,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 14, 47, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2789152m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 13, 19, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1398542m
+                        },
+                        new
+                        {
+                            FlightId = 60,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 16, 58, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2690549m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 14, 29, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1480697m
+                        },
+                        new
+                        {
+                            FlightId = 61,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 6, 7, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2483599m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 1, 58, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 984931m
+                        },
+                        new
+                        {
+                            FlightId = 62,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 13, 2, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2444324m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 7, 16, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1058827m
+                        },
+                        new
+                        {
+                            FlightId = 63,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 2, 47, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2613927m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 21, 12, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1073485m
+                        },
+                        new
+                        {
+                            FlightId = 64,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 11, 57, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3354746m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 4, 21, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1472467m
+                        },
+                        new
+                        {
+                            FlightId = 65,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 12, 58, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2678360m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 8, 55, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 819708m
+                        },
+                        new
+                        {
+                            FlightId = 66,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 10, 11, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3473980m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 7, 27, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1005473m
+                        },
+                        new
+                        {
+                            FlightId = 67,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 5, 26, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2589698m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 1, 49, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1097183m
+                        },
+                        new
+                        {
+                            FlightId = 68,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 23, 19, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3293683m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 21, 17, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1130212m
+                        },
+                        new
+                        {
+                            FlightId = 69,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 17, 59, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3363794m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 12, 25, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 991153m
+                        },
+                        new
+                        {
+                            FlightId = 70,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 15, 20, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3482202m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 13, 56, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 964242m
+                        },
+                        new
+                        {
+                            FlightId = 71,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 18, 21, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3021109m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 13, 26, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1261081m
+                        },
+                        new
+                        {
+                            FlightId = 72,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 13, 48, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2911722m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 9, 42, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 988926m
+                        },
+                        new
+                        {
+                            FlightId = 73,
+                            AirlineId = 1,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 9, 36, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2880947m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 2, 16, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1344678m
+                        },
+                        new
+                        {
+                            FlightId = 74,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 8, 34, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2086681m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 1, 25, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1308680m
+                        },
+                        new
+                        {
+                            FlightId = 75,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 8, 16, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3109058m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 3, 10, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 943157m
+                        },
+                        new
+                        {
+                            FlightId = 76,
+                            AirlineId = 1,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 12, 30, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2294498m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 6, 25, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1324369m
+                        },
+                        new
+                        {
+                            FlightId = 77,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 14, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2677238m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 10, 33, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1434423m
+                        },
+                        new
+                        {
+                            FlightId = 78,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 9, 11, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2624891m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 7, 36, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1071495m
+                        },
+                        new
+                        {
+                            FlightId = 79,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 4, 43, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3107442m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 0, 43, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1220354m
+                        },
+                        new
+                        {
+                            FlightId = 80,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 6, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2701713m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 1, 15, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1437977m
+                        },
+                        new
+                        {
+                            FlightId = 81,
+                            AirlineId = 1,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 18, 6, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2231646m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 13, 35, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1206390m
+                        },
+                        new
+                        {
+                            FlightId = 82,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 5, 42, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3030651m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 4, 25, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1381081m
+                        },
+                        new
+                        {
+                            FlightId = 83,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 4, 0, 28, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3048697m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 23, 16, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1289021m
+                        },
+                        new
+                        {
+                            FlightId = 84,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 10, 35, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3436911m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 3, 48, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1049236m
+                        },
+                        new
+                        {
+                            FlightId = 85,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 19, 24, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2640749m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 15, 41, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1036102m
+                        },
+                        new
+                        {
+                            FlightId = 86,
+                            AirlineId = 1,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 2, 3, 51, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3147919m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 2, 0, 44, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 897082m
+                        },
+                        new
+                        {
+                            FlightId = 87,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 13, 34, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2404359m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 12, 34, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 899430m
+                        },
+                        new
+                        {
+                            FlightId = 88,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 21, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3045931m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 14, 14, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 816279m
+                        },
+                        new
+                        {
+                            FlightId = 89,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 12, 8, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2516711m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 8, 53, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 806320m
+                        },
+                        new
+                        {
+                            FlightId = 90,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 9, 18, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2705930m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 6, 29, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 963565m
+                        },
+                        new
+                        {
+                            FlightId = 91,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 3, 10, 34, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2940867m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 9, 34, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 997029m
+                        },
+                        new
+                        {
+                            FlightId = 92,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 6, 12, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3436763m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 1, 35, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1058257m
+                        },
+                        new
+                        {
+                            FlightId = 93,
+                            AirlineId = 2,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 3, 21, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3142552m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 19, 23, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1135722m
+                        },
+                        new
+                        {
+                            FlightId = 94,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 8, 4, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2229134m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 1, 57, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1032281m
+                        },
+                        new
+                        {
+                            FlightId = 95,
+                            AirlineId = 1,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 30, 23, 46, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2655674m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 30, 17, 34, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1142142m
+                        },
+                        new
+                        {
+                            FlightId = 96,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 7, 20, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2945844m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 5, 42, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 961011m
+                        },
+                        new
+                        {
+                            FlightId = 97,
+                            AirlineId = 3,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 1, 4, 26, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3038752m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 1, 0, 23, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 891077m
+                        },
+                        new
+                        {
+                            FlightId = 98,
+                            AirlineId = 5,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 19, 9, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2347636m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 17, 20, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 918212m
+                        },
+                        new
+                        {
+                            FlightId = 99,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 4, 29, 20, 17, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 2827853m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 4, 29, 12, 41, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1257972m
+                        },
+                        new
+                        {
+                            FlightId = 100,
+                            AirlineId = 4,
+                            ArrivalAirportId = 1,
+                            ArrivalDatetime = new DateTime(2024, 5, 4, 4, 18, 0, 0, DateTimeKind.Local),
+                            BussinessPrice = 3119763m,
+                            DepartureAirportId = 2,
+                            DepartureDatetime = new DateTime(2024, 5, 3, 20, 34, 0, 0, DateTimeKind.Local),
+                            EconomyPrice = 1127432m
                         });
                 });
 
@@ -15308,6 +15871,14406 @@ namespace Csharp_DatVeMayBay.Migrations
                             SeatColumn = 6,
                             SeatRow = "F",
                             Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1801,
+                            FlightId = 51,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1802,
+                            FlightId = 51,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1803,
+                            FlightId = 51,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1804,
+                            FlightId = 51,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1805,
+                            FlightId = 51,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1806,
+                            FlightId = 51,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1807,
+                            FlightId = 51,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1808,
+                            FlightId = 51,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1809,
+                            FlightId = 51,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1810,
+                            FlightId = 51,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1811,
+                            FlightId = 51,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1812,
+                            FlightId = 51,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1813,
+                            FlightId = 51,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1814,
+                            FlightId = 51,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1815,
+                            FlightId = 51,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1816,
+                            FlightId = 51,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1817,
+                            FlightId = 51,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1818,
+                            FlightId = 51,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1819,
+                            FlightId = 51,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1820,
+                            FlightId = 51,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1821,
+                            FlightId = 51,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1822,
+                            FlightId = 51,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1823,
+                            FlightId = 51,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1824,
+                            FlightId = 51,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1825,
+                            FlightId = 51,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1826,
+                            FlightId = 51,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1827,
+                            FlightId = 51,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1828,
+                            FlightId = 51,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1829,
+                            FlightId = 51,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1830,
+                            FlightId = 51,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1831,
+                            FlightId = 51,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1832,
+                            FlightId = 51,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1833,
+                            FlightId = 51,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1834,
+                            FlightId = 51,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1835,
+                            FlightId = 51,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1836,
+                            FlightId = 51,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1837,
+                            FlightId = 52,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1838,
+                            FlightId = 52,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1839,
+                            FlightId = 52,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1840,
+                            FlightId = 52,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1841,
+                            FlightId = 52,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1842,
+                            FlightId = 52,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1843,
+                            FlightId = 52,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1844,
+                            FlightId = 52,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1845,
+                            FlightId = 52,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1846,
+                            FlightId = 52,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1847,
+                            FlightId = 52,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1848,
+                            FlightId = 52,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1849,
+                            FlightId = 52,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1850,
+                            FlightId = 52,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1851,
+                            FlightId = 52,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1852,
+                            FlightId = 52,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1853,
+                            FlightId = 52,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1854,
+                            FlightId = 52,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1855,
+                            FlightId = 52,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1856,
+                            FlightId = 52,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1857,
+                            FlightId = 52,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1858,
+                            FlightId = 52,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1859,
+                            FlightId = 52,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1860,
+                            FlightId = 52,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1861,
+                            FlightId = 52,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1862,
+                            FlightId = 52,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1863,
+                            FlightId = 52,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1864,
+                            FlightId = 52,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1865,
+                            FlightId = 52,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1866,
+                            FlightId = 52,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1867,
+                            FlightId = 52,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1868,
+                            FlightId = 52,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1869,
+                            FlightId = 52,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1870,
+                            FlightId = 52,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1871,
+                            FlightId = 52,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1872,
+                            FlightId = 52,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1873,
+                            FlightId = 53,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1874,
+                            FlightId = 53,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1875,
+                            FlightId = 53,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1876,
+                            FlightId = 53,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1877,
+                            FlightId = 53,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1878,
+                            FlightId = 53,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1879,
+                            FlightId = 53,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1880,
+                            FlightId = 53,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1881,
+                            FlightId = 53,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1882,
+                            FlightId = 53,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1883,
+                            FlightId = 53,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1884,
+                            FlightId = 53,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1885,
+                            FlightId = 53,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1886,
+                            FlightId = 53,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1887,
+                            FlightId = 53,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1888,
+                            FlightId = 53,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1889,
+                            FlightId = 53,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1890,
+                            FlightId = 53,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1891,
+                            FlightId = 53,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1892,
+                            FlightId = 53,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1893,
+                            FlightId = 53,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1894,
+                            FlightId = 53,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1895,
+                            FlightId = 53,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1896,
+                            FlightId = 53,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1897,
+                            FlightId = 53,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1898,
+                            FlightId = 53,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1899,
+                            FlightId = 53,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1900,
+                            FlightId = 53,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1901,
+                            FlightId = 53,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1902,
+                            FlightId = 53,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1903,
+                            FlightId = 53,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1904,
+                            FlightId = 53,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1905,
+                            FlightId = 53,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1906,
+                            FlightId = 53,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1907,
+                            FlightId = 53,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1908,
+                            FlightId = 53,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1909,
+                            FlightId = 54,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1910,
+                            FlightId = 54,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1911,
+                            FlightId = 54,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1912,
+                            FlightId = 54,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1913,
+                            FlightId = 54,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1914,
+                            FlightId = 54,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1915,
+                            FlightId = 54,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1916,
+                            FlightId = 54,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1917,
+                            FlightId = 54,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1918,
+                            FlightId = 54,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1919,
+                            FlightId = 54,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1920,
+                            FlightId = 54,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1921,
+                            FlightId = 54,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1922,
+                            FlightId = 54,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1923,
+                            FlightId = 54,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1924,
+                            FlightId = 54,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1925,
+                            FlightId = 54,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1926,
+                            FlightId = 54,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1927,
+                            FlightId = 54,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1928,
+                            FlightId = 54,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1929,
+                            FlightId = 54,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1930,
+                            FlightId = 54,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1931,
+                            FlightId = 54,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1932,
+                            FlightId = 54,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1933,
+                            FlightId = 54,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1934,
+                            FlightId = 54,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1935,
+                            FlightId = 54,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1936,
+                            FlightId = 54,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1937,
+                            FlightId = 54,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1938,
+                            FlightId = 54,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1939,
+                            FlightId = 54,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1940,
+                            FlightId = 54,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1941,
+                            FlightId = 54,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1942,
+                            FlightId = 54,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1943,
+                            FlightId = 54,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1944,
+                            FlightId = 54,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1945,
+                            FlightId = 55,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1946,
+                            FlightId = 55,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1947,
+                            FlightId = 55,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1948,
+                            FlightId = 55,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1949,
+                            FlightId = 55,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1950,
+                            FlightId = 55,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1951,
+                            FlightId = 55,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1952,
+                            FlightId = 55,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1953,
+                            FlightId = 55,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1954,
+                            FlightId = 55,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1955,
+                            FlightId = 55,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1956,
+                            FlightId = 55,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1957,
+                            FlightId = 55,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1958,
+                            FlightId = 55,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1959,
+                            FlightId = 55,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1960,
+                            FlightId = 55,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1961,
+                            FlightId = 55,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1962,
+                            FlightId = 55,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1963,
+                            FlightId = 55,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1964,
+                            FlightId = 55,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1965,
+                            FlightId = 55,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1966,
+                            FlightId = 55,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1967,
+                            FlightId = 55,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1968,
+                            FlightId = 55,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1969,
+                            FlightId = 55,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1970,
+                            FlightId = 55,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1971,
+                            FlightId = 55,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1972,
+                            FlightId = 55,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1973,
+                            FlightId = 55,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1974,
+                            FlightId = 55,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1975,
+                            FlightId = 55,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1976,
+                            FlightId = 55,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1977,
+                            FlightId = 55,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1978,
+                            FlightId = 55,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1979,
+                            FlightId = 55,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1980,
+                            FlightId = 55,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1981,
+                            FlightId = 56,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1982,
+                            FlightId = 56,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1983,
+                            FlightId = 56,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1984,
+                            FlightId = 56,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1985,
+                            FlightId = 56,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1986,
+                            FlightId = 56,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1987,
+                            FlightId = 56,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1988,
+                            FlightId = 56,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1989,
+                            FlightId = 56,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1990,
+                            FlightId = 56,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1991,
+                            FlightId = 56,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1992,
+                            FlightId = 56,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1993,
+                            FlightId = 56,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1994,
+                            FlightId = 56,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1995,
+                            FlightId = 56,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1996,
+                            FlightId = 56,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1997,
+                            FlightId = 56,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1998,
+                            FlightId = 56,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 1999,
+                            FlightId = 56,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2000,
+                            FlightId = 56,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2001,
+                            FlightId = 56,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2002,
+                            FlightId = 56,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2003,
+                            FlightId = 56,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2004,
+                            FlightId = 56,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2005,
+                            FlightId = 56,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2006,
+                            FlightId = 56,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2007,
+                            FlightId = 56,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2008,
+                            FlightId = 56,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2009,
+                            FlightId = 56,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2010,
+                            FlightId = 56,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2011,
+                            FlightId = 56,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2012,
+                            FlightId = 56,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2013,
+                            FlightId = 56,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2014,
+                            FlightId = 56,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2015,
+                            FlightId = 56,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2016,
+                            FlightId = 56,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2017,
+                            FlightId = 57,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2018,
+                            FlightId = 57,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2019,
+                            FlightId = 57,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2020,
+                            FlightId = 57,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2021,
+                            FlightId = 57,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2022,
+                            FlightId = 57,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2023,
+                            FlightId = 57,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2024,
+                            FlightId = 57,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2025,
+                            FlightId = 57,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2026,
+                            FlightId = 57,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2027,
+                            FlightId = 57,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2028,
+                            FlightId = 57,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2029,
+                            FlightId = 57,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2030,
+                            FlightId = 57,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2031,
+                            FlightId = 57,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2032,
+                            FlightId = 57,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2033,
+                            FlightId = 57,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2034,
+                            FlightId = 57,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2035,
+                            FlightId = 57,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2036,
+                            FlightId = 57,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2037,
+                            FlightId = 57,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2038,
+                            FlightId = 57,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2039,
+                            FlightId = 57,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2040,
+                            FlightId = 57,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2041,
+                            FlightId = 57,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2042,
+                            FlightId = 57,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2043,
+                            FlightId = 57,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2044,
+                            FlightId = 57,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2045,
+                            FlightId = 57,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2046,
+                            FlightId = 57,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2047,
+                            FlightId = 57,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2048,
+                            FlightId = 57,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2049,
+                            FlightId = 57,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2050,
+                            FlightId = 57,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2051,
+                            FlightId = 57,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2052,
+                            FlightId = 57,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2053,
+                            FlightId = 58,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2054,
+                            FlightId = 58,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2055,
+                            FlightId = 58,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2056,
+                            FlightId = 58,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2057,
+                            FlightId = 58,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2058,
+                            FlightId = 58,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2059,
+                            FlightId = 58,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2060,
+                            FlightId = 58,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2061,
+                            FlightId = 58,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2062,
+                            FlightId = 58,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2063,
+                            FlightId = 58,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2064,
+                            FlightId = 58,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2065,
+                            FlightId = 58,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2066,
+                            FlightId = 58,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2067,
+                            FlightId = 58,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2068,
+                            FlightId = 58,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2069,
+                            FlightId = 58,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2070,
+                            FlightId = 58,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2071,
+                            FlightId = 58,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2072,
+                            FlightId = 58,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2073,
+                            FlightId = 58,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2074,
+                            FlightId = 58,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2075,
+                            FlightId = 58,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2076,
+                            FlightId = 58,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2077,
+                            FlightId = 58,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2078,
+                            FlightId = 58,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2079,
+                            FlightId = 58,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2080,
+                            FlightId = 58,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2081,
+                            FlightId = 58,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2082,
+                            FlightId = 58,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2083,
+                            FlightId = 58,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2084,
+                            FlightId = 58,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2085,
+                            FlightId = 58,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2086,
+                            FlightId = 58,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2087,
+                            FlightId = 58,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2088,
+                            FlightId = 58,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2089,
+                            FlightId = 59,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2090,
+                            FlightId = 59,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2091,
+                            FlightId = 59,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2092,
+                            FlightId = 59,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2093,
+                            FlightId = 59,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2094,
+                            FlightId = 59,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2095,
+                            FlightId = 59,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2096,
+                            FlightId = 59,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2097,
+                            FlightId = 59,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2098,
+                            FlightId = 59,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2099,
+                            FlightId = 59,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2100,
+                            FlightId = 59,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2101,
+                            FlightId = 59,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2102,
+                            FlightId = 59,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2103,
+                            FlightId = 59,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2104,
+                            FlightId = 59,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2105,
+                            FlightId = 59,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2106,
+                            FlightId = 59,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2107,
+                            FlightId = 59,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2108,
+                            FlightId = 59,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2109,
+                            FlightId = 59,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2110,
+                            FlightId = 59,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2111,
+                            FlightId = 59,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2112,
+                            FlightId = 59,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2113,
+                            FlightId = 59,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2114,
+                            FlightId = 59,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2115,
+                            FlightId = 59,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2116,
+                            FlightId = 59,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2117,
+                            FlightId = 59,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2118,
+                            FlightId = 59,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2119,
+                            FlightId = 59,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2120,
+                            FlightId = 59,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2121,
+                            FlightId = 59,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2122,
+                            FlightId = 59,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2123,
+                            FlightId = 59,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2124,
+                            FlightId = 59,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2125,
+                            FlightId = 60,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2126,
+                            FlightId = 60,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2127,
+                            FlightId = 60,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2128,
+                            FlightId = 60,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2129,
+                            FlightId = 60,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2130,
+                            FlightId = 60,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2131,
+                            FlightId = 60,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2132,
+                            FlightId = 60,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2133,
+                            FlightId = 60,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2134,
+                            FlightId = 60,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2135,
+                            FlightId = 60,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2136,
+                            FlightId = 60,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2137,
+                            FlightId = 60,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2138,
+                            FlightId = 60,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2139,
+                            FlightId = 60,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2140,
+                            FlightId = 60,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2141,
+                            FlightId = 60,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2142,
+                            FlightId = 60,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2143,
+                            FlightId = 60,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2144,
+                            FlightId = 60,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2145,
+                            FlightId = 60,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2146,
+                            FlightId = 60,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2147,
+                            FlightId = 60,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2148,
+                            FlightId = 60,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2149,
+                            FlightId = 60,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2150,
+                            FlightId = 60,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2151,
+                            FlightId = 60,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2152,
+                            FlightId = 60,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2153,
+                            FlightId = 60,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2154,
+                            FlightId = 60,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2155,
+                            FlightId = 60,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2156,
+                            FlightId = 60,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2157,
+                            FlightId = 60,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2158,
+                            FlightId = 60,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2159,
+                            FlightId = 60,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2160,
+                            FlightId = 60,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2161,
+                            FlightId = 61,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2162,
+                            FlightId = 61,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2163,
+                            FlightId = 61,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2164,
+                            FlightId = 61,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2165,
+                            FlightId = 61,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2166,
+                            FlightId = 61,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2167,
+                            FlightId = 61,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2168,
+                            FlightId = 61,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2169,
+                            FlightId = 61,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2170,
+                            FlightId = 61,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2171,
+                            FlightId = 61,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2172,
+                            FlightId = 61,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2173,
+                            FlightId = 61,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2174,
+                            FlightId = 61,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2175,
+                            FlightId = 61,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2176,
+                            FlightId = 61,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2177,
+                            FlightId = 61,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2178,
+                            FlightId = 61,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2179,
+                            FlightId = 61,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2180,
+                            FlightId = 61,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2181,
+                            FlightId = 61,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2182,
+                            FlightId = 61,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2183,
+                            FlightId = 61,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2184,
+                            FlightId = 61,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2185,
+                            FlightId = 61,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2186,
+                            FlightId = 61,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2187,
+                            FlightId = 61,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2188,
+                            FlightId = 61,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2189,
+                            FlightId = 61,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2190,
+                            FlightId = 61,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2191,
+                            FlightId = 61,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2192,
+                            FlightId = 61,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2193,
+                            FlightId = 61,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2194,
+                            FlightId = 61,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2195,
+                            FlightId = 61,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2196,
+                            FlightId = 61,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2197,
+                            FlightId = 62,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2198,
+                            FlightId = 62,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2199,
+                            FlightId = 62,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2200,
+                            FlightId = 62,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2201,
+                            FlightId = 62,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2202,
+                            FlightId = 62,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2203,
+                            FlightId = 62,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2204,
+                            FlightId = 62,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2205,
+                            FlightId = 62,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2206,
+                            FlightId = 62,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2207,
+                            FlightId = 62,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2208,
+                            FlightId = 62,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2209,
+                            FlightId = 62,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2210,
+                            FlightId = 62,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2211,
+                            FlightId = 62,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2212,
+                            FlightId = 62,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2213,
+                            FlightId = 62,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2214,
+                            FlightId = 62,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2215,
+                            FlightId = 62,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2216,
+                            FlightId = 62,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2217,
+                            FlightId = 62,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2218,
+                            FlightId = 62,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2219,
+                            FlightId = 62,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2220,
+                            FlightId = 62,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2221,
+                            FlightId = 62,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2222,
+                            FlightId = 62,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2223,
+                            FlightId = 62,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2224,
+                            FlightId = 62,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2225,
+                            FlightId = 62,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2226,
+                            FlightId = 62,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2227,
+                            FlightId = 62,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2228,
+                            FlightId = 62,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2229,
+                            FlightId = 62,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2230,
+                            FlightId = 62,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2231,
+                            FlightId = 62,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2232,
+                            FlightId = 62,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2233,
+                            FlightId = 63,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2234,
+                            FlightId = 63,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2235,
+                            FlightId = 63,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2236,
+                            FlightId = 63,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2237,
+                            FlightId = 63,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2238,
+                            FlightId = 63,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2239,
+                            FlightId = 63,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2240,
+                            FlightId = 63,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2241,
+                            FlightId = 63,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2242,
+                            FlightId = 63,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2243,
+                            FlightId = 63,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2244,
+                            FlightId = 63,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2245,
+                            FlightId = 63,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2246,
+                            FlightId = 63,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2247,
+                            FlightId = 63,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2248,
+                            FlightId = 63,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2249,
+                            FlightId = 63,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2250,
+                            FlightId = 63,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2251,
+                            FlightId = 63,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2252,
+                            FlightId = 63,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2253,
+                            FlightId = 63,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2254,
+                            FlightId = 63,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2255,
+                            FlightId = 63,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2256,
+                            FlightId = 63,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2257,
+                            FlightId = 63,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2258,
+                            FlightId = 63,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2259,
+                            FlightId = 63,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2260,
+                            FlightId = 63,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2261,
+                            FlightId = 63,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2262,
+                            FlightId = 63,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2263,
+                            FlightId = 63,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2264,
+                            FlightId = 63,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2265,
+                            FlightId = 63,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2266,
+                            FlightId = 63,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2267,
+                            FlightId = 63,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2268,
+                            FlightId = 63,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2269,
+                            FlightId = 64,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2270,
+                            FlightId = 64,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2271,
+                            FlightId = 64,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2272,
+                            FlightId = 64,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2273,
+                            FlightId = 64,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2274,
+                            FlightId = 64,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2275,
+                            FlightId = 64,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2276,
+                            FlightId = 64,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2277,
+                            FlightId = 64,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2278,
+                            FlightId = 64,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2279,
+                            FlightId = 64,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2280,
+                            FlightId = 64,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2281,
+                            FlightId = 64,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2282,
+                            FlightId = 64,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2283,
+                            FlightId = 64,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2284,
+                            FlightId = 64,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2285,
+                            FlightId = 64,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2286,
+                            FlightId = 64,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2287,
+                            FlightId = 64,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2288,
+                            FlightId = 64,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2289,
+                            FlightId = 64,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2290,
+                            FlightId = 64,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2291,
+                            FlightId = 64,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2292,
+                            FlightId = 64,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2293,
+                            FlightId = 64,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2294,
+                            FlightId = 64,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2295,
+                            FlightId = 64,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2296,
+                            FlightId = 64,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2297,
+                            FlightId = 64,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2298,
+                            FlightId = 64,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2299,
+                            FlightId = 64,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2300,
+                            FlightId = 64,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2301,
+                            FlightId = 64,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2302,
+                            FlightId = 64,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2303,
+                            FlightId = 64,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2304,
+                            FlightId = 64,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2305,
+                            FlightId = 65,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2306,
+                            FlightId = 65,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2307,
+                            FlightId = 65,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2308,
+                            FlightId = 65,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2309,
+                            FlightId = 65,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2310,
+                            FlightId = 65,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2311,
+                            FlightId = 65,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2312,
+                            FlightId = 65,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2313,
+                            FlightId = 65,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2314,
+                            FlightId = 65,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2315,
+                            FlightId = 65,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2316,
+                            FlightId = 65,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2317,
+                            FlightId = 65,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2318,
+                            FlightId = 65,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2319,
+                            FlightId = 65,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2320,
+                            FlightId = 65,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2321,
+                            FlightId = 65,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2322,
+                            FlightId = 65,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2323,
+                            FlightId = 65,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2324,
+                            FlightId = 65,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2325,
+                            FlightId = 65,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2326,
+                            FlightId = 65,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2327,
+                            FlightId = 65,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2328,
+                            FlightId = 65,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2329,
+                            FlightId = 65,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2330,
+                            FlightId = 65,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2331,
+                            FlightId = 65,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2332,
+                            FlightId = 65,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2333,
+                            FlightId = 65,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2334,
+                            FlightId = 65,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2335,
+                            FlightId = 65,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2336,
+                            FlightId = 65,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2337,
+                            FlightId = 65,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2338,
+                            FlightId = 65,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2339,
+                            FlightId = 65,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2340,
+                            FlightId = 65,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2341,
+                            FlightId = 66,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2342,
+                            FlightId = 66,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2343,
+                            FlightId = 66,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2344,
+                            FlightId = 66,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2345,
+                            FlightId = 66,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2346,
+                            FlightId = 66,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2347,
+                            FlightId = 66,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2348,
+                            FlightId = 66,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2349,
+                            FlightId = 66,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2350,
+                            FlightId = 66,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2351,
+                            FlightId = 66,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2352,
+                            FlightId = 66,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2353,
+                            FlightId = 66,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2354,
+                            FlightId = 66,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2355,
+                            FlightId = 66,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2356,
+                            FlightId = 66,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2357,
+                            FlightId = 66,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2358,
+                            FlightId = 66,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2359,
+                            FlightId = 66,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2360,
+                            FlightId = 66,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2361,
+                            FlightId = 66,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2362,
+                            FlightId = 66,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2363,
+                            FlightId = 66,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2364,
+                            FlightId = 66,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2365,
+                            FlightId = 66,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2366,
+                            FlightId = 66,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2367,
+                            FlightId = 66,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2368,
+                            FlightId = 66,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2369,
+                            FlightId = 66,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2370,
+                            FlightId = 66,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2371,
+                            FlightId = 66,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2372,
+                            FlightId = 66,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2373,
+                            FlightId = 66,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2374,
+                            FlightId = 66,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2375,
+                            FlightId = 66,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2376,
+                            FlightId = 66,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2377,
+                            FlightId = 67,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2378,
+                            FlightId = 67,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2379,
+                            FlightId = 67,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2380,
+                            FlightId = 67,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2381,
+                            FlightId = 67,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2382,
+                            FlightId = 67,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2383,
+                            FlightId = 67,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2384,
+                            FlightId = 67,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2385,
+                            FlightId = 67,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2386,
+                            FlightId = 67,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2387,
+                            FlightId = 67,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2388,
+                            FlightId = 67,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2389,
+                            FlightId = 67,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2390,
+                            FlightId = 67,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2391,
+                            FlightId = 67,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2392,
+                            FlightId = 67,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2393,
+                            FlightId = 67,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2394,
+                            FlightId = 67,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2395,
+                            FlightId = 67,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2396,
+                            FlightId = 67,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2397,
+                            FlightId = 67,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2398,
+                            FlightId = 67,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2399,
+                            FlightId = 67,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2400,
+                            FlightId = 67,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2401,
+                            FlightId = 67,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2402,
+                            FlightId = 67,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2403,
+                            FlightId = 67,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2404,
+                            FlightId = 67,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2405,
+                            FlightId = 67,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2406,
+                            FlightId = 67,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2407,
+                            FlightId = 67,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2408,
+                            FlightId = 67,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2409,
+                            FlightId = 67,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2410,
+                            FlightId = 67,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2411,
+                            FlightId = 67,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2412,
+                            FlightId = 67,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2413,
+                            FlightId = 68,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2414,
+                            FlightId = 68,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2415,
+                            FlightId = 68,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2416,
+                            FlightId = 68,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2417,
+                            FlightId = 68,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2418,
+                            FlightId = 68,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2419,
+                            FlightId = 68,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2420,
+                            FlightId = 68,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2421,
+                            FlightId = 68,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2422,
+                            FlightId = 68,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2423,
+                            FlightId = 68,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2424,
+                            FlightId = 68,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2425,
+                            FlightId = 68,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2426,
+                            FlightId = 68,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2427,
+                            FlightId = 68,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2428,
+                            FlightId = 68,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2429,
+                            FlightId = 68,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2430,
+                            FlightId = 68,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2431,
+                            FlightId = 68,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2432,
+                            FlightId = 68,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2433,
+                            FlightId = 68,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2434,
+                            FlightId = 68,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2435,
+                            FlightId = 68,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2436,
+                            FlightId = 68,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2437,
+                            FlightId = 68,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2438,
+                            FlightId = 68,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2439,
+                            FlightId = 68,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2440,
+                            FlightId = 68,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2441,
+                            FlightId = 68,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2442,
+                            FlightId = 68,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2443,
+                            FlightId = 68,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2444,
+                            FlightId = 68,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2445,
+                            FlightId = 68,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2446,
+                            FlightId = 68,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2447,
+                            FlightId = 68,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2448,
+                            FlightId = 68,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2449,
+                            FlightId = 69,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2450,
+                            FlightId = 69,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2451,
+                            FlightId = 69,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2452,
+                            FlightId = 69,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2453,
+                            FlightId = 69,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2454,
+                            FlightId = 69,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2455,
+                            FlightId = 69,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2456,
+                            FlightId = 69,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2457,
+                            FlightId = 69,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2458,
+                            FlightId = 69,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2459,
+                            FlightId = 69,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2460,
+                            FlightId = 69,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2461,
+                            FlightId = 69,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2462,
+                            FlightId = 69,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2463,
+                            FlightId = 69,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2464,
+                            FlightId = 69,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2465,
+                            FlightId = 69,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2466,
+                            FlightId = 69,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2467,
+                            FlightId = 69,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2468,
+                            FlightId = 69,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2469,
+                            FlightId = 69,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2470,
+                            FlightId = 69,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2471,
+                            FlightId = 69,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2472,
+                            FlightId = 69,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2473,
+                            FlightId = 69,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2474,
+                            FlightId = 69,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2475,
+                            FlightId = 69,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2476,
+                            FlightId = 69,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2477,
+                            FlightId = 69,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2478,
+                            FlightId = 69,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2479,
+                            FlightId = 69,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2480,
+                            FlightId = 69,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2481,
+                            FlightId = 69,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2482,
+                            FlightId = 69,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2483,
+                            FlightId = 69,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2484,
+                            FlightId = 69,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2485,
+                            FlightId = 70,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2486,
+                            FlightId = 70,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2487,
+                            FlightId = 70,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2488,
+                            FlightId = 70,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2489,
+                            FlightId = 70,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2490,
+                            FlightId = 70,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2491,
+                            FlightId = 70,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2492,
+                            FlightId = 70,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2493,
+                            FlightId = 70,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2494,
+                            FlightId = 70,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2495,
+                            FlightId = 70,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2496,
+                            FlightId = 70,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2497,
+                            FlightId = 70,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2498,
+                            FlightId = 70,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2499,
+                            FlightId = 70,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2500,
+                            FlightId = 70,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2501,
+                            FlightId = 70,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2502,
+                            FlightId = 70,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2503,
+                            FlightId = 70,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2504,
+                            FlightId = 70,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2505,
+                            FlightId = 70,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2506,
+                            FlightId = 70,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2507,
+                            FlightId = 70,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2508,
+                            FlightId = 70,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2509,
+                            FlightId = 70,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2510,
+                            FlightId = 70,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2511,
+                            FlightId = 70,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2512,
+                            FlightId = 70,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2513,
+                            FlightId = 70,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2514,
+                            FlightId = 70,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2515,
+                            FlightId = 70,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2516,
+                            FlightId = 70,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2517,
+                            FlightId = 70,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2518,
+                            FlightId = 70,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2519,
+                            FlightId = 70,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2520,
+                            FlightId = 70,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2521,
+                            FlightId = 71,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2522,
+                            FlightId = 71,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2523,
+                            FlightId = 71,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2524,
+                            FlightId = 71,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2525,
+                            FlightId = 71,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2526,
+                            FlightId = 71,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2527,
+                            FlightId = 71,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2528,
+                            FlightId = 71,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2529,
+                            FlightId = 71,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2530,
+                            FlightId = 71,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2531,
+                            FlightId = 71,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2532,
+                            FlightId = 71,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2533,
+                            FlightId = 71,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2534,
+                            FlightId = 71,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2535,
+                            FlightId = 71,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2536,
+                            FlightId = 71,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2537,
+                            FlightId = 71,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2538,
+                            FlightId = 71,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2539,
+                            FlightId = 71,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2540,
+                            FlightId = 71,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2541,
+                            FlightId = 71,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2542,
+                            FlightId = 71,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2543,
+                            FlightId = 71,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2544,
+                            FlightId = 71,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2545,
+                            FlightId = 71,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2546,
+                            FlightId = 71,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2547,
+                            FlightId = 71,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2548,
+                            FlightId = 71,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2549,
+                            FlightId = 71,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2550,
+                            FlightId = 71,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2551,
+                            FlightId = 71,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2552,
+                            FlightId = 71,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2553,
+                            FlightId = 71,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2554,
+                            FlightId = 71,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2555,
+                            FlightId = 71,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2556,
+                            FlightId = 71,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2557,
+                            FlightId = 72,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2558,
+                            FlightId = 72,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2559,
+                            FlightId = 72,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2560,
+                            FlightId = 72,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2561,
+                            FlightId = 72,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2562,
+                            FlightId = 72,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2563,
+                            FlightId = 72,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2564,
+                            FlightId = 72,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2565,
+                            FlightId = 72,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2566,
+                            FlightId = 72,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2567,
+                            FlightId = 72,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2568,
+                            FlightId = 72,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2569,
+                            FlightId = 72,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2570,
+                            FlightId = 72,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2571,
+                            FlightId = 72,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2572,
+                            FlightId = 72,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2573,
+                            FlightId = 72,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2574,
+                            FlightId = 72,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2575,
+                            FlightId = 72,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2576,
+                            FlightId = 72,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2577,
+                            FlightId = 72,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2578,
+                            FlightId = 72,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2579,
+                            FlightId = 72,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2580,
+                            FlightId = 72,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2581,
+                            FlightId = 72,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2582,
+                            FlightId = 72,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2583,
+                            FlightId = 72,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2584,
+                            FlightId = 72,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2585,
+                            FlightId = 72,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2586,
+                            FlightId = 72,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2587,
+                            FlightId = 72,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2588,
+                            FlightId = 72,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2589,
+                            FlightId = 72,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2590,
+                            FlightId = 72,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2591,
+                            FlightId = 72,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2592,
+                            FlightId = 72,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2593,
+                            FlightId = 73,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2594,
+                            FlightId = 73,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2595,
+                            FlightId = 73,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2596,
+                            FlightId = 73,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2597,
+                            FlightId = 73,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2598,
+                            FlightId = 73,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2599,
+                            FlightId = 73,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2600,
+                            FlightId = 73,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2601,
+                            FlightId = 73,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2602,
+                            FlightId = 73,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2603,
+                            FlightId = 73,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2604,
+                            FlightId = 73,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2605,
+                            FlightId = 73,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2606,
+                            FlightId = 73,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2607,
+                            FlightId = 73,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2608,
+                            FlightId = 73,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2609,
+                            FlightId = 73,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2610,
+                            FlightId = 73,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2611,
+                            FlightId = 73,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2612,
+                            FlightId = 73,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2613,
+                            FlightId = 73,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2614,
+                            FlightId = 73,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2615,
+                            FlightId = 73,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2616,
+                            FlightId = 73,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2617,
+                            FlightId = 73,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2618,
+                            FlightId = 73,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2619,
+                            FlightId = 73,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2620,
+                            FlightId = 73,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2621,
+                            FlightId = 73,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2622,
+                            FlightId = 73,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2623,
+                            FlightId = 73,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2624,
+                            FlightId = 73,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2625,
+                            FlightId = 73,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2626,
+                            FlightId = 73,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2627,
+                            FlightId = 73,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2628,
+                            FlightId = 73,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2629,
+                            FlightId = 74,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2630,
+                            FlightId = 74,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2631,
+                            FlightId = 74,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2632,
+                            FlightId = 74,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2633,
+                            FlightId = 74,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2634,
+                            FlightId = 74,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2635,
+                            FlightId = 74,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2636,
+                            FlightId = 74,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2637,
+                            FlightId = 74,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2638,
+                            FlightId = 74,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2639,
+                            FlightId = 74,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2640,
+                            FlightId = 74,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2641,
+                            FlightId = 74,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2642,
+                            FlightId = 74,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2643,
+                            FlightId = 74,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2644,
+                            FlightId = 74,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2645,
+                            FlightId = 74,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2646,
+                            FlightId = 74,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2647,
+                            FlightId = 74,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2648,
+                            FlightId = 74,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2649,
+                            FlightId = 74,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2650,
+                            FlightId = 74,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2651,
+                            FlightId = 74,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2652,
+                            FlightId = 74,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2653,
+                            FlightId = 74,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2654,
+                            FlightId = 74,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2655,
+                            FlightId = 74,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2656,
+                            FlightId = 74,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2657,
+                            FlightId = 74,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2658,
+                            FlightId = 74,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2659,
+                            FlightId = 74,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2660,
+                            FlightId = 74,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2661,
+                            FlightId = 74,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2662,
+                            FlightId = 74,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2663,
+                            FlightId = 74,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2664,
+                            FlightId = 74,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2665,
+                            FlightId = 75,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2666,
+                            FlightId = 75,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2667,
+                            FlightId = 75,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2668,
+                            FlightId = 75,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2669,
+                            FlightId = 75,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2670,
+                            FlightId = 75,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2671,
+                            FlightId = 75,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2672,
+                            FlightId = 75,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2673,
+                            FlightId = 75,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2674,
+                            FlightId = 75,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2675,
+                            FlightId = 75,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2676,
+                            FlightId = 75,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2677,
+                            FlightId = 75,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2678,
+                            FlightId = 75,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2679,
+                            FlightId = 75,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2680,
+                            FlightId = 75,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2681,
+                            FlightId = 75,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2682,
+                            FlightId = 75,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2683,
+                            FlightId = 75,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2684,
+                            FlightId = 75,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2685,
+                            FlightId = 75,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2686,
+                            FlightId = 75,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2687,
+                            FlightId = 75,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2688,
+                            FlightId = 75,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2689,
+                            FlightId = 75,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2690,
+                            FlightId = 75,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2691,
+                            FlightId = 75,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2692,
+                            FlightId = 75,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2693,
+                            FlightId = 75,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2694,
+                            FlightId = 75,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2695,
+                            FlightId = 75,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2696,
+                            FlightId = 75,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2697,
+                            FlightId = 75,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2698,
+                            FlightId = 75,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2699,
+                            FlightId = 75,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2700,
+                            FlightId = 75,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2701,
+                            FlightId = 76,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2702,
+                            FlightId = 76,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2703,
+                            FlightId = 76,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2704,
+                            FlightId = 76,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2705,
+                            FlightId = 76,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2706,
+                            FlightId = 76,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2707,
+                            FlightId = 76,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2708,
+                            FlightId = 76,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2709,
+                            FlightId = 76,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2710,
+                            FlightId = 76,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2711,
+                            FlightId = 76,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2712,
+                            FlightId = 76,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2713,
+                            FlightId = 76,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2714,
+                            FlightId = 76,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2715,
+                            FlightId = 76,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2716,
+                            FlightId = 76,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2717,
+                            FlightId = 76,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2718,
+                            FlightId = 76,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2719,
+                            FlightId = 76,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2720,
+                            FlightId = 76,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2721,
+                            FlightId = 76,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2722,
+                            FlightId = 76,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2723,
+                            FlightId = 76,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2724,
+                            FlightId = 76,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2725,
+                            FlightId = 76,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2726,
+                            FlightId = 76,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2727,
+                            FlightId = 76,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2728,
+                            FlightId = 76,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2729,
+                            FlightId = 76,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2730,
+                            FlightId = 76,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2731,
+                            FlightId = 76,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2732,
+                            FlightId = 76,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2733,
+                            FlightId = 76,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2734,
+                            FlightId = 76,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2735,
+                            FlightId = 76,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2736,
+                            FlightId = 76,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2737,
+                            FlightId = 77,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2738,
+                            FlightId = 77,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2739,
+                            FlightId = 77,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2740,
+                            FlightId = 77,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2741,
+                            FlightId = 77,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2742,
+                            FlightId = 77,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2743,
+                            FlightId = 77,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2744,
+                            FlightId = 77,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2745,
+                            FlightId = 77,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2746,
+                            FlightId = 77,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2747,
+                            FlightId = 77,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2748,
+                            FlightId = 77,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2749,
+                            FlightId = 77,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2750,
+                            FlightId = 77,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2751,
+                            FlightId = 77,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2752,
+                            FlightId = 77,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2753,
+                            FlightId = 77,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2754,
+                            FlightId = 77,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2755,
+                            FlightId = 77,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2756,
+                            FlightId = 77,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2757,
+                            FlightId = 77,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2758,
+                            FlightId = 77,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2759,
+                            FlightId = 77,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2760,
+                            FlightId = 77,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2761,
+                            FlightId = 77,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2762,
+                            FlightId = 77,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2763,
+                            FlightId = 77,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2764,
+                            FlightId = 77,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2765,
+                            FlightId = 77,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2766,
+                            FlightId = 77,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2767,
+                            FlightId = 77,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2768,
+                            FlightId = 77,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2769,
+                            FlightId = 77,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2770,
+                            FlightId = 77,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2771,
+                            FlightId = 77,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2772,
+                            FlightId = 77,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2773,
+                            FlightId = 78,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2774,
+                            FlightId = 78,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2775,
+                            FlightId = 78,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2776,
+                            FlightId = 78,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2777,
+                            FlightId = 78,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2778,
+                            FlightId = 78,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2779,
+                            FlightId = 78,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2780,
+                            FlightId = 78,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2781,
+                            FlightId = 78,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2782,
+                            FlightId = 78,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2783,
+                            FlightId = 78,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2784,
+                            FlightId = 78,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2785,
+                            FlightId = 78,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2786,
+                            FlightId = 78,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2787,
+                            FlightId = 78,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2788,
+                            FlightId = 78,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2789,
+                            FlightId = 78,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2790,
+                            FlightId = 78,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2791,
+                            FlightId = 78,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2792,
+                            FlightId = 78,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2793,
+                            FlightId = 78,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2794,
+                            FlightId = 78,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2795,
+                            FlightId = 78,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2796,
+                            FlightId = 78,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2797,
+                            FlightId = 78,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2798,
+                            FlightId = 78,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2799,
+                            FlightId = 78,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2800,
+                            FlightId = 78,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2801,
+                            FlightId = 78,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2802,
+                            FlightId = 78,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2803,
+                            FlightId = 78,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2804,
+                            FlightId = 78,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2805,
+                            FlightId = 78,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2806,
+                            FlightId = 78,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2807,
+                            FlightId = 78,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2808,
+                            FlightId = 78,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2809,
+                            FlightId = 79,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2810,
+                            FlightId = 79,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2811,
+                            FlightId = 79,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2812,
+                            FlightId = 79,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2813,
+                            FlightId = 79,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2814,
+                            FlightId = 79,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2815,
+                            FlightId = 79,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2816,
+                            FlightId = 79,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2817,
+                            FlightId = 79,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2818,
+                            FlightId = 79,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2819,
+                            FlightId = 79,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2820,
+                            FlightId = 79,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2821,
+                            FlightId = 79,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2822,
+                            FlightId = 79,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2823,
+                            FlightId = 79,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2824,
+                            FlightId = 79,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2825,
+                            FlightId = 79,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2826,
+                            FlightId = 79,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2827,
+                            FlightId = 79,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2828,
+                            FlightId = 79,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2829,
+                            FlightId = 79,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2830,
+                            FlightId = 79,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2831,
+                            FlightId = 79,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2832,
+                            FlightId = 79,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2833,
+                            FlightId = 79,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2834,
+                            FlightId = 79,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2835,
+                            FlightId = 79,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2836,
+                            FlightId = 79,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2837,
+                            FlightId = 79,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2838,
+                            FlightId = 79,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2839,
+                            FlightId = 79,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2840,
+                            FlightId = 79,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2841,
+                            FlightId = 79,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2842,
+                            FlightId = 79,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2843,
+                            FlightId = 79,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2844,
+                            FlightId = 79,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2845,
+                            FlightId = 80,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2846,
+                            FlightId = 80,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2847,
+                            FlightId = 80,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2848,
+                            FlightId = 80,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2849,
+                            FlightId = 80,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2850,
+                            FlightId = 80,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2851,
+                            FlightId = 80,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2852,
+                            FlightId = 80,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2853,
+                            FlightId = 80,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2854,
+                            FlightId = 80,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2855,
+                            FlightId = 80,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2856,
+                            FlightId = 80,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2857,
+                            FlightId = 80,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2858,
+                            FlightId = 80,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2859,
+                            FlightId = 80,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2860,
+                            FlightId = 80,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2861,
+                            FlightId = 80,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2862,
+                            FlightId = 80,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2863,
+                            FlightId = 80,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2864,
+                            FlightId = 80,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2865,
+                            FlightId = 80,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2866,
+                            FlightId = 80,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2867,
+                            FlightId = 80,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2868,
+                            FlightId = 80,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2869,
+                            FlightId = 80,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2870,
+                            FlightId = 80,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2871,
+                            FlightId = 80,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2872,
+                            FlightId = 80,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2873,
+                            FlightId = 80,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2874,
+                            FlightId = 80,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2875,
+                            FlightId = 80,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2876,
+                            FlightId = 80,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2877,
+                            FlightId = 80,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2878,
+                            FlightId = 80,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2879,
+                            FlightId = 80,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2880,
+                            FlightId = 80,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2881,
+                            FlightId = 81,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2882,
+                            FlightId = 81,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2883,
+                            FlightId = 81,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2884,
+                            FlightId = 81,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2885,
+                            FlightId = 81,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2886,
+                            FlightId = 81,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2887,
+                            FlightId = 81,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2888,
+                            FlightId = 81,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2889,
+                            FlightId = 81,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2890,
+                            FlightId = 81,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2891,
+                            FlightId = 81,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2892,
+                            FlightId = 81,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2893,
+                            FlightId = 81,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2894,
+                            FlightId = 81,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2895,
+                            FlightId = 81,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2896,
+                            FlightId = 81,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2897,
+                            FlightId = 81,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2898,
+                            FlightId = 81,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2899,
+                            FlightId = 81,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2900,
+                            FlightId = 81,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2901,
+                            FlightId = 81,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2902,
+                            FlightId = 81,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2903,
+                            FlightId = 81,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2904,
+                            FlightId = 81,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2905,
+                            FlightId = 81,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2906,
+                            FlightId = 81,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2907,
+                            FlightId = 81,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2908,
+                            FlightId = 81,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2909,
+                            FlightId = 81,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2910,
+                            FlightId = 81,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2911,
+                            FlightId = 81,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2912,
+                            FlightId = 81,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2913,
+                            FlightId = 81,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2914,
+                            FlightId = 81,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2915,
+                            FlightId = 81,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2916,
+                            FlightId = 81,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2917,
+                            FlightId = 82,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2918,
+                            FlightId = 82,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2919,
+                            FlightId = 82,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2920,
+                            FlightId = 82,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2921,
+                            FlightId = 82,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2922,
+                            FlightId = 82,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2923,
+                            FlightId = 82,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2924,
+                            FlightId = 82,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2925,
+                            FlightId = 82,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2926,
+                            FlightId = 82,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2927,
+                            FlightId = 82,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2928,
+                            FlightId = 82,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2929,
+                            FlightId = 82,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2930,
+                            FlightId = 82,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2931,
+                            FlightId = 82,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2932,
+                            FlightId = 82,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2933,
+                            FlightId = 82,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2934,
+                            FlightId = 82,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2935,
+                            FlightId = 82,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2936,
+                            FlightId = 82,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2937,
+                            FlightId = 82,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2938,
+                            FlightId = 82,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2939,
+                            FlightId = 82,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2940,
+                            FlightId = 82,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2941,
+                            FlightId = 82,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2942,
+                            FlightId = 82,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2943,
+                            FlightId = 82,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2944,
+                            FlightId = 82,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2945,
+                            FlightId = 82,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2946,
+                            FlightId = 82,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2947,
+                            FlightId = 82,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2948,
+                            FlightId = 82,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2949,
+                            FlightId = 82,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2950,
+                            FlightId = 82,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2951,
+                            FlightId = 82,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2952,
+                            FlightId = 82,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2953,
+                            FlightId = 83,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2954,
+                            FlightId = 83,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2955,
+                            FlightId = 83,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2956,
+                            FlightId = 83,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2957,
+                            FlightId = 83,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2958,
+                            FlightId = 83,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2959,
+                            FlightId = 83,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2960,
+                            FlightId = 83,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2961,
+                            FlightId = 83,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2962,
+                            FlightId = 83,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2963,
+                            FlightId = 83,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2964,
+                            FlightId = 83,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2965,
+                            FlightId = 83,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2966,
+                            FlightId = 83,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2967,
+                            FlightId = 83,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2968,
+                            FlightId = 83,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2969,
+                            FlightId = 83,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2970,
+                            FlightId = 83,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2971,
+                            FlightId = 83,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2972,
+                            FlightId = 83,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2973,
+                            FlightId = 83,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2974,
+                            FlightId = 83,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2975,
+                            FlightId = 83,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2976,
+                            FlightId = 83,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2977,
+                            FlightId = 83,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2978,
+                            FlightId = 83,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2979,
+                            FlightId = 83,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2980,
+                            FlightId = 83,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2981,
+                            FlightId = 83,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2982,
+                            FlightId = 83,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2983,
+                            FlightId = 83,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2984,
+                            FlightId = 83,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2985,
+                            FlightId = 83,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2986,
+                            FlightId = 83,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2987,
+                            FlightId = 83,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2988,
+                            FlightId = 83,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2989,
+                            FlightId = 84,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2990,
+                            FlightId = 84,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2991,
+                            FlightId = 84,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2992,
+                            FlightId = 84,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2993,
+                            FlightId = 84,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2994,
+                            FlightId = 84,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2995,
+                            FlightId = 84,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2996,
+                            FlightId = 84,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2997,
+                            FlightId = 84,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2998,
+                            FlightId = 84,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 2999,
+                            FlightId = 84,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3000,
+                            FlightId = 84,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3001,
+                            FlightId = 84,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3002,
+                            FlightId = 84,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3003,
+                            FlightId = 84,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3004,
+                            FlightId = 84,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3005,
+                            FlightId = 84,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3006,
+                            FlightId = 84,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3007,
+                            FlightId = 84,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3008,
+                            FlightId = 84,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3009,
+                            FlightId = 84,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3010,
+                            FlightId = 84,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3011,
+                            FlightId = 84,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3012,
+                            FlightId = 84,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3013,
+                            FlightId = 84,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3014,
+                            FlightId = 84,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3015,
+                            FlightId = 84,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3016,
+                            FlightId = 84,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3017,
+                            FlightId = 84,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3018,
+                            FlightId = 84,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3019,
+                            FlightId = 84,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3020,
+                            FlightId = 84,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3021,
+                            FlightId = 84,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3022,
+                            FlightId = 84,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3023,
+                            FlightId = 84,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3024,
+                            FlightId = 84,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3025,
+                            FlightId = 85,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3026,
+                            FlightId = 85,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3027,
+                            FlightId = 85,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3028,
+                            FlightId = 85,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3029,
+                            FlightId = 85,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3030,
+                            FlightId = 85,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3031,
+                            FlightId = 85,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3032,
+                            FlightId = 85,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3033,
+                            FlightId = 85,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3034,
+                            FlightId = 85,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3035,
+                            FlightId = 85,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3036,
+                            FlightId = 85,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3037,
+                            FlightId = 85,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3038,
+                            FlightId = 85,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3039,
+                            FlightId = 85,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3040,
+                            FlightId = 85,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3041,
+                            FlightId = 85,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3042,
+                            FlightId = 85,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3043,
+                            FlightId = 85,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3044,
+                            FlightId = 85,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3045,
+                            FlightId = 85,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3046,
+                            FlightId = 85,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3047,
+                            FlightId = 85,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3048,
+                            FlightId = 85,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3049,
+                            FlightId = 85,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3050,
+                            FlightId = 85,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3051,
+                            FlightId = 85,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3052,
+                            FlightId = 85,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3053,
+                            FlightId = 85,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3054,
+                            FlightId = 85,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3055,
+                            FlightId = 85,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3056,
+                            FlightId = 85,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3057,
+                            FlightId = 85,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3058,
+                            FlightId = 85,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3059,
+                            FlightId = 85,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3060,
+                            FlightId = 85,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3061,
+                            FlightId = 86,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3062,
+                            FlightId = 86,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3063,
+                            FlightId = 86,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3064,
+                            FlightId = 86,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3065,
+                            FlightId = 86,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3066,
+                            FlightId = 86,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3067,
+                            FlightId = 86,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3068,
+                            FlightId = 86,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3069,
+                            FlightId = 86,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3070,
+                            FlightId = 86,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3071,
+                            FlightId = 86,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3072,
+                            FlightId = 86,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3073,
+                            FlightId = 86,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3074,
+                            FlightId = 86,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3075,
+                            FlightId = 86,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3076,
+                            FlightId = 86,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3077,
+                            FlightId = 86,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3078,
+                            FlightId = 86,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3079,
+                            FlightId = 86,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3080,
+                            FlightId = 86,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3081,
+                            FlightId = 86,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3082,
+                            FlightId = 86,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3083,
+                            FlightId = 86,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3084,
+                            FlightId = 86,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3085,
+                            FlightId = 86,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3086,
+                            FlightId = 86,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3087,
+                            FlightId = 86,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3088,
+                            FlightId = 86,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3089,
+                            FlightId = 86,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3090,
+                            FlightId = 86,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3091,
+                            FlightId = 86,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3092,
+                            FlightId = 86,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3093,
+                            FlightId = 86,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3094,
+                            FlightId = 86,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3095,
+                            FlightId = 86,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3096,
+                            FlightId = 86,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3097,
+                            FlightId = 87,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3098,
+                            FlightId = 87,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3099,
+                            FlightId = 87,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3100,
+                            FlightId = 87,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3101,
+                            FlightId = 87,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3102,
+                            FlightId = 87,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3103,
+                            FlightId = 87,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3104,
+                            FlightId = 87,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3105,
+                            FlightId = 87,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3106,
+                            FlightId = 87,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3107,
+                            FlightId = 87,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3108,
+                            FlightId = 87,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3109,
+                            FlightId = 87,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3110,
+                            FlightId = 87,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3111,
+                            FlightId = 87,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3112,
+                            FlightId = 87,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3113,
+                            FlightId = 87,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3114,
+                            FlightId = 87,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3115,
+                            FlightId = 87,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3116,
+                            FlightId = 87,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3117,
+                            FlightId = 87,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3118,
+                            FlightId = 87,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3119,
+                            FlightId = 87,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3120,
+                            FlightId = 87,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3121,
+                            FlightId = 87,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3122,
+                            FlightId = 87,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3123,
+                            FlightId = 87,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3124,
+                            FlightId = 87,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3125,
+                            FlightId = 87,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3126,
+                            FlightId = 87,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3127,
+                            FlightId = 87,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3128,
+                            FlightId = 87,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3129,
+                            FlightId = 87,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3130,
+                            FlightId = 87,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3131,
+                            FlightId = 87,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3132,
+                            FlightId = 87,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3133,
+                            FlightId = 88,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3134,
+                            FlightId = 88,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3135,
+                            FlightId = 88,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3136,
+                            FlightId = 88,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3137,
+                            FlightId = 88,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3138,
+                            FlightId = 88,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3139,
+                            FlightId = 88,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3140,
+                            FlightId = 88,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3141,
+                            FlightId = 88,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3142,
+                            FlightId = 88,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3143,
+                            FlightId = 88,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3144,
+                            FlightId = 88,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3145,
+                            FlightId = 88,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3146,
+                            FlightId = 88,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3147,
+                            FlightId = 88,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3148,
+                            FlightId = 88,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3149,
+                            FlightId = 88,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3150,
+                            FlightId = 88,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3151,
+                            FlightId = 88,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3152,
+                            FlightId = 88,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3153,
+                            FlightId = 88,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3154,
+                            FlightId = 88,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3155,
+                            FlightId = 88,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3156,
+                            FlightId = 88,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3157,
+                            FlightId = 88,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3158,
+                            FlightId = 88,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3159,
+                            FlightId = 88,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3160,
+                            FlightId = 88,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3161,
+                            FlightId = 88,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3162,
+                            FlightId = 88,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3163,
+                            FlightId = 88,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3164,
+                            FlightId = 88,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3165,
+                            FlightId = 88,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3166,
+                            FlightId = 88,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3167,
+                            FlightId = 88,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3168,
+                            FlightId = 88,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3169,
+                            FlightId = 89,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3170,
+                            FlightId = 89,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3171,
+                            FlightId = 89,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3172,
+                            FlightId = 89,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3173,
+                            FlightId = 89,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3174,
+                            FlightId = 89,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3175,
+                            FlightId = 89,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3176,
+                            FlightId = 89,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3177,
+                            FlightId = 89,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3178,
+                            FlightId = 89,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3179,
+                            FlightId = 89,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3180,
+                            FlightId = 89,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3181,
+                            FlightId = 89,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3182,
+                            FlightId = 89,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3183,
+                            FlightId = 89,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3184,
+                            FlightId = 89,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3185,
+                            FlightId = 89,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3186,
+                            FlightId = 89,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3187,
+                            FlightId = 89,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3188,
+                            FlightId = 89,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3189,
+                            FlightId = 89,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3190,
+                            FlightId = 89,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3191,
+                            FlightId = 89,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3192,
+                            FlightId = 89,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3193,
+                            FlightId = 89,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3194,
+                            FlightId = 89,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3195,
+                            FlightId = 89,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3196,
+                            FlightId = 89,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3197,
+                            FlightId = 89,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3198,
+                            FlightId = 89,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3199,
+                            FlightId = 89,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3200,
+                            FlightId = 89,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3201,
+                            FlightId = 89,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3202,
+                            FlightId = 89,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3203,
+                            FlightId = 89,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3204,
+                            FlightId = 89,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3205,
+                            FlightId = 90,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3206,
+                            FlightId = 90,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3207,
+                            FlightId = 90,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3208,
+                            FlightId = 90,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3209,
+                            FlightId = 90,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3210,
+                            FlightId = 90,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3211,
+                            FlightId = 90,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3212,
+                            FlightId = 90,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3213,
+                            FlightId = 90,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3214,
+                            FlightId = 90,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3215,
+                            FlightId = 90,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3216,
+                            FlightId = 90,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3217,
+                            FlightId = 90,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3218,
+                            FlightId = 90,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3219,
+                            FlightId = 90,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3220,
+                            FlightId = 90,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3221,
+                            FlightId = 90,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3222,
+                            FlightId = 90,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3223,
+                            FlightId = 90,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3224,
+                            FlightId = 90,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3225,
+                            FlightId = 90,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3226,
+                            FlightId = 90,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3227,
+                            FlightId = 90,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3228,
+                            FlightId = 90,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3229,
+                            FlightId = 90,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3230,
+                            FlightId = 90,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3231,
+                            FlightId = 90,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3232,
+                            FlightId = 90,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3233,
+                            FlightId = 90,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3234,
+                            FlightId = 90,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3235,
+                            FlightId = 90,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3236,
+                            FlightId = 90,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3237,
+                            FlightId = 90,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3238,
+                            FlightId = 90,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3239,
+                            FlightId = 90,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3240,
+                            FlightId = 90,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3241,
+                            FlightId = 91,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3242,
+                            FlightId = 91,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3243,
+                            FlightId = 91,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3244,
+                            FlightId = 91,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3245,
+                            FlightId = 91,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3246,
+                            FlightId = 91,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3247,
+                            FlightId = 91,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3248,
+                            FlightId = 91,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3249,
+                            FlightId = 91,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3250,
+                            FlightId = 91,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3251,
+                            FlightId = 91,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3252,
+                            FlightId = 91,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3253,
+                            FlightId = 91,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3254,
+                            FlightId = 91,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3255,
+                            FlightId = 91,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3256,
+                            FlightId = 91,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3257,
+                            FlightId = 91,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3258,
+                            FlightId = 91,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3259,
+                            FlightId = 91,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3260,
+                            FlightId = 91,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3261,
+                            FlightId = 91,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3262,
+                            FlightId = 91,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3263,
+                            FlightId = 91,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3264,
+                            FlightId = 91,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3265,
+                            FlightId = 91,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3266,
+                            FlightId = 91,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3267,
+                            FlightId = 91,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3268,
+                            FlightId = 91,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3269,
+                            FlightId = 91,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3270,
+                            FlightId = 91,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3271,
+                            FlightId = 91,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3272,
+                            FlightId = 91,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3273,
+                            FlightId = 91,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3274,
+                            FlightId = 91,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3275,
+                            FlightId = 91,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3276,
+                            FlightId = 91,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3277,
+                            FlightId = 92,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3278,
+                            FlightId = 92,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3279,
+                            FlightId = 92,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3280,
+                            FlightId = 92,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3281,
+                            FlightId = 92,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3282,
+                            FlightId = 92,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3283,
+                            FlightId = 92,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3284,
+                            FlightId = 92,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3285,
+                            FlightId = 92,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3286,
+                            FlightId = 92,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3287,
+                            FlightId = 92,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3288,
+                            FlightId = 92,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3289,
+                            FlightId = 92,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3290,
+                            FlightId = 92,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3291,
+                            FlightId = 92,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3292,
+                            FlightId = 92,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3293,
+                            FlightId = 92,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3294,
+                            FlightId = 92,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3295,
+                            FlightId = 92,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3296,
+                            FlightId = 92,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3297,
+                            FlightId = 92,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3298,
+                            FlightId = 92,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3299,
+                            FlightId = 92,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3300,
+                            FlightId = 92,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3301,
+                            FlightId = 92,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3302,
+                            FlightId = 92,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3303,
+                            FlightId = 92,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3304,
+                            FlightId = 92,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3305,
+                            FlightId = 92,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3306,
+                            FlightId = 92,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3307,
+                            FlightId = 92,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3308,
+                            FlightId = 92,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3309,
+                            FlightId = 92,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3310,
+                            FlightId = 92,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3311,
+                            FlightId = 92,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3312,
+                            FlightId = 92,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3313,
+                            FlightId = 93,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3314,
+                            FlightId = 93,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3315,
+                            FlightId = 93,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3316,
+                            FlightId = 93,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3317,
+                            FlightId = 93,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3318,
+                            FlightId = 93,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3319,
+                            FlightId = 93,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3320,
+                            FlightId = 93,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3321,
+                            FlightId = 93,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3322,
+                            FlightId = 93,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3323,
+                            FlightId = 93,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3324,
+                            FlightId = 93,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3325,
+                            FlightId = 93,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3326,
+                            FlightId = 93,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3327,
+                            FlightId = 93,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3328,
+                            FlightId = 93,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3329,
+                            FlightId = 93,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3330,
+                            FlightId = 93,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3331,
+                            FlightId = 93,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3332,
+                            FlightId = 93,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3333,
+                            FlightId = 93,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3334,
+                            FlightId = 93,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3335,
+                            FlightId = 93,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3336,
+                            FlightId = 93,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3337,
+                            FlightId = 93,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3338,
+                            FlightId = 93,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3339,
+                            FlightId = 93,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3340,
+                            FlightId = 93,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3341,
+                            FlightId = 93,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3342,
+                            FlightId = 93,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3343,
+                            FlightId = 93,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3344,
+                            FlightId = 93,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3345,
+                            FlightId = 93,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3346,
+                            FlightId = 93,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3347,
+                            FlightId = 93,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3348,
+                            FlightId = 93,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3349,
+                            FlightId = 94,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3350,
+                            FlightId = 94,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3351,
+                            FlightId = 94,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3352,
+                            FlightId = 94,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3353,
+                            FlightId = 94,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3354,
+                            FlightId = 94,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3355,
+                            FlightId = 94,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3356,
+                            FlightId = 94,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3357,
+                            FlightId = 94,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3358,
+                            FlightId = 94,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3359,
+                            FlightId = 94,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3360,
+                            FlightId = 94,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3361,
+                            FlightId = 94,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3362,
+                            FlightId = 94,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3363,
+                            FlightId = 94,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3364,
+                            FlightId = 94,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3365,
+                            FlightId = 94,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3366,
+                            FlightId = 94,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3367,
+                            FlightId = 94,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3368,
+                            FlightId = 94,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3369,
+                            FlightId = 94,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3370,
+                            FlightId = 94,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3371,
+                            FlightId = 94,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3372,
+                            FlightId = 94,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3373,
+                            FlightId = 94,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3374,
+                            FlightId = 94,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3375,
+                            FlightId = 94,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3376,
+                            FlightId = 94,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3377,
+                            FlightId = 94,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3378,
+                            FlightId = 94,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3379,
+                            FlightId = 94,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3380,
+                            FlightId = 94,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3381,
+                            FlightId = 94,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3382,
+                            FlightId = 94,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3383,
+                            FlightId = 94,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3384,
+                            FlightId = 94,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3385,
+                            FlightId = 95,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3386,
+                            FlightId = 95,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3387,
+                            FlightId = 95,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3388,
+                            FlightId = 95,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3389,
+                            FlightId = 95,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3390,
+                            FlightId = 95,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3391,
+                            FlightId = 95,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3392,
+                            FlightId = 95,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3393,
+                            FlightId = 95,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3394,
+                            FlightId = 95,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3395,
+                            FlightId = 95,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3396,
+                            FlightId = 95,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3397,
+                            FlightId = 95,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3398,
+                            FlightId = 95,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3399,
+                            FlightId = 95,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3400,
+                            FlightId = 95,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3401,
+                            FlightId = 95,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3402,
+                            FlightId = 95,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3403,
+                            FlightId = 95,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3404,
+                            FlightId = 95,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3405,
+                            FlightId = 95,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3406,
+                            FlightId = 95,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3407,
+                            FlightId = 95,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3408,
+                            FlightId = 95,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3409,
+                            FlightId = 95,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3410,
+                            FlightId = 95,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3411,
+                            FlightId = 95,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3412,
+                            FlightId = 95,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3413,
+                            FlightId = 95,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3414,
+                            FlightId = 95,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3415,
+                            FlightId = 95,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3416,
+                            FlightId = 95,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3417,
+                            FlightId = 95,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3418,
+                            FlightId = 95,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3419,
+                            FlightId = 95,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3420,
+                            FlightId = 95,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3421,
+                            FlightId = 96,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3422,
+                            FlightId = 96,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3423,
+                            FlightId = 96,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3424,
+                            FlightId = 96,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3425,
+                            FlightId = 96,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3426,
+                            FlightId = 96,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3427,
+                            FlightId = 96,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3428,
+                            FlightId = 96,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3429,
+                            FlightId = 96,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3430,
+                            FlightId = 96,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3431,
+                            FlightId = 96,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3432,
+                            FlightId = 96,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3433,
+                            FlightId = 96,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3434,
+                            FlightId = 96,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3435,
+                            FlightId = 96,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3436,
+                            FlightId = 96,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3437,
+                            FlightId = 96,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3438,
+                            FlightId = 96,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3439,
+                            FlightId = 96,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3440,
+                            FlightId = 96,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3441,
+                            FlightId = 96,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3442,
+                            FlightId = 96,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3443,
+                            FlightId = 96,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3444,
+                            FlightId = 96,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3445,
+                            FlightId = 96,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3446,
+                            FlightId = 96,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3447,
+                            FlightId = 96,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3448,
+                            FlightId = 96,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3449,
+                            FlightId = 96,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3450,
+                            FlightId = 96,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3451,
+                            FlightId = 96,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3452,
+                            FlightId = 96,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3453,
+                            FlightId = 96,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3454,
+                            FlightId = 96,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3455,
+                            FlightId = 96,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3456,
+                            FlightId = 96,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3457,
+                            FlightId = 97,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3458,
+                            FlightId = 97,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3459,
+                            FlightId = 97,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3460,
+                            FlightId = 97,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3461,
+                            FlightId = 97,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3462,
+                            FlightId = 97,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3463,
+                            FlightId = 97,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3464,
+                            FlightId = 97,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3465,
+                            FlightId = 97,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3466,
+                            FlightId = 97,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3467,
+                            FlightId = 97,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3468,
+                            FlightId = 97,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3469,
+                            FlightId = 97,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3470,
+                            FlightId = 97,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3471,
+                            FlightId = 97,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3472,
+                            FlightId = 97,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3473,
+                            FlightId = 97,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3474,
+                            FlightId = 97,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3475,
+                            FlightId = 97,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3476,
+                            FlightId = 97,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3477,
+                            FlightId = 97,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3478,
+                            FlightId = 97,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3479,
+                            FlightId = 97,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3480,
+                            FlightId = 97,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3481,
+                            FlightId = 97,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3482,
+                            FlightId = 97,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3483,
+                            FlightId = 97,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3484,
+                            FlightId = 97,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3485,
+                            FlightId = 97,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3486,
+                            FlightId = 97,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3487,
+                            FlightId = 97,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3488,
+                            FlightId = 97,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3489,
+                            FlightId = 97,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3490,
+                            FlightId = 97,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3491,
+                            FlightId = 97,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3492,
+                            FlightId = 97,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3493,
+                            FlightId = 98,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3494,
+                            FlightId = 98,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3495,
+                            FlightId = 98,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3496,
+                            FlightId = 98,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3497,
+                            FlightId = 98,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3498,
+                            FlightId = 98,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3499,
+                            FlightId = 98,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3500,
+                            FlightId = 98,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3501,
+                            FlightId = 98,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3502,
+                            FlightId = 98,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3503,
+                            FlightId = 98,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3504,
+                            FlightId = 98,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3505,
+                            FlightId = 98,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3506,
+                            FlightId = 98,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3507,
+                            FlightId = 98,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3508,
+                            FlightId = 98,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3509,
+                            FlightId = 98,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3510,
+                            FlightId = 98,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3511,
+                            FlightId = 98,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3512,
+                            FlightId = 98,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3513,
+                            FlightId = 98,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3514,
+                            FlightId = 98,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3515,
+                            FlightId = 98,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3516,
+                            FlightId = 98,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3517,
+                            FlightId = 98,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3518,
+                            FlightId = 98,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3519,
+                            FlightId = 98,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3520,
+                            FlightId = 98,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3521,
+                            FlightId = 98,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3522,
+                            FlightId = 98,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3523,
+                            FlightId = 98,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3524,
+                            FlightId = 98,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3525,
+                            FlightId = 98,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3526,
+                            FlightId = 98,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3527,
+                            FlightId = 98,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3528,
+                            FlightId = 98,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3529,
+                            FlightId = 99,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3530,
+                            FlightId = 99,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3531,
+                            FlightId = 99,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3532,
+                            FlightId = 99,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3533,
+                            FlightId = 99,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3534,
+                            FlightId = 99,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3535,
+                            FlightId = 99,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3536,
+                            FlightId = 99,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3537,
+                            FlightId = 99,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3538,
+                            FlightId = 99,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3539,
+                            FlightId = 99,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3540,
+                            FlightId = 99,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3541,
+                            FlightId = 99,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3542,
+                            FlightId = 99,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3543,
+                            FlightId = 99,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3544,
+                            FlightId = 99,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3545,
+                            FlightId = 99,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3546,
+                            FlightId = 99,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3547,
+                            FlightId = 99,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3548,
+                            FlightId = 99,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3549,
+                            FlightId = 99,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3550,
+                            FlightId = 99,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3551,
+                            FlightId = 99,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3552,
+                            FlightId = 99,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3553,
+                            FlightId = 99,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3554,
+                            FlightId = 99,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3555,
+                            FlightId = 99,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3556,
+                            FlightId = 99,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3557,
+                            FlightId = 99,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3558,
+                            FlightId = 99,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3559,
+                            FlightId = 99,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3560,
+                            FlightId = 99,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3561,
+                            FlightId = 99,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3562,
+                            FlightId = 99,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3563,
+                            FlightId = 99,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3564,
+                            FlightId = 99,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3565,
+                            FlightId = 100,
+                            SeatColumn = 1,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3566,
+                            FlightId = 100,
+                            SeatColumn = 2,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3567,
+                            FlightId = 100,
+                            SeatColumn = 3,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3568,
+                            FlightId = 100,
+                            SeatColumn = 4,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3569,
+                            FlightId = 100,
+                            SeatColumn = 5,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3570,
+                            FlightId = 100,
+                            SeatColumn = 6,
+                            SeatRow = "A",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3571,
+                            FlightId = 100,
+                            SeatColumn = 1,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3572,
+                            FlightId = 100,
+                            SeatColumn = 2,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3573,
+                            FlightId = 100,
+                            SeatColumn = 3,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3574,
+                            FlightId = 100,
+                            SeatColumn = 4,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3575,
+                            FlightId = 100,
+                            SeatColumn = 5,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3576,
+                            FlightId = 100,
+                            SeatColumn = 6,
+                            SeatRow = "B",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3577,
+                            FlightId = 100,
+                            SeatColumn = 1,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3578,
+                            FlightId = 100,
+                            SeatColumn = 2,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3579,
+                            FlightId = 100,
+                            SeatColumn = 3,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3580,
+                            FlightId = 100,
+                            SeatColumn = 4,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3581,
+                            FlightId = 100,
+                            SeatColumn = 5,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3582,
+                            FlightId = 100,
+                            SeatColumn = 6,
+                            SeatRow = "C",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3583,
+                            FlightId = 100,
+                            SeatColumn = 1,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3584,
+                            FlightId = 100,
+                            SeatColumn = 2,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3585,
+                            FlightId = 100,
+                            SeatColumn = 3,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3586,
+                            FlightId = 100,
+                            SeatColumn = 4,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3587,
+                            FlightId = 100,
+                            SeatColumn = 5,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3588,
+                            FlightId = 100,
+                            SeatColumn = 6,
+                            SeatRow = "D",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3589,
+                            FlightId = 100,
+                            SeatColumn = 1,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3590,
+                            FlightId = 100,
+                            SeatColumn = 2,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3591,
+                            FlightId = 100,
+                            SeatColumn = 3,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3592,
+                            FlightId = 100,
+                            SeatColumn = 4,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3593,
+                            FlightId = 100,
+                            SeatColumn = 5,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3594,
+                            FlightId = 100,
+                            SeatColumn = 6,
+                            SeatRow = "E",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3595,
+                            FlightId = 100,
+                            SeatColumn = 1,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3596,
+                            FlightId = 100,
+                            SeatColumn = 2,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3597,
+                            FlightId = 100,
+                            SeatColumn = 3,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3598,
+                            FlightId = 100,
+                            SeatColumn = 4,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3599,
+                            FlightId = 100,
+                            SeatColumn = 5,
+                            SeatRow = "F",
+                            Status = 1
+                        },
+                        new
+                        {
+                            SeatId = 3600,
+                            FlightId = 100,
+                            SeatColumn = 6,
+                            SeatRow = "F",
+                            Status = 1
                         });
                 });
 
@@ -15317,8 +30280,9 @@ namespace Csharp_DatVeMayBay.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("BookingId")
-                        .HasColumnType("int");
+                    b.Property<string>("BookingId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("FlightId")
                         .HasColumnType("int");
@@ -15329,10 +30293,9 @@ namespace Csharp_DatVeMayBay.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<string>("TicketClass")
-                        .IsRequired()
+                    b.Property<int>("TicketClass")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("int");
 
                     b.Property<decimal>("TicketPrice")
                         .HasColumnType("decimal(18,2)");
@@ -15407,6 +30370,16 @@ namespace Csharp_DatVeMayBay.Migrations
                             LastName = "Hào",
                             PhoneNumber = "0777777777",
                             UserEmail = "ngvhao@gmail.com"
+                        },
+                        new
+                        {
+                            UserId = 3,
+                            Address = "Huế, Việt Nam",
+                            Dob = new DateTime(2003, 12, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            FirstName = "User",
+                            LastName = "",
+                            PhoneNumber = "0777777778",
+                            UserEmail = "user@gmail.com"
                         });
                 });
 
@@ -15429,6 +30402,10 @@ namespace Csharp_DatVeMayBay.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Csharp_DatVeMayBay.Models.Domain.Flight", "FlightReturn")
+                        .WithMany()
+                        .HasForeignKey("FlightReturnId");
+
                     b.HasOne("Csharp_DatVeMayBay.Models.Domain.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
@@ -15436,6 +30413,8 @@ namespace Csharp_DatVeMayBay.Migrations
                         .IsRequired();
 
                     b.Navigation("Flight");
+
+                    b.Navigation("FlightReturn");
 
                     b.Navigation("User");
                 });
@@ -15492,7 +30471,7 @@ namespace Csharp_DatVeMayBay.Migrations
             modelBuilder.Entity("Csharp_DatVeMayBay.Models.Domain.Ticket", b =>
                 {
                     b.HasOne("Csharp_DatVeMayBay.Models.Domain.Booking", "Booking")
-                        .WithMany()
+                        .WithMany("Tickets")
                         .HasForeignKey("BookingId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -15514,6 +30493,11 @@ namespace Csharp_DatVeMayBay.Migrations
                     b.Navigation("Flight");
 
                     b.Navigation("Seat");
+                });
+
+            modelBuilder.Entity("Csharp_DatVeMayBay.Models.Domain.Booking", b =>
+                {
+                    b.Navigation("Tickets");
                 });
 
             modelBuilder.Entity("Csharp_DatVeMayBay.Models.Domain.Flight", b =>

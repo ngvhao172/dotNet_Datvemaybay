@@ -31,8 +31,8 @@
 <!-- form -->
 <div class="row m-0">
     <div class="container justify-content-center d-flex" style="margin-top: -15vh;">
-        <form class="g-4 bg-white z-1 p-5 position-relative rounded-3 m-auto mb-3 shadow-lg needs-validation"
-            style="width: 80vw;" method="post" action="select-flight">
+        <form class="g-4 bg-white z-1 p-5 position-relative rounded-3 m-auto mb-3 shadow-lg"
+            style="width: 80vw;" method="post" action="select-flight" id="formSearchFlight">
             <!--- abc -->
             <!-- heading -->
             <div class="row">
@@ -44,8 +44,8 @@
                 <div class="col-md-6">
                     <select id="type" name="type" class="form-select form-select-lg mb-3"
                         aria-label=".form-select-lg example" style="display: inline-block;">
-                        <option value="Một chiều" selected>Một chiều</option>
-                        <option value="Khứ hồi">Khứ Hồi</option>
+                        <option value="Một chiều">Một chiều</option>
+                        <option value="Khứ hồi">Khứ hồi</option>
                     </select>
                 </div>
 
@@ -107,7 +107,7 @@
                     <div class="input-group" id="chuyenVe">
                         <span id="chuyenVe" class="input-group-text fs-5 p-2 fw-semibold bg-white">Chuyến
                             Về</span>
-                        <input type="date" class="form-control d-block m-auto p-2 fs-5" min="" max="" name="toDate"
+                        <input type="date" class="form-control d-block m-auto p-2 fs-5" min="" max="" name="return_datetime"
                             value="" id="toDate">
                         <div class="invalid-feedback">
                             Vui lòng chọn ngày về.
@@ -119,8 +119,8 @@
             <!-- 4 -->
             <div class="row mt-3">
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary float-end rounded-5 p-3 fs-5 fw-semibold" type="button"
-                        style="background-color:  #8DD3BB; border: none;">Search Flight</button>
+                    <button onclick="searchEvent()" type="submit" class="btn btn-primary float-end rounded-5 p-3 fs-5 fw-semibold" id="search"
+                        style="background-color:#8DD3BB; border: none;">Search Flight</button>
                 </div>
             </div>
         </form>
@@ -188,23 +188,46 @@
 
 </div>
 <script>
+    sessionStorage.clear();
     $(document).ready(() => {
         var currentDate = new Date().toISOString().split('T')[0];
+        var currentDateplus1 = new Date(currentDate);
+        currentDateplus1.setDate(currentDateplus1.getDate() + 1);
+        var minReturnDate = currentDateplus1.toISOString().split('T')[0];
         $("#departure_datetime").attr('min', currentDate);
+        $("#toDate").attr('min', minReturnDate);
+
         $('#chuyenVe').hide();
+   
         $('#type').on('change', function() {
             var val = $(this).val();
+            console.log(val)
             if (val == "Khứ hồi") {
                 $('#khoiHanh').text("Chuyến Đi")
-                // select the input element by its ID
                 const inputElement = document.getElementById('toDate');
                 $('#chuyenVe').show();
+                $("#toDate").prop("required", true);
             } else {
                 $('#khoiHanh').text("Khởi Hành")
                 const inputElement = document.getElementById('toDate');
                 $('#chuyenVe').hide();
+                $("#toDate").removeAttr("required");
             }
         });
+
+
+        function searchEvent(e){
+            e.preventDefault();
+            var departureDate = $("#departure_datetime").val();
+            var returnDate = $("#toDate").val();
+
+            if (new Date(departureDate) > new Date(returnDate)) {
+                alert("Ngày khởi hành không được lớn hơn ngày trở về");
+            }
+            else {
+                $("#formSearchFlight").submit();
+            }
+        }
     });
 </script>
 

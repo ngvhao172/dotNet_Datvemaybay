@@ -17,6 +17,11 @@ namespace Csharp_DatVeMayBay.Controllers
             return View("404");
         }
 
+        public IActionResult GeneralError()
+        {
+            return View();
+        }
+
         /* public IActionResult NotFound()
          {
              return View("404");

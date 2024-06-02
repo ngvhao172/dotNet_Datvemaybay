@@ -1,0 +1,118 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="alertNoti"></div>
+                <form id="loginForm" action="/login" method="POST">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" name="password" required>
+                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                <i id="eye-icon" class="bi bi-eye-fill"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberme">
+                        <label class="form-check-label" for="rememberme">Remember me</label>
+                    </div>
+                    <button type="submit" id="loginButon" class="btn btn-primary w-100">Login</button>
+                </form>
+                <div class="mt-3">
+                    <p class="mb-0">Don't have an account? <a href="/register">Register here</a></p>
+                    <p class="mb-0"><a href="/forgotpassword">Forgot password?</a></p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-dark w-100" id="google_login">
+                        Login with Google <i class="fab fa-google"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById("email").focus();
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#password");
+    password.setAttribute("type", "password");
+
+    togglePassword.addEventListener("click", function () {
+        const type = password.getAttribute("type") == "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye icon
+
+        if ($('#eye-icon').hasClass('bi-eye-slash-fill')) {
+            $('#eye-icon').addClass('bi-eye-fill').removeClass('bi-eye-slash-fill');
+        } else {
+            $('#eye-icon').addClass('bi-eye-slash-fill').removeClass('bi-eye-fill');
+        }
+    });
+
+    $('#loginForm').submit(function(e) {
+        e.preventDefault();
+
+        loginAjax(e);
+    });
+
+
+    function loginAjax(e){
+
+        e.preventDefault();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        $.ajax({
+            url: '/api/User/LoginInBookingProgess',
+            method: "POST",
+            data: {
+                email: email,
+                password: password
+            },
+            dataType: "json",
+            success: function (data) {
+                console.log(data)
+                if(data.data.status==false){
+                    const container = $(`
+                        <div class="alert alert-danger alert-dismissible">
+                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            <strong>Failed!</strong> ${data.data.message}
+                        </div>
+                    `);
+                    $("#alertNoti").append(container);
+                    setTimeout(() => {
+                        container.fadeOut(1000);
+                    }, 2000);
+                }
+                if(data.data.status==true){
+
+
+                    var currentPath = window.location.pathname;
+                    console.log(currentPath);
+
+                    $("#loginForm").attr("action", `/login${currentPath}`);
+                    $("#loginForm").submit();
+                }
+            }
+        });
+    }
+
+    $("#google_login").on("click", ()=>{{
+        var currentPath = window.location.pathname;
+
+        window.location.href = `/ggLogin${currentPath}`;
+    }})
+</script>

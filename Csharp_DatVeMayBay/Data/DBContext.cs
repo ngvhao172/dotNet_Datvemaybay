@@ -49,13 +49,22 @@ namespace Csharp_DatVeMayBay.Data
             User user = new User {UserId = 2, UserEmail = "ngvhao@gmail.com", FirstName = "Nguyễn Văn", LastName = "Hào", Address = "Huế, Việt Nam", Dob = new DateTime(2003, 12, 7), PhoneNumber = "0777777777" };
             Account acc2 = new Account { UserEmail = "ngvhao@gmail.com", Password = BCrypt.Net.BCrypt.EnhancedHashPassword("123",13), Enable = true , UserId = 2, Verified = true };
 
+            User user1 = new User { UserId = 3, UserEmail = "user@gmail.com", FirstName = "User", LastName = "", Address = "Huế, Việt Nam", Dob = new DateTime(2003, 12, 7), PhoneNumber = "0777777778" };
+            Account acc3 = new Account { UserEmail = "user@gmail.com", Password = BCrypt.Net.BCrypt.EnhancedHashPassword("user", 13), Enable = true, UserId = 3, Verified = true };
+
             modelBuilder.Entity<User>().HasData(admin);
             modelBuilder.Entity<Account>().HasData(acc);
             modelBuilder.Entity<User>().HasData(user);
             modelBuilder.Entity<Account>().HasData(acc2);
+            modelBuilder.Entity<User>().HasData(user1);
+            modelBuilder.Entity<Account>().HasData(acc3);
+
+            //1 Booking có nhiều Ticket
+            modelBuilder.Entity<Ticket>().HasIndex(t => t.BookingId).IsUnique(false);
 
 
-            var ListFlightAndSeat = GenerateSampleFlights(50);
+
+            var ListFlightAndSeat = GenerateSampleFlights(100);
 
             modelBuilder.Entity<Flight>().HasData(ListFlightAndSeat.Item1);
 
@@ -85,14 +94,20 @@ namespace Csharp_DatVeMayBay.Data
                 *//*Gán cố định nơi đi và nơi đến*//*
                 Airport DepartureAirport = Airports.Find(airport => airport.AirportId == 1);
                 Airport ArrivalAirport = Airports.Find(airport => airport.AirportId == 2);*/
-
+                int departureID = 1;
+                int arrivalID = 2;
+                if(i >= count / 2)
+                {
+                    departureID = 2;
+                    arrivalID = 1;
+                }
                 var departureTime = DateTime.Today.AddDays(random.Next(0, 5)).AddHours(random.Next(0, 24)).AddMinutes(random.Next(0, 60)).AddSeconds(0);// Tạo thời gian đi ngẫu nhiên trong khoảng từ 00:00 đến 23:59
                 var flight = new Flight
                 {
                     FlightId = i,
                     AirlineId = randomAirlineId, // Chọn một số ngẫu nhiên từ 1 đến 5 cho airline_id
-                    DepartureAirportId = 1, // Sử dụng airport_id của sân bay đi cố định
-                    ArrivalAirportId = 2, // Sử dụng airport_id của sân bay đến cố định
+                    DepartureAirportId = departureID, // Sử dụng airport_id của sân bay đi cố định
+                    ArrivalAirportId = arrivalID, // Sử dụng airport_id của sân bay đến cố định
                     DepartureDatetime = departureTime,
                     ArrivalDatetime = departureTime.AddHours(random.Next(1, 8)).AddMinutes(random.Next(0, 60)).AddSeconds(0),
                     EconomyPrice = random.Next(800000, 1500000), // Giá vé kinh tế ngẫu nhiên từ 800,000 đến 1,500,000

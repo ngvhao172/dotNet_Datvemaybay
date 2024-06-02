@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Csharp_DatVeMayBay.Models.Domain
 {
@@ -21,6 +22,7 @@ namespace Csharp_DatVeMayBay.Models.Domain
         [Required]
         public DateTime ExpirationDate { get; set; }
 
+        [JsonIgnore]
         public User User { get; set; }
     }
 }

@@ -122,31 +122,6 @@
                     </div>
                 </div>
                 <div class="col-10">
-                    <div class="row mb-3">
-                        <div class="col-4">
-                            <div class="input-group date datetimepicker" data-target-input="nearest">
-                                <div class="input-group-text d-block">Ngày đi <i class="fa fa-calendar"
-                                        style="height: 100%;"></i></div><input required id="search_fromdate" type="date"
-                                    class="form-control datetimepicker-input" data-target=".datetimepicker" />
-                                <div class="input-group-append" data-target="#datetimepicker"
-                                    data-toggle="datetimepicker">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="input-group date datetimepicker" data-target-input="nearest">
-                                <div class="input-group-text d-block">Ngày về <i class="fa fa-calendar"
-                                        style="height: 100%;"></i></div><input required id="search_todate" type="date"
-                                    class="form-control datetimepicker-input" data-target=".datetimepicker" />
-                                <div class="input-group-append" data-target="#datetimepicker"
-                                    data-toggle="datetimepicker">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <input type="button" name="save" id="btn_search" class="btn btn-info" value="Tìm kiếm" />
-                        </div>
-                    </div>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="list-flights_today" role="tabpanel"
                             aria-labelledby="list-flights_today-list">
@@ -182,14 +157,43 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="list-all-flights" role="tabpanel"
-                            aria-labelledby="list-all-flights-list">
+                             aria-labelledby="list-all-flights-list">
+                            <div class="row mb-3">
+                                <div class="col-4">
+                                    <div class="input-group date datetimepicker" data-target-input="nearest">
+                                        <div class="input-group-text d-block">
+                                            Ngày đi <i class="fa fa-calendar"
+                                                       style="height: 100%;"></i>
+                                        </div><input required id="search_fromdate" type="date"
+                                                     class="form-control datetimepicker-input" data-target=".datetimepicker" />
+                                        <div class="input-group-append" data-target="#datetimepicker"
+                                             data-toggle="datetimepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group date datetimepicker" data-target-input="nearest">
+                                        <div class="input-group-text d-block">
+                                            Ngày về <i class="fa fa-calendar"
+                                                       style="height: 100%;"></i>
+                                        </div><input required id="search_todate" type="date"
+                                                     class="form-control datetimepicker-input" data-target=".datetimepicker" />
+                                        <div class="input-group-append" data-target="#datetimepicker"
+                                             data-toggle="datetimepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <input type="button" name="save" id="btn_search" class="btn btn-info" value="Tìm kiếm" />
+                                </div>
+                            </div>
                             <table class="table table-striped" id="dt-flight" style="width: 100%">
                                 <thead>
                                     <tr>
                                         <th scope="col">MÃ CHUYẾN BAY</th>
-                                        <th scope="col">MÃ HÃNG BAY</th>
-                                        <th scope="col">MÃ SÂN BAY KHỞI HÀNH</th>
-                                        <th scope="col">MÃ SÂN BAY ĐÍCH</th>
+                                        <th scope="col">TÊN HÃNG BAY</th>
+                                        <th scope="col">TÊN SÂN BAY KHỞI HÀNH</th>
+                                        <th scope="col">TÊN SÂN BAY ĐÍCH</th>
                                         <th scope="col">THỜI GIAN KHỞI HÀNH</th>
                                         <th scope="col">THỜI GIAN ĐẾN</th>
                                         <th scope="col">GIÁ PHỔ THÔNG</th>
@@ -199,14 +203,14 @@
                                     </tr>
                                 </thead>
                                 <tfoot>
-                                    <th scope="col">MÃ CHUYẾN BAY</th>
-                                    <th scope="col">MÃ HÃNG BAY</th>
-                                    <th scope="col">MÃ SÂN BAY KHỞI HÀNH</th>
-                                    <th scope="col">MÃ SÂN BAY ĐÍCH</th>
-                                    <th scope="col">THỜI GIAN KHỞI HÀNH</th>
-                                    <th scope="col">THỜI GIAN ĐẾN</th>
-                                    <th scope="col">GIÁ PHỔ THÔNG</th>
-                                    <th scope="col">GIÁ THƯƠNG GIA</th>
+                                <th scope="col">MÃ CHUYẾN BAY</th>
+                                <th scope="col">TÊN HÃNG BAY</th>
+                                <th scope="col">TÊN SÂN BAY KHỞI HÀNH</th>
+                                <th scope="col">TÊN SÂN BAY ĐÍCH</th>
+                                <th scope="col">THỜI GIAN KHỞI HÀNH</th>
+                                <th scope="col">THỜI GIAN ĐẾN</th>
+                                <th scope="col">GIÁ PHỔ THÔNG</th>
+                                <th scope="col">GIÁ THƯƠNG GIA</th>
                                 </tfoot>
                             </table>
 

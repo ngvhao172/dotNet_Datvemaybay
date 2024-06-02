@@ -1,4 +1,7 @@
-﻿using Csharp_DatVeMayBay.Data;
+﻿using Csharp_DatVeMayBay.Adapter_Pattern;
+using Csharp_DatVeMayBay.Command_Pattern;
+using Csharp_DatVeMayBay.Data;
+using Csharp_DatVeMayBay.Observer_Pattern;
 using Csharp_DatVeMayBay.Services.EmailService;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
@@ -58,6 +61,8 @@ options.UseSqlServer(builder.Configuration
 .GetConnectionString("DatvemaybayConnection")));
 
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<FlightService>();
+
 
 var app = builder.Build();
 

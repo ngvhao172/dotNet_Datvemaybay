@@ -12,16 +12,24 @@
 		},
 		"processing": true,
 		"ajax": {
-			"url": "/api/Flights/GetAllFlights",
+			"url": "/api/Management/ManageData",
 			"type": "POST",
 			"dataSrc": "data",
+			"data": function () {
+				return {
+					dataType: "Flight",
+					action: "GetAll",
+					fromDate: $('#search_fromdate').val(),
+					toDate: $('#search_todate').val()
+				};
+			},
 			"dataType": "json"
 		},
 		"columns": [
 			{ "data": "flightId" },
-			{ "data": "airlineId" },
-			{ "data": "departureAirportId" },
-			{ "data": "arrivalAirportId" },
+			{ "data": "airline.airlineName" },
+			{ "data": "departureAirport.airportName" },
+			{ "data": "arrivalAirport.airportName" },
 			{ "data": "departureDatetime" },
 			{ "data": "arrivalDatetime" },
 			{
@@ -80,7 +88,7 @@
 		},
 		"processing": true,
 		"ajax": {
-			url: "/api/Flights/GetAllFlightsToday",
+			url: "/api/Management/ManageData",
 			type: "POST",
 		/*	'data': function (data) {
 				var from_date = $('#search_fromdate').val();
@@ -88,6 +96,10 @@
 				data.searchByFromdate = from_date;
 				data.searchByTodate = to_date;
 			},*/
+			"data": {
+				dataType: "Flight",
+				action: "GetToday"
+			},
 			dataType: "json",
 			"dataSrc": "data",
 		},
@@ -131,9 +143,13 @@
 		],
 	});
 	$.ajax({
-		url: '/api/Airlines/GetAllAirlines',
+		url: '/api/Management/ManageData',
 		type: 'POST',
 		dataType: 'json',
+		"data": {
+			dataType: "Airline",
+			action: "GetAll"
+		},
 		success: function (data) {
 			var options = '<option value="">Chọn hãng bay</option>';
 			$.each(data.data, function (key, value) {
@@ -143,9 +159,13 @@
 		}
 	});
 	$.ajax({
-		url: '/api/Airports/GetAllAirports',
+		url: '/api/Management/ManageData',
 		type: 'POST',
 		dataType: 'json',
+		"data": {
+			dataType: "Airport",
+			action: "GetAll"
+		},
 		success: function (data) {
 			var options1 = '<option value="">Chọn sân bay khởi hành</option>';
 			var options2 = '<option value="">Chọn sân bay đích</option>';
@@ -169,56 +189,82 @@
 		$('#error-message').hide();
 		var flightId = $(this).attr("data-id");
 		$.ajax({
-			url: '/api/Flights/GetFlightById',
+			url: '/api/Management/ManageData',
 			method: "POST",
-			data: { flight_id: flightId},
+			data: {
+				dataType: "Flight",
+				action: "GetById",
+				flight_id: flightId
+			},
 			dataType: "json",
-			success: function (data) {
-				$('#FlightModal').modal('show');
-				$('#flight_id').val(data.data.flightId);
-				$('#airline_id').val(data.data.airlineId);
-				$('#departure_airport_id').val(data.data.departureAirportId);
-				$('#arrival_airport_id').val(data.data.arrivalAirportId);
-				$('#departure_datetime').val(data.data.departureDatetime);
-				$('#arrival_datetime').val(data.data.arrivalDatetime);
-				$('#economy_price').val(data.data.economyPrice);
-				$('#business_price').val(data.data.bussinessPrice);
-				$('.modal-title').html("<i class='fa fa-plus'></i>Sửa chuyến bay");
-				$('#save').val('Sửa');
+			success: function (response) {
+				if (response.status) {
+					data = response.data;
+					$('#FlightModal').modal('show');
+					$('#flight_id').val(data.flightId);
+					$('#airline_id').val(data.airlineId);
+					$('#departure_airport_id').val(data.departureAirportId);
+					$('#arrival_airport_id').val(data.arrivalAirportId);
+					$('#departure_datetime').val(data.departureDatetime);
+					$('#arrival_datetime').val(data.arrivalDatetime);
+					$('#economy_price').val(data.economyPrice);
+					$('#business_price').val(data.bussinessPrice);
+					$('.modal-title').html("<i class='fa fa-plus'></i>Sửa chuyến bay");
+					$('#save').val('Sửa');
+				}
 			}
 		});
 	});
 
 	$("#FlightModal").on('submit', '#FlightForm', function (event) {
 		event.preventDefault();
-		var formData = $(this).serialize();
-		let urlValue;
+
+		var flightId = $("#flight_id").val();
+		var airlineId = $("#airline_id").val();
+		var departureAirportId = $("#departure_airport_id").val();
+		var arrivalAirportId = $("#arrival_airport_id").val();
+		var departureDatetime = $("#departure_datetime").val();
+		var arrivalDatetime = $("#arrival_datetime").val();
+		var economyPrice = $("#economy_price").val();
+		var bussinessPrice = $("#business_price").val();
+		let action;
 		if ($('#save').val() == "Sửa") {
-			urlValue = "/api/Flights/UpdateFlight"
+			action = "Update"
 		}
 		else {
-			urlValue = "/api/Flights/AddFlight"
+			action = "Add"
 		}
 		$.ajax({
-			url: urlValue,
+			url: '/api/Management/ManageData',
 			method: "POST",
-			data: formData,
+			data: {
+				action: action,
+				dataType: "Flight",
+				flight_id: flightId,
+				airline_id: airlineId,
+				departure_airport_id: departureAirportId,
+				arrival_airport_id: arrivalAirportId,
+				departure_datetime: departureDatetime,
+				arrival_datetime: arrivalDatetime,
+				economy_price: economyPrice,
+				business_price: bussinessPrice,
+			},
 			dataType: "json",
-			success: function (data) {
-					data = data.data
-					if (data.status) {
-						$('#error-delete-message').removeClass('alert-warning').addClass('alert-success');
-						$('#error-delete-message strong').text(data.message);
-						$('#error-delete-message').show();
-						$('#FlightForm')[0].reset();
-						$('#FlightModal').modal('hide');
-						flightData.ajax.reload(null, false);
-						flightDataToday.ajax.reload(null, false);
-					} else {
-						$('#error-message').removeClass("alert-success").addClass("alert-warning");
-						$('#error-message strong').text(data.message);
-						$('#error-message').show();
-					}
+			success: function (response) {
+				if (response.status) {
+					data = response.data;
+					$('#error-delete-message').removeClass('alert-warning').addClass('alert-success');
+					$('#error-delete-message strong').text(response.message);
+					$('#error-delete-message').show();
+					$('#FlightForm')[0].reset();
+					$('#FlightModal').modal('hide');
+					flightData.ajax.reload(null, false);
+					flightDataToday.ajax.reload(null, false);
+				} else {
+					$('#error-message').removeClass("alert-success").addClass("alert-warning");
+					$('#error-message strong').text(response.message);
+					$('#error-message').show();
+				}
 				/*$('#save').attr('disabled', false);
 				if (data.success) {
 					$('#error-message').removeClass('alert-warning').addClass('alert-success');
@@ -249,26 +295,30 @@
 	$("#deleteModal").on('submit', '#DeleteFlightForm', function (event) {
 		event.preventDefault();
 		$('#delete_save').attr('disabled', 'disabled');
-		var flight_id = $('#delete_flight_id');
+		var flight_id = $('#delete_flight_id').val();
 		$.ajax({
-			url: "/api/Flights/DeleteFlight",
+			url: '/api/Management/ManageData',
 			method: "POST",
-			data: flight_id,
+			data: {
+				dataType: "Flight",
+				action: "Delete",
+				flight_id: flight_id	
+			},
 			dataType: "json",
-			success: function (data) {
+			success: function (response) {
 				$('#DeleteFlightForm')[0].reset();
 				$('#deleteModal').modal('hide');
 				$('#delete_save').attr('disabled', false);
-				if (data.data.status) {
+				if (response.status) {
+					data = response.data;
 					$('#error-delete-message').removeClass('alert-warning').addClass('alert-success');
-					$('#error-delete-message strong').text(data.data.message);
+					$('#error-delete-message strong').text(response.message);
 					$('#error-delete-message').show();
 					flightData.ajax.reload(null, false);
 					flightDataToday.ajax.reload(null, false);
 				} else {
-					console.log(data);
 					$('#error-delete-message').removeClass('alert-success').addClass('alert-warning');
-					$('#error-delete-message strong').text(data.message);
+					$('#error-delete-message strong').text(response.message);
 					$('#error-delete-message').show();
 				}
 			}
@@ -283,14 +333,22 @@
 		$('#error-message').hide();
 		var flightId = $(this).attr("data-id");
 		$.ajax({
-			url: "/api/Flights/GetFlightById",
+			url: '/api/Management/ManageData',
 			method: "POST",
-			data: { flight_id: flightId },
+			data: {
+				dataType: "Flight",
+				action: "GetById",
+				flight_id: flightId
+			},
 			dataType: "json",
-			success: function (data) {
-				$('#deleteModal').modal('show');
-				$('#delete_flight_id').val(data.data.flightId);
-				$("#deleteModal .modal-body").text('Bạn có chắc muốn xoá chuyến bay có mã: ' + data.data.flightId +'?');
+			success: function (response) {
+				if (response.status) {
+					data = response.data;
+					$('#deleteModal').modal('show');
+					$('#delete_flight_id').val(data.flightId);
+					$("#deleteModal .modal-body").html('Bạn có chắc muốn xoá chuyến bay có mã:  <strong>' + data.flightId + ' </strong>?');
+				}
+				
 			}
 		})
 	});
@@ -321,5 +379,20 @@
 		$('#search_fromdate').val('');
 		$('#search_todate').val('');
 		flightData.draw();
+	});
+	$('#btn_search').click(function () {
+		var fromDate = $('#search_fromdate').val();
+		var toDate = $('#search_todate').val();
+
+		if (fromDate !== "" && toDate !== "") {
+			flightData.ajax.data = {
+				dataType: "Statistic",
+				action: "GetAll",
+				fromDate: fromDate,
+				toDate: toDate
+			};
+			flightData.ajax.reload();
+		} else {
+		}
 	});
 })

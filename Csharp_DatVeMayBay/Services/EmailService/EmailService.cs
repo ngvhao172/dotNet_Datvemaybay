@@ -20,8 +20,10 @@ namespace Csharp_DatVeMayBay.Services.EmailService
             email.From.Add(MailboxAddress.Parse(_config.GetSection("EmailUsername").Value));
             email.To.Add(MailboxAddress.Parse(request.To));
             email.Subject = request.Subject;
-            email.Body = new TextPart(TextFormat.Html) { Text = request.Body };
 
+            string footer = "<br/><br/><hr/><p>Thanks,<br/>StarLine Booking Service<br/>Address: District 7, Ho Chi Minh City, Vietnam<br/>Email: starline.bookingservice@gmail.com</p>";
+
+            email.Body = new TextPart(TextFormat.Html) { Text = request.Body + footer };
             using var smtp = new SmtpClient();
             smtp.Connect(_config.GetSection("EmailHost").Value, 587, SecureSocketOptions.StartTls);
             smtp.Authenticate(_config.GetSection("EmailUsername").Value, _config.GetSection("EmailPassword").Value);

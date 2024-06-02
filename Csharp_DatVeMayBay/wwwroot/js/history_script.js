@@ -12,10 +12,18 @@
         },
         "processing": true,
         "ajax": {
-            "url": "/api/HistoryTickets/GetAllTicket",
-            "type": "GET",
+            "url": "/api/Management/ManageData",
+            "type": "POST",
             "dataType": "json",
-            "dataSrc": "data"
+            "data": function () {
+                return {
+                    dataType: "HistoryTicket",
+                    action: "GetAll",
+                    fromDate: $('#search_fromdate').val(),
+                    toDate: $('#search_todate').val()
+                };
+            },
+            "dataSrc" : "data"
         },
         "columns": [
             { "data": "userId", },
@@ -58,4 +66,18 @@
     $('#history_customer').click(function () {
         historyData.draw();
     });*/
+    $('#btn_search').click(function () {
+        var fromDate = $('#search_fromdate').val();
+        var toDate = $('#search_todate').val();
+        if (fromDate !== "" && toDate !== "") {
+            historyData.ajax.data = {
+                dataType: "HistoryTicket",
+                action: "GetAll",
+                fromDate: fromDate,
+                toDate: toDate
+            };
+            historyData.ajax.reload();
+        } else {
+        }
+    });
 })

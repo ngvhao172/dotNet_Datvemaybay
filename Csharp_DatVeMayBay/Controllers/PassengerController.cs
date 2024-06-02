@@ -40,16 +40,34 @@ namespace Csharp_DatVeMayBay.Controllers
             var PhoneNumber = Request.Form["PhoneNumber"];
             var Address = Request.Form["Address"];
             var Dob = DateOnly.Parse(Request.Form["Dob"]);
+            var NumberOfLuggage = Request.Form["numberOfLuggages"];
+            var NumberOfMeal = Request.Form["numberOfMeals"];
+            var NumberOfLuggageReturn = Request.Form["numberOfLuggagesReturn"];
+            var NumberOfMealReturn = Request.Form["numberOfMealsReturn"];
             var PassengerInfo = new PassengerInfo(FirstName, LastName, PhoneNumber, Address, Dob);
             var FlightData = Request.Form["FlightData"];
             var Flight = JsonConvert.DeserializeObject<Flight>(FlightData);
             var Form = Request.Form["FormData"];
             var FormData = JsonConvert.DeserializeObject<FormData>(Form);
+
+            List<int> numberOfLuggage = new List<int>();
+            numberOfLuggage.Add(Int16.Parse(NumberOfLuggage));
+
+            List<int> numberOfMeal = new List<int>();
+            numberOfMeal.Add(Int16.Parse(NumberOfMeal));
+            if (FormData.ReturnFlight != null)
+            {
+                numberOfLuggage.Add(Int16.Parse(NumberOfLuggageReturn));
+                numberOfMeal.Add(Int16.Parse(NumberOfMealReturn));
+            }
+           
+            FormData.NumberOfLuggages = numberOfLuggage;
+            FormData.NumberOfMeals = numberOfMeal;
             var viewModel = new BookingViewModel
             {
                 Flight = Flight,
                 FormData = FormData,
-                PassengerInfo = PassengerInfo
+                PassengerInfo = PassengerInfo,
             };
             return View(viewModel);
         }

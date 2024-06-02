@@ -11,9 +11,13 @@
 			"sEmptyTable": "Không có dữ liệu"
 		},
 		"ajax": {
-			"url": "/api/Airports/GetAllAirports",
+			"url": "/api/Management/ManageData",
 			"type": "POST",
 			"dataType": "json",
+			"data": {
+				dataType: "Airport",
+				action: "GetAll"
+			},
 			"dataSrc": "data"
 		},
 		"processing": true,
@@ -54,50 +58,66 @@
 		$('#error-message').hide();
 		var airportId = $(this).attr("data-id");
 		$.ajax({
-			url: '/api/Airports/GetAirportById',
+			url: '/api/Management/ManageData',
 			method: "POST",
-			data: { airport_id: airportId},
+			data: {
+				dataType: "Airport",
+				action: "GetById",
+				airport_id: airportId
+			},
 			dataType: "json",
-			success: function (data) {
-				data = data.data;
-				$('#AirportModal').modal('show');
-				$('#airport_id').val(data.airportId);
-				$('#airport_name').val(data.airportName);
-				$('#airport_location').val(data.airportLocation);
-				$('#airport_code').val(data.airportCode);
-				$('.modal-title').html("<i class='fa fa-plus'></i>Sửa sân bay");
-				$('#save').val('Sửa');
+			success: function (response) {
+				if (response.status) {
+					data = response.data;
+					$('#AirportModal').modal('show');
+					$('#airport_id').val(data.airportId);
+					$('#airport_name').val(data.airportName);
+					$('#airport_location').val(data.airportLocation);
+					$('#airport_code').val(data.airportCode);
+					$('.modal-title').html("<i class='fa fa-plus'></i>Sửa sân bay");
+					$('#save').val('Sửa');
+				}
+				
 			}
 		});
 	});
 
 	$("#AirportModal").on('submit', '#AirportForm', function (event) {
 		event.preventDefault();
-		var formData = $(this).serialize();
-		let urlValue;
+		var airportName = $("#airport_name").val();
+		var airportId = $("#airport_id").val();
+		var airportCode = $("#airport_code").val();
+		var airportLocation = $("#airport_location").val();
+		let action;
 		if ($('#save').val() == "Sửa") {
-			urlValue = "/api/Airports/UpdateAirport"
+			action = "Update"
 		}
 		else {
-			urlValue = "/api/Airports/AddAirport"
+			action = "Add"
 		}
 		$.ajax({
-			url: urlValue,
+			url: "/api/Management/ManageData",
 			method: "POST",
-			data: formData,
+			data: {
+				action: action,
+				dataType: "Airport",
+				airport_name: airportName,
+				airport_id: airportId,
+				airport_code: airportCode,
+				airport_location: airportLocation,
+			},
 			dataType: "json",
-			success: function (data) {
-				data = data.data;
-				if (data.status) {
+			success: function (response) {
+				if (response.status) {
 					$('#error-delete-message').removeClass('alert-warning').addClass('alert-success');
-					$('#error-delete-message strong').text(data.message);
+					$('#error-delete-message strong').text(response.message);
 					$('#error-delete-message').show();
 					$('#AirportForm')[0].reset();
 					$('#AirportModal').modal('hide');
 					airportData.ajax.reload(null, false);
 				} else {
 					$('#error-message').removeClass("alert-success").addClass("alert-warning");
-					$('#error-message strong').text(data.message);
+					$('#error-message strong').text(response.message);
 					$('#error-message').show();
 				}
 			}
@@ -126,25 +146,28 @@
 	$("#deleteModal").on('submit', '#DeleteAirportForm', function (event) {
 		event.preventDefault();
 		$('#delete_save').attr('disabled', 'disabled');
-		var airportId = $('#delete_airport_id');
+		var airportId = $('#delete_airport_id').val();
 		$.ajax({
-			url: "/api/Airports/DeleteAirport",
+			url: "/api/Management/ManageData",
 			method: "POST",
-			data: airportId,
+			data: {
+				dataType: "Airport",
+				action: "Delete",
+				airport_id: airportId
+			},
 			dataType: "json",
-			success: function (data) {
-				data = data.data;
+			success: function (response) {
 				$('#DeleteAirportForm')[0].reset();
 				$('#deleteModal').modal('hide');
 				$('#delete_save').attr('disabled', false);
-				if (data.status) {
+				if (response.status) {
 					$('#error-delete-message').removeClass('alert-warning').addClass('alert-success');
-					$('#error-delete-message strong').text(data.message);
+					$('#error-delete-message strong').text(response.message);
 					$('#error-delete-message').show();
 					airportData.ajax.reload(null, false);
 				} else {
 					$('#error-delete-message').removeClass('alert-success').addClass('alert-warning');
-					$('#error-delete-message strong').text(data.message);
+					$('#error-delete-message strong').text(response.message);
 					$('#error-delete-message').show();
 				}
 			}
@@ -159,16 +182,23 @@
 		$('#error-message').hide();
 		var airportId = $(this).attr("data-id");
 		$.ajax({
-			url: "/api/Airports/GetAirportById",
+			url: "/api/Management/ManageData",
 			method: "POST",
-			data: { airport_id: airportId},
+			data: {
+				dataType: "Airport",
+				action: "GetById",
+				airport_id: airportId
+			},
 			dataType: "json",
-			success: function (data) {
-				data = data.data;
-				$('#deleteModal').modal('show');
-				$('#delete_airport_id').val(data.airportId);
-				$("#deleteModal .modal-body").html('Bạn có chắc muốn xoá sân bay <strong>' + data.airportName + '</strong>?');
-				$('#delete_action').val('airportDelete');
+			success: function (response) {
+				if (response.status) {
+					data = response.data;
+					$('#deleteModal').modal('show');
+					$('#delete_airport_id').val(data.airportId);
+					$("#deleteModal .modal-body").html('Bạn có chắc muốn xoá sân bay <strong>' + data.airportName + '</strong>?');
+					$('#delete_action').val('airportDelete');
+				}
+				
 			}
 		})
 	});

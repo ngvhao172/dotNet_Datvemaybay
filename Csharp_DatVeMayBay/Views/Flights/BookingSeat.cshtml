@@ -1,8 +1,12 @@
 ﻿@model Csharp_DatVeMayBay.Controllers.FlightsController.BookingSeatViewModel
+@{
+    ViewData["Title"] = "Booking Seat";
+}
 <link rel="stylesheet" type="text/css" href="~/css/seats.css">
 <p class="mt-5"></p>
 <div class="container-fluid pt-5 body-section">
-    <h1 class="mb-4 p-3 text-center" style="background-color: #8DD3BB; color:#000">Quý khách vui lòng chọn chỗ ngồi
+    <h1 class="mb-4 p-3 text-center" style="background-color: #8DD3BB; color:#000">
+        Quý khách vui lòng chọn chỗ ngồi
     </h1>
     <div class="row">
         <!-- cột trái -->
@@ -51,19 +55,21 @@
             </div>
             <div class="row mb-3">
                 <button type="button" id="btnBook" class="btn btn-warning accepted fw-bold fs-3"
-                    style="color:#fff; max-width: 400px; margin-auto">Đặt</button>
+                        style="color:#fff; max-width: 400px; margin-auto">
+                    Đặt
+                </button>
             </div>
         </div>
     </div>
 
     <script>
         const dec = 65;
-    @{
-        var busySeats = Model.Seats
-            .Select(seat => seat.SeatRow + seat.SeatColumn.ToString())
-            .ToList();
-    }
-        const busySeats = @Html.Raw(Json.Serialize(busySeats));
+        @{
+            var busySeats = Model.Seats
+                .Select(seat => seat.SeatRow + seat.SeatColumn.ToString())
+                .ToList();
+        }
+            const busySeats = @Html.Raw(Json.Serialize(busySeats));
         //busySeats = busySeats.push("G1,G2,G3,G4,G5,G6,H1,H2,H3,H4,H5,H6,I1,I2,I3,I4.I5,I6,J1,J2,J3,J4,J5,J6");
         for (let i = 0; i < 10; i++) {
             const row = String.fromCharCode(dec + i);
@@ -83,39 +89,39 @@
                         // Chỗ ngồi đã được đặt
                         if (row <= 'C') {
                             seatHtml = `<div class='col-3 p-0 mx-auto seat'>
-                        <div class='Thương-Gia text-center seat fw-bold p-1' 
-                            style='width:100%; height:38px; background-color:#6bc6d2; color:#fff;'
-                            onclick='changeSeatState(this)'>
-                            ${coe}
-                        </div>
-                    </div>`;
+                                    <div class='Thương-Gia text-center seat fw-bold p-1'
+                                        style='width:100%; height:38px; background-color:#6bc6d2; color:#fff;'
+                                        onclick='changeSeatState(this)'>
+                                        ${coe}
+                                    </div>
+                                </div>`;
                         } else {
                             seatHtml = `<div class='col-3 p-0 mx-auto seat'>
-                        <div class='Phổ-Thông text-center seat fw-bold p-1' 
-                            style='width:100%; height:38px; background-color:#e059e7; color:#fff;'
-                            onclick='changeSeatState(this)'>
-                            ${coe}
-                        </div>
-                    </div>`;
+                                    <div class='Phổ-Thông text-center seat fw-bold p-1'
+                                        style='width:100%; height:38px; background-color:#e059e7; color:#fff;'
+                                        onclick='changeSeatState(this)'>
+                                        ${coe}
+                                    </div>
+                                </div>`;
                         }
                     } else {
                         // Chỗ sẵn có
                         if (row <= 'C') {
                             seatHtml = `<div class='col-3 p-0 mx-auto seat'>
-                        <div class='Thương-Gia available text-center seat fw-bold p-1' 
-                            style='width:100%; height:38px; background-color:rgb(195, 195, 195); color:#fff;'
-                            onclick='changeSeatState(this)'>
-                            ${coe}
-                        </div>
-                    </div>`;
+                                    <div class='Thương-Gia available text-center seat fw-bold p-1'
+                                        style='width:100%; height:38px; background-color:rgb(195, 195, 195); color:#fff;'
+                                        onclick='changeSeatState(this)'>
+                                        ${coe}
+                                    </div>
+                                </div>`;
                         } else {
                             seatHtml = `<div class='col-3 p-0 mx-auto seat'>
-                        <div class='Phổ-Thông available text-center seat fw-bold p-1' 
-                            style='width:100%; height:38px; background-color:rgb(195, 195, 195); color:#fff;'
-                            onclick='changeSeatState(this)'>
-                            ${coe}
-                        </div>
-                    </div>`;
+                                    <div class='Phổ-Thông available text-center seat fw-bold p-1'
+                                        style='width:100%; height:38px; background-color:rgb(195, 195, 195); color:#fff;'
+                                        onclick='changeSeatState(this)'>
+                                        ${coe}
+                                    </div>
+                                </div>`;
                         }
                     }
                     s += seatHtml;
@@ -128,8 +134,8 @@
 
             if (row === 'C') {
                 document.getElementById("seating-chart").innerHTML += `<div class='row m-0 align-items-end'>
-                                                            <div class='col'><hr></div>
-                                                        </div>`;
+                                                                        <div class='col'><hr></div>
+                                                                    </div>`;
             }
         }
     </script>
@@ -145,9 +151,10 @@
 
 </div>
 <!-- form-->
-<form id="form" method="post" action="./flight-detail-booking">
+<form id="form" method="post" action="/flight-detail-booking">
     <input type="hidden" name="FlightData" value='@Json.Serialize(@Model.Flight)'>
     <input type="hidden" name="FormData" value='@Json.Serialize(@Model.FormData)'>
+    <input type="hidden" id="returnFlight" name="returnFlight" value='false'>
 </form>
 </div>
 <script>
@@ -215,6 +222,10 @@
                 input.name = "seat";
                 input.value = $.trim(seat.innerHTML);
                 form.append(input);
+            }
+            if ("@Model.FormData.Type" == "Kh&#x1EE9; h&#x1ED3;i" && "@Model.FormData.ReturnFlight" == "") {
+                form.attr("action", "/select-return-flight");
+                $("#returnFlight").val("true");
             }
             form.submit();
         }

@@ -142,24 +142,19 @@ namespace Csharp_DatVeMayBay.Controllers
                     var creditCards = await dbContext.Creditcards.Where(c => c.UserId == user.UserId).ToListAsync();
                     userProfile.creditCards.AddRange(creditCards);
 
-                    foreach (var booking in bookings)
+                    for(int i = bookings.Count - 1 ; i>0; i--)
                     {
                         var tickets = await dbContext.Tickets
-                            .Where(t => t.BookingId == booking.BookingId)
-                            .Include(t => t.Flight)
-                                .ThenInclude(f => f.Airline)
-                            .Include(t => t.Flight)
-                                .ThenInclude(f => f.DepartureAirport)
-                            .Include(t => t.Flight)
-                                .ThenInclude(f => f.ArrivalAirport)
-                            .Include(t => t.Seat)
-                            .Include(t => t.Booking)
-                            .ToListAsync();
-
-                        /*                        var airportDeparture = dbContext.Airports.FirstOrDefault(a => booking.Flight.DepartureAirportId == a.AirportId);
-                                                var airportArrival = dbContext.Airports.FirstOrDefault(a => booking.Flight.ArrivalAirportId == a.AirportId);*/
-                        /*                        var flight = dbContext.Flights.FirstOrDefault(f => f.FlightId == booking.FlightId);
-                                                var airLine = dbContext.Airlines.FirstOrDefault(a => booking.Flight.AirlineId == a.AirlineId);*/
+                           .Where(t => t.BookingId == bookings[i].BookingId)
+                           .Include(t => t.Flight)
+                               .ThenInclude(f => f.Airline)
+                           .Include(t => t.Flight)
+                               .ThenInclude(f => f.DepartureAirport)
+                           .Include(t => t.Flight)
+                               .ThenInclude(f => f.ArrivalAirport)
+                           .Include(t => t.Seat)
+                           .Include(t => t.Booking)
+                           .ToListAsync();
 
                         userProfile.Tickets.AddRange(tickets);
                     }
@@ -206,6 +201,34 @@ namespace Csharp_DatVeMayBay.Controllers
                 return RedirectToAction("Error403", "Error");
 
             }
+        }
+
+        [Route("me/tickets/{ticketId}")]
+        [HttpGet]
+        public async Task<IActionResult> GetHistoryTicket(string ticketId)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                Ticket t = await dbContext.Tickets
+                            .Where(t => t.TicketId == ticketId)
+                            .Include(f => f.Flight)
+                                .ThenInclude(a => a.Airline)
+                            .Include(f => f.Flight)
+                                .ThenInclude(a => a.DepartureAirport)
+                            .Include(f => f.Flight)
+                                .ThenInclude(a => a.ArrivalAirport)
+                            .Include(f => f.Booking)
+                                .ThenInclude(a => a.User)
+                            .Include(s => s.Seat)
+                            .FirstAsync();
+                List<Ticket> tickets = new List<Ticket>();
+                tickets.Add(t);
+                if(t.Booking.User.UserId.ToString() == User.FindFirst(ClaimTypes.NameIdentifier).Value)
+                {
+                    return View("~/Views/Booking/BookingTicket.cshtml", tickets);
+                }
+            }
+            return Redirect("/Error/404");
         }
 
     }

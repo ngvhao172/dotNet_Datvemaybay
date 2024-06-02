@@ -1,25 +1,53 @@
 ﻿@model Csharp_DatVeMayBay.Controllers.FlightsController.BookingSeatViewModel
 @using Csharp_DatVeMayBay.Util.CustomHelpers
+@{
+    ViewData["Title"] = "Booking Detail";
+
+}
 <!-- body -->
 <div class="container mt-5 pt-5 body-section">
     <form id="formBookNow" action="" method="post">
         <input type="hidden" name="FlightData" value='@Json.Serialize(@Model.Flight)'>
-         <input type="hidden" name="FormData" value='@Json.Serialize(@Model.FormData)'>
+        <input type="hidden" name="FormData" value='@Json.Serialize(@Model.FormData)'>
+        <input type="hidden" name="numberOfMeals" value="0">
+        <input type="hidden" name="numberOfLuggages" value="0">
+        @if(Model.FormData.ReturnFlight != null)
+        {
+        <input type="hidden" name="numberOfMealsReturn" value="0">
+        <input type="hidden" name="numberOfLuggagesReturn" value="0">
+        }
         <div class="row mb-3">
             <!-- col left -->
             <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-3">
                 <h1 class="fw-bolder">
-                    @Model.Flight.Airline.AirlineName
+                    @Model.FormData.OutBoundFlight.Airline.AirlineName
                 </h1>
                 <div class="fs-5">
-                    @Model.Flight.DepartureAirport.AirportLocation _ @Model.Flight.DepartureAirport.AirportName
+                    @Model.FormData.OutBoundFlight.DepartureAirport.AirportLocation _ @Model.FormData.OutBoundFlight.DepartureAirport.AirportName
                     <br>
                     --
                     <br>
-                    @Model.Flight.ArrivalAirport.AirportLocation _ @Model.Flight.ArrivalAirport.AirportName
-                    <br>SeatNo:  @Model.FormData.SeatPicker, FlightNo:   @string.Concat("VN", Model.Flight.FlightId),   @string.Concat("Airbus: A", Model.Flight.FlightId) 
-                  
+                    @Model.FormData.OutBoundFlight.ArrivalAirport.AirportLocation _ @Model.FormData.OutBoundFlight.ArrivalAirport.AirportName
+                    <br>SeatNo:  @Model.FormData.SeatPicker[0], FlightNo:   @string.Concat("VN", Model.FormData.OutBoundFlight.FlightId),   @string.Concat("Airbus: A", Model.FormData.OutBoundFlight.FlightId)
+
                 </div>
+                <br />
+                @if(Model.FormData.ReturnFlight != null)
+                {
+                <p class="fw-bold fs-5">Chiều về</p>
+                <h1 class="fw-bolder">
+                    @Model.FormData.ReturnFlight.Airline.AirlineName
+                </h1>
+                <div class="fs-5">
+                    @Model.FormData.ReturnFlight.DepartureAirport.AirportLocation _ @Model.FormData.ReturnFlight.DepartureAirport.AirportName
+                    <br>
+                    --
+                    <br>
+                    @Model.FormData.ReturnFlight.ArrivalAirport.AirportLocation _ @Model.FormData.ReturnFlight.ArrivalAirport.AirportName
+                    <br>SeatNo:  @Model.FormData.SeatPicker[1], FlightNo:   @string.Concat("VN", Model.FormData.ReturnFlight.FlightId),   @string.Concat("Airbus: A", Model.FormData.ReturnFlight.FlightId)
+
+                </div>
+                }
             </div>
 
             <!-- col right -->
@@ -29,11 +57,22 @@
                         <span class="fw-bold fs-2 p-0 text-end" style="color:#ff8682">
                             @if(Model.FormData.FlightClass == "PT")
                             {
-                                @customHelper.FormatCurrency(@Model.Flight.EconomyPrice)
+                            @if(Model.FormData.ReturnFlight != null)
+                            {
+                            @customHelper.FormatCurrency(@customHelper.AddExpression(@Model.FormData.OutBoundFlight.EconomyPrice,@Model.FormData.ReturnFlight.EconomyPrice))
+                            }
+                            else{
+                            @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.EconomyPrice)
+                            }
                             }
                             else
                             {
-                                @customHelper.FormatCurrency(@Model.Flight.BussinessPrice)
+                            @if(Model.FormData.ReturnFlight!=null){
+                            @customHelper.FormatCurrency(@customHelper.AddExpression(@Model.FormData.OutBoundFlight.BussinessPrice,@Model.FormData.ReturnFlight.BussinessPrice))
+                            }
+                            else{
+                            @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.BussinessPrice)
+                            }
                             }
                         </span>
                     </div>
@@ -41,15 +80,128 @@
                 <div class="row justify-content-end">
                     <div class="col-12 col-lg-6">
                         <button type="button" id="bookFlight" class="btn btn-outline-success fw-bold p-2 fs-4"
-                            name="booknow" data-bs-toggle="modal" data-bs-target="#exampleModal" style="
-                                    background-color:#8DD3BB; 
-                                    border: #8DD3BB; 
+                                name="booknow" data-bs-toggle="modal" data-bs-target="#exampleModal" style="
+                                    background-color:#8DD3BB;
+                                    border: #8DD3BB;
                                     color:black;
                                     width:100%;">
                             Book now
                         </button>
                     </div>
                 </div>
+                <div class="row mt-3 justify-content-end me-2">
+                    <div class="col-12 col-md-10 p-0">
+                        <div class="row p-4" style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.1);border-radius: 12px;">
+                            <!-- Row 1 -->
+                            <div class="row">
+                                <div class="col">
+                                    <p class="fw-bold">Các dịch vụ khác đính kèm</p>
+                                </div>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="row mt-1">
+                                <hr />
+                                <div class="col">
+                                    <div class="row align-items-center">
+                                        <div class="col-3">
+                                            <p class="fw-bold">Suất ăn</p>
+                                        </div>
+                                        <div class="col-3">
+                                            Số lượng:<span class="fw-bold" id="numberOfMeals"> 0</span>
+                                        </div>
+                                        <div class="col-3 text-end">
+                                            Giá tiền:
+                                            @if(Model.FormData.FlightClass == "PT")
+                                            {
+                                            <span class="fw-bold"> @customHelper.FormatCurrency(150000)</span>
+                                            }
+                                            else{
+                                            <span class="fw-bold"> @customHelper.FormatCurrency(250000)</span>
+                                            }
+                                        </div>
+                                        <div class="col-3">
+                                            <button type="button" onclick="minusCount('numberOfMeals')" class="btn btn-icon d-inline-block"><i class="bi bi-dash-circle-fill"></i></button>
+                                            <button type="button" onclick="addCount('numberOfMeals')" class="btn btn-icon d-inline-block"><i class="bi bi-plus-circle-fill"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 align-items-center">
+                                        <div class="col-3">
+                                            <p class="fw-bold">Hành lý (15kg)</p>
+                                        </div>
+                                        <div class="col-3">
+                                            Số lượng:<span class="fw-bold" id="numberOfLuggages"> 0</span>
+                                        </div>
+                                        <div class="col-3 text-end">
+                                            Giá tiền:<span class="fw-bold">  @customHelper.FormatCurrency(150000)</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <button type="button" onclick="minusCount('numberOfLuggages')" class="btn btn-icon d-inline-block"><i class="bi bi-dash-circle-fill"></i></button>
+                                            <button type="button" onclick="addCount('numberOfLuggages')" class="btn btn-icon d-inline-block"><i class="bi bi-plus-circle-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if(Model.FormData.ReturnFlight != null)
+                {
+                <div class="row mt-3 justify-content-end me-2">
+                    <div class="col-12 col-md-10 p-0">
+                        <div class="row p-4" style="background: #fff;box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.1);border-radius: 12px;">
+                            <!-- Row 1 -->
+                            <div class="row">
+                                <div class="col">
+                                    <p class="fw-bold">Các dịch vụ khác đính kèm (Chiều về)</p>
+                                </div>
+                            </div>
+                            <!-- Row 2 -->
+                            <div class="row mt-1">
+                                <hr />
+                                <div class="col">
+                                    <div class="row align-items-center">
+                                        <div class="col-3">
+                                            <p class="fw-bold">Suất ăn</p>
+                                        </div>
+                                        <div class="col-3">
+                                            Số lượng:<span class="fw-bold" id="numberOfMealsReturn"> 0</span>
+                                        </div>
+                                        <div class="col-3 text-end">
+                                            Giá tiền:
+                                            @if(Model.FormData.FlightClass == "PT")
+                                            {
+                                            <span class="fw-bold"> @customHelper.FormatCurrency(150000)</span>
+                                            }
+                                            else{
+                                            <span class="fw-bold"> @customHelper.FormatCurrency(250000)</span>
+                                            }
+                                        </div>
+                                        <div class="col-3">
+                                            <button type="button" onclick="minusCount('numberOfMealsReturn')" class="btn btn-icon d-inline-block"><i class="bi bi-dash-circle-fill"></i></button>
+                                            <button type="button" onclick="addCount('numberOfMealsReturn')" class="btn btn-icon d-inline-block"><i class="bi bi-plus-circle-fill"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 align-items-center">
+                                        <div class="col-3">
+                                            <p class="fw-bold">Hành lý (15kg)</p>
+                                        </div>
+                                        <div class="col-3">
+                                            Số lượng:<span class="fw-bold" id="numberOfLuggagesReturn"> 0</span>
+                                        </div>
+                                        <div class="col-3 text-end">
+                                            Giá tiền:<span class="fw-bold"> @customHelper.FormatCurrency(150000)</span>
+                                        </div>
+                                        <div class="col-3">
+                                            <button type="button" onclick="minusCount('numberOfLuggagesReturn')" class="btn btn-icon d-inline-block"><i class="bi bi-dash-circle-fill"></i></button>
+                                            <button type="button" onclick="addCount('numberOfLuggagesReturn')" class="btn btn-icon d-inline-block"><i class="bi bi-plus-circle-fill"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
             </div>
         </div>
     </form>
@@ -63,17 +215,19 @@
                         <div class="col">
                             <form action="../passenger" method="POST" class="needs-validation">
                                 <input type="hidden" name="FlightData" value='@Json.Serialize(Model.Flight)'>
-                                 <input type="hidden" name="FormData" value='@Json.Serialize(@Model.FormData)'>
+                                <input type="hidden" name="FormData" value='@Json.Serialize(@Model.FormData)'>
                                 <div class="modal-header border-bottom-0">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-10">
-                                                <h2 class="modal-title fw-bolder" id="exampleModalLabel">Thông tin cá
-                                                    nhân</h2>
+                                                <h2 class="modal-title fw-bolder" id="exampleModalLabel">
+                                                    Thông tin cá
+                                                    nhân
+                                                </h2>
                                             </div>
                                             <div class="col-2 align-items-center text-center d-flex">
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close"></button>
+                                                        aria-label="Close"></button>
                                             </div>
                                         </div>
                                     </div>
@@ -84,14 +238,14 @@
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="text" class="form-control border-dark" id="firstName"
-                                                        name="FirstName" placeholder="" value="" required>
+                                                           name="FirstName" placeholder="" value="" required>
                                                     <label for="firstName" class="form-label">Họ</label>
                                                 </div>
                                             </div>
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="cvc" class="form-control border-dark" required
-                                                        id="lastName" name="LastName" placeholder="" value="">
+                                                           id="lastName" name="LastName" placeholder="" value="">
                                                     <label for="lastName">Tên</label>
                                                 </div>
                                             </div>
@@ -100,7 +254,7 @@
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="number" class="form-control border-dark" required
-                                                        id="phoneNumber" name="PhoneNumber" placeholder="" value="">
+                                                           id="phoneNumber" name="PhoneNumber" placeholder="" value="">
                                                     <label for="phoneNumber">SĐT</label>
                                                 </div>
                                             </div>
@@ -109,7 +263,7 @@
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="cvc" class="form-control border-dark" required
-                                                        id="address" name="Address" placeholder="" value="" required>
+                                                           id="address" name="Address" placeholder="" value="" required>
                                                     <label for="address">Địa chỉ</label>
                                                 </div>
                                             </div>
@@ -118,7 +272,7 @@
                                             <div class="col">
                                                 <div class="form-floating">
                                                     <input type="date" class="form-control border-dark" required
-                                                        id="Dob" name="Dob" placeholder="" value="" required>
+                                                           id="Dob" name="Dob" placeholder="" value="" required>
                                                     <label for="Dob">Ngày sinh</label>
                                                 </div>
                                             </div>
@@ -136,17 +290,27 @@
                                     <div class="container">
                                         <div class="row"></div>
                                         <div class="col mb-2">
-                                            <!-- <form action="../booking-dt/booking-dt.php" method="post"> -->
+                                            <input type="hidden" name="numberOfMeals" value="0">
+                                            <input type="hidden" name="numberOfLuggages" value="0">
+                                            @if(Model.FormData.ReturnFlight != null)
+                                            {
+                                            <input type="hidden" name="numberOfMealsReturn" value="0">
+                                            <input type="hidden" name="numberOfLuggagesReturn" value="0">
+                                            }
                                             <button type="submit" id="" class="btn btn-outline-success p-2"
-                                                style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">Lưu
-                                                thông tin</button>
+                                                    style="background-color:#8DD3BB; border: #8DD3BB; color: black;width: 100%;">
+                                                Lưu
+                                                thông tin
+                                            </button>
                                             <!-- <script src="functions.js"></script> -->
                                         </div>
                                         <div class="col">
-                                            <p class="text-center" style="font-size: 10px;">By confirming your
+                                            <p class="text-center" style="font-size: 10px;">
+                                                By confirming your
                                                 subscription, you allow The Outdoor Inn Crowd Limited to charge your
                                                 card for this payment and future payments in accordance with their
-                                                terms. You can always cancel your subscription.</p>
+                                                terms. You can always cancel your subscription.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -161,7 +325,7 @@
 
     <div class="row mb-5 mt-5">
         <img class=" p-0 w-100" style="border-radius: 12px;" src="~/img/flight-booking-detail/plane-flight-detail.svg"
-            alt="flight-detail">
+             alt="flight-detail">
     </div>
 
     <div class="row mb-3 choose-heading">
@@ -205,10 +369,18 @@
             </div>
 
             <div class="row mb-3">
-                <div class="col px-4"><i class="fa-solid fa-stopwatch"></i> <span class="">Pre-flight cleaning,
-                        installation of cabin HEPA filters.</span></div>
-                <div class="col px-4"><i class="fa-solid fa-stopwatch"></i> <span class="">Pre-flight health screening
-                        questions.</span></div>
+                <div class="col px-4">
+                    <i class="fa-solid fa-stopwatch"></i> <span class="">
+                        Pre-flight cleaning,
+                        installation of cabin HEPA filters.
+                    </span>
+                </div>
+                <div class="col px-4">
+                    <i class="fa-solid fa-stopwatch"></i> <span class="">
+                        Pre-flight health screening
+                        questions.
+                    </span>
+                </div>
             </div>
 
         </div>
@@ -222,10 +394,10 @@
             <div class="col-12 p-4">
                 <div class="row">
                     <div class="col">
-                        <h4 class="fw-bold">Departure on @Model.Flight.DepartureDatetime</h4>
+                        <h4 class="fw-bold">Departure on @Model.FormData.OutBoundFlight.DepartureDatetime</h4>
                     </div>
                     <div class="col">
-                        <h3 class="text-secondary text-end">@customHelper.GetDuration(Model.Flight.DepartureDatetime, Model.Flight.ArrivalDatetime)</h3>
+                        <h3 class="text-secondary text-end">@customHelper.GetDuration(Model.FormData.OutBoundFlight.DepartureDatetime, Model.Flight.ArrivalDatetime)</h3>
                     </div>
                 </div>
             </div>
@@ -236,13 +408,13 @@
                     <div class="col-12 col-lg-4 px-5 justify-content-center">
                         <div class="row border rounded-3">
                             <!-- logo -->
-                            <img class="col-12 col-sm-6 col-md-5 col-lg-5 p-0" src="../@Model.Flight.Airline.AirlineLogo"
-                                alt="">
+                            <img class="col-12 col-sm-6 col-md-5 col-lg-5 p-0" src="../@Model.FormData.OutBoundFlight.Airline.AirlineLogo"
+                                 alt="">
 
                             <!-- info -->
                             <div class="col-12 col-sm-6 col-md-7 col-lg-7 py-2 justify-content-center">
-                                <h4 class="fw-bold text-center">@Model.Flight.Airline.AirlineName</h4>
-                                <h5 class="text-secondary text-center">Airbus @string.Concat("A", Model.Flight.FlightId) </h5>
+                                <h4 class="fw-bold text-center">@Model.FormData.OutBoundFlight.Airline.AirlineName</h4>
+                                <h5 class="text-secondary text-center">Airbus @string.Concat("A", Model.FormData.OutBoundFlight.FlightId) </h5>
                             </div>
                         </div>
                     </div>
@@ -250,8 +422,9 @@
                     <div class="col-lg-8 pe-3 align-middle">
                         <div class="row justify-content-end py-4 icons-in-return">
                             <!-- icon-in-return la class tu them --->
-                            <div class="col-1 border-end text-center align-middle"><i
-                                    class="fa-sharp fa-solid fa-plane fs-3"></i></div>
+                            <div class="col-1 border-end text-center align-middle">
+                                <i class="fa-sharp fa-solid fa-plane fs-3"></i>
+                            </div>
                             <div class="col-1 border-end text-center"><i class="fa-solid fa-wifi fs-3"></i></div>
                             <div class="col-1 border-end text-center"><i class="fa-solid fa-stopwatch fs-3"></i></div>
                             <div class="col-1 border-end text-center"><i class="fa-solid fa-burger fs-3"></i></div>
@@ -268,13 +441,13 @@
                     @*<h4 class="fw-bold">12:00 pm</h4>*@
                 </div>
                 <div class="col">
-                    <h5>@Model.Flight.DepartureAirport.AirportLocation</h5>
+                    <h5>@Model.FormData.OutBoundFlight.DepartureAirport.AirportLocation</h5>
                 </div>
                 <!-- <div class="col footer-icon-arrow-left"><i class="fa-solid fa-arrow-left-long fs-3"></i></div> -->
                 <div class="col footer-icon-plane"><i class="fa-sharp fa-solid fa-plane fs-2"></i></div>
                 <!-- <div class="col footer-icon-arrow-left"><i class="fa-solid fa-arrow-right-long fs-3"></i></div> -->
                 <div class="col">
-                    <h5>@Model.Flight.ArrivalAirport.AirportLocation</h5>
+                    <h5>@Model.FormData.OutBoundFlight.ArrivalAirport.AirportLocation</h5>
                 </div>
                 <div class="col">
                     @*<h4 class="fw-bold">12:00 pm</h4>*@
@@ -284,13 +457,44 @@
     </div>
 </div>
 <script>
-    @if (User.Identity.IsAuthenticated)
-    {
+    @if (User.Identity.IsAuthenticated) {
         <text>
-        $("#bookFlight").attr("data-bs-toggle", "");
-        $("#bookFlight").attr("type", "submit");
-        $("#formBookNow").attr("action", "../payment-booking");
+            $("#bookFlight").attr("data-bs-toggle", "");
+            $("#bookFlight").attr("type", "submit");
+            $("#formBookNow").attr("action", "../payment-booking");
         </text>
     }
 
-</script> 
+    function addCount(id) {
+        var $element = $("#" + id);
+        var count = parseInt($element.text()) + 1;
+        $element.text(count);
+        $("input[name='" + id + "']").val(count);
+        sessionStorage.setItem(id, count);
+    }
+
+    function minusCount(id) {
+        var $element = $("#" + id);
+        var count = parseInt($element.text());
+        if (count > 0) {
+            count--;
+            $element.text(count);
+            $("input[name='" + id + "']").val(count);
+            sessionStorage.setItem(id, count);
+        }
+    }
+
+    $(document).ready(function () {
+        $("span[id^='numberOf']").each(function () {
+            var id = $(this).attr('id');
+            var storedCount = sessionStorage.getItem(id);
+            if (storedCount !== null) {
+                $("input[name='" + id + "']").val(storedCount);
+                $(this).text(storedCount);
+            }
+        });
+    });
+
+
+
+</script>

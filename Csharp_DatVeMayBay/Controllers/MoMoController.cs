@@ -10,6 +10,7 @@ using Org.BouncyCastle.Asn1.X9;
 using RestSharp;
 using System.Security.Cryptography;
 using System.Text;
+using static Csharp_DatVeMayBay.Controllers.BookingController;
 
 namespace Csharp_DatVeMayBay.Controllers
 {
@@ -82,7 +83,6 @@ namespace Csharp_DatVeMayBay.Controllers
                 string hex = BitConverter.ToString(hashmessage);
                 hex = hex.Replace("-", "").ToLower();
                 return hex;
-
             }
         }
 
@@ -116,16 +116,22 @@ namespace Csharp_DatVeMayBay.Controllers
             else
             {
                 //Fail
-            /*    string ticketId = extraData;
-                Ticket ticket = await dbContext.Tickets.Where(t => t.TicketId == ticketId).FirstOrDefaultAsync();
-                if(ticket != null) {
-                    Booking booking = await dbContext.Bookings.Where(b => b.BookingId == ticket.BookingId).FirstOrDefaultAsync();
+                /*    string ticketId = extraData;
+                    Ticket ticket = await dbContext.Tickets.Where(t => t.TicketId == ticketId).FirstOrDefaultAsync();
+                    if(ticket != null) {
+                        Booking booking = await dbContext.Bookings.Where(b => b.BookingId == ticket.BookingId).FirstOrDefaultAsync();
 
-                    dbContext.Bookings.Remove(booking);
-                    dbContext.Tickets.Remove(ticket);
-                }*/
+                        dbContext.Bookings.Remove(booking);
+                        dbContext.Tickets.Remove(ticket);
+                    }*/
+
+                var bookingDetailViewModelJson = TempData["BookingDetailViewModel"] as string;
+                var bookingDetailViewModel = JsonConvert.DeserializeObject<BookingDetailModel>(bookingDetailViewModelJson);
+
+                TempData["LastBookingDetailRetrieve"] = JsonConvert.SerializeObject(bookingDetailViewModel);
+
                 TempData["error"] = "Error. " + message;
-                return Redirect("/");
+                return Redirect("/payment-booking");
             }
         }
 

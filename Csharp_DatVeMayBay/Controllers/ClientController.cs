@@ -15,7 +15,6 @@ namespace Csharp_DatVeMayBay.Controllers
         {
             this.dbContext = dbContext;
         }
-
         public async Task<IActionResult> Index()
         {
             if (User.Identity.IsAuthenticated)

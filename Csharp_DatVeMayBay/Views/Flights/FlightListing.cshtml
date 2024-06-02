@@ -7,26 +7,27 @@ ViewData["Title"] = "Flight Listing";
 <div class="body-section">
     <!-- search flight -->
     <div class="container justify-content-center d-flex mt-5">
-        <form class="g-4 bg-white z-1 p-5 rounded-3 m-auto mb-3 shadow-lg mt-4" style="width: 80vw;"> <!--- abc -->
+        <form class="g-4 bg-white z-1 p-5 rounded-3 m-auto mb-3 shadow-lg mt-4" style="width: 80vw;">
+            <!--- abc -->
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6">
                         <select id="type" name="type" class="form-select form-select-lg mb-3"
-                            aria-label=".form-select-lg example" style="display: inline-block;" disabled>
+                                aria-label=".form-select-lg example" style="display: inline-block;" disabled>
                             <option value="">@Model.FormData.Type</option>
                         </select>
                     </div>
                     <div class="col-md-6">
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
-                            style="display: inline-block;" disabled>
-                        @if (@Model.FormData.FlightClass == "PT")
-                        {
-                                <option value="" selected>Phổ Thông</option>
-                        }
-                        else
-                        {
-                                <option value="" selected>Thương Gia</option>
-                        }
+                                style="display: inline-block;" disabled>
+                            @if (@Model.FormData.FlightClass == "PT")
+                            {
+                            <option value="" selected>Phổ Thông</option>
+                            }
+                            else
+                            {
+                            <option value="" selected>Thương Gia</option>
+                            }
                         </select>
                     </div>
                 </div>
@@ -36,11 +37,10 @@ ViewData["Title"] = "Flight Listing";
                     <div class="input-group">
                         <span class="input-group-text mb-3 fs-5 bg-white fw-semibold">Từ</span>
                         <select name="from" id="from" class="form-select form-select-lg mb-3"
-                            aria-label=".form-select-lg example" style="display: inline-block;" disabled>
+                                aria-label=".form-select-lg example" style="display: inline-block;" disabled>
                             <option value="" selected>@Model.FormData.DepartureAirport.AirportLocation</option>
                         </select>
-                        <span
-                            class="fa-solid fa-arrow-right-arrow-left mb-3 mt-4 ms-3 d-none d-lg-block fa-lg"></span>
+                        <span class="fa-solid fa-arrow-right-arrow-left mb-3 mt-4 ms-3 d-none d-lg-block fa-lg"></span>
                     </div>
                 </div>
 
@@ -49,7 +49,7 @@ ViewData["Title"] = "Flight Listing";
                     <div class="input-group">
                         <span class="input-group-text mb-3 fs-5 bg-white fw-semibold">Đến</span>
                         <select name="to" id="to" class="form-select form-select-lg mb-3"
-                            aria-label=".form-select-lg example" style="display: inline-block;" disabled>
+                                aria-label=".form-select-lg example" style="display: inline-block;" disabled>
                             <option value="" selected>@Model.FormData.ArrivalAirport.AirportLocation</option>
                         </select>
                     </div>
@@ -58,19 +58,30 @@ ViewData["Title"] = "Flight Listing";
                 <div class="col-12 col-lg-6">
                     <div class="row">
                         <div class="col input-group">
-                            <span id="khoiHanh" class="input-group-text fs-5 p-2 fw-semibold bg-white">Khởi
-                                Hành</span>
+                            <span id="khoiHanh" class="input-group-text fs-5 p-2 fw-semibold bg-white">
+                                Khởi
+                                Hành
+                            </span>
                             <input type="text" class="form-control d-block m-auto p-2 fs-5" min="" max=""
-                                name="fromDate"
-                                value="@customHelper.splitDatetime(@Model.FormData.DepartureDate)[0]" id="fromDate"
-                                disabled>
+                                   name="fromDate"
+                                   value="@customHelper.splitDatetime(@Model.FormData.DepartureDate)[0]" id="fromDate"
+                                   disabled>
                         </div>
+                        @if (@Model.FormData.Type == "Khứ hồi")
+                        {
                         <div class="col input-group" id="chuyenVe">
-                            <span id="chuyenVe" class="input-group-text fs-5 p-2 fw-semibold bg-white">Chuyến
-                                Về</span>
-                            <input type="date" class="form-control d-block m-auto p-2 fs-5" min="" max=""
-                                name="toDate" value="" id="toDate" disabled>
+                            <span id="chuyenVe" class="input-group-text fs-5 p-2 fw-semibold bg-white">
+                                Chuyến
+                                Về
+                            </span>
+                            <input type="text" class="form-control d-block m-auto p-2 fs-5" min="" max=""
+                                   name="return_datetime" value="@customHelper.splitDatetime(Model.FormData.ReturnDate)[0]" id="toDate" disabled>
                         </div>
+                        }
+                        else
+                        {
+                        }
+
                     </div>
                 </div>
             </div>
@@ -81,9 +92,9 @@ ViewData["Title"] = "Flight Listing";
         <div class="row">
             <!-- Col trai -->
             <div class="col-sm-4">
-                <form action="/select-flight" method="post">
+                <form action="/select-flight/filter" id="formFilter" method="post">
                     <input hidden name="checkTrue" value="true" />
-                @*@{
+                    @*@{
                     string airlinesChecked;
                     }
                     @foreach (var airline in Model.Airlines)
@@ -93,121 +104,204 @@ ViewData["Title"] = "Flight Listing";
                     <h4>Filters</h4>
                     <hr>
                     <label for="customRange2" class="form-label fw-bolder">Airlines</label>
-                @{
+                    @{
                     string allAirlinesValue = string.Join(",", Model.Airlines.Select(a => a.AirlineId));
-                }
+                    }
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="@allAirlinesValue" name="allairlines"
-                            @(Model.AirlineChecked==null ? "checked" : "" )>
+                               @(Model.AirlineChecked == null) ? "checked" : "" >
                         <label class="form-check-label" for="all">
                             All
                         </label>
                     </div>
                     <!-- load hãng bay-->
-                @foreach (var airline in Model.Airlines)
-                {
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="@airline.AirlineId"
-                            id="defaultCheck<@airline.AirlineId>" name="airlines" @if(Model.AirlineChecked!=null) {
-                            @(Model.AirlineChecked.Contains(airline.AirlineId.ToString()) ? "checked" : "" )
-}>
-                            <label class="form-check-label" for="defaultCheck<@airline.AirlineId>">
+                    @foreach (var airline in Model.Airlines)
+                    {
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="@airline.AirlineId"
+                               id="defaultCheck<@airline.AirlineId>" name="airlines" @if(Model.AirlineChecked!=null) {
+                               @(Model.AirlineChecked.Contains(airline.AirlineId.ToString()) ? "checked" : "" )
+                               }>
+                        <label class="form-check-label" for="defaultCheck<@airline.AirlineId>">
                             @airline.AirlineName
-                            </label>
-                        </div>
-                }
+                        </label>
+                    </div>
+                    }
                     <br>
                     <button type="submit" class="btn-filter btn btn-outline-dark">Lọc</button>
                 </form>
             </div>
             <!-- Col phai -->
             <div class="col-sm-8">
-            @if (Model.Flights.Count != 0)
-            {
+                @if (@Model.FormData.Type == "Khứ hồi")
+                {
+                @if(Model.FormData.OutBoundFlight != null){
+                <div class="row">
+                    <button name="" value="" type=""
+                            class="text-decoration-none text-dark border-0 mt-2 p-2 bg-light"
+                            style="width:100%; border-radius: 30px">
+                        <div class="row">
+                            <div class="col-4 col-lg-3">
+                                <div class="row ms-2">
+                                    <p class="p-0 m-0 rounded-pill fw-bold" style="background-color: #8DD3BB">Chiều đi</p>
+                                </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                        <img src="@Model.FormData.OutBoundFlight.Airline.AirlineLogo" alt="Logo"
+                                             style="width: 120px; height: 67px;">
+                                    </div>
+                                </div>
+                                <div class="row pb-3">
+                                    <div class="col text-center fw-bold">@Model.FormData.OutBoundFlight.Airline.AirlineName</div>
+                                </div>
+                            </div>
+                            <div class="col-8 col-lg-6 mt-4 align-items-center">
+                                <div class="row d-flex justify-content-space-between">
+                                    <div class="col-4 fw-bold text-start">
+                                        @Model.FormData.OutBoundFlight.DepartureDatetime<br>@Model.FormData.OutBoundFlight.DepartureAirport.AirportCode
+                                    </div>
+                                    <div class="col-4 text-center text-end">
+                                        @customHelper.GetDuration(Model.FormData.OutBoundFlight.DepartureDatetime,
+                                        Model.FormData.OutBoundFlight.ArrivalDatetime)<br> Bay thẳng
+                                    </div>
+                                    <div class="col-4 fw-bold text-end">
+                                        @Model.FormData.OutBoundFlight.ArrivalDatetime<br>@Model.FormData.OutBoundFlight.ArrivalAirport.AirportCode
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3 mt-4 text-center">
+                                <div class="row">
+                                    @if (Model.FormData.FlightClass == "PT")
+                                    {
+                                    <div class="col fw-bold">
+                                        @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.EconomyPrice)
+                                    </div>
+                                    }
+                                    else
+                                    {
+                                    <div class="col fw-bold">
+                                        @customHelper.FormatCurrency(@Model.FormData.OutBoundFlight.BussinessPrice)
+                                    </div>
+                                    }
+                                </div>
+                                <div class="row">
+                                    <div class="col">1 hành khách</div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                }
+                <p class="fw-bold fs-4">@Model.FormData.Message</p>
+                }
+
+                @if (Model.Flights.Count != 0)
+                {
+
                 @foreach (var flight in Model.Flights)
                 {
-                    <div class="row">
-                        <form action="./select-flight/booking-seat" method="post" class="col-12 p-0">
-                            <button name="" value="" type="submit"
-                        class="text-decoration-none text-dark border-0 mt-2 p-2 bg-light"
-                        style="width:100%; border-radius: 30px">
-                                <input type="hidden" name="FlightData" value='@Json.Serialize(flight)'>
-                                <input type="hidden" name="FormData" value='@Json.Serialize(Model.FormData)'>
-                                <div class="row">
-                                    <div class="col-4 col-lg-3">
-                                        <div class="row">
-                                            <div class="col text-center">
-                                                <img src="@flight.Airline.AirlineLogo" alt="Logo"
-                                            style="width: 120px; height: 67px;">
-                                            </div>
-                                        </div>
-                                        <div class="row pb-3">
-                                            <div class="col text-center fw-bold">@flight.Airline.AirlineName</div>
+                <div class="row">
+                    <form action="./select-flight/booking-seat" class="bookingSeatForm" method="post" class="col-12 p-0">
+                        <button name="" value="" type="submit"
+                                class="text-decoration-none text-dark border-0 mt-2 p-2 bg-light"
+                                style="width:100%; border-radius: 30px">
+                            <input type="hidden" name="FlightData" value='@Json.Serialize(flight)'>
+                            <input type="hidden" name="FormData" value='@Json.Serialize(Model.FormData)'>
+                            <div class="row">
+                                <div class="col-4 col-lg-3">
+                                    <div class="row">
+                                        <div class="col text-center">
+                                            <img src="@flight.Airline.AirlineLogo" alt="Logo"
+                                                 style="width: 120px; height: 67px;">
                                         </div>
                                     </div>
-                                    <div class="col-8 col-lg-6 mt-4 align-items-center">
-                                        <div class="row d-flex justify-content-space-between">
-                                            <div class="col-4 fw-bold text-start">
-                                            @flight.DepartureDatetime<br>@flight.DepartureAirport.AirportCode</div>
-                                            <div class="col-4 text-center text-end">
+                                    <div class="row pb-3">
+                                        <div class="col text-center fw-bold">@flight.Airline.AirlineName</div>
+                                    </div>
+                                </div>
+                                <div class="col-8 col-lg-6 mt-4 align-items-center">
+                                    <div class="row d-flex justify-content-space-between">
+                                        <div class="col-4 fw-bold text-start">
+                                            @flight.DepartureDatetime<br>@flight.DepartureAirport.AirportCode
+                                        </div>
+                                        <div class="col-4 text-center text-end">
                                             @customHelper.GetDuration(flight.DepartureDatetime,
-                                        flight.ArrivalDatetime)<br> Bay thẳng</div>
-                                            <div class="col-4 fw-bold text-end">
-                                            @flight.ArrivalDatetime<br>@flight.ArrivalAirport.AirportCode</div>
+                                            flight.ArrivalDatetime)<br> Bay thẳng
                                         </div>
-                                    </div>
-                                    <div class="col-12 col-lg-3 mt-4 text-center">
-                                        <div class="row">
-                                        @if (Model.FormData.FlightClass == "PT")
-                                        {
-                                                <div class="col fw-bold">@customHelper.FormatCurrency(@flight.EconomyPrice)
-                                                </div>
-                                        }
-                                        else
-                                        {
-                                                <div class="col fw-bold">
-                                                @customHelper.FormatCurrency(@flight.BussinessPrice)</div>
-                                        }
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">1 hành khách</div>
+                                        <div class="col-4 fw-bold text-end">
+                                            @flight.ArrivalDatetime<br>@flight.ArrivalAirport.AirportCode
                                         </div>
                                     </div>
                                 </div>
-                            </button>
-                        </form>
-                    </div>
+                                <div class="col-12 col-lg-3 mt-4 text-center">
+                                    <div class="row">
+                                        @if (Model.FormData.FlightClass == "PT")
+                                        {
+                                        <div class="col fw-bold">
+                                            @customHelper.FormatCurrency(@flight.EconomyPrice)
+                                        </div>
+                                        }
+                                        else
+                                        {
+                                        <div class="col fw-bold">
+                                            @customHelper.FormatCurrency(@flight.BussinessPrice)
+                                        </div>
+                                        }
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">1 hành khách</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </form>
+                </div>
                 }
-            }
-            else
-            {
+                }
+                else
+                {
                 <div class="text-center">
                     <h1>@ViewData["Message"]</h1>
                 </div>
 
-            }
+                }
                 <div class="container mt-5">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-            <li class="page-item @((Model.PageNumber == 1) ? "disabled" : "")">
-                <a class="page-link" href="@(Url.Action("GetFlightListing", new { page = Model.PageNumber - 1 }))">Previous</a>
-            </li>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item @(Model.PageNumber == 1 ? " disabled" : "" )">
+                                <a class="page-link" href="#" onclick="goToPage('@(Model.PageNumber - 1)')">Previous</a>
+                            </li>
 
                             @for (int i = 1; i <= Model.TotalPages; i++)
                             {
-                    <li class="page-item @(Model.PageNumber == i ? "active" : "")">
-                        <a class="page-link" href="@(Url.Action("GetFlightListing", new { page = i }))">@i</a>
-                    </li>
+                            <li class="page-item @(Model.PageNumber == i ? " active" : "" )">
+                                <a class="page-link" href="#" onclick="goToPage('@i')">@i</a>
+                            </li>
                             }
 
-            <li class="page-item @((Model.PageNumber == Model.TotalPages) ? "disabled" : "")">
-                <a class="page-link" href="@(Url.Action("GetFlightListing", new { page = Model.PageNumber + 1 }))">Next</a>
-            </li>
-        </ul>
-    </nav>
-</div>
+                            <li class="page-item @(Model.PageNumber == Model.TotalPages ? " disabled" : "" )">
+                                <a class="page-link" href="#" onclick="goToPage('@(Model.PageNumber + 1)')">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
+                <script>
+                    function goToPage(page) {
+                        var currentPath = window.location.pathname;
+                        var nextPageUrl = currentPath + "?page=" + page;
+                        window.location.href = nextPageUrl;
+                    }
+                </script>
             </div>
         </div>
     </div>
 </div>
+<script>
+    var routeValue = window.location.pathname;
+
+    $("#formFilter").attr("action", routeValue + "/filter");
+
+    $(".bookingSeatForm").attr("action", routeValue + "/booking-seat");
+</script>

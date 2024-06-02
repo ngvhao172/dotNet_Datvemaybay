@@ -3,6 +3,7 @@
     public enum TicketStatus
     {
         Paid,
-        Unpaid
+        Unpaid,
+        Cancelled
     }
 }

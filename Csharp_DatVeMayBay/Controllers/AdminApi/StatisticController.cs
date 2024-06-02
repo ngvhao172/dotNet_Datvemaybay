@@ -7,8 +7,6 @@ using System.Linq;
 
 namespace Csharp_DatVeMayBay.Controllers.AdminApi
 {
-    [ApiController]
-    [Route("api/Statistic")]
     public class StatisticController : Controller
     {
         private readonly DBContext dbContext;
@@ -22,8 +20,6 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
             public decimal totalRevenue { get; set; }
 
         }
-        [HttpPost]
-        [Route("GetStatistic")]
         public JsonResult GetStatistic(DateTime fromDate, DateTime toDate)
         {
             List<StatisticModel> dataArray = new List<StatisticModel>();
@@ -61,7 +57,7 @@ namespace Csharp_DatVeMayBay.Controllers.AdminApi
                 };
                 dataArray.Add(statisticData);
             }
-            return Json(new { data = dataArray });
+            return Json(new { status = true, data = dataArray });
         }
     }
 }

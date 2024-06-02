@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.InteropServices;
+using System.Text.Json.Serialization;
 
 namespace Csharp_DatVeMayBay.Models.Domain
 {
@@ -30,6 +31,7 @@ namespace Csharp_DatVeMayBay.Models.Domain
 
         public DateTime Dob { get; set; }
 
+        [JsonIgnore]
         public ICollection<Creditcard> Creditcards { get; set; }
 
     }

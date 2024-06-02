@@ -11510,11 +11510,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
+      "projectUniqueName": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
       "projectName": "Csharp_DatVeMayBay",
-      "projectPath": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
+      "projectPath": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\dotNet\\Project_FinalTerm\\Csharp_DatVeMayBay\\Csharp_DatVeMayBay\\obj\\",
+      "outputPath": "D:\\Code\\DesignPattern\\Final_Project\\designpattern_datvemaybay\\source\\Csharp_DatVeMayBay\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

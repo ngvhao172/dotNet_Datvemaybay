@@ -12,9 +12,13 @@
         },
         "processing": true,
         "ajax": {
-            "url": "/api/Customers/GetAllCustomer",
-            "type": "GET",
+            "url": "/api/Management/ManageData",
+            "type": "POST",
             "dataType": "json",
+            "data": {
+                dataType: "Customer",
+                action: "GetAll"
+            },
             "dataSrc": "data"
         },
         "columns": [
@@ -44,15 +48,22 @@
         $('#error-message').show();
         var userId = $(this).attr("data-id");
         $.ajax({
-            url: "/api/Customers/GetCustomerById",
+            url: "/api/Management/ManageData",
             method: "POST",
-            data: { user_id: userId},
+            data: {
+                dataType: "Customer",
+                action: "GetById",
+                user_id: userId
+            },
             dataType: "json",
-            success: function (data) {
-                $('#deleteModal').modal('show');
-                $('#delete_user').val(data.data.userId);
-                console.log(data);
-                $("#deleteModal .modal-body").text('Bạn có chắc muốn xoá người dùng ' + data.data.firstName + ' ' + data.data.lastName + '?');
+            success: function (response) {
+                if (response.status) {
+                    data = response.data;
+                    $('#deleteModal').modal('show');
+                    $('#delete_user').val(data.userId);
+                    $("#deleteModal .modal-body").html('Bạn có chắc muốn xoá người dùng  <strong>' + data.firstName + ' ' + data.lastName + ' </strong>?');
+                }
+                
             }
         });
     });
@@ -63,23 +74,26 @@
         var user_id = $('#delete_user').val();
         console.log(user_id);
         $.ajax({
-            url: "/api/Customers/DeleteCustomer",
+            url: "/api/Management/ManageData",
             method: "POST",
-            data: { user_id: user_id },
+            data: {
+                dataType: "Customer",
+                action: "Delete",
+                user_id: user_id
+            },
             dataType: "json",
-            success: function (data) {
-                data = data.data;
+            success: function (response) {
                 $('#DeleteUserForm')[0].reset();
                 $('#deleteModal').modal('hide');
                 $('#delete_save').attr('disabled', false);
-                if (data.status) {       
+                if (response.status) {       
                     $('#error-delete-message').removeClass('alert-warning').addClass('alert-success');
-                    $('#error-delete-message strong').text(data.message);
+                    $('#error-delete-message strong').text(response.message);
                     $('#error-delete-message').show();
                     userData.ajax.reload(null, false);
                 } else {
                     $('#error-delete-message').removeClass('alert-success').addClass('alert-warning');
-                    $('#error-delete-message strong').text(data.message);
+                    $('#error-delete-message strong').text(response.message);
                     $('#error-delete-message').show();
                 }
             }
