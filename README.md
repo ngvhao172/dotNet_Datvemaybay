@@ -2,26 +2,29 @@
 PROJECT SỬ DỤNG C# với Entity Framework để hỗ trợ lưu trữ dữ liệu dưới dạng Model First, dữ liệu được lưu trong SQL SERVER
 --
 ## DESIGN PATTERS
-  - PROJECT ÁP DỤNG CÁC DESIGN PATTERNS PHỔ BIẾN NHƯ SINGLETON, TEMPLATE METHOD, STRATEGY, FACADE, DECORATOR, ...
+  - PROJECT áp dụng các patterns phổ biến như SINGLETON, TEMPLATE METHOD, STRATEGY, FACADE, DECORATOR, ...
 ## DEPENDENCY INJECTION
- - PROJECT ÁP DỤNG DI TRONG CÁC PATTERNS LÀM GIẢM SỰ PHỤ THUỘC VÀ TĂNG KHẢ NĂNG MỞ RỘNG, NÂNG CẤP
+ - PROJECT áp dụng DI trong các patterns để giảm sự phụ thuộc, tăng khả năng mở rộng, nâng cấp
 
 ## CHỨC NĂNG (FEATURES)
-  - CLIENT
-   + ĐƯỢC TRIỂN KHAI DƯỚI DẠNG SERVER SIDE
-   + NGƯỜI DÙNG CÓ THỂ ĐẶT VÉ KHỨ HỒI HOẶC MỘT CHIỀU, CÓ THỂ MUA SUẤT ĂN, HÀNH LÝ
-   + NGƯỜI DÙNG CÓ THỂ CHỌN NGÀY, ĐỊA ĐIỂM MUỐN ĐI VÀ CHỌN HÃNG MÁY BAY MUỐN ĐI
-   + NGƯỜI DÙNG CÓ THỂ CHỌN THANH TOÁN BẰNG THẺ CREDIT, VNPAY, MOMO
-   + NGƯỜI DÙNG CÓ THỂ TRA CỨU LẠI CÁC VÉ ĐÃ MUA BẰNG MÃ BOOKING, MÃ VÉ
-   + NGƯỜI DÙNG CÓ THỂ QUẢN LÝ TÀI KHOẢN, THÔNG TIN CÁ NHÂN, ...
-   + SAU KHI ĐẶT VÉ SẼ CÓ EMAIL THÔNG BÁO GỬI VỀ
+- CLIENT
+   + Được triển khai dưới dạng SERVER SIDE
+   + Đặt vé khứ hồi hoặc một chiều.
+   + Mua suất ăn và hành lý.    
+   + Chọn ngày và địa điểm đi và đến.
+   + Lựa chọn hãng hàng không mong muốn.
+   + Thanh toán bằng thẻ Credit, VNPAY, Momo, ...
+   + Tra cứu lại các vé đã mua bằng mã Booking hoặc mã vé.
+   + Quản lý tài khoản cá nhân, chỉnh sửa thông tin cá nhân.
+   + Sau khi đặt vé, gửi email thông báo cho người dùng.
+   + 
 - ADMIN
   + ĐƯỢC TRIỂN KHAI DƯỚI DẠNG CLIENT SIDE
-  + QUẢN LÝ CÁC CHUYẾN BAY
-  + QUẢN LÝ CÁC HÃNG BAY
-  + QUẢN LÝ CÁC ĐIỂM SÂN BAY
-  + QUẢN LÝ NGƯỜI DÙNG
-  + THỐNG KÊ DOANH THU
+  + Quản lý các chuyến bay
+  + Quản lý các hãng bay
+  + Quản lý các điểm sân bay
+  + Quản lý người dùng
+  + Thống kê doanh thu
 
 ## PROJECT ÁP DỤNG AUTHORIZATION (POLICY) VÀ AUTHENTICATION (CLAIMS BASE) ĐỂ XÁC THƯC VÀ PHÂN QUYỀN NGƯỜI DÙNG.
 
